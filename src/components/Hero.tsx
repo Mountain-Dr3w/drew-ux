@@ -1,7 +1,6 @@
 
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
-import { ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -52,13 +51,6 @@ const Hero: React.FC = () => {
           <div className="absolute top-40 right-10 md:right-40 w-12 h-12 rounded-full bg-blue-500/20 animate-float hidden md:block"></div>
           <div className="absolute top-60 left-10 md:left-40 w-8 h-8 rounded-full bg-cyan-500/20 animate-float animation-delay-1000 hidden md:block"></div>
         </div>
-      </div>
-
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#projects" className="flex flex-col items-center justify-center text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-          <span className="text-sm mb-2">Scroll</span>
-          <ArrowDown size={16} />
-        </a>
       </div>
     </section>
   );
