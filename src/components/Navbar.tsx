@@ -26,9 +26,9 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center">
-          <span className="text-xl font-bold tracking-tight text-white">
-            <span className="text-white mr-1">District</span>
-            <span className="text-accent font-semibold">Creative</span>
+          <span className="text-xl font-bold tracking-tight text-foreground">
+            <span className="mr-1">District</span>
+            <span className="font-semibold">Creative</span>
           </span>
         </a>
 
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-sm font-medium text-foreground hover:text-accent/80 link-underline transition-colors"
+              className="text-sm font-medium text-foreground hover:text-black/60 dark:hover:text-white/60 link-underline transition-colors"
             >
               {item}
             </a>

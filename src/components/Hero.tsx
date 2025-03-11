@@ -6,8 +6,8 @@ const Hero: React.FC = () => {
   return (
     <section className="min-h-screen relative flex items-center justify-center pt-20">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 -left-10 -right-10 h-72 rounded-[50%] bg-gradient-to-r from-accent/5 via-accent/3 to-muted blur-3xl -z-10 transform translate-y-[-45%]" />
-        <div className="absolute bottom-0 -right-20 h-96 w-96 rounded-full bg-gradient-to-r from-muted via-accent/3 to-accent/5 blur-3xl -z-10" />
+        <div className="absolute top-0 -left-10 -right-10 h-72 rounded-[50%] bg-gradient-to-r from-black/5 via-black/3 to-muted blur-3xl -z-10 transform translate-y-[-45%] dark:from-white/5 dark:via-white/3 dark:to-muted" />
+        <div className="absolute bottom-0 -right-20 h-96 w-96 rounded-full bg-gradient-to-r from-muted via-black/3 to-black/5 blur-3xl -z-10 dark:from-muted dark:via-white/3 dark:to-white/5" />
       </div>
       
       <div className="max-w-7xl mx-auto px-4 md:px-8 w-full">
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
           <TransitionEffect direction="up" delay={0.4}>
             <a
               href="#contact"
-              className="group flex items-center justify-center space-x-2 bg-primary text-primary-foreground px-7 py-3 rounded-md hover:bg-primary/90 transition-colors duration-300 shadow-sm"
+              className="group flex items-center justify-center space-x-2 bg-black text-white dark:bg-white dark:text-black px-7 py-3 rounded-md hover:bg-black/90 dark:hover:bg-white/90 transition-colors duration-300 shadow-sm"
             >
               <span>Work With Us</span>
               <svg 
@@ -42,8 +42,8 @@ const Hero: React.FC = () => {
             </a>
           </TransitionEffect>
 
-          <div className="absolute top-40 right-10 md:right-40 w-12 h-12 rounded-full bg-accent/10 animate-float hidden md:block"></div>
-          <div className="absolute top-60 left-10 md:left-40 w-8 h-8 rounded-full bg-accent/10 animate-float animation-delay-1000 hidden md:block"></div>
+          <div className="absolute top-40 right-10 md:right-40 w-12 h-12 rounded-full bg-black/10 animate-float hidden md:block dark:bg-white/10"></div>
+          <div className="absolute top-60 left-10 md:left-40 w-8 h-8 rounded-full bg-black/10 animate-float animation-delay-1000 hidden md:block dark:bg-white/10"></div>
         </div>
       </div>
     </section>
