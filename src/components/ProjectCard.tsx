@@ -42,19 +42,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       
       <div className="p-6">
         <div className="mb-2">
-          <span className="inline-block px-3 py-1 text-xs font-medium bg-black/10 text-black rounded-full dark:bg-white/10 dark:text-white">
+          <span className="inline-block px-3 py-1 text-xs font-medium bg-black/20 text-black rounded-full dark:bg-white/20 dark:text-white">
             {category}
           </span>
         </div>
-        <h3 className="text-xl font-semibold mb-2 group-hover:text-black transition-colors dark:group-hover:text-white">
+        <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
           {title}
         </h3>
-        <p className="text-muted-foreground text-sm mb-4">
+        <p className="text-gray-800 text-sm mb-4 dark:text-gray-200">
           {description}
         </p>
         <div className={cn(
           "flex items-center font-medium text-sm transition-all duration-300",
-          isHovered ? "text-black dark:text-white" : "text-gray-400"
+          isHovered ? "text-black dark:text-white" : "text-gray-700 dark:text-gray-300"
         )}>
           <span className="mr-2">View project</span>
           <ArrowRight size={16} className={cn(

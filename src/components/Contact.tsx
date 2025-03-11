@@ -9,13 +9,13 @@ const Contact: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <TransitionEffect delay={0.1}>
           <div className="text-center mb-12">
-            <span className="inline-block px-3 py-1 text-sm font-medium bg-black/5 rounded-full mb-3">
+            <span className="inline-block px-3 py-1 text-sm font-medium bg-black/10 text-black rounded-full mb-3 dark:bg-white/10 dark:text-white">
               Get in Touch
             </span>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 text-black dark:text-white">
               Let's work together
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-800 max-w-2xl mx-auto dark:text-gray-200">
               I'm always interested in new projects and collaborations. Whether you have a project in mind or just want to say hello, I'd love to hear from you.
             </p>
           </div>
@@ -27,12 +27,12 @@ const Contact: React.FC = () => {
               href="mailto:hello@example.com" 
               className="group glass-card p-8 rounded-2xl flex flex-col items-center text-center hover:shadow-md transition-shadow duration-300"
             >
-              <div className="w-16 h-16 flex items-center justify-center bg-black rounded-full text-white mb-6">
+              <div className="w-16 h-16 flex items-center justify-center bg-black rounded-full text-white mb-6 dark:bg-white dark:text-black">
                 <Mail size={24} />
               </div>
-              <h3 className="text-xl font-medium mb-2">Send me an email</h3>
-              <p className="text-gray-600 mb-6">hello@example.com</p>
-              <div className="flex items-center font-medium text-sm text-gray-600 group-hover:text-black transition-colors duration-300">
+              <h3 className="text-xl font-medium mb-2 text-black dark:text-white">Send me an email</h3>
+              <p className="text-gray-800 mb-6 dark:text-gray-200">hello@example.com</p>
+              <div className="flex items-center font-medium text-sm text-gray-800 group-hover:text-black transition-colors duration-300 dark:text-gray-200 dark:group-hover:text-white">
                 <span className="mr-2">Write me</span>
                 <ArrowRight size={16} className="group-hover:transform group-hover:translate-x-1 transition-transform duration-300" />
               </div>
@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
         </TransitionEffect>
 
         <TransitionEffect delay={0.3}>
-          <div className="mt-24 text-center text-sm text-gray-500">
+          <div className="mt-24 text-center text-sm text-gray-700 dark:text-gray-300">
             <p>&copy; {new Date().getFullYear()} Portfolio. All rights reserved.</p>
           </div>
         </TransitionEffect>
