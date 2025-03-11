@@ -6,21 +6,21 @@ const Hero: React.FC = () => {
   return (
     <section className="min-h-screen relative flex items-center justify-center pt-20">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 -left-10 -right-10 h-72 rounded-[50%] bg-gradient-to-r from-blue-500/10 to-cyan-500/10 blur-3xl -z-10 transform translate-y-[-45%]" />
-        <div className="absolute bottom-0 -right-20 h-96 w-96 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 blur-3xl -z-10" />
+        <div className="absolute top-0 -left-10 -right-10 h-72 rounded-[50%] bg-gradient-to-r from-gray-500/10 to-gray-700/10 blur-3xl -z-10 transform translate-y-[-45%]" />
+        <div className="absolute bottom-0 -right-20 h-96 w-96 rounded-full bg-gradient-to-r from-gray-700/10 to-gray-500/10 blur-3xl -z-10" />
       </div>
       
       <div className="max-w-7xl mx-auto px-4 md:px-8 w-full">
         <div className="flex flex-col items-center text-center mt-20">
           <TransitionEffect direction="up" delay={0.1}>
-            <span className="inline-block px-3 py-1 text-sm font-medium bg-blue-500/10 dark:bg-blue-500/20 rounded-full mb-6 text-blue-800 dark:text-blue-300">
+            <span className="inline-block px-3 py-1 text-sm font-medium bg-gray-200 dark:bg-gray-800/50 rounded-full mb-6 text-gray-800 dark:text-gray-300">
               Public Sector Design Consultancy
             </span>
           </TransitionEffect>
 
           <TransitionEffect direction="up" delay={0.2}>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight max-w-4xl mb-6 text-balance">
-              Creating <span className="gradient-text">transformative</span> digital services for <span className="gradient-text">government</span> and <span className="gradient-text">citizens</span>
+              Creating <span className="grayscale-gradient-text">transformative</span> digital services for <span className="grayscale-gradient-text">government</span> and <span className="grayscale-gradient-text">citizens</span>
             </h1>
           </TransitionEffect>
 
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
           <TransitionEffect direction="up" delay={0.4}>
             <a
               href="#projects"
-              className="group flex items-center justify-center space-x-2 bg-blue-500 text-white px-7 py-3 rounded-full hover:bg-blue-600 transition-colors duration-300 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40"
+              className="group flex items-center justify-center space-x-2 bg-gray-800 text-white px-7 py-3 rounded-full hover:bg-gray-700 transition-colors duration-300 shadow-lg shadow-gray-500/20 hover:shadow-gray-500/40"
             >
               <span>View our work</span>
               <svg 
@@ -48,8 +48,8 @@ const Hero: React.FC = () => {
             </a>
           </TransitionEffect>
 
-          <div className="absolute top-40 right-10 md:right-40 w-12 h-12 rounded-full bg-blue-500/20 animate-float hidden md:block"></div>
-          <div className="absolute top-60 left-10 md:left-40 w-8 h-8 rounded-full bg-cyan-500/20 animate-float animation-delay-1000 hidden md:block"></div>
+          <div className="absolute top-40 right-10 md:right-40 w-12 h-12 rounded-full bg-gray-400/20 animate-float hidden md:block"></div>
+          <div className="absolute top-60 left-10 md:left-40 w-8 h-8 rounded-full bg-gray-500/20 animate-float animation-delay-1000 hidden md:block"></div>
         </div>
       </div>
     </section>
