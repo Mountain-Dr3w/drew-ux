@@ -36,8 +36,6 @@ const Index: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden">
-      <div className="fixed inset-0 noise-bg pointer-events-none"></div>
-      <div className="fixed inset-0 grid-pattern pointer-events-none"></div>
       <Navbar />
       <main>
         <Hero />
