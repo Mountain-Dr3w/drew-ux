@@ -18,27 +18,27 @@ const Navbar: React.FC = () => {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 px-4 md:px-8',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 md:px-8',
         isScrolled 
-          ? 'bg-background/80 backdrop-blur-lg shadow-sm dark:bg-background/80 dark:border-b dark:border-border' 
+          ? 'bg-background/90 backdrop-blur-sm border-b border-gray-200 dark:bg-background/90 dark:border-white/10' 
           : 'bg-transparent'
       )}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-6xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center">
-          <span className="text-xl font-bold tracking-tight text-foreground">
+          <span className="text-base font-medium tracking-tight text-foreground">
             <span className="mr-1">District</span>
-            <span className="font-semibold">Creative</span>
+            <span className="font-medium">Creative</span>
           </span>
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-10">
+        <nav className="hidden md:flex items-center space-x-8">
           {['Projects', 'About', 'Contact'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-sm font-medium text-foreground hover:text-black/60 dark:hover:text-white/60 link-underline transition-colors"
+              className="text-sm font-medium text-foreground hover:text-black/60 dark:hover:text-white/60 transition-colors"
             >
               {item}
             </a>

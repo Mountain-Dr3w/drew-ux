@@ -22,34 +22,32 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <div
-      className="group relative overflow-hidden rounded-xl glass-card transition-all duration-500 h-full hover:shadow-lg"
+      className="group relative overflow-hidden rounded-lg shiftnudge-card h-full"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
         transitionDelay: `${delay}s`,
       }}
-    >
-      <div className="absolute top-2 right-2 w-24 h-24 bg-gradient-to-br from-black/20 to-black/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10 dark:from-white/20 dark:to-white/10"></div>
-      
-      <div className="relative h-72 overflow-hidden rounded-t-xl">
+    >      
+      <div className="relative h-64 overflow-hidden">
         <div className={cn(
           "absolute inset-0 bg-cover bg-center transition-transform duration-700 grayscale",
-          isHovered ? "scale-110" : "scale-100"
+          isHovered ? "scale-105" : "scale-100"
         )} 
         style={{ backgroundImage: `url(${imageUrl})` }} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
       
       <div className="p-6">
-        <div className="mb-2">
-          <span className="inline-block px-3 py-1 text-xs font-medium bg-black/20 text-black rounded-full dark:bg-white/20 dark:text-white">
+        <div className="mb-3">
+          <span className="inline-block px-2 py-1 text-xs font-medium bg-gray-100 text-gray-800 rounded-md dark:bg-white/10 dark:text-gray-200">
             {category}
           </span>
         </div>
-        <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
+        <h3 className="text-lg font-medium mb-2 text-black dark:text-white">
           {title}
         </h3>
-        <p className="text-gray-800 text-sm mb-4 dark:text-gray-200">
+        <p className="text-gray-600 text-sm mb-4 dark:text-gray-300">
           {description}
         </p>
         <div className={cn(
@@ -57,9 +55,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           isHovered ? "text-black dark:text-white" : "text-gray-700 dark:text-gray-300"
         )}>
           <span className="mr-2">View project</span>
-          <ArrowRight size={16} className={cn(
+          <ArrowRight size={14} className={cn(
             "transition-transform duration-300",
-            isHovered ? "transform translate-x-2" : ""
+            isHovered ? "transform translate-x-1" : ""
           )} />
         </div>
       </div>
