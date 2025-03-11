@@ -35,21 +35,9 @@ const Hero: React.FC = () => {
 
         <div className="flex flex-col items-center text-center">
           <TransitionEffect direction="up" delay={0.2}>
-            <h1 className="shiftnudge-heading mb-7 text-balance">
-              Bringing <span className="text-black dark:text-white relative">
-                Transformational
-                <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-black/20 dark:bg-white/20"></span>
-              </span> Design to <span className="text-black dark:text-white relative">
-                CivTech
-                <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-black/20 dark:bg-white/20"></span>
-              </span>
-            </h1>
-          </TransitionEffect>
-
-          <TransitionEffect direction="up" delay={0.3}>
-            <p className="shiftnudge-subheading max-w-2xl mb-10 text-pretty">
+            <h1 className="shiftnudge-heading mb-10 text-balance">
               Designing usable, accessible, and scalable software isn't easy. Let us do it for you.
-            </p>
+            </h1>
           </TransitionEffect>
 
           <TransitionEffect direction="up" delay={0.4}>
