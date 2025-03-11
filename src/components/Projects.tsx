@@ -5,27 +5,27 @@ import TransitionEffect from './TransitionEffect';
 
 const projectsData = [
   {
-    title: "Web App Redesign",
-    description: "Complete UX overhaul of a financial dashboard with improved information architecture and accessibility.",
-    category: "UX Design",
+    title: "Citizen Services Portal",
+    description: "A streamlined digital platform that transforms how citizens access government services, with improved accessibility and usability.",
+    category: "UX Research & Design",
     imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
   },
   {
-    title: "E-commerce Mobile App",
-    description: "User-centered shopping experience with intuitive navigation and seamless checkout flow.",
+    title: "Municipal App Redesign",
+    description: "Complete redesign of a city's mobile application, focusing on intuitive navigation and simplified service requests.",
     category: "App Design",
     imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
   },
   {
-    title: "Brand Identity System",
-    description: "Cohesive visual language and component system for a tech startup's digital presence.",
-    category: "Brand Design",
+    title: "Public Health Campaign",
+    description: "Visual system and digital strategy for a nationwide public health initiative, resulting in 40% increased engagement.",
+    category: "Brand & Digital",
     imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
   },
   {
-    title: "Healthcare Platform",
-    description: "Accessible interface designed to simplify complex medical information for patients.",
-    category: "UX Research",
+    title: "Government Intranet System",
+    description: "Internal platform redesign that improved workflow efficiency by 35% while enhancing information accessibility for staff.",
+    category: "UX/UI & Systems",
     imageUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
   },
 ];
@@ -39,7 +39,7 @@ const Projects: React.FC = () => {
             <span className="inline-block px-3 py-1 text-sm font-medium bg-black/5 rounded-full mb-3">
               Selected Work
             </span>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Recent Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Public Sector Projects</h2>
           </div>
         </TransitionEffect>
 
