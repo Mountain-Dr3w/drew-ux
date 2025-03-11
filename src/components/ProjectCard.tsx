@@ -29,7 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         transitionDelay: `${delay}s`,
       }}
     >
-      <div className="absolute top-2 right-2 w-20 h-20 bg-gradient-to-br from-gray-500/20 to-gray-700/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
+      <div className="absolute top-2 right-2 w-20 h-20 bg-gradient-to-br from-blue-500/10 to-gray-700/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
       
       <div className="relative h-72 overflow-hidden">
         <div className={cn(
@@ -42,7 +42,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       
       <div className="p-6">
         <div className="mb-2">
-          <span className="inline-block px-3 py-1 text-xs font-medium bg-gray-200 dark:bg-gray-800/40 rounded-full text-gray-700 dark:text-gray-300">
+          <span className="inline-block px-3 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 rounded-full text-gray-700 dark:text-gray-300">
             {category}
           </span>
         </div>
@@ -54,7 +54,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </p>
         <div className={cn(
           "flex items-center font-medium text-sm transition-all duration-300",
-          isHovered ? "text-gray-700 dark:text-gray-300" : "text-gray-400"
+          isHovered ? "text-blue-600 dark:text-blue-400" : "text-gray-400"
         )}>
           <span className="mr-2">View project</span>
           <ArrowRight size={16} className={cn(
