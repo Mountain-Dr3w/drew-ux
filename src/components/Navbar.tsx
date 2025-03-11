@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" className="text-xl font-medium tracking-tight gradient-text">
-          portfolio
+          District Creative
         </a>
 
         {/* Desktop Navigation */}
@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-400 link-underline transition-colors"
+              className="text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 link-underline transition-colors"
             >
               {item}
             </a>
@@ -81,7 +81,7 @@ const Navbar: React.FC = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-xl font-medium text-gray-800 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-400"
+              className="text-xl font-medium text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
               onClick={() => setMobileMenuOpen(false)}
             >
               {item}
