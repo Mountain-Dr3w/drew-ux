@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 px-4 md:px-8',
         isScrolled 
-          ? 'bg-white/80 backdrop-blur-lg shadow-sm dark:bg-[#0f0f12]/80 dark:border-b dark:border-white/5' 
+          ? 'bg-background/80 backdrop-blur-lg shadow-sm dark:bg-background/80 dark:border-b dark:border-border' 
           : 'bg-transparent'
       )}
     >
@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-400 link-underline transition-colors"
+              className="text-sm font-medium text-foreground hover:text-accent/80 link-underline transition-colors"
             >
               {item}
             </a>
@@ -50,19 +50,19 @@ const Navbar: React.FC = () => {
         >
           <span
             className={cn(
-              'w-6 h-0.5 bg-gray-800 dark:bg-gray-200 transition-transform duration-300',
+              'w-6 h-0.5 bg-foreground transition-transform duration-300',
               mobileMenuOpen && 'transform rotate-45 translate-y-2'
             )}
           />
           <span
             className={cn(
-              'w-6 h-0.5 bg-gray-800 dark:bg-gray-200 transition-opacity duration-300',
+              'w-6 h-0.5 bg-foreground transition-opacity duration-300',
               mobileMenuOpen && 'opacity-0'
             )}
           />
           <span
             className={cn(
-              'w-6 h-0.5 bg-gray-800 dark:bg-gray-200 transition-transform duration-300',
+              'w-6 h-0.5 bg-foreground transition-transform duration-300',
               mobileMenuOpen && 'transform -rotate-45 -translate-y-2'
             )}
           />
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       <div
         className={cn(
-          'fixed inset-0 top-16 bg-white dark:bg-[#0f0f12] z-40 transform transition-transform duration-300 ease-in-out md:hidden',
+          'fixed inset-0 top-16 bg-background z-40 transform transition-transform duration-300 ease-in-out md:hidden',
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         )}
       >
@@ -81,7 +81,7 @@ const Navbar: React.FC = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-xl font-medium text-gray-800 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-400"
+              className="text-xl font-medium text-foreground hover:text-accent/80"
               onClick={() => setMobileMenuOpen(false)}
             >
               {item}
