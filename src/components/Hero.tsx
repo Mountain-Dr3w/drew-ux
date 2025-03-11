@@ -12,12 +12,6 @@ const Hero: React.FC = () => {
       
       <div className="max-w-7xl mx-auto px-4 md:px-8 w-full">
         <div className="flex flex-col items-center text-center mt-20">
-          <TransitionEffect direction="up" delay={0.1}>
-            <span className="inline-block px-3 py-1 text-sm font-medium bg-secondary rounded-full mb-6 text-accent/90">
-              Public Sector Design Consultancy
-            </span>
-          </TransitionEffect>
-
           <TransitionEffect direction="up" delay={0.2}>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight max-w-4xl mb-6 text-balance">
               Creating <span className="gradient-text">transformative</span> digital services for <span className="gradient-text">government</span> and <span className="gradient-text">citizens</span>
