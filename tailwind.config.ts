@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -100,6 +99,10 @@ export default {
 					'0%': { opacity: '0', transform: 'translateY(20px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
 				},
+				'fade-in-fast': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
 				'fade-out': {
 					'0%': { opacity: '1', transform: 'translateY(0)' },
 					'100%': { opacity: '0', transform: 'translateY(20px)' }
@@ -128,17 +131,33 @@ export default {
 					'0%': { filter: 'blur(8px)', opacity: '0' },
 					'100%': { filter: 'blur(0)', opacity: '1' }
 				},
-				float: {
+				'float': {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' }
 				},
-				pulse: {
+				'pulse': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.7' }
 				},
-				glow: {
+				'glow': {
 					'0%, 100%': { boxShadow: '0 0 15px rgba(30, 174, 219, 0.5)' },
 					'50%': { boxShadow: '0 0 30px rgba(30, 174, 219, 0.8)' }
+				},
+				'scale-up': {
+					'0%': { transform: 'scale(0.95)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'bg-shimmer': {
+					'0%': { backgroundPosition: '0% 0%' },
+					'100%': { backgroundPosition: '100% 100%' }
+				},
+				'text-shimmer': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'100%': { backgroundPosition: '100% 50%' }
+				},
+				'gradient-shift': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' }
 				}
 			},
 			animation: {
@@ -156,6 +175,13 @@ export default {
 				'float': 'float 6s ease-in-out infinite',
 				'pulse-slow': 'pulse 4s ease-in-out infinite',
 				'glow': 'glow 2s ease-in-out infinite',
+				'scale-up': 'scale-up 0.6s ease-out',
+				'bg-shimmer': 'bg-shimmer 3s ease infinite',
+				'text-shimmer': 'text-shimmer 2s ease infinite',
+				'gradient-shift': 'gradient-shift 4s ease infinite'
+			},
+			backgroundSize: {
+				'300%': '300% 300%',
 			}
 		}
 	},
