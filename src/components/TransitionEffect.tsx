@@ -4,12 +4,11 @@ import React, { useEffect, useRef } from 'react';
 interface TransitionEffectProps {
   children: React.ReactNode;
   delay?: number;
-  direction?: 'up' | 'down' | 'left' | 'right' | 'scale' | 'fade';
+  direction?: 'up' | 'down' | 'left' | 'right';
   duration?: number;
   once?: boolean;
   className?: string;
   threshold?: number;
-  distance?: number;
 }
 
 const TransitionEffect: React.FC<TransitionEffectProps> = ({
@@ -20,7 +19,6 @@ const TransitionEffect: React.FC<TransitionEffectProps> = ({
   once = true,
   className = '',
   threshold = 0.1,
-  distance = 20,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -58,25 +56,19 @@ const TransitionEffect: React.FC<TransitionEffectProps> = ({
     };
   }, [delay, once, threshold]);
 
-  let transformInitial = '';
+  let transformInitial = 'translateY(20px)';
   switch (direction) {
     case 'up':
-      transformInitial = `translateY(${distance}px)`;
+      transformInitial = 'translateY(20px)';
       break;
     case 'down':
-      transformInitial = `translateY(-${distance}px)`;
+      transformInitial = 'translateY(-20px)';
       break;
     case 'left':
-      transformInitial = `translateX(${distance}px)`;
+      transformInitial = 'translateX(20px)';
       break;
     case 'right':
-      transformInitial = `translateX(-${distance}px)`;
-      break;
-    case 'scale':
-      transformInitial = 'scale(0.95)';
-      break;
-    case 'fade':
-      transformInitial = 'none';
+      transformInitial = 'translateX(-20px)';
       break;
   }
 
@@ -86,7 +78,6 @@ const TransitionEffect: React.FC<TransitionEffectProps> = ({
       className={`animate-on-scroll ${className}`}
       style={{
         transform: transformInitial,
-        opacity: 0,
         transition: `opacity ${duration}s ease, transform ${duration}s ease`,
         transitionDelay: `${delay}s`,
       }}
