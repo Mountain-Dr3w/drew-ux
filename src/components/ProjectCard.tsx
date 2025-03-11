@@ -22,13 +22,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <div
-      className="group relative overflow-hidden rounded-2xl glass-card transition-all duration-500 h-full"
+      className="group relative overflow-hidden rounded-2xl glass-card transition-all duration-500 h-full hover:shadow-xl hover:shadow-purple-500/10"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
         transitionDelay: `${delay}s`,
       }}
     >
+      <div className="absolute top-2 right-2 w-20 h-20 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
+      
       <div className="relative h-72 overflow-hidden">
         <div className={cn(
           "absolute inset-0 bg-cover bg-center transition-transform duration-700",
@@ -40,19 +42,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       
       <div className="p-6">
         <div className="mb-2">
-          <span className="inline-block px-3 py-1 text-xs font-medium bg-black/5 rounded-full">
+          <span className="inline-block px-3 py-1 text-xs font-medium bg-purple-500/10 dark:bg-purple-500/20 rounded-full text-purple-700 dark:text-purple-300">
             {category}
           </span>
         </div>
-        <h3 className="text-xl font-semibold mb-2 group-hover:text-black transition-colors">
+        <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors">
           {title}
         </h3>
-        <p className="text-gray-600 text-sm mb-4">
+        <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
           {description}
         </p>
         <div className={cn(
           "flex items-center font-medium text-sm transition-all duration-300",
-          isHovered ? "text-black" : "text-gray-400"
+          isHovered ? "text-purple-500 dark:text-purple-400" : "text-gray-400"
         )}>
           <span className="mr-2">View project</span>
           <ArrowRight size={16} className={cn(

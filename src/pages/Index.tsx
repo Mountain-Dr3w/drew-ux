@@ -8,6 +8,9 @@ import Contact from '@/components/Contact';
 
 const Index: React.FC = () => {
   useEffect(() => {
+    // Set dark mode
+    document.documentElement.classList.add('dark');
+    
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -33,6 +36,8 @@ const Index: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden">
+      <div className="fixed inset-0 noise-bg pointer-events-none"></div>
+      <div className="fixed inset-0 grid-pattern pointer-events-none"></div>
       <Navbar />
       <main>
         <Hero />
