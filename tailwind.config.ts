@@ -67,18 +67,18 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				purple: {
-					DEFAULT: '#8b5cf6',
-					50: '#f5f3ff',
-					100: '#ede9fe',
-					200: '#ddd6fe',
-					300: '#c4b5fd',
-					400: '#a78bfa',
-					500: '#8b5cf6',
-					600: '#7c3aed',
-					700: '#6d28d9',
-					800: '#5b21b6',
-					900: '#4c1d95'
+				blue: {
+					DEFAULT: '#1EAEDB',
+					50: '#e6f7ff',
+					100: '#bae3ff',
+					200: '#7cc4fa',
+					300: '#4ca3f5',
+					400: '#1a88f3',
+					500: '#0c7be0',
+					600: '#0062b3',
+					700: '#0050a1',
+					800: '#003c75',
+					900: '#002855'
 				}
 			},
 			borderRadius: {
@@ -136,8 +136,8 @@ export default {
 					'50%': { opacity: '0.7' }
 				},
 				glow: {
-					'0%, 100%': { boxShadow: '0 0 15px rgba(139, 92, 246, 0.5)' },
-					'50%': { boxShadow: '0 0 30px rgba(139, 92, 246, 0.8)' }
+					'0%, 100%': { boxShadow: '0 0 15px rgba(30, 174, 219, 0.5)' },
+					'50%': { boxShadow: '0 0 30px rgba(30, 174, 219, 0.8)' }
 				}
 			},
 			animation: {

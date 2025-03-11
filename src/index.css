@@ -25,7 +25,7 @@
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 265 89% 66%;
+    --accent: 210 100% 56%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -66,7 +66,7 @@
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 265 89% 66%;
+    --accent: 210 100% 56%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -95,7 +95,7 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/70 backdrop-blur-md shadow-sm border border-white/20 rounded-2xl dark:bg-[#1a1a24]/50 dark:border-white/5 dark:shadow-purple-900/5;
+    @apply bg-white/70 backdrop-blur-md shadow-sm border border-white/20 rounded-2xl dark:bg-[#1a1a24]/50 dark:border-white/5 dark:shadow-blue-900/5;
   }
   
   .text-balance {
@@ -152,24 +152,24 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent;
   }
 
   .gradient-bg {
-    @apply bg-gradient-to-r from-purple-500/10 to-indigo-500/10;
+    @apply bg-gradient-to-r from-blue-500/10 to-cyan-500/10;
   }
 
-  .purple-glow {
+  .blue-glow {
     @apply relative;
   }
 
-  .purple-glow::before {
+  .blue-glow::before {
     content: '';
-    @apply absolute -inset-1 blur-xl bg-purple-500/20 opacity-0 transition-opacity duration-300 rounded-full;
+    @apply absolute -inset-1 blur-xl bg-blue-500/20 opacity-0 transition-opacity duration-300 rounded-full;
     z-index: -1;
   }
 
-  .purple-glow:hover::before {
+  .blue-glow:hover::before {
     @apply opacity-100;
   }
 }
