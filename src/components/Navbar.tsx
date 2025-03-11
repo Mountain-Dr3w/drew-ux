@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 link-underline transition-colors"
+              className="text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-400 link-underline transition-colors"
             >
               {item}
             </a>
@@ -81,7 +81,7 @@ const Navbar: React.FC = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-xl font-medium text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
+              className="text-xl font-medium text-gray-800 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-400"
               onClick={() => setMobileMenuOpen(false)}
             >
               {item}
