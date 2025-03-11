@@ -34,15 +34,6 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="section-padding">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <TransitionEffect delay={0.1}>
-          <div className="mb-12 md:mb-16">
-            <span className="inline-block px-3 py-1 text-sm font-medium bg-black/5 rounded-full mb-3">
-              Selected Work
-            </span>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Public Sector Projects</h2>
-          </div>
-        </TransitionEffect>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projectsData.map((project, index) => (
             <TransitionEffect key={index} delay={0.1 + index * 0.1} threshold={0.2}>

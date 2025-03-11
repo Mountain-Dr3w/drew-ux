@@ -25,8 +25,11 @@ const Navbar: React.FC = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#" className="text-xl font-medium tracking-tight gradient-text">
-          District Creative
+        <a href="#" className="flex items-center">
+          <span className="text-xl font-bold tracking-tight text-white">
+            <span className="text-white mr-1">District</span>
+            <span className="text-accent font-semibold">Creative</span>
+          </span>
         </a>
 
         {/* Desktop Navigation */}

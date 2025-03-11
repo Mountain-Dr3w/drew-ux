@@ -14,22 +14,22 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center text-center mt-20">
           <TransitionEffect direction="up" delay={0.2}>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight max-w-4xl mb-6 text-balance">
-              Creating <span className="gradient-text">transformative</span> digital services for <span className="gradient-text">government</span> and <span className="gradient-text">citizens</span>
+              Bringing <span className="gradient-text">Transformational</span> Design to <span className="gradient-text">CivTech</span>
             </h1>
           </TransitionEffect>
 
           <TransitionEffect direction="up" delay={0.3}>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 text-pretty">
-              We're a specialized design consultancy helping public sector organizations improve citizen experiences through intuitive, accessible, and human-centered design.
+              Designing usable, accessible, and scalable software isn't easy. Let us do it for you.
             </p>
           </TransitionEffect>
 
           <TransitionEffect direction="up" delay={0.4}>
             <a
-              href="#projects"
+              href="#contact"
               className="group flex items-center justify-center space-x-2 bg-primary text-primary-foreground px-7 py-3 rounded-md hover:bg-primary/90 transition-colors duration-300 shadow-sm"
             >
-              <span>View our work</span>
+              <span>Work With Us</span>
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" 
