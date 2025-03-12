@@ -29,14 +29,6 @@ const Hero: React.FC = () => {
           <Paintbrush size={36} className="text-orange-500 dark:text-orange-400" strokeWidth={1.5} />
         </div>
         
-        {/* Paint splatter */}
-        <div className="absolute top-[30%] right-[40%]">
-          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M25 10C28 15 35 13 38 18C41 23 34 28 36 33C38 38 30 42 25 40C20 38 15 43 10 38C5 33 12 28 10 23C8 18 15 13 20 15C25 17 22 5 25 10Z" 
-                  fill="#9b87f5" fillOpacity="0.3" />
-          </svg>
-        </div>
-        
         {/* Accent shape */}
         <div className="absolute right-10 md:right-20 top-40 w-20 h-20 md:w-40 md:h-40 rounded-full border border-black/10 dark:border-white/10"></div>
       </div>
