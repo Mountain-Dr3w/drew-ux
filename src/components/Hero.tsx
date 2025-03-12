@@ -1,7 +1,7 @@
 
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Pencil, PenTool, Paintbrush } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -16,13 +16,31 @@ const Hero: React.FC = () => {
         <div className="absolute bottom-[30%] right-[15%] w-32 h-8 bg-gray-100/20 dark:bg-gray-800/20 rounded-sm transform -rotate-6"></div>
         <div className="absolute top-[25%] left-[20%] w-12 h-12 border-2 border-gray-300/30 dark:border-gray-700/30 transform rotate-45"></div>
         
-        {/* Decorative dots pattern */}
-        <div className="absolute -left-10 top-20 w-80 h-80 opacity-10 dark:opacity-5">
-          <div className="absolute w-2 h-2 rounded-full bg-black dark:bg-white left-10 top-10"></div>
-          <div className="absolute w-2 h-2 rounded-full bg-black dark:bg-white left-20 top-40"></div>
-          <div className="absolute w-2 h-2 rounded-full bg-black dark:bg-white left-40 top-20"></div>
-          <div className="absolute w-1 h-1 rounded-full bg-black dark:bg-white left-60 top-30"></div>
-          <div className="absolute w-1 h-1 rounded-full bg-black dark:bg-white left-70 top-60"></div>
+        {/* Artsy pencil elements */}
+        <div className="absolute top-[15%] right-[25%] opacity-40 transform rotate-[-30deg]">
+          <Pencil size={48} className="text-purple-500 dark:text-purple-400" strokeWidth={1.5} />
+        </div>
+        
+        <div className="absolute bottom-[25%] left-[18%] opacity-30 transform rotate-[15deg]">
+          <PenTool size={42} className="text-blue-500 dark:text-blue-400" strokeWidth={1.5} />
+        </div>
+        
+        <div className="absolute top-[40%] left-[30%] opacity-20 transform rotate-[-15deg]">
+          <Paintbrush size={36} className="text-orange-500 dark:text-orange-400" strokeWidth={1.5} />
+        </div>
+        
+        {/* Stylized pencil */}
+        <div className="absolute bottom-[35%] right-[20%] w-1 h-24 bg-gradient-to-b from-yellow-400 to-yellow-500 transform rotate-[35deg]">
+          <div className="absolute -top-2 -left-1 right-0 h-4 bg-gray-800 dark:bg-gray-700 rounded-t-sm"></div>
+          <div className="absolute -bottom-3 -left-1 w-3 h-6 bg-pink-400 dark:bg-pink-500 transform rotate-[0deg]"></div>
+        </div>
+        
+        {/* Paint splatter */}
+        <div className="absolute top-[30%] right-[40%]">
+          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25 10C28 15 35 13 38 18C41 23 34 28 36 33C38 38 30 42 25 40C20 38 15 43 10 38C5 33 12 28 10 23C8 18 15 13 20 15C25 17 22 5 25 10Z" 
+                  fill="#9b87f5" fillOpacity="0.3" />
+          </svg>
         </div>
         
         {/* Accent shape */}
