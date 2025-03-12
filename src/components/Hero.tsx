@@ -27,13 +27,13 @@ const Hero: React.FC = () => {
         {/* Subtle tag line above heading */}
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 flex flex-wrap justify-center gap-2">
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-green-100/50 dark:bg-green-900/20 text-green-700 dark:text-green-300">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-100/50 dark:bg-gray-800/20 text-gray-700 dark:text-gray-300">
               Accessibility Compliance
             </span>
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-blue-100/50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-100/50 dark:bg-gray-800/20 text-gray-700 dark:text-gray-300">
               End-to-End Design
             </span>
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-purple-100/50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-100/50 dark:bg-gray-800/20 text-gray-700 dark:text-gray-300">
               Product Strategy
             </span>
           </div>
