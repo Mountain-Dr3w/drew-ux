@@ -16,20 +16,6 @@ const Hero: React.FC = () => {
         <div className="absolute bottom-[30%] right-[15%] w-32 h-8 bg-gray-100/20 dark:bg-gray-800/20 rounded-sm transform -rotate-6"></div>
         <div className="absolute top-[25%] left-[20%] w-12 h-12 border-2 border-gray-300/30 dark:border-gray-700/30 transform rotate-45"></div>
         
-        {/* Sketch lines */}
-        <div className="absolute top-1/4 left-[5%] w-20 h-[1px] bg-gray-300/50 dark:bg-gray-700/50 transform rotate-[30deg]"></div>
-        <div className="absolute top-1/3 right-[8%] w-16 h-[1px] bg-gray-300/40 dark:bg-gray-700/40 transform -rotate-[15deg]"></div>
-        <div className="absolute bottom-1/3 left-[15%] w-24 h-[1px] bg-gray-300/40 dark:bg-gray-700/40 transform rotate-[45deg]"></div>
-        
-        {/* Squiggly line effect */}
-        <svg className="absolute top-1/3 left-[30%] w-24 h-8 opacity-40" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,10 C20,0 30,20 50,10 C70,0 80,20 100,10" fill="none" stroke="currentColor" strokeWidth="1" className="text-gray-400 dark:text-gray-600" />
-        </svg>
-        
-        <svg className="absolute bottom-1/4 right-[25%] w-20 h-8 opacity-30" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,10 C30,20 70,0 100,10" fill="none" stroke="currentColor" strokeWidth="1" className="text-gray-500 dark:text-gray-500" />
-        </svg>
-        
         {/* Decorative dots pattern */}
         <div className="absolute -left-10 top-20 w-80 h-80 opacity-10 dark:opacity-5">
           <div className="absolute w-2 h-2 rounded-full bg-black dark:bg-white left-10 top-10"></div>
