@@ -29,12 +29,6 @@ const Hero: React.FC = () => {
           <Paintbrush size={36} className="text-orange-500 dark:text-orange-400" strokeWidth={1.5} />
         </div>
         
-        {/* Stylized pencil */}
-        <div className="absolute bottom-[35%] right-[20%] w-1 h-24 bg-gradient-to-b from-yellow-400 to-yellow-500 transform rotate-[35deg]">
-          <div className="absolute -top-2 -left-1 right-0 h-4 bg-gray-800 dark:bg-gray-700 rounded-t-sm"></div>
-          <div className="absolute -bottom-3 -left-1 w-3 h-6 bg-pink-400 dark:bg-pink-500 transform rotate-[0deg]"></div>
-        </div>
-        
         {/* Paint splatter */}
         <div className="absolute top-[30%] right-[40%]">
           <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
