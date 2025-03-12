@@ -1,7 +1,7 @@
 
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
-import { Check, Star } from 'lucide-react';
+import { Check, Star, ArrowRight } from 'lucide-react';
 
 const About: React.FC = () => {
   const skills = [
@@ -14,8 +14,18 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+    <section id="about" className="min-h-screen py-24 md:py-32 relative flex items-center">
+      {/* Background elements for personality */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 -left-10 -right-10 h-32 rounded-[50%] bg-gradient-to-r from-black/2 via-black/1 to-muted blur-3xl -z-10 transform translate-y-[-45%] dark:from-white/2 dark:via-white/1 dark:to-muted" />
+        
+        {/* Lofi sketch elements */}
+        <div className="absolute top-20 right-[5%] w-24 h-24 border-2 border-dashed border-gray-300/40 dark:border-gray-700/40 rounded-md rotate-12 opacity-60"></div>
+        <div className="absolute bottom-[30%] right-[15%] w-32 h-8 bg-gray-100/20 dark:bg-gray-800/20 rounded-sm transform -rotate-6"></div>
+        <div className="absolute top-[25%] left-[20%] w-12 h-12 border-2 border-gray-300/30 dark:border-gray-700/30 transform rotate-45"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 md:px-8 w-full relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div>
             <TransitionEffect delay={0.1}>
@@ -45,6 +55,19 @@ const About: React.FC = () => {
                   ))}
                 </div>
               </div>
+            </TransitionEffect>
+            
+            <TransitionEffect delay={0.4}>
+              <a
+                href="#contact"
+                className="group inline-flex items-center justify-center space-x-2 bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-full hover:bg-black/90 dark:hover:bg-white/90 transition-colors duration-300"
+              >
+                <span className="font-medium text-sm">Work With Us</span>
+                <ArrowRight 
+                  size={16} 
+                  className="transition-transform duration-300 group-hover:translate-x-1" 
+                />
+              </a>
             </TransitionEffect>
           </div>
           
