@@ -2,12 +2,14 @@
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface ProjectCardProps {
   title: string;
   description: string;
   category: string;
   imageUrl: string;
+  url?: string;
   delay?: number;
 }
 
@@ -16,6 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   category,
   imageUrl,
+  url = "#",
   delay = 0,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -50,16 +53,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className="text-gray-600 text-sm mb-4 dark:text-gray-300">
           {description}
         </p>
-        <div className={cn(
-          "flex items-center font-medium text-sm transition-all duration-300",
-          isHovered ? "text-black dark:text-white" : "text-gray-700 dark:text-gray-300"
-        )}>
-          <span className="mr-2">View project</span>
-          <ArrowRight size={14} className={cn(
-            "transition-transform duration-300",
-            isHovered ? "transform translate-x-1" : ""
-          )} />
-        </div>
+        <Link to={url} className="block">
+          <div className={cn(
+            "flex items-center font-medium text-sm transition-all duration-300",
+            isHovered ? "text-black dark:text-white" : "text-gray-700 dark:text-gray-300"
+          )}>
+            <span className="mr-2">View project</span>
+            <ArrowRight size={14} className={cn(
+              "transition-transform duration-300",
+              isHovered ? "transform translate-x-1" : ""
+            )} />
+          </div>
+        </Link>
       </div>
     </div>
   );
