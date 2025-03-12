@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import CaseStudyHeader from '@/components/case-study/CaseStudyHeader';
 import CaseStudyHero from '@/components/case-study/CaseStudyHero';
@@ -50,8 +49,6 @@ const VerifluxCaseStudy: React.FC = () => {
           caseNumber="Case Study #1"
           title="Establishing Design Culture and Facilitating User Adoption for a Waste Traceability Startup"
           description="How Veriflux transformed its product experience to drive user adoption and create a sustainable impact in the food waste management industry."
-          imageUrl="https://images.unsplash.com/photo-1616443580100-3155fefe2ff3"
-          imageAlt="Garbage truck for the Veriflux waste traceability platform"
         />
 
         <BackgroundSection />

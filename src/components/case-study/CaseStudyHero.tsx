@@ -6,16 +6,12 @@ interface CaseStudyHeroProps {
   caseNumber: string;
   title: string;
   description: string;
-  imageUrl: string;
-  imageAlt: string;
 }
 
 const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({
   caseNumber,
   title,
-  description,
-  imageUrl,
-  imageAlt
+  description
 }) => {
   return (
     <section className="mb-16 md:mb-24">
@@ -32,16 +28,6 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({
           {description}
         </p>
       </TransitionEffect>
-      
-      <div className="mt-10 grid place-items-center">
-        <div className="w-full max-w-4xl rounded-lg overflow-hidden bg-black/5 dark:bg-white/5 aspect-video">
-          <img 
-            src={imageUrl} 
-            alt={imageAlt} 
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
     </section>
   );
 };
