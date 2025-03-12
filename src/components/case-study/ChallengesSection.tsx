@@ -31,17 +31,6 @@ const ChallengesSection: React.FC = () => {
           <p>The company needed to scale quickly while maintaining quality and implementing a sustainable design process.</p>
         </li>
       </ul>
-      
-      <div className="mt-8 grid gap-6 md:grid-cols-2">
-        <div className="bg-card p-6 rounded-lg border border-border overflow-hidden">
-          <img 
-            src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
-            alt="Old dashboard design showing usability issues"
-            className="rounded-md w-full h-auto mb-3"
-          />
-          <p className="text-sm text-muted-foreground italic">The original dashboard had usability issues and lacked clear information hierarchy.</p>
-        </div>
-      </div>
     </CaseStudySection>
   );
 };
