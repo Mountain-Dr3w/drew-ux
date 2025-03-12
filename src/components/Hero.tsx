@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4">
             <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-black/5 dark:bg-white/5 text-black/70 dark:text-white/70">
-              Design Collective
+              Accessibility Compliance
             </span>
           </div>
         </TransitionEffect>
