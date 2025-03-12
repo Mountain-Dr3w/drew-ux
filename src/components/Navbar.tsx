@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import Logo from './Logo';
+import { Building, Flag } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,7 +33,7 @@ const Navbar: React.FC = () => {
             primaryColor="#8B5CF6" 
             secondaryColor="#D6BCFA"
             size="sm"
-            customPath="M5 5L19 5L19 19L5 19L5 5ZM9 9L15 9L15 15L9 15L9 9Z"
+            customPath="M12 3L20 7V17L12 21L4 17V7L12 3ZM12 12L16 14V10L12 8L8 10V14L12 12Z"
             customViewBox="0 0 24 24"
           />
           <span className="text-base font-medium tracking-tight text-foreground">
