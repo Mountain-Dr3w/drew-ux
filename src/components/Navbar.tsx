@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import Logo from './Logo';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,7 +26,15 @@ const Navbar: React.FC = () => {
       )}
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center gap-2">
+          <Logo 
+            shape="custom"
+            primaryColor="#8B5CF6" 
+            secondaryColor="#D6BCFA"
+            size="sm"
+            customPath="M5 5L19 5L19 19L5 19L5 5ZM9 9L15 9L15 15L9 15L9 9Z"
+            customViewBox="0 0 24 24"
+          />
           <span className="text-base font-medium tracking-tight text-foreground">
             <span className="mr-1">District</span>
             <span className="font-medium">Creative</span>
