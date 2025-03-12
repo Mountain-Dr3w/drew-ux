@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center text-center">
           <TransitionEffect direction="up" delay={0.2}>
             <h1 className="shiftnudge-heading mb-10 text-balance">
-              Designing usable, accessible, and scalable software isn't easy. Let us do it for you.
+              Designing usable, accessible, and scalable software isn't easy. <span className="font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Let us do it for you.</span>
             </h1>
           </TransitionEffect>
 
