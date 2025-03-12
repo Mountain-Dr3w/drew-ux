@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import CaseStudyHeader from '@/components/case-study/CaseStudyHeader';
 import CaseStudyHero from '@/components/case-study/CaseStudyHero';
@@ -46,16 +47,16 @@ const VerifluxCaseStudy: React.FC = () => {
 
       <main className="container py-12 md:py-16 lg:py-24">
         <CaseStudyHero 
-          caseNumber="Case Study #1"
-          title="Establishing Design Culture and Facilitating User Adoption for a Waste Traceability Startup"
-          description="How Veriflux transformed its product experience to drive user adoption and create a sustainable impact in the food waste management industry."
+          caseNumber="Case Study"
+          title="Transforming a Food Waste Platform through Strategic UX Design"
+          description="How Veriflux evolved from a functional tool to an intuitive platform that drives user adoption and creates sustainable impact in the food waste management industry."
         />
 
         <BackgroundSection />
         <ChallengesSection />
+        <ProblemStatementSection />
         <ApproachSection />
         <UserResearchSection />
-        <ProblemStatementSection />
         <SolutionsSection />
         <DesignAuditSection />
         <DesignImprovementsSection />

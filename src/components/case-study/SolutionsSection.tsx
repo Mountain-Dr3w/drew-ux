@@ -1,41 +1,93 @@
 
 import React from 'react';
 import CaseStudySection from './CaseStudySection';
+import { Palette, LayoutGrid, BarChart2 } from 'lucide-react';
 
 const SolutionsSection: React.FC = () => {
   return (
     <CaseStudySection title="Solutions">
-      <h3 className="text-xl font-medium mb-4">Design System Creation</h3>
-      <p className="text-muted-foreground mb-6">
-        We developed a comprehensive design system including component libraries, typography guidelines, and color systems. This established a foundation for consistent UX across all platform touchpoints.
-      </p>
-      
-      <h3 className="text-xl font-medium mb-4">Information Architecture Overhaul</h3>
-      <p className="text-muted-foreground mb-6">
-        We restructured the platform's navigation and content hierarchy based on user needs, creating intuitive pathways for different user types and common tasks.
-      </p>
-      
-      <h3 className="text-xl font-medium mb-4">Data Visualization Enhancements</h3>
-      <p className="text-muted-foreground mb-6">
-        We redesigned dashboards and reports to communicate insights more effectively, using appropriate chart types and visual hierarchies to highlight key metrics and trends.
-      </p>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-        <div className="bg-card p-6 rounded-lg border border-border overflow-hidden">
-          <img 
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
-            alt="Design system components"
-            className="rounded-md w-full h-auto mb-3"
-          />
-          <p className="text-sm text-muted-foreground">The new design system created consistency across all platform elements.</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+        <div className="bg-card rounded-lg border border-border overflow-hidden">
+          <div className="p-6 border-b border-border">
+            <div className="bg-blue-100 dark:bg-blue-900/30 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <Palette className="text-blue-600 dark:text-blue-400" size={24} />
+            </div>
+            <h3 className="text-xl font-medium mb-2">Design System Creation</h3>
+            <p className="text-muted-foreground">
+              We developed a comprehensive design system including component libraries, typography guidelines, and color systems.
+            </p>
+          </div>
+          <div className="px-6 py-4 bg-muted/30">
+            <p className="text-sm text-muted-foreground">
+              Established a foundation for consistent UX across all platform touchpoints.
+            </p>
+          </div>
         </div>
-        <div className="bg-card p-6 rounded-lg border border-border overflow-hidden">
-          <img 
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
-            alt="Information architecture diagrams"
-            className="rounded-md w-full h-auto mb-3"
-          />
-          <p className="text-sm text-muted-foreground">Restructured navigation and content hierarchy for intuitive user flows.</p>
+        
+        <div className="bg-card rounded-lg border border-border overflow-hidden">
+          <div className="p-6 border-b border-border">
+            <div className="bg-purple-100 dark:bg-purple-900/30 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <LayoutGrid className="text-purple-600 dark:text-purple-400" size={24} />
+            </div>
+            <h3 className="text-xl font-medium mb-2">Information Architecture</h3>
+            <p className="text-muted-foreground">
+              We restructured the platform's navigation and content hierarchy based on user needs and common tasks.
+            </p>
+          </div>
+          <div className="px-6 py-4 bg-muted/30">
+            <p className="text-sm text-muted-foreground">
+              Created intuitive pathways for different user types and workflows.
+            </p>
+          </div>
+        </div>
+        
+        <div className="bg-card rounded-lg border border-border overflow-hidden">
+          <div className="p-6 border-b border-border">
+            <div className="bg-green-100 dark:bg-green-900/30 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <BarChart2 className="text-green-600 dark:text-green-400" size={24} />
+            </div>
+            <h3 className="text-xl font-medium mb-2">Data Visualization</h3>
+            <p className="text-muted-foreground">
+              We redesigned dashboards and reports to communicate insights more effectively and highlight key metrics.
+            </p>
+          </div>
+          <div className="px-6 py-4 bg-muted/30">
+            <p className="text-sm text-muted-foreground">
+              Used appropriate chart types and visual hierarchies for data clarity.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div className="bg-card p-8 rounded-lg border border-border mb-8">
+        <h3 className="text-xl font-medium mb-4">Design Process</h3>
+        
+        <div className="relative">
+          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border"></div>
+          
+          <div className="relative pl-12 pb-10">
+            <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-blue-500 border-4 border-background"></div>
+            <h4 className="font-medium text-lg mb-2">Discovery & Research</h4>
+            <p className="text-muted-foreground mb-2">We began with extensive user research to understand pain points and opportunities.</p>
+          </div>
+          
+          <div className="relative pl-12 pb-10">
+            <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-purple-500 border-4 border-background"></div>
+            <h4 className="font-medium text-lg mb-2">Design & Prototyping</h4>
+            <p className="text-muted-foreground mb-2">We created wireframes, developed the design system, and built interactive prototypes.</p>
+          </div>
+          
+          <div className="relative pl-12 pb-10">
+            <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-amber-500 border-4 border-background"></div>
+            <h4 className="font-medium text-lg mb-2">Testing & Iteration</h4>
+            <p className="text-muted-foreground mb-2">We conducted usability testing with actual users and refined our designs based on feedback.</p>
+          </div>
+          
+          <div className="relative pl-12">
+            <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-green-500 border-4 border-background"></div>
+            <h4 className="font-medium text-lg mb-2">Implementation & Handoff</h4>
+            <p className="text-muted-foreground">We collaborated with developers to implement the design system and ensure design fidelity.</p>
+          </div>
         </div>
       </div>
     </CaseStudySection>

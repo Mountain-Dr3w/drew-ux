@@ -1,49 +1,78 @@
 
 import React from 'react';
 import CaseStudySection from './CaseStudySection';
+import { Lightbulb, Target, LineChart } from 'lucide-react';
 
 const UserResearchSection: React.FC = () => {
   return (
     <CaseStudySection title="User Research">
-      <h3 className="text-xl font-medium mb-4">Research Objectives</h3>
-      <ul className="space-y-2 text-muted-foreground mb-6">
-        <li className="flex items-start gap-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-          <span>Understand user workflows and pain points within the current platform</span>
-        </li>
-        <li className="flex items-start gap-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-          <span>Identify key metrics and data points most valuable to users</span>
-        </li>
-        <li className="flex items-start gap-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-          <span>Discover opportunities for improving engagement and retention</span>
-        </li>
-      </ul>
-      
-      <h3 className="text-xl font-medium mb-4">Methods</h3>
-      <p className="text-muted-foreground mb-4">
-        We conducted 15 in-depth interviews with current and potential users, performed usability tests on the existing platform, and analyzed usage data to identify patterns.
-      </p>
-      
-      <h3 className="text-xl font-medium mb-4">Results</h3>
-      <p className="text-muted-foreground mb-4">
-        Our research revealed several key insights that informed our redesign:
-      </p>
-      <ul className="space-y-2 text-muted-foreground mb-6">
-        <li className="flex items-start gap-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-          <span>Users wanted clearer visualization of waste diversion metrics and progress over time</span>
-        </li>
-        <li className="flex items-start gap-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-          <span>The platform needed to support different user roles more effectively (facility managers vs. sustainability teams)</span>
-        </li>
-        <li className="flex items-start gap-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-          <span>Onboarding and education were critical to help users understand the value of waste tracking</span>
-        </li>
-      </ul>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="bg-card p-6 rounded-lg border border-border h-full">
+          <div className="mb-4 bg-blue-100 dark:bg-blue-900/30 w-10 h-10 rounded-full flex items-center justify-center">
+            <Target className="text-blue-600 dark:text-blue-400" size={20} />
+          </div>
+          <h3 className="text-xl font-medium mb-3">Research Objectives</h3>
+          <ul className="space-y-3 text-muted-foreground">
+            <li className="flex items-start gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
+              <span>Understand user workflows and pain points</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
+              <span>Identify key metrics most valuable to users</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
+              <span>Discover opportunities for improving engagement</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div className="bg-card p-6 rounded-lg border border-border h-full">
+          <div className="mb-4 bg-purple-100 dark:bg-purple-900/30 w-10 h-10 rounded-full flex items-center justify-center">
+            <LineChart className="text-purple-600 dark:text-purple-400" size={20} />
+          </div>
+          <h3 className="text-xl font-medium mb-3">Methods</h3>
+          <p className="text-muted-foreground mb-3">
+            We employed a mixed-methods approach including:
+          </p>
+          <ul className="space-y-2 text-muted-foreground">
+            <li className="flex items-start gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
+              <span>15 in-depth user interviews</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
+              <span>Usability testing with 8 participants</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
+              <span>Competitive analysis of 5 similar platforms</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div className="bg-card p-6 rounded-lg border border-border h-full">
+          <div className="mb-4 bg-green-100 dark:bg-green-900/30 w-10 h-10 rounded-full flex items-center justify-center">
+            <Lightbulb className="text-green-600 dark:text-green-400" size={20} />
+          </div>
+          <h3 className="text-xl font-medium mb-3">Key Insights</h3>
+          <ul className="space-y-3 text-muted-foreground">
+            <li className="flex items-start gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
+              <span>Users wanted clearer visualization of waste metrics over time</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
+              <span>Different user roles needed role-specific views</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
+              <span>Onboarding was critical for understanding waste tracking value</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </CaseStudySection>
   );
 };

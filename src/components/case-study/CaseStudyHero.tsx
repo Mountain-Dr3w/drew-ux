@@ -19,12 +19,12 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({
         <div className="inline-block px-4 py-1 mb-4 text-sm font-medium bg-green-100 text-green-800 rounded-full dark:bg-green-900/30 dark:text-green-400">
           {caseNumber}
         </div>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter mb-8">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter mb-8 max-w-4xl">
           {title}
         </h1>
       </TransitionEffect>
       <TransitionEffect direction="up" delay={0.2}>
-        <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl">
+        <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl leading-relaxed">
           {description}
         </p>
       </TransitionEffect>
