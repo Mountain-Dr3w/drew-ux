@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import Logo from './Logo';
-import { Building, Flag } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,6 +53,12 @@ const Navbar: React.FC = () => {
               {item}
             </a>
           ))}
+          <Link
+            to="/case-study/veriflux"
+            className="text-sm font-medium text-foreground hover:text-black/60 dark:hover:text-white/60 transition-colors"
+          >
+            Case Study
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -100,6 +106,13 @@ const Navbar: React.FC = () => {
               {item}
             </a>
           ))}
+          <Link
+            to="/case-study/veriflux"
+            className="text-xl font-medium text-foreground hover:text-accent/80"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Case Study
+          </Link>
         </nav>
       </div>
     </header>
