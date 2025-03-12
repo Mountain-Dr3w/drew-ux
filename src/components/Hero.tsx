@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
                 href="#contact"
-                className="group inline-flex items-center justify-center space-x-2 bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-full hover:bg-black/90 dark:hover:bg-white/90 transition-colors duration-300 w-full sm:w-36"
+                className="group inline-flex items-center justify-center space-x-2 bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-full hover:bg-black/90 dark:hover:bg-white/90 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap"
               >
                 <span className="font-medium text-sm">Work With Us</span>
                 <ArrowRight 
@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
               
               <a
                 href="#projects"
-                className="group inline-flex items-center justify-center space-x-2 border border-black/10 dark:border-white/10 bg-transparent text-black dark:text-white px-6 py-3 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-300 w-full sm:w-36"
+                className="group inline-flex items-center justify-center space-x-2 border border-black/10 dark:border-white/10 bg-transparent text-black dark:text-white px-6 py-3 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap"
               >
                 <span className="font-medium text-sm">View Projects</span>
               </a>
