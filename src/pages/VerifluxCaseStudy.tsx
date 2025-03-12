@@ -63,8 +63,8 @@ const VerifluxCaseStudy: React.FC = () => {
           <div className="mt-10 grid place-items-center">
             <div className="w-full max-w-4xl rounded-lg overflow-hidden bg-black/5 dark:bg-white/5 aspect-video">
               <img 
-                src="/lovable-uploads/3e3a3ef7-21f6-4652-b638-6bac94b2828b.png" 
-                alt="Veriflux case study overview" 
+                src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" 
+                alt="Food waste collection truck for the Veriflux waste traceability platform" 
                 className="w-full h-full object-cover"
               />
             </div>
