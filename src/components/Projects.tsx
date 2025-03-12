@@ -5,8 +5,8 @@ import TransitionEffect from './TransitionEffect';
 
 const projectsData = [
   {
-    title: "Reimagining Food Waste Traceability",
-    description: "A streamlined digital platform that transforms how citizens access government services, with improved accessibility and usability.",
+    title: "Establishing Design Culture for Waste Traceability",
+    description: "How we helped Veriflux transform their product experience to drive user adoption and create a sustainable impact in food waste management.",
     category: "UX Research & Design",
     imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     url: "/case-study/veriflux",
