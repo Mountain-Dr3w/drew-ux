@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -8,15 +7,9 @@ import Contact from '@/components/Contact';
 
 const Index: React.FC = () => {
   useEffect(() => {
-    // Check if dark mode is saved in localStorage and apply it
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
+    // Force dark mode and store in localStorage
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
     
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
