@@ -1,7 +1,7 @@
 
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
-import { Check, Star, ArrowRight } from 'lucide-react';
+import { Check, Star } from 'lucide-react';
 
 const About: React.FC = () => {
   const skills = [
@@ -55,19 +55,6 @@ const About: React.FC = () => {
                   ))}
                 </div>
               </div>
-            </TransitionEffect>
-            
-            <TransitionEffect delay={0.4}>
-              <a
-                href="#contact"
-                className="group inline-flex items-center justify-center space-x-2 bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-full hover:bg-black/90 dark:hover:bg-white/90 transition-colors duration-300"
-              >
-                <span className="font-medium text-sm">Let's Collaborate</span>
-                <ArrowRight 
-                  size={16} 
-                  className="transition-transform duration-300 group-hover:translate-x-1" 
-                />
-              </a>
             </TransitionEffect>
           </div>
           
