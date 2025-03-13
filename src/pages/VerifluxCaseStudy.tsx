@@ -12,7 +12,6 @@ import DesignAuditSection from '@/components/case-study/DesignAuditSection';
 import DesignImprovementsSection from '@/components/case-study/DesignImprovementsSection';
 import NewFeaturesSection from '@/components/case-study/NewFeaturesSection';
 import ResultsSection from '@/components/case-study/ResultsSection';
-import NextCaseStudySection from '@/components/case-study/NextCaseStudySection';
 
 const VerifluxCaseStudy: React.FC = () => {
   useEffect(() => {
@@ -66,11 +65,6 @@ const VerifluxCaseStudy: React.FC = () => {
         <DesignImprovementsSection />
         <NewFeaturesSection />
         <ResultsSection />
-        
-        <NextCaseStudySection 
-          title="Municipal App Redesign"
-          link="#"
-        />
       </main>
     </div>
   );
