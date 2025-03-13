@@ -8,8 +8,15 @@ import Contact from '@/components/Contact';
 
 const Index: React.FC = () => {
   useEffect(() => {
-    // Set dark mode
-    document.documentElement.classList.add('dark');
+    // Check if dark mode is saved in localStorage and apply it
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
     
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {

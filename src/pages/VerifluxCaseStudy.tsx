@@ -18,6 +18,10 @@ const VerifluxCaseStudy: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     
+    // Set dark mode and store in localStorage
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+    
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
