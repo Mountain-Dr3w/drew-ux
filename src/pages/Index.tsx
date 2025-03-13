@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -7,10 +8,6 @@ import Contact from '@/components/Contact';
 
 const Index: React.FC = () => {
   useEffect(() => {
-    // Force dark mode and store in localStorage
-    document.documentElement.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
-    
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import Logo from './Logo';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,33 +53,37 @@ const Navbar: React.FC = () => {
               {item}
             </a>
           ))}
+          <ThemeToggle />
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden flex flex-col space-y-1.5 w-6 h-6 justify-center"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span
-            className={cn(
-              'w-6 h-0.5 bg-foreground transition-transform duration-300',
-              mobileMenuOpen && 'transform rotate-45 translate-y-2'
-            )}
-          />
-          <span
-            className={cn(
-              'w-6 h-0.5 bg-foreground transition-opacity duration-300',
-              mobileMenuOpen && 'opacity-0'
-            )}
-          />
-          <span
-            className={cn(
-              'w-6 h-0.5 bg-foreground transition-transform duration-300',
-              mobileMenuOpen && 'transform -rotate-45 -translate-y-2'
-            )}
-          />
-        </button>
+        {/* Mobile Menu Button and Theme Toggle */}
+        <div className="md:hidden flex items-center gap-4">
+          <ThemeToggle />
+          <button
+            className="flex flex-col space-y-1.5 w-6 h-6 justify-center"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span
+              className={cn(
+                'w-6 h-0.5 bg-foreground transition-transform duration-300',
+                mobileMenuOpen && 'transform rotate-45 translate-y-2'
+              )}
+            />
+            <span
+              className={cn(
+                'w-6 h-0.5 bg-foreground transition-opacity duration-300',
+                mobileMenuOpen && 'opacity-0'
+              )}
+            />
+            <span
+              className={cn(
+                'w-6 h-0.5 bg-foreground transition-transform duration-300',
+                mobileMenuOpen && 'transform -rotate-45 -translate-y-2'
+              )}
+            />
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
