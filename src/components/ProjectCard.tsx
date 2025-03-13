@@ -34,7 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     >      
       <div className="relative h-64 overflow-hidden">
         <div className={cn(
-          "absolute inset-0 bg-cover bg-center transition-transform duration-700 grayscale",
+          "absolute inset-0 bg-cover bg-center transition-transform duration-700",
           isHovered ? "scale-105" : "scale-100"
         )} 
         style={{ backgroundImage: `url(${imageUrl})` }} />
