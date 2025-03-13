@@ -5,12 +5,12 @@ import { Check, Star, ArrowRight } from 'lucide-react';
 
 const About: React.FC = () => {
   const skills = [
-    "Citizen Experience Design", 
-    "Service Blueprinting", 
-    "Accessibility Standards", 
-    "Public Engagement", 
-    "Digital Transformation", 
-    "Policy Implementation"
+    "Strategic User Research", 
+    "Information Architecture", 
+    "Interaction Design", 
+    "UI Systems Development", 
+    "Usability Testing", 
+    "Design Implementation"
   ];
 
   return (
@@ -30,22 +30,22 @@ const About: React.FC = () => {
           <div>
             <TransitionEffect delay={0.1}>
               <span className="inline-block px-3 py-1 text-sm font-medium bg-black/10 text-black rounded-full mb-3 dark:bg-white/10 dark:text-white">
-                Our Approach
+                UX Design Expertise
               </span>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 text-black dark:text-white">
-                We bridge the gap between policy goals and citizen needs
+                Transforming complex challenges into intuitive user experiences
               </h2>
             </TransitionEffect>
             
             <TransitionEffect delay={0.2}>
               <p className="text-gray-800 mb-6 text-pretty dark:text-gray-200">
-                With over 8 years of experience working with government agencies and public institutions, District Creative specializes in transforming complex public services into intuitive digital experiences. We understand the unique challenges of the public sector and design solutions that serve both operational needs and citizen expectations.
+                With over 8 years of strategic UX design experience, I specialize in transforming complex digital products into intuitive, user-centered experiences. My design approach balances business objectives with user needs, creating interfaces that drive engagement, adoption, and satisfaction across diverse platforms.
               </p>
             </TransitionEffect>
             
             <TransitionEffect delay={0.3}>
               <div className="mb-8">
-                <h3 className="text-lg font-medium mb-4 text-black dark:text-white">Expertise</h3>
+                <h3 className="text-lg font-medium mb-4 text-black dark:text-white">Core Competencies</h3>
                 <div className="grid grid-cols-2 gap-x-4 gap-y-3">
                   {skills.map((skill, index) => (
                     <div key={index} className="flex items-center space-x-2">
@@ -62,7 +62,7 @@ const About: React.FC = () => {
                 href="#contact"
                 className="group inline-flex items-center justify-center space-x-2 bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-full hover:bg-black/90 dark:hover:bg-white/90 transition-colors duration-300"
               >
-                <span className="font-medium text-sm">Work With Us</span>
+                <span className="font-medium text-sm">Let's Collaborate</span>
                 <ArrowRight 
                   size={16} 
                   className="transition-transform duration-300 group-hover:translate-x-1" 
@@ -84,9 +84,9 @@ const About: React.FC = () => {
                       </div>
                     </div>
                     <blockquote className="text-lg font-medium italic max-w-xs mb-4 text-balance text-black dark:text-white">
-                      "District Creative transformed our citizen services portal into an intuitive platform that citizens actually enjoy using."
+                      "Their strategic UX approach transformed our platform from functional to exceptional, resulting in measurable improvements in user adoption."
                     </blockquote>
-                    <cite className="text-sm text-gray-700 not-italic dark:text-gray-300">— Director of Digital Services, State Agency</cite>
+                    <cite className="text-sm text-gray-700 not-italic dark:text-gray-300">— Product Lead, Tech Startup</cite>
                   </div>
                 </div>
               </div>
