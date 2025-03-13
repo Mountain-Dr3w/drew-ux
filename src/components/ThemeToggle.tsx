@@ -15,9 +15,9 @@ const ThemeToggle: React.FC = () => {
       onPressedChange={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {theme === "dark" ? (
-        <Sun size={16} className="text-yellow-300" />
+        <Sun size={16} className="text-yellow-400" />
       ) : (
-        <Moon size={16} className="text-gray-700" />
+        <Moon size={16} className="text-gray-900" />
       )}
     </Toggle>
   );
