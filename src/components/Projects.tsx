@@ -12,10 +12,10 @@ const projectsData = [
     url: "/case-study/veriflux",
   },
   {
-    title: "Digital Banking Experience Redesign",
+    title: "Revolutionizing Logistics and Readiness for the USAF",
     description: "Creating an intuitive and accessible mobile banking platform that increased user engagement by 45% and reduced support tickets by 30%.",
     category: "UI/UX Design",
-    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    imageUrl: "/lovable-uploads/f0075149-b5c6-43b0-9085-723a84367eb7.png",
     url: "#",
   },
 ];
