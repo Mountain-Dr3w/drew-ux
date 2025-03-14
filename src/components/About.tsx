@@ -6,28 +6,20 @@ import { Check, Star } from 'lucide-react';
 const About: React.FC = () => {
   const qualities = [
     {
-      title: "Cross-functional Leadership",
-      description: "I lead complex initiatives across multiple teams, aligning product strategy with broader business objectives while mentoring junior designers."
+      title: "Strategic Leadership",
+      description: "I lead complex initiatives across teams, aligning product strategy with business objectives while mentoring junior designers and establishing frameworks that yield actionable insights."
     },
     {
-      title: "Systems Thinking",
-      description: "Beyond individual screens, I design cohesive systems and frameworks that scale across products, establishing consistent patterns that reduce design debt."
+      title: "Systems Design Expertise",
+      description: "I design cohesive systems that scale across products, establishing consistent patterns that reduce design debt and create measurable user experiences that drive business metrics."
     },
     {
-      title: "Strategic Problem Solving",
-      description: "I identify core business problems before jumping to solutions, framing challenges from multiple perspectives to discover the highest-impact opportunities."
-    },
-    {
-      title: "Technical Partnership",
+      title: "Technical Collaboration",
       description: "With deep knowledge of component architecture and design systems, I partner closely with engineering to create solutions that balance innovation with implementation realities."
     },
     {
-      title: "Research Direction",
-      description: "I establish research frameworks that yield actionable insights, turning user data into strategic roadmaps that drive product evolution."
-    },
-    {
-      title: "Business Impact Focus",
-      description: "My designs directly address key metrics and business goals, creating measurable user experiences that drive adoption, retention, and conversion."
+      title: "Business-Driven Approach",
+      description: "I identify core business problems before jumping to solutions, framing challenges from multiple perspectives to discover high-impact opportunities that drive adoption, retention, and conversion."
     }
   ];
 
@@ -58,10 +50,10 @@ const About: React.FC = () => {
           </div>
         </TransitionEffect>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {qualities.map((quality, index) => (
             <TransitionEffect key={index} delay={0.1 + (index * 0.1)}>
-              <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200/80 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-all duration-300">
+              <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200/80 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-all duration-300 h-full">
                 <h3 className="text-lg font-medium mb-3 text-black dark:text-white">
                   {quality.title}
                 </h3>
