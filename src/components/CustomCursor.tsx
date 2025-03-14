@@ -22,16 +22,33 @@ const CustomCursor: React.FC = () => {
 
     const handleElementHover = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      const isHoverable = 
-        target.tagName.toLowerCase() === 'a' || 
-        target.tagName.toLowerCase() === 'button' || 
-        target.role === 'button' ||
-        target.tagName.toLowerCase() === 'input' ||
-        target.tagName.toLowerCase() === 'textarea' ||
-        target.tagName.toLowerCase() === 'select' ||
-        target.hasAttribute('tabindex');
       
-      setIsHovering(isHoverable);
+      // Check if the target is or is inside a clickable element
+      const isClickable = (element: HTMLElement | null): boolean => {
+        if (!element) return false;
+        
+        // Check if the element itself is clickable
+        if (
+          element.tagName.toLowerCase() === 'a' || 
+          element.tagName.toLowerCase() === 'button' || 
+          element.getAttribute('role') === 'button' ||
+          element.tagName.toLowerCase() === 'input' ||
+          element.tagName.toLowerCase() === 'textarea' ||
+          element.tagName.toLowerCase() === 'select' ||
+          element.hasAttribute('tabindex')
+        ) {
+          return true;
+        }
+        
+        // Check if any parent element is clickable (up to body)
+        if (element.parentElement && element.parentElement !== document.body) {
+          return isClickable(element.parentElement);
+        }
+        
+        return false;
+      };
+      
+      setIsHovering(isClickable(target));
     };
 
     window.addEventListener('mousemove', updateCursorPosition);
