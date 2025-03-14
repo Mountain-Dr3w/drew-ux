@@ -72,14 +72,14 @@ const CustomCursor: React.FC = () => {
       
       const bgColor = getBackgroundColor(target);
       
-      // Very simple luminance calculation: extract RGB values and compute luminance
+      // Extract RGB values and compute luminance
       const rgbMatch = bgColor.match(/\d+/g);
       if (rgbMatch && rgbMatch.length >= 3) {
         const r = parseInt(rgbMatch[0]);
         const g = parseInt(rgbMatch[1]);
         const b = parseInt(rgbMatch[2]);
         
-        // Formula: 0.299*R + 0.587*G + 0.114*B
+        // Calculate perceived brightness (standard luminance formula)
         const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
         
         // If luminance > 0.5, it's considered light, otherwise dark

@@ -111,6 +111,7 @@
   
   .cursor-dot.dark {
     @apply bg-black;
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
   }
   
   .cursor-dot.light {
@@ -125,6 +126,7 @@
   
   .cursor-ring.dark {
     @apply border border-black/80;
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
   }
   
   .cursor-ring.light {
