@@ -30,7 +30,7 @@ const About: React.FC = () => {
           <div>
             <TransitionEffect delay={0.1}>
               <span className="inline-block px-3 py-1 text-sm font-medium bg-black/10 text-black rounded-full mb-3 dark:bg-white/10 dark:text-white">
-                UX Design Expertise
+                What I Offer
               </span>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 text-black dark:text-white">
                 Transforming complex challenges into intuitive user experiences
