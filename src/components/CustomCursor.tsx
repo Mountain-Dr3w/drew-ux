@@ -50,13 +50,22 @@ const CustomCursor: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div 
-      className={`custom-cursor ${isHovering ? 'hover' : ''}`}
-      style={{ 
-        left: `${position.x}px`, 
-        top: `${position.y}px`,
-      }}
-    />
+    <>
+      <div 
+        className="cursor-dot"
+        style={{ 
+          left: `${position.x}px`, 
+          top: `${position.y}px`,
+        }}
+      />
+      <div 
+        className={`cursor-ring ${isHovering ? 'hover' : ''}`}
+        style={{ 
+          left: `${position.x}px`, 
+          top: `${position.y}px`,
+        }}
+      />
+    </>
   );
 };
 

@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -105,12 +104,19 @@
   }
 
   /* Custom cursor styles */
-  .custom-cursor {
-    @apply fixed pointer-events-none z-[9999] w-6 h-6 rounded-full bg-accent mix-blend-difference transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-100 ease-out;
+  .cursor-dot {
+    @apply fixed pointer-events-none z-[9999] w-1.5 h-1.5 bg-black dark:bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2;
+    transition: transform 0.1s ease-out;
   }
   
-  .custom-cursor.hover {
-    @apply w-12 h-12 bg-white mix-blend-difference transition-all duration-200 ease-out;
+  .cursor-ring {
+    @apply fixed pointer-events-none z-[9998] w-8 h-8 border border-black/40 dark:border-white/40 rounded-full transform -translate-x-1/2 -translate-y-1/2;
+    transition: width 0.25s ease-out, height 0.25s ease-out, border-color 0.25s ease-out;
+  }
+  
+  .cursor-ring.hover {
+    @apply w-14 h-14 border-black dark:border-white border-opacity-80 dark:border-opacity-80;
+    transition: width 0.15s ease-out, height 0.15s ease-out, border-color 0.15s ease-out;
   }
   
   a, button, [role="button"], input, textarea, select, details, [tabindex]:not([tabindex="-1"]) {
