@@ -105,35 +105,37 @@
 
   /* Custom cursor styles */
   .cursor-dot {
-    @apply fixed pointer-events-none z-[9999] w-1.5 h-1.5 bg-black dark:bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2;
+    @apply fixed pointer-events-none z-[9999] w-1.5 h-1.5 rounded-full transform -translate-x-1/2 -translate-y-1/2;
     transition: background-color 0.2s ease;
+  }
+  
+  .cursor-dot.dark {
+    @apply bg-black;
   }
   
   .cursor-dot.light {
     @apply bg-white;
-    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.8));
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.9));
   }
   
   .cursor-ring {
-    @apply fixed pointer-events-none z-[9998] w-8 h-8 border border-black/80 dark:border-white/80 rounded-full transform -translate-x-1/2 -translate-y-1/2;
+    @apply fixed pointer-events-none z-[9998] w-8 h-8 rounded-full transform -translate-x-1/2 -translate-y-1/2;
     transition: width 0.25s ease-out, height 0.25s ease-out, border-color 0.25s ease-out;
   }
   
+  .cursor-ring.dark {
+    @apply border border-black/80;
+  }
+  
   .cursor-ring.light {
-    @apply border-white/90;
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
+    @apply border border-white/90;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.9));
     border-width: 1.5px;
   }
   
   .cursor-ring.hover {
-    @apply w-14 h-14 border-black dark:border-white border-opacity-80 dark:border-opacity-80;
-    transition: width 0.15s ease-out, height 0.15s ease-out, border-color 0.15s ease-out;
-  }
-  
-  .cursor-ring.hover.light {
-    @apply border-white/90;
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
-    border-width: 1.5px;
+    @apply w-14 h-14;
+    transition: width 0.15s ease-out, height 0.15s ease-out;
   }
   
   a, button, [role="button"], input, textarea, select, details, [tabindex]:not([tabindex="-1"]) {

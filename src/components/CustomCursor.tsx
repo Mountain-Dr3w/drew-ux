@@ -6,7 +6,7 @@ const CustomCursor: React.FC = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [cursorColor, setCursorColor] = useState<"light" | "dark">("dark");
+  const [isDarkBackground, setIsDarkBackground] = useState(false);
   const { theme } = useTheme();
 
   useEffect(() => {
@@ -30,7 +30,6 @@ const CustomCursor: React.FC = () => {
       const isClickable = (element: HTMLElement | null): boolean => {
         if (!element) return false;
         
-        // Check if the element itself is clickable
         if (
           element.tagName.toLowerCase() === 'a' || 
           element.tagName.toLowerCase() === 'button' || 
@@ -43,7 +42,6 @@ const CustomCursor: React.FC = () => {
           return true;
         }
         
-        // Check if any parent element is clickable (up to body)
         if (element.parentElement && element.parentElement !== document.body) {
           return isClickable(element.parentElement);
         }
@@ -53,67 +51,43 @@ const CustomCursor: React.FC = () => {
       
       setIsHovering(isClickable(target));
 
-      // Get the background color of the element under the cursor
-      const getBgColor = (el: HTMLElement): string => {
-        const bgColor = window.getComputedStyle(el).backgroundColor;
+      // Get background color and determine if it's dark
+      const getBackgroundColor = (element: HTMLElement): string => {
+        const computedStyle = window.getComputedStyle(element);
+        const backgroundColor = computedStyle.backgroundColor;
         
-        // If the element has a non-transparent background, use it
-        if (bgColor !== 'rgba(0, 0, 0, 0)' && bgColor !== 'transparent') {
-          return bgColor;
+        // If the background is not transparent, return it
+        if (backgroundColor !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'transparent') {
+          return backgroundColor;
         }
         
-        // Check for specific color classes
-        if (
-          el.classList.contains('bg-white') || 
-          el.classList.contains('text-black') || 
-          el.classList.contains('white') ||
-          el.classList.contains('bg-background') && theme === 'light'
-        ) {
-          return 'rgb(255, 255, 255)';
-        }
-        
-        if (
-          el.classList.contains('bg-black') || 
-          el.classList.contains('text-white') || 
-          el.classList.contains('black') ||
-          el.classList.contains('bg-background') && theme === 'dark'
-        ) {
-          return 'rgb(0, 0, 0)';
-        }
-        
-        // If we can't determine from this element, check the parent
-        if (el.parentElement && el.parentElement !== document.body) {
-          return getBgColor(el.parentElement);
+        // If we still don't have a color and there's a parent, check the parent
+        if (element.parentElement && element.parentElement !== document.body) {
+          return getBackgroundColor(element.parentElement);
         }
         
         // Default to theme background
         return theme === 'dark' ? 'rgb(18, 18, 20)' : 'rgb(250, 250, 250)';
       };
       
-      // Get the background color
-      const backgroundColor = getBgColor(target);
+      const bgColor = getBackgroundColor(target);
       
-      // Simple function to detect if a color is light or dark
-      const isLightColor = (color: string): boolean => {
-        // Parse the RGB values from the color string
-        const rgb = color.match(/\d+/g);
-        if (!rgb || rgb.length < 3) return false;
+      // Very simple luminance calculation: extract RGB values and compute luminance
+      const rgbMatch = bgColor.match(/\d+/g);
+      if (rgbMatch && rgbMatch.length >= 3) {
+        const r = parseInt(rgbMatch[0]);
+        const g = parseInt(rgbMatch[1]);
+        const b = parseInt(rgbMatch[2]);
         
-        const r = parseInt(rgb[0]);
-        const g = parseInt(rgb[1]);
-        const b = parseInt(rgb[2]);
+        // Formula: 0.299*R + 0.587*G + 0.114*B
+        const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
         
-        // Calculate perceived brightness (using the formula from WCAG)
-        // Perceived brightness = (R * 299 + G * 587 + B * 114) / 1000
-        const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-        
-        // If brightness > 125, the color is considered light
-        return brightness > 125;
-      };
-      
-      // Set cursor color based on background lightness
-      const isLight = isLightColor(backgroundColor);
-      setCursorColor(isLight ? "dark" : "light");
+        // If luminance > 0.5, it's considered light, otherwise dark
+        setIsDarkBackground(luminance <= 0.5);
+      } else {
+        // Default to dark background if theme is dark
+        setIsDarkBackground(theme === 'dark');
+      }
     };
 
     window.addEventListener('mousemove', updateCursorPosition);
@@ -134,14 +108,14 @@ const CustomCursor: React.FC = () => {
   return (
     <>
       <div 
-        className={`cursor-dot ${cursorColor === "light" ? "light" : ""}`}
+        className={`cursor-dot ${isDarkBackground ? "light" : "dark"}`}
         style={{ 
           left: `${position.x}px`, 
           top: `${position.y}px`,
         }}
       />
       <div 
-        className={`cursor-ring ${isHovering ? 'hover' : ''} ${cursorColor === "light" ? "light" : ""}`}
+        className={`cursor-ring ${isHovering ? 'hover' : ''} ${isDarkBackground ? "light" : "dark"}`}
         style={{ 
           left: `${position.x}px`, 
           top: `${position.y}px`,
