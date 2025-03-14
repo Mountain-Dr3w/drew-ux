@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -111,17 +112,18 @@
   
   .cursor-dot.light {
     @apply bg-white;
-    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));
   }
   
   .cursor-ring {
-    @apply fixed pointer-events-none z-[9998] w-8 h-8 border border-black/40 dark:border-white/40 rounded-full transform -translate-x-1/2 -translate-y-1/2;
+    @apply fixed pointer-events-none z-[9998] w-8 h-8 border border-black/80 dark:border-white/80 rounded-full transform -translate-x-1/2 -translate-y-1/2;
     transition: width 0.25s ease-out, height 0.25s ease-out, border-color 0.25s ease-out;
   }
   
   .cursor-ring.light {
     @apply border-white;
-    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));
+    border-width: 1.5px;
   }
   
   .cursor-ring.hover {
@@ -131,7 +133,8 @@
   
   .cursor-ring.hover.light {
     @apply border-white;
-    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));
+    border-width: 1.5px;
   }
   
   a, button, [role="button"], input, textarea, select, details, [tabindex]:not([tabindex="-1"]) {
