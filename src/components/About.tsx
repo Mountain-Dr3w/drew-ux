@@ -6,28 +6,28 @@ import { Check, Star } from 'lucide-react';
 const About: React.FC = () => {
   const qualities = [
     {
-      title: "Autonomous Problem Solver",
-      description: "I thrive when given the space to tackle complex challenges, collaborating with your team to define problems and execute effective design solutions."
+      title: "Cross-functional Leadership",
+      description: "I lead complex initiatives across multiple teams, aligning product strategy with broader business objectives while mentoring junior designers."
     },
     {
-      title: "Visualization Focused",
-      description: "From rough sketches to high-fidelity prototypes, I believe in making design visible throughout the process to build alignment and excitement."
+      title: "Systems Thinking",
+      description: "Beyond individual screens, I design cohesive systems and frameworks that scale across products, establishing consistent patterns that reduce design debt."
     },
     {
-      title: "Clarity Champion",
-      description: "I bring transparency and energy to projects, creating momentum that helps teams understand the vision and deliver their best work."
+      title: "Strategic Problem Solving",
+      description: "I identify core business problems before jumping to solutions, framing challenges from multiple perspectives to discover the highest-impact opportunities."
     },
     {
-      title: "Engineering Ally",
-      description: "With experience in React and component-based design systems, I bridge the gap between design and development to create implementable solutions."
+      title: "Technical Partnership",
+      description: "With deep knowledge of component architecture and design systems, I partner closely with engineering to create solutions that balance innovation with implementation realities."
     },
     {
-      title: "Technical Adventurer",
-      description: "I'm not afraid to dive deep into complex technology, understanding technical constraints to design solutions that are both innovative and feasible."
+      title: "Research Direction",
+      description: "I establish research frameworks that yield actionable insights, turning user data into strategic roadmaps that drive product evolution."
     },
     {
-      title: "Results Oriented",
-      description: "I value working software over perfect documentation. While I appreciate good process, I'm focused on creating functional products that drive real impact."
+      title: "Business Impact Focus",
+      description: "My designs directly address key metrics and business goals, creating measurable user experiences that drive adoption, retention, and conversion."
     }
   ];
 
@@ -50,10 +50,10 @@ const About: React.FC = () => {
               What I Offer
             </span>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 text-black dark:text-white">
-              What you're looking for in a UX designer
+              What you're looking for in a staff-level UX designer
             </h2>
             <p className="max-w-2xl mx-auto text-gray-800 text-pretty dark:text-gray-200">
-              Beyond just creating interfaces, I partner with teams to solve complex problems and create exceptional experiences that users love and businesses value.
+              Beyond tactical execution, I bring strategic vision and cross-functional leadership to drive holistic product experiences that scale and deliver measurable business impact.
             </p>
           </div>
         </TransitionEffect>
@@ -85,9 +85,9 @@ const About: React.FC = () => {
                   </div>
                 </div>
                 <blockquote className="text-lg font-medium italic mb-4 text-balance text-black dark:text-white">
-                  "Their strategic UX approach transformed our platform from functional to exceptional, resulting in measurable improvements in user adoption."
+                  "Their strategic leadership transformed our product organization, establishing scalable design systems and processes that elevated our entire digital experience."
                 </blockquote>
-                <cite className="text-sm text-gray-700 not-italic dark:text-gray-300">— Product Lead, Tech Startup</cite>
+                <cite className="text-sm text-gray-700 not-italic dark:text-gray-300">— VP of Product, Enterprise SaaS Company</cite>
               </div>
             </div>
             
