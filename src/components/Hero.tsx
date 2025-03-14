@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center text-center">
           <TransitionEffect direction="up" delay={0.2}>
             <h1 className="shiftnudge-heading mb-10 text-balance">
-              Designing usable, accessible, and scalable software isn't easy. <span className="font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Let us do it for you.</span>
+              Designing usable, accessible, and scalable software isn't easy. <span className="font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Let me do it for you.</span>
             </h1>
           </TransitionEffect>
 
@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
                 href="#contact"
                 className="group inline-flex items-center justify-center space-x-2 bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-full hover:bg-black/90 dark:hover:bg-white/90 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap"
               >
-                <span className="font-medium text-sm">Work With Us</span>
+                <span className="font-medium text-sm">Work With Me</span>
                 <ArrowRight 
                   size={16} 
                   className="transition-transform duration-300 group-hover:translate-x-1" 
