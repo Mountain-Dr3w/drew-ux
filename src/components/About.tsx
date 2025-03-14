@@ -4,13 +4,31 @@ import TransitionEffect from './TransitionEffect';
 import { Check, Star } from 'lucide-react';
 
 const About: React.FC = () => {
-  const skills = [
-    "Strategic User Research", 
-    "Information Architecture", 
-    "Interaction Design", 
-    "UI Systems Development", 
-    "Usability Testing", 
-    "Design Implementation"
+  const qualities = [
+    {
+      title: "Autonomous Problem Solver",
+      description: "I thrive when given the space to tackle complex challenges, collaborating with your team to define problems and execute effective design solutions."
+    },
+    {
+      title: "Visualization Focused",
+      description: "From rough sketches to high-fidelity prototypes, I believe in making design visible throughout the process to build alignment and excitement."
+    },
+    {
+      title: "Clarity Champion",
+      description: "I bring transparency and energy to projects, creating momentum that helps teams understand the vision and deliver their best work."
+    },
+    {
+      title: "Engineering Ally",
+      description: "With experience in React and component-based design systems, I bridge the gap between design and development to create implementable solutions."
+    },
+    {
+      title: "Technical Adventurer",
+      description: "I'm not afraid to dive deep into complex technology, understanding technical constraints to design solutions that are both innovative and feasible."
+    },
+    {
+      title: "Results Oriented",
+      description: "I value working software over perfect documentation. While I appreciate good process, I'm focused on creating functional products that drive real impact."
+    }
   ];
 
   return (
@@ -26,63 +44,57 @@ const About: React.FC = () => {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 md:px-8 w-full relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div>
-            <TransitionEffect delay={0.1}>
-              <span className="inline-block px-3 py-1 text-sm font-medium bg-black/10 text-black rounded-full mb-3 dark:bg-white/10 dark:text-white">
-                What I Offer
-              </span>
-              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 text-black dark:text-white">
-                Transforming complex challenges into intuitive user experiences
-              </h2>
-            </TransitionEffect>
-            
-            <TransitionEffect delay={0.2}>
-              <p className="text-gray-800 mb-6 text-pretty dark:text-gray-200">
-                With over 8 years of strategic UX design experience, I specialize in transforming complex digital products into intuitive, user-centered experiences. My design approach balances business objectives with user needs, creating interfaces that drive engagement, adoption, and satisfaction across diverse platforms.
-              </p>
-            </TransitionEffect>
-            
-            <TransitionEffect delay={0.3}>
-              <div className="mb-8">
-                <h3 className="text-lg font-medium mb-4 text-black dark:text-white">Core Competencies</h3>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-3">
-                  {skills.map((skill, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <Check size={16} className="text-black dark:text-white" />
-                      <span className="text-gray-800 dark:text-gray-200">{skill}</span>
-                    </div>
-                  ))}
-                </div>
+        <TransitionEffect delay={0.1}>
+          <div className="text-center mb-16">
+            <span className="inline-block px-3 py-1 text-sm font-medium bg-black/10 text-black rounded-full mb-3 dark:bg-white/10 dark:text-white">
+              What I Offer
+            </span>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 text-black dark:text-white">
+              What you're looking for in a UX designer
+            </h2>
+            <p className="max-w-2xl mx-auto text-gray-800 text-pretty dark:text-gray-200">
+              Beyond just creating interfaces, I partner with teams to solve complex problems and create exceptional experiences that users love and businesses value.
+            </p>
+          </div>
+        </TransitionEffect>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {qualities.map((quality, index) => (
+            <TransitionEffect key={index} delay={0.1 + (index * 0.1)}>
+              <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200/80 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-all duration-300">
+                <h3 className="text-lg font-medium mb-3 text-black dark:text-white">
+                  {quality.title}
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 text-pretty">
+                  {quality.description}
+                </p>
               </div>
             </TransitionEffect>
-          </div>
-          
-          <TransitionEffect delay={0.4}>
-            <div className="relative p-1">
-              <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-tr from-gray-100 to-white shadow-sm border border-gray-200 dark:from-gray-800 dark:to-gray-900 dark:border-gray-700">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="flex justify-center mb-4">
-                      <div className="flex space-x-1">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} size={20} className="text-black fill-black dark:text-white dark:fill-white" />
-                        ))}
-                      </div>
-                    </div>
-                    <blockquote className="text-lg font-medium italic max-w-xs mb-4 text-balance text-black dark:text-white">
-                      "Their strategic UX approach transformed our platform from functional to exceptional, resulting in measurable improvements in user adoption."
-                    </blockquote>
-                    <cite className="text-sm text-gray-700 not-italic dark:text-gray-300">— Product Lead, Tech Startup</cite>
+          ))}
+        </div>
+        
+        <TransitionEffect delay={0.4}>
+          <div className="mt-16 relative max-w-2xl mx-auto p-1">
+            <div className="rounded-2xl overflow-hidden bg-gradient-to-tr from-gray-100 to-white shadow-sm border border-gray-200 dark:from-gray-800 dark:to-gray-900 dark:border-gray-700 p-8">
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="flex space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} size={20} className="text-black fill-black dark:text-white dark:fill-white" />
+                    ))}
                   </div>
                 </div>
+                <blockquote className="text-lg font-medium italic mb-4 text-balance text-black dark:text-white">
+                  "Their strategic UX approach transformed our platform from functional to exceptional, resulting in measurable improvements in user adoption."
+                </blockquote>
+                <cite className="text-sm text-gray-700 not-italic dark:text-gray-300">— Product Lead, Tech Startup</cite>
               </div>
-              
-              <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-black/10 -z-10 dark:bg-white/5" />
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-black/10 -z-10 dark:bg-white/5" />
             </div>
-          </TransitionEffect>
-        </div>
+            
+            <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-black/10 -z-10 dark:bg-white/5" />
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-black/10 -z-10 dark:bg-white/5" />
+          </div>
+        </TransitionEffect>
       </div>
     </section>
   );
