@@ -111,6 +111,7 @@
   
   .cursor-dot.light {
     @apply bg-white;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
   }
   
   .cursor-ring {
@@ -119,7 +120,8 @@
   }
   
   .cursor-ring.light {
-    @apply border-white/70;
+    @apply border-white;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
   }
   
   .cursor-ring.hover {
@@ -129,6 +131,7 @@
   
   .cursor-ring.hover.light {
     @apply border-white;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
   }
   
   a, button, [role="button"], input, textarea, select, details, [tabindex]:not([tabindex="-1"]) {
