@@ -40,13 +40,13 @@ const Hero: React.FC = () => {
         {/* Subtle tag line above heading */}
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 flex flex-wrap justify-center gap-2">
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gradient-to-r from-purple-50 to-blue-50 text-purple-700 dark:from-purple-900/40 dark:to-blue-900/30 dark:text-purple-300">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-purple-50 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300">
               Accessibility Compliance
             </span>
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 dark:from-blue-900/40 dark:to-indigo-900/30 dark:text-blue-300">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">
               End-to-End Design
             </span>
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 dark:from-indigo-900/40 dark:to-purple-900/30 dark:text-indigo-300">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300">
               Product Strategy
             </span>
           </div>
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
                 href="#contact"
-                className="group inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white dark:from-purple-600 dark:to-blue-500 dark:text-white px-6 py-3 rounded-full hover:from-purple-700 hover:to-blue-600 dark:hover:from-purple-700 dark:hover:to-blue-600 transition-all duration-300 w-full sm:w-36 h-12 whitespace-nowrap"
+                className="group inline-flex items-center justify-center space-x-2 bg-purple-600 text-white dark:bg-purple-600 dark:text-white px-6 py-3 rounded-full hover:bg-purple-700 dark:hover:bg-purple-700 transition-all duration-300 w-full sm:w-36 h-12 whitespace-nowrap"
               >
                 <span className="font-medium text-sm">Work With Me</span>
                 <ArrowRight 
