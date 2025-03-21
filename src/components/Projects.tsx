@@ -12,6 +12,13 @@ const projectsData = [
     url: "/case-study/veriflux",
   },
   {
+    title: "Jigsaw: Modern AR Management System",
+    description: "Redesigning a complex air resource management tool to enhance user experience and operational efficiency for military and aviation personnel.",
+    category: "UI/UX Design & System Architecture",
+    imageUrl: "/lovable-uploads/79bb2514-9999-4ae2-9062-38abff3365fa.png",
+    url: "/case-study/jigsaw",
+  },
+  {
     title: "Revolutionizing Logistics and Readiness for the USAF",
     description: "Creating an intuitive and accessible mobile banking platform that increased user engagement by 45% and reduced support tickets by 30%.",
     category: "UI/UX Design",
