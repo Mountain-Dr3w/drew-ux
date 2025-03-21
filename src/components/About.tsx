@@ -25,12 +25,9 @@ const About: React.FC = () => {
 
   return (
     <section id="about" className="min-h-screen py-24 md:py-32 relative flex items-center">
-      {/* Background elements with improved gradients */}
+      {/* Background elements for personality */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 -left-10 -right-10 h-40 rounded-[50%] bg-gradient-to-r from-green-600/10 via-emerald-400/5 to-transparent blur-3xl -z-10 transform translate-y-[-45%] dark:from-green-600/10 dark:via-emerald-400/5 dark:to-transparent" />
-        
-        {/* Additional gradient shape */}
-        <div className="absolute bottom-0 -left-20 -right-20 h-80 rounded-[50%] bg-gradient-to-r from-emerald-400/10 via-green-500/5 to-transparent blur-3xl -z-10 dark:from-emerald-400/10 dark:via-green-500/5 dark:to-transparent" />
+        <div className="absolute top-0 -left-10 -right-10 h-32 rounded-[50%] bg-gradient-to-r from-black/2 via-black/1 to-muted blur-3xl -z-10 transform translate-y-[-45%] dark:from-white/2 dark:via-white/1 dark:to-muted" />
         
         {/* Lofi sketch elements */}
         <div className="absolute top-20 right-[5%] w-24 h-24 border-2 border-dashed border-gray-300/40 dark:border-gray-700/40 rounded-md rotate-12 opacity-60"></div>
@@ -41,7 +38,7 @@ const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 w-full relative">
         <TransitionEffect delay={0.1}>
           <div className="text-center mb-16">
-            <span className="inline-block px-3 py-1 text-sm font-medium bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 rounded-full mb-3 dark:from-green-900/40 dark:to-emerald-900/30 dark:text-green-300">
+            <span className="inline-block px-3 py-1 text-sm font-medium bg-black/10 text-black rounded-full mb-3 dark:bg-white/10 dark:text-white">
               What I Offer
             </span>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 text-black dark:text-white">
@@ -56,7 +53,7 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {qualities.map((quality, index) => (
             <TransitionEffect key={index} delay={0.1 + (index * 0.1)}>
-              <div className="bg-gradient-to-br from-white/80 to-white/50 dark:from-white/5 dark:to-white/2 backdrop-blur-sm p-6 rounded-xl border border-gray-200/80 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-all duration-300 h-full shadow-sm hover:shadow-md">
+              <div className="bg-white/50 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200/80 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-all duration-300 h-full">
                 <h3 className="text-lg font-medium mb-3 text-black dark:text-white">
                   {quality.title}
                 </h3>
@@ -70,26 +67,24 @@ const About: React.FC = () => {
         
         <TransitionEffect delay={0.4}>
           <div className="mt-16 relative max-w-2xl mx-auto p-1">
-            <div className="p-1 bg-gradient-to-r from-green-200 via-green-300 to-emerald-300 dark:from-green-800 dark:via-green-700 dark:to-emerald-700 rounded-2xl">
-              <div className="rounded-xl overflow-hidden bg-white shadow-sm dark:bg-gray-900 p-8">
-                <div className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <div className="flex space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} size={20} className="text-green-500 fill-green-500 dark:text-green-400 dark:fill-green-400" />
-                      ))}
-                    </div>
+            <div className="rounded-2xl overflow-hidden bg-gradient-to-tr from-gray-100 to-white shadow-sm border border-gray-200 dark:from-gray-800 dark:to-gray-900 dark:border-gray-700 p-8">
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="flex space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} size={20} className="text-black fill-black dark:text-white dark:fill-white" />
+                    ))}
                   </div>
-                  <blockquote className="text-lg font-medium italic mb-4 text-balance text-black dark:text-white">
-                    "Their strategic leadership transformed our product organization, establishing scalable design systems and processes that elevated our entire digital experience."
-                  </blockquote>
-                  <cite className="text-sm text-gray-700 not-italic dark:text-gray-300">— VP of Product, Enterprise SaaS Company</cite>
                 </div>
+                <blockquote className="text-lg font-medium italic mb-4 text-balance text-black dark:text-white">
+                  "Their strategic leadership transformed our product organization, establishing scalable design systems and processes that elevated our entire digital experience."
+                </blockquote>
+                <cite className="text-sm text-gray-700 not-italic dark:text-gray-300">— VP of Product, Enterprise SaaS Company</cite>
               </div>
             </div>
             
-            <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-gradient-to-br from-green-100 to-emerald-200 -z-10 dark:from-green-800/50 dark:to-emerald-700/50" />
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-gradient-to-tr from-green-100 to-emerald-200 -z-10 dark:from-green-800/50 dark:to-emerald-700/50" />
+            <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-black/10 -z-10 dark:bg-white/5" />
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-black/10 -z-10 dark:bg-white/5" />
           </div>
         </TransitionEffect>
       </div>
