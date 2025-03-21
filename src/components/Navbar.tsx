@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import Logo from './Logo';
 import ThemeToggle from './ThemeToggle';
 
 const Navbar: React.FC = () => {
@@ -28,17 +27,13 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <Logo 
-            shape="custom"
-            primaryColor="#8B5CF6" 
-            secondaryColor="#D6BCFA"
-            size="sm"
-            customPath="M12 3L20 7V17L12 21L4 17V7L12 3ZM12 12L16 14V10L12 8L8 10V14L12 12Z"
-            customViewBox="0 0 24 24"
+          <img 
+            src="/lovable-uploads/ea186a64-9918-4dfc-bcf3-7c05fac5bb5b.png" 
+            alt="DrewUX Logo" 
+            className="h-8 w-auto"
           />
           <span className="text-base font-medium tracking-tight text-foreground">
-            <span className="mr-1">District</span>
-            <span className="font-medium">Creative</span>
+            DrewUX
           </span>
         </a>
 
