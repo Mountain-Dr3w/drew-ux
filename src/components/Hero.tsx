@@ -1,8 +1,6 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { ArrowRight, Pencil, PenTool, Paintbrush } from 'lucide-react';
-import { Badge } from './ui/badge';
 
 const Hero: React.FC = () => {
   return (
@@ -84,27 +82,15 @@ const Hero: React.FC = () => {
             <div className="mt-16 pt-8 border-t border-black/10 dark:border-white/10 text-center">
               <p className="text-xs uppercase tracking-wider text-black/50 dark:text-white/50 mb-5">Trusted by innovative teams</p>
               <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
-                {/* US Air Force Logo Badge */}
                 <div className="flex items-center space-x-2 bg-white dark:bg-gray-800 rounded-md px-4 py-3 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
-                  <div className="w-8 h-8 flex items-center justify-center bg-blue-600 rounded-full text-white font-bold text-xs">
-                    USAF
-                  </div>
                   <span className="font-medium text-sm">US Air Force</span>
                 </div>
                 
-                {/* Small Business Administration Logo Badge */}
                 <div className="flex items-center space-x-2 bg-white dark:bg-gray-800 rounded-md px-4 py-3 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
-                  <div className="w-8 h-8 flex items-center justify-center bg-blue-500 rounded-full text-white font-bold text-xs">
-                    SBA
-                  </div>
                   <span className="font-medium text-sm">Small Business Administration</span>
                 </div>
                 
-                {/* Placeholder for a third badge if needed */}
                 <div className="flex items-center space-x-2 bg-white dark:bg-gray-800 rounded-md px-4 py-3 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow opacity-60">
-                  <div className="w-8 h-8 flex items-center justify-center bg-gray-400 rounded-full text-white">
-                    
-                  </div>
                   <span className="font-medium text-sm">Future Partner</span>
                 </div>
               </div>
