@@ -6,20 +6,20 @@ import { Check, Star } from 'lucide-react';
 const About: React.FC = () => {
   const qualities = [
     {
-      title: "Strategic Leadership",
-      description: "I lead complex initiatives across teams, aligning product strategy with business objectives while mentoring junior designers and establishing frameworks that yield actionable insights."
+      title: "End-to-End Product Design",
+      description: "I take ideas all the way from exploratory research to polished, high-fidelity designs—creating experiences that are not just beautiful, but intuitive, functional, and built to scale."
     },
     {
-      title: "Systems Design Expertise",
-      description: "I design cohesive systems that scale across products, establishing consistent patterns that reduce design debt and create measurable user experiences that drive business metrics."
+      title: "Product Strategy",
+      description: "I connect user needs with business goals to shape products that are both valuable and viable. By blending research, data, and design thinking, I help define clear roadmaps, prioritize features, and create experiences that drive real impact."
     },
     {
       title: "Technical Collaboration",
-      description: "With deep knowledge of component architecture and design systems, I partner closely with engineering to create solutions that balance innovation with implementation realities."
+      description: "With deep knowledge of component architecture and design systems, I partner closely with engineering to create solutions that balance innovation with implementation realities and constraints."
     },
     {
-      title: "Business-Driven Approach",
-      description: "I identify core business problems before jumping to solutions, framing challenges from multiple perspectives to discover high-impact opportunities that drive adoption, retention, and conversion."
+      title: "User-Centered Approach",
+      description: "I dig deep to understand what users truly need by listening, researching, and testing. Every design decision I make is guided by real insights and a genuine focus on creating better experiences."
     }
   ];
 
@@ -77,9 +77,9 @@ const About: React.FC = () => {
                   </div>
                 </div>
                 <blockquote className="text-lg font-medium italic mb-4 text-balance text-black dark:text-white">
-                  "Their strategic leadership transformed our product organization, establishing scalable design systems and processes that elevated our entire digital experience."
+                  "Drew's ability to build relationships with [our users], and to understand and act on their feedback to deliver valuable outcomes has been instrumental for us. I truly believe we would not have operational adoption without him."
                 </blockquote>
-                <cite className="text-sm text-gray-700 not-italic dark:text-gray-300">— VP of Product, Enterprise SaaS Company</cite>
+                <cite className="text-sm text-gray-700 not-italic dark:text-gray-300">— Portfolio Product Lead</cite>
               </div>
             </div>
             
