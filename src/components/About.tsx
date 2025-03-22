@@ -96,28 +96,34 @@ const About: React.FC = () => {
                 </div>
               </TabsContent>
               
-              <TabsContent value="outside-work" className="mt-0 space-y-8">
-                <div className="mx-auto overflow-hidden rounded-xl border border-gray-200/80 dark:border-white/10 shadow-md">
-                  <AspectRatio ratio={16 / 9}>
-                    <img 
-                      src="/lovable-uploads/f073a10d-33bb-42dc-88f5-205f14398adf.png" 
-                      alt="Drew conversing with colleagues" 
-                      className="object-cover w-full h-full"
-                    />
-                  </AspectRatio>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                  {personalQualities.map((quality, index) => (
-                    <div key={index} className="bg-white/50 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200/80 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-all duration-300 h-full">
-                      <h3 className="text-lg font-medium mb-3 text-black dark:text-white">
-                        {quality.title}
-                      </h3>
-                      <p className="text-gray-700 dark:text-gray-300 text-pretty">
-                        {quality.description}
-                      </p>
+              <TabsContent value="outside-work" className="mt-0">
+                <div className="flex flex-col md:flex-row gap-8">
+                  {/* Left side - Image */}
+                  <div className="md:w-2/5">
+                    <div className="rounded-xl border border-gray-200/80 dark:border-white/10 shadow-md overflow-hidden h-full">
+                      <img 
+                        src="/lovable-uploads/f073a10d-33bb-42dc-88f5-205f14398adf.png" 
+                        alt="Drew conversing with colleagues" 
+                        className="object-cover w-full h-full"
+                      />
                     </div>
-                  ))}
+                  </div>
+                  
+                  {/* Right side - Cards */}
+                  <div className="md:w-3/5">
+                    <div className="grid grid-cols-1 gap-6">
+                      {personalQualities.map((quality, index) => (
+                        <div key={index} className="bg-white/50 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200/80 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-all duration-300">
+                          <h3 className="text-lg font-medium mb-3 text-black dark:text-white">
+                            {quality.title}
+                          </h3>
+                          <p className="text-gray-700 dark:text-gray-300 text-pretty">
+                            {quality.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </TabsContent>
             </Tabs>
