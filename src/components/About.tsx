@@ -1,11 +1,13 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { Check, Star } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const About: React.FC = () => {
+  const isMobile = useIsMobile();
+  
   const qualities = [
     {
       title: "End-to-End Product Design",
@@ -46,11 +48,9 @@ const About: React.FC = () => {
 
   return (
     <section id="about" className="min-h-screen py-24 md:py-32 relative flex items-center">
-      {/* Background elements for personality */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 -left-10 -right-10 h-32 rounded-[50%] bg-gradient-to-r from-black/2 via-black/1 to-muted blur-3xl -z-10 transform translate-y-[-45%] dark:from-white/2 dark:via-white/1 dark:to-muted" />
         
-        {/* Lofi sketch elements */}
         <div className="absolute top-20 right-[5%] w-24 h-24 border-2 border-dashed border-gray-300/40 dark:border-gray-700/40 rounded-md rotate-12 opacity-60"></div>
         <div className="absolute bottom-[30%] right-[15%] w-32 h-8 bg-gray-100/20 dark:bg-gray-800/20 rounded-sm transform -rotate-6"></div>
         <div className="absolute top-[25%] left-[20%] w-12 h-12 border-2 border-gray-300/30 dark:border-gray-700/30 transform rotate-45"></div>
@@ -98,19 +98,19 @@ const About: React.FC = () => {
               
               <TabsContent value="outside-work" className="mt-0">
                 <div className="flex flex-col md:flex-row gap-8">
-                  {/* Left side - Image */}
-                  <div className="md:w-2/5">
-                    <div className="rounded-xl border border-gray-200/80 dark:border-white/10 shadow-md overflow-hidden h-full">
-                      <img 
-                        src="/lovable-uploads/f073a10d-33bb-42dc-88f5-205f14398adf.png" 
-                        alt="Drew conversing with colleagues" 
-                        className="object-cover w-full h-full"
-                      />
+                  {!isMobile && (
+                    <div className="md:w-2/5">
+                      <div className="rounded-xl border border-gray-200/80 dark:border-white/10 shadow-md overflow-hidden h-full">
+                        <img 
+                          src="/lovable-uploads/f073a10d-33bb-42dc-88f5-205f14398adf.png" 
+                          alt="Drew conversing with colleagues" 
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
                     </div>
-                  </div>
+                  )}
                   
-                  {/* Right side - Cards */}
-                  <div className="md:w-3/5">
+                  <div className={isMobile ? "w-full" : "md:w-3/5"}>
                     <div className="grid grid-cols-1 gap-6">
                       {personalQualities.map((quality, index) => (
                         <div key={index} className="bg-white/50 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200/80 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-all duration-300">
