@@ -42,7 +42,7 @@ const About: React.FC = () => {
               What I Offer
             </span>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 text-black dark:text-white">
-              What you're looking for in a staff-level UX designer
+              Your key to driving user and business outcomes
             </h2>
             <p className="max-w-2xl mx-auto text-gray-800 text-pretty dark:text-gray-200">
               Beyond tactical execution, I bring strategic vision and cross-functional leadership to drive holistic product experiences that scale and deliver measurable business impact.
