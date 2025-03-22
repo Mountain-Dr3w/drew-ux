@@ -7,21 +7,18 @@ const projectsData = [
   {
     title: "Establishing Design Culture for Waste Traceability",
     description: "How we helped Veriflux transform their product experience to drive user adoption and create a sustainable impact in food waste management.",
-    category: ["UX Design", "Product Strategy"],
     imageUrl: "/lovable-uploads/ae63cad8-87c0-4daa-94fe-d989f8711460.png",
     url: "/case-study/veriflux",
   },
   {
     title: "Modernizing an Air-to-Air Refueling System",
     description: "Redesigning a complex air refueling management tool to maximize user adoption and operational efficiency for military planning personnel.",
-    category: ["UX Design", "Product Strategy", "Service Design"],
     imageUrl: "/lovable-uploads/79bb2514-9999-4ae2-9062-38abff3365fa.png",
     url: "/case-study/jigsaw",
   },
   {
     title: "Revolutionizing Logistics and Readiness for the USAF",
     description: "Empowering military decision-makers to use all of the data at their disposal to make choices that optimize readiness",
-    category: ["UX Design"],
     imageUrl: "/lovable-uploads/f0075149-b5c6-43b0-9085-723a84367eb7.png",
     url: "#",
   },
@@ -37,7 +34,6 @@ const Projects: React.FC = () => {
               <ProjectCard
                 title={project.title}
                 description={project.description}
-                category={project.category}
                 imageUrl={project.imageUrl}
                 url={project.url}
               />
