@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import ThemeToggle from './ThemeToggle';
@@ -27,8 +28,8 @@ const Navbar: React.FC = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
           <img 
-            src="/lovable-uploads/ea186a64-9918-4dfc-bcf3-7c05fac5bb5b.png" 
-            alt="DrewUX Logo" 
+            src="/lovable-uploads/Asset 3.svg" 
+            alt="Logo" 
             className="h-8 w-auto"
           />
         </a>
