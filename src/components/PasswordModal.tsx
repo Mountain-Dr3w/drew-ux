@@ -80,7 +80,7 @@ const PasswordModal: React.FC<PasswordModalProps> = ({ open, onOpenChange, onAut
                     />
                   </FormControl>
                   {error && (
-                    <FormMessage className="flex items-center gap-2 text-white dark:text-white font-medium text-sm">
+                    <FormMessage className="flex items-center gap-2 text-destructive dark:text-red-400 font-medium text-sm">
                       <AlertCircle className="w-4 h-4" />
                       Incorrect password. Please try again.
                     </FormMessage>

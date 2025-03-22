@@ -17,18 +17,7 @@ const queryClient = new QueryClient();
 // Wrapper to handle redirects with location state
 const ProtectedRoute = ({ path, element }: { path: string, element: React.ReactNode }) => {
   const location = useLocation();
-  const hasAccess = localStorage.getItem('caseStudyAccess') === 'true';
   
-  if (!hasAccess) {
-    return (
-      <Navigate 
-        to="/" 
-        replace 
-        state={{ from: path }} 
-      />
-    );
-  }
-
   return (
     <ProtectedCaseStudy>
       {element}
