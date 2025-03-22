@@ -13,7 +13,7 @@ const projectsData = [
   {
     title: "Modernizing an Air-to-Air Refueling System",
     description: "Redesigning a complex air refueling management tool to maximize user adoption and operational efficiency for military planning personnel.",
-    imageUrl: "/lovable-uploads/79bb2514-9999-4ae2-9062-38abff3365fa.png",
+    imageUrl: "/lovable-uploads/424622bd-bc00-4f6e-9a37-6678fbb643ab.png",
     url: "/case-study/jigsaw",
   },
   {

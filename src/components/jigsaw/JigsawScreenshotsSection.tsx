@@ -16,7 +16,7 @@ const JigsawScreenshotsSection: React.FC = () => {
           <div className="relative group overflow-hidden rounded-lg border border-border">
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
             <img 
-              src="/lovable-uploads/5a83ed25-18c0-41dc-a6c1-6d7632ff0481.png"
+              src="/lovable-uploads/424622bd-bc00-4f6e-9a37-6678fbb643ab.png"
               alt="Jigsaw timeline interface showing aircraft resource scheduling"
               className="w-full h-auto rounded-lg transition-transform duration-500 group-hover:scale-[1.02]"
             />
@@ -80,7 +80,7 @@ const JigsawScreenshotsSection: React.FC = () => {
         <div className="relative group overflow-hidden rounded-lg border border-border mt-8">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
           <img 
-            src="/lovable-uploads/79bb2514-9999-4ae2-9062-38abff3365fa.png"
+            src="/lovable-uploads/424622bd-bc00-4f6e-9a37-6678fbb643ab.png"
             alt="Jigsaw map view showing geospatial resource tracking"
             className="w-full h-auto rounded-lg transition-transform duration-500 group-hover:scale-[1.02]"
           />
