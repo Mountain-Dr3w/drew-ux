@@ -1,7 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import ThemeToggle from './ThemeToggle';
+import ThemeSwitchingLogo from './ThemeSwitchingLogo';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,11 +27,7 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <img 
-            src="/lovable-uploads/Asset 3.svg" 
-            alt="Logo" 
-            className="h-8 w-auto"
-          />
+          <ThemeSwitchingLogo />
         </a>
 
         {/* Desktop Navigation */}
