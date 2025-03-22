@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import VerifluxCaseStudy from "./pages/VerifluxCaseStudy";
@@ -13,6 +13,28 @@ import CustomCursor from "./components/CustomCursor";
 import ProtectedCaseStudy from "./components/ProtectedCaseStudy";
 
 const queryClient = new QueryClient();
+
+// Wrapper to handle redirects with location state
+const ProtectedRoute = ({ path, element }: { path: string, element: React.ReactNode }) => {
+  const location = useLocation();
+  const hasAccess = localStorage.getItem('caseStudyAccess') === 'true';
+  
+  if (!hasAccess) {
+    return (
+      <Navigate 
+        to="/" 
+        replace 
+        state={{ from: path }} 
+      />
+    );
+  }
+
+  return (
+    <ProtectedCaseStudy>
+      {element}
+    </ProtectedCaseStudy>
+  );
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -27,17 +49,19 @@ const App = () => (
             <Route 
               path="/case-study/veriflux" 
               element={
-                <ProtectedCaseStudy>
-                  <VerifluxCaseStudy />
-                </ProtectedCaseStudy>
+                <ProtectedRoute 
+                  path="/case-study/veriflux"
+                  element={<VerifluxCaseStudy />}
+                />
               } 
             />
             <Route 
               path="/case-study/jigsaw" 
               element={
-                <ProtectedCaseStudy>
-                  <JigsawCaseStudy />
-                </ProtectedCaseStudy>
+                <ProtectedRoute 
+                  path="/case-study/jigsaw"
+                  element={<JigsawCaseStudy />}
+                />
               } 
             />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

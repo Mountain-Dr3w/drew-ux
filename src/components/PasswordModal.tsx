@@ -12,13 +12,14 @@ import { Lock, AlertCircle } from 'lucide-react';
 interface PasswordModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  onAuthorized?: () => void;
 }
 
 interface PasswordForm {
   password: string;
 }
 
-const PasswordModal: React.FC<PasswordModalProps> = ({ open, onOpenChange }) => {
+const PasswordModal: React.FC<PasswordModalProps> = ({ open, onOpenChange, onAuthorized }) => {
   const [error, setError] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -32,12 +33,17 @@ const PasswordModal: React.FC<PasswordModalProps> = ({ open, onOpenChange }) => 
   const onSubmit = (data: PasswordForm) => {
     if (data.password === 'goceltics') {
       localStorage.setItem('caseStudyAccess', 'true');
-      onOpenChange(false);
       setError(false);
       toast({
         title: "Access Granted",
         description: "You now have access to case studies",
       });
+      
+      if (onAuthorized) {
+        onAuthorized();
+      } else {
+        onOpenChange(false);
+      }
     } else {
       setError(true);
       form.reset();
@@ -74,7 +80,7 @@ const PasswordModal: React.FC<PasswordModalProps> = ({ open, onOpenChange }) => 
                     />
                   </FormControl>
                   {error && (
-                    <FormMessage className="flex items-center gap-2">
+                    <FormMessage className="flex items-center gap-2 text-white dark:text-white font-medium text-sm">
                       <AlertCircle className="w-4 h-4" />
                       Incorrect password. Please try again.
                     </FormMessage>
