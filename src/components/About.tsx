@@ -3,6 +3,7 @@ import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { Check, Star } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const About: React.FC = () => {
   const qualities = [
@@ -59,7 +60,7 @@ const About: React.FC = () => {
         <TransitionEffect delay={0.1}>
           <div className="text-center mb-12">
             <span className="inline-block px-3 py-1 text-sm font-medium bg-black/10 text-black rounded-full mb-3 dark:bg-white/10 dark:text-white">
-              What I Offer
+              Who I Am
             </span>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 text-black dark:text-white">
               Your key to driving user and business outcomes
@@ -95,8 +96,18 @@ const About: React.FC = () => {
                 </div>
               </TabsContent>
               
-              <TabsContent value="outside-work" className="mt-0 space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <TabsContent value="outside-work" className="mt-0 space-y-8">
+                <div className="mx-auto overflow-hidden rounded-xl border border-gray-200/80 dark:border-white/10 shadow-md">
+                  <AspectRatio ratio={16 / 9}>
+                    <img 
+                      src="/lovable-uploads/f073a10d-33bb-42dc-88f5-205f14398adf.png" 
+                      alt="Drew conversing with colleagues" 
+                      className="object-cover w-full h-full"
+                    />
+                  </AspectRatio>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                   {personalQualities.map((quality, index) => (
                     <div key={index} className="bg-white/50 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200/80 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-all duration-300 h-full">
                       <h3 className="text-lg font-medium mb-3 text-black dark:text-white">
