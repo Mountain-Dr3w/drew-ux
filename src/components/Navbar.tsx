@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import ThemeToggle from './ThemeToggle';
@@ -32,9 +31,6 @@ const Navbar: React.FC = () => {
             alt="DrewUX Logo" 
             className="h-8 w-auto"
           />
-          <span className="text-base font-medium tracking-tight text-foreground">
-            DrewUX
-          </span>
         </a>
 
         {/* Desktop Navigation */}
