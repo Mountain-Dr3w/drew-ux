@@ -10,6 +10,7 @@ import VerifluxCaseStudy from "./pages/VerifluxCaseStudy";
 import JigsawCaseStudy from "./pages/JigsawCaseStudy";
 import { ThemeProvider } from "./hooks/use-theme";
 import CustomCursor from "./components/CustomCursor";
+import ProtectedCaseStudy from "./components/ProtectedCaseStudy";
 
 const queryClient = new QueryClient();
 
@@ -23,8 +24,22 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/case-study/veriflux" element={<VerifluxCaseStudy />} />
-            <Route path="/case-study/jigsaw" element={<JigsawCaseStudy />} />
+            <Route 
+              path="/case-study/veriflux" 
+              element={
+                <ProtectedCaseStudy>
+                  <VerifluxCaseStudy />
+                </ProtectedCaseStudy>
+              } 
+            />
+            <Route 
+              path="/case-study/jigsaw" 
+              element={
+                <ProtectedCaseStudy>
+                  <JigsawCaseStudy />
+                </ProtectedCaseStudy>
+              } 
+            />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
