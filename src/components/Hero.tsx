@@ -26,13 +26,13 @@ const Hero: React.FC = () => {
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 flex flex-wrap justify-center gap-2">
             <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-50 dark:bg-gray-700/40 text-gray-700 dark:text-gray-300">
-              Accessibility Compliance
+              Human-Centered Advocate
             </span>
             <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-50 dark:bg-gray-700/40 text-gray-700 dark:text-gray-300">
-              End-to-End Design
+              End-to-End Designer
             </span>
             <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-50 dark:bg-gray-700/40 text-gray-700 dark:text-gray-300">
-              Product Strategy
+              Product Strategist
             </span>
           </div>
         </TransitionEffect>
