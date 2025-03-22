@@ -1,3 +1,4 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { Check, Star } from 'lucide-react';
@@ -82,17 +83,33 @@ const About: React.FC = () => {
               </div>
               
               <TabsContent value="at-work" className="mt-0 space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {qualities.map((quality, index) => (
-                    <div key={index} className="bg-white/50 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200/80 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-all duration-300 h-full">
-                      <h3 className="text-lg font-medium mb-3 text-black dark:text-white">
-                        {quality.title}
-                      </h3>
-                      <p className="text-gray-700 dark:text-gray-300 text-pretty">
-                        {quality.description}
-                      </p>
+                <div className="flex flex-col md:flex-row gap-8">
+                  {!isMobile && (
+                    <div className="md:w-2/5">
+                      <div className="rounded-xl border border-gray-200/80 dark:border-white/10 shadow-md overflow-hidden h-full">
+                        <img 
+                          src="/lovable-uploads/ae63cad8-87c0-4daa-94fe-d989f8711460.png" 
+                          alt="Drew working on product design" 
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
                     </div>
-                  ))}
+                  )}
+                  
+                  <div className={isMobile ? "w-full" : "md:w-3/5"}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {qualities.map((quality, index) => (
+                        <div key={index} className="bg-white/50 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200/80 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-all duration-300">
+                          <h3 className="text-lg font-medium mb-3 text-black dark:text-white">
+                            {quality.title}
+                          </h3>
+                          <p className="text-gray-700 dark:text-gray-300 text-pretty">
+                            {quality.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </TabsContent>
               
