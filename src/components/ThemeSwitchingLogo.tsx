@@ -9,7 +9,7 @@ const ThemeSwitchingLogo: React.FC = () => {
     <div className="flex items-center gap-2">
       <svg 
         viewBox="0 0 333.75 292.5" 
-        className="h-8 w-auto"
+        className="h-6 w-auto"
         aria-label="Logo"
       >
         <path 
