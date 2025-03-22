@@ -103,40 +103,19 @@
     letter-spacing: -0.03em;
   }
 
-  /* Custom cursor styles */
+  /* Custom cursor styles - cleaner version */
   .cursor-dot {
-    @apply fixed pointer-events-none z-[9999] w-1.5 h-1.5 rounded-full transform -translate-x-1/2 -translate-y-1/2;
-    transition: background-color 0.2s ease;
-  }
-  
-  .cursor-dot.dark {
-    @apply bg-black;
-    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
-  }
-  
-  .cursor-dot.light {
-    @apply bg-white;
-    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.9));
+    @apply fixed pointer-events-none z-[9999] w-1 h-1 rounded-full transform -translate-x-1/2 -translate-y-1/2;
+    transition: width 0.15s ease-out, height 0.15s ease-out, opacity 0.15s ease-out;
   }
   
   .cursor-ring {
-    @apply fixed pointer-events-none z-[9998] w-8 h-8 rounded-full transform -translate-x-1/2 -translate-y-1/2;
-    transition: width 0.25s ease-out, height 0.25s ease-out, border-color 0.25s ease-out;
-  }
-  
-  .cursor-ring.dark {
-    @apply border border-black/80;
-    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
-  }
-  
-  .cursor-ring.light {
-    @apply border border-white/90;
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.9));
-    border-width: 1.5px;
+    @apply fixed pointer-events-none z-[9998] w-6 h-6 rounded-full transform -translate-x-1/2 -translate-y-1/2 border border-opacity-50;
+    transition: width 0.2s ease-out, height 0.2s ease-out, opacity 0.2s ease-out;
   }
   
   .cursor-ring.hover {
-    @apply w-14 h-14;
+    @apply w-10 h-10;
     transition: width 0.15s ease-out, height 0.15s ease-out;
   }
   
