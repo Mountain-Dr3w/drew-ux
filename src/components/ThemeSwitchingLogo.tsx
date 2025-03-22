@@ -18,7 +18,7 @@ const ThemeSwitchingLogo: React.FC = () => {
         />
       </svg>
       <span 
-        className={`font-medium text-lg tracking-tight ${theme === "dark" ? "text-white" : "text-black"}`}
+        className={`font-bold text-xl tracking-tight ${theme === "dark" ? "text-white" : "text-black"}`}
       >
         DrewUX
       </span>
