@@ -24,25 +24,19 @@ const Contact: React.FC = () => {
         <TransitionEffect delay={0.2}>
           <div className="max-w-2xl mx-auto">
             <a 
-              href="mailto:hello@example.com" 
+              href="mailto:drew@drewux.design" 
               className="group glass-card p-8 rounded-2xl flex flex-col items-center text-center hover:shadow-md transition-shadow duration-300"
             >
               <div className="w-16 h-16 flex items-center justify-center bg-black rounded-full text-white mb-6 dark:bg-white dark:text-black">
                 <Mail size={24} />
               </div>
               <h3 className="text-xl font-medium mb-2 text-black dark:text-white">Send me an email</h3>
-              <p className="text-gray-800 mb-6 dark:text-gray-200">hello@example.com</p>
+              <p className="text-gray-800 mb-6 dark:text-gray-200">drew@drewux.design</p>
               <div className="flex items-center font-medium text-sm text-gray-800 group-hover:text-black transition-colors duration-300 dark:text-gray-200 dark:group-hover:text-white">
                 <span className="mr-2">Write me</span>
                 <ArrowRight size={16} className="group-hover:transform group-hover:translate-x-1 transition-transform duration-300" />
               </div>
             </a>
-          </div>
-        </TransitionEffect>
-
-        <TransitionEffect delay={0.3}>
-          <div className="mt-24 text-center text-sm text-gray-700 dark:text-gray-300">
-            <p>&copy; {new Date().getFullYear()} Portfolio. All rights reserved.</p>
           </div>
         </TransitionEffect>
       </div>
