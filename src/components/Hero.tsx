@@ -8,32 +8,33 @@ const Hero: React.FC = () => {
     <section className="min-h-[85vh] relative flex items-center justify-center pt-24 md:pt-32">
       {/* Background elements with gradients */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 -left-10 -right-10 h-32 rounded-[50%] bg-gradient-to-r from-purple-100/30 via-blue-100/20 to-muted blur-3xl -z-10 transform translate-y-[-45%] dark:from-purple-900/10 dark:via-blue-900/5 dark:to-muted" />
+        {/* More subtle gradient overlay */}
+        <div className="absolute top-0 -left-10 -right-10 h-32 rounded-[50%] bg-gradient-to-r from-purple-100/10 via-blue-100/5 to-muted blur-3xl -z-10 transform translate-y-[-45%] dark:from-purple-900/5 dark:via-blue-900/3 dark:to-muted" />
         
         {/* Additional subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background z-[-5]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background z-[-5]" />
         
         {/* Lofi sketch elements */}
-        <div className="absolute top-20 right-[5%] w-24 h-24 border-2 border-dashed border-gray-300/40 dark:border-gray-700/40 rounded-md rotate-12 opacity-60"></div>
-        <div className="absolute top-40 left-[10%] w-16 h-16 border border-gray-300/40 dark:border-gray-700/40 rounded-full"></div>
-        <div className="absolute bottom-[30%] right-[15%] w-32 h-8 bg-gray-100/20 dark:bg-gray-800/20 rounded-sm transform -rotate-6"></div>
-        <div className="absolute top-[25%] left-[20%] w-12 h-12 border-2 border-gray-300/30 dark:border-gray-700/30 transform rotate-45"></div>
+        <div className="absolute top-20 right-[5%] w-24 h-24 border-2 border-dashed border-gray-300/30 dark:border-gray-700/30 rounded-md rotate-12 opacity-50"></div>
+        <div className="absolute top-40 left-[10%] w-16 h-16 border border-gray-300/30 dark:border-gray-700/30 rounded-full"></div>
+        <div className="absolute bottom-[30%] right-[15%] w-32 h-8 bg-gray-100/10 dark:bg-gray-800/10 rounded-sm transform -rotate-6"></div>
+        <div className="absolute top-[25%] left-[20%] w-12 h-12 border-2 border-gray-300/20 dark:border-gray-700/20 transform rotate-45"></div>
         
         {/* Gradient accents */}
-        <div className="absolute right-10 md:right-20 top-40 w-20 h-20 md:w-40 md:h-40 rounded-full border border-black/10 dark:border-white/10 bg-gradient-to-br from-purple-100/10 to-blue-100/5 dark:from-purple-900/10 dark:to-blue-900/5"></div>
+        <div className="absolute right-10 md:right-20 top-40 w-20 h-20 md:w-40 md:h-40 rounded-full border border-black/5 dark:border-white/5 bg-gradient-to-br from-purple-100/5 to-blue-100/3 dark:from-purple-900/5 dark:to-blue-900/3"></div>
       </div>
       
       <div className="max-w-4xl mx-auto px-6 md:px-8 w-full relative">
         {/* Subtle tag line above heading */}
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 flex flex-wrap justify-center gap-2">
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-50 dark:bg-gray-700/40 text-gray-700 dark:text-gray-300">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-50/70 dark:bg-gray-700/30 text-gray-700 dark:text-gray-300">
               Human Factors Advocate
             </span>
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-50 dark:bg-gray-700/40 text-gray-700 dark:text-gray-300">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-50/70 dark:bg-gray-700/30 text-gray-700 dark:text-gray-300">
               End-to-End Designer
             </span>
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-50 dark:bg-gray-700/40 text-gray-700 dark:text-gray-300">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-50/70 dark:bg-gray-700/30 text-gray-700 dark:text-gray-300">
               Product Strategist
             </span>
           </div>
