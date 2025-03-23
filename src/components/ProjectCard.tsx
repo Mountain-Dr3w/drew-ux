@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -20,20 +20,50 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   delay = 0,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [rotation, setRotation] = useState({ x: 0, y: 0 });
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+    
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left; // x position within the element
+    const y = e.clientY - rect.top; // y position within the element
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    // Calculate rotation based on mouse position
+    // Limit the rotation to a small amount (-5 to 5 degrees)
+    const rotateX = ((y - centerY) / centerY) * -5; 
+    const rotateY = ((x - centerX) / centerX) * 5;
+    
+    setRotation({ x: rotateX, y: rotateY });
+  };
+
+  const resetRotation = () => {
+    setRotation({ x: 0, y: 0 });
+  };
 
   return (
-    <Link to={url} className="block h-full">
+    <Link to={url} className="block h-full perspective">
       <div
+        ref={cardRef}
         className={cn(
           "group relative overflow-hidden rounded-lg h-full z-10 transition-all duration-300",
           "bg-[hsl(var(--z-10-background))] border border-border",
-          "shadow-sm hover:shadow-md",
+          "shadow-sm hover:shadow-md transform-gpu",
           isHovered ? "translate-y-[-4px]" : ""
         )}
         onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseLeave={() => {
+          setIsHovered(false);
+          resetRotation();
+        }}
+        onMouseMove={handleMouseMove}
         style={{
           transitionDelay: `${delay}s`,
+          transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
         }}
       >      
         <div className="relative h-64 overflow-hidden">
