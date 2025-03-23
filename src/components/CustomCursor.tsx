@@ -1,12 +1,17 @@
 
 import React, { useEffect, useState } from 'react';
 import { useTheme } from "@/hooks/use-theme";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const CustomCursor: React.FC = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const { theme } = useTheme();
+  const isMobile = useIsMobile();
+
+  // Don't render cursor on mobile devices
+  if (isMobile) return null;
 
   useEffect(() => {
     const updateCursorPosition = (e: MouseEvent) => {
