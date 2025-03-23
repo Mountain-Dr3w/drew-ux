@@ -130,19 +130,19 @@ const About: React.FC = () => {
         
         <TransitionEffect delay={0.4}>
           <div className="mt-16 relative max-w-2xl mx-auto p-1">
-            <div className="rounded-2xl overflow-hidden bg-gradient-to-tr from-gray-100 to-white shadow-sm border border-gray-200 dark:from-gray-800 dark:to-gray-900 dark:border-gray-700 p-8">
+            <div className="rounded-2xl overflow-hidden bg-gradient-to-tr from-purple-600 to-blue-500 shadow-sm p-8">
               <div className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="flex space-x-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={20} className="text-black fill-black dark:text-white dark:fill-white" />
+                      <Star key={i} size={20} className="text-white fill-white" />
                     ))}
                   </div>
                 </div>
-                <blockquote className="text-lg font-medium italic mb-4 text-balance bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+                <blockquote className="text-lg font-medium italic mb-4 text-balance text-white">
                   "Drew's ability to build relationships with [our users], and to understand and act on their feedback to deliver valuable outcomes has been instrumental for us. I truly believe we would not have operational adoption without him."
                 </blockquote>
-                <cite className="text-sm text-gray-700 not-italic dark:text-gray-300">— Portfolio Product Lead</cite>
+                <cite className="text-sm text-white/80 not-italic">— Portfolio Product Lead</cite>
               </div>
             </div>
             
