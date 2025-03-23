@@ -6,6 +6,11 @@ import { ArrowRight } from 'lucide-react';
 const Hero: React.FC = () => {
   return (
     <section className="min-h-[90vh] relative flex items-center justify-center pt-24 md:pt-32 z-0 mb-16 md:mb-0">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 overflow-hidden z-[-2]">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-purple-50/30 to-pink-50/30 dark:from-blue-900/10 dark:via-purple-900/10 dark:to-pink-900/10 animate-gradient-shift" style={{ animationDuration: '20s' }}></div>
+      </div>
+      
       {/* Background elements with subtle gradients */}
       <div className="absolute inset-0 overflow-hidden z-[-1]">
         {/* Lofi sketch elements with reduced opacity */}
