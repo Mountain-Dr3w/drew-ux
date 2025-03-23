@@ -82,10 +82,10 @@ const Navbar: React.FC = () => {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <button
-                  className="flex justify-center items-center w-10 h-10 rounded-full bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 text-foreground transition-all hover:shadow-md dark:hover:bg-white/20"
+                  className="flex justify-center items-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 text-foreground transition-all hover:shadow-md dark:hover:bg-white/20"
                   aria-label="Toggle menu"
                 >
-                  {isOpen ? <X size={18} /> : <Menu size={18} />}
+                  {isOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
               </SheetTrigger>
               <SheetContent 
@@ -98,8 +98,15 @@ const Navbar: React.FC = () => {
                   <div className="absolute bottom-40 left-0 w-12 h-12 rounded-full bg-gradient-to-tr from-blue-100/50 to-teal-100/50 dark:from-blue-900/10 dark:to-teal-900/10 blur-xl -z-10"></div>
                   
                   {/* Menu Header - compact */}
-                  <div className="border-b border-gray-200/50 dark:border-white/10 px-3 py-2">
+                  <div className="border-b border-gray-200/50 dark:border-white/10 px-4 py-3 flex items-center justify-between">
                     <h2 className="text-base font-bold gradient-text">Menu</h2>
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="flex justify-center items-center w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 text-foreground hover:bg-black/10 dark:hover:bg-white/20"
+                      aria-label="Close menu"
+                    >
+                      <X size={24} />
+                    </button>
                   </div>
                   
                   {/* Menu Items - BIGGER touch targets */}
@@ -144,7 +151,7 @@ const Navbar: React.FC = () => {
                   </NavigationMenu>
                   
                   {/* Call to action - made more visible and compact */}
-                  <div className="mt-4 px-4 pb-4 sticky bottom-0 left-0 right-0">
+                  <div className="mt-auto px-4 pb-4 sticky bottom-0 left-0 right-0">
                     <div className="relative overflow-hidden rounded-lg p-4 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border border-white/50 dark:border-white/5 shadow-sm group">
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-200/20 to-blue-200/20 dark:from-purple-500/10 dark:to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
                       <h3 className="text-base font-medium mb-1">Need a Product Wizard?</h3>
