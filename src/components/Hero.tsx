@@ -5,12 +5,9 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="min-h-[85vh] relative flex items-center justify-center pt-24 md:pt-32">
+    <section className="min-h-[85vh] relative flex items-center justify-center pt-24 md:pt-32 z-0">
       {/* Background elements with subtle gradients */}
       <div className="absolute inset-0 overflow-hidden z-[-1]">
-        {/* Subtle background overlay to blend with body gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/40" />
-        
         {/* Lofi sketch elements with reduced opacity */}
         <div className="absolute top-20 right-[5%] w-24 h-24 border-2 border-dashed border-gray-300/20 dark:border-gray-700/20 rounded-md rotate-12 opacity-30"></div>
         <div className="absolute top-40 left-[10%] w-16 h-16 border border-gray-300/20 dark:border-gray-700/20 rounded-full opacity-30"></div>
@@ -22,13 +19,13 @@ const Hero: React.FC = () => {
         {/* Subtle tag line above heading */}
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 flex flex-wrap justify-center gap-2">
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-200/80 dark:bg-gray-800/30 text-gray-700 dark:text-gray-300">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-300/90 dark:bg-gray-800/30 text-gray-700 dark:text-gray-300">
               Human Factors Advocate
             </span>
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-200/80 dark:bg-gray-800/30 text-gray-700 dark:text-gray-300">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-300/90 dark:bg-gray-800/30 text-gray-700 dark:text-gray-300">
               End-to-End Designer
             </span>
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-200/80 dark:bg-gray-800/30 text-gray-700 dark:text-gray-300">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-300/90 dark:bg-gray-800/30 text-gray-700 dark:text-gray-300">
               Product Strategist
             </span>
           </div>
@@ -45,7 +42,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
                 href="#contact"
-                className="group inline-flex items-center justify-center space-x-2 bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-full hover:bg-black/90 dark:hover:bg-white/90 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap"
+                className="group inline-flex items-center justify-center space-x-2 bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-full hover:bg-black/90 dark:hover:bg-white/90 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap z-10"
               >
                 <span className="font-medium text-sm">Work With Me</span>
                 <ArrowRight 
@@ -56,13 +53,12 @@ const Hero: React.FC = () => {
               
               <a
                 href="#projects"
-                className="group inline-flex items-center justify-center space-x-2 border border-black/10 dark:border-white/10 bg-transparent text-black dark:text-white px-6 py-3 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap"
+                className="group inline-flex items-center justify-center space-x-2 border border-black/10 dark:border-white/10 bg-transparent text-black dark:text-white px-6 py-3 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap z-10"
               >
                 <span className="font-medium text-sm">View Projects</span>
               </a>
             </div>
           </TransitionEffect>
-          
         </div>
       </div>
     </section>

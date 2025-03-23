@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -44,6 +45,15 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Z-index related background colors */
+    --z-0-background: 0 0% 98%;
+    --z-10-background: 0 0% 100%;
+    --z-20-background: 0 0% 100%;
+    --z-30-background: 0 0% 100%;
+    --z-40-background: 0 0% 100%;
+    --z-50-background: 0 0% 100%;
+    --z-50-overlay: 0 0% 0%;
   }
 
   .dark {
@@ -74,6 +84,15 @@
     --border: 0 0% 20%;
     --input: 0 0% 20%;
     --ring: 0 0% 83.9%;
+    
+    /* Z-index related background colors - dark theme */
+    --z-0-background: 0 0% 7%;
+    --z-10-background: 0 0% 10%;
+    --z-20-background: 0 0% 12%;
+    --z-30-background: 0 0% 14%;
+    --z-40-background: 0 0% 16%;
+    --z-50-background: 0 0% 18%;
+    --z-50-overlay: 0 0% 0%;
   }
 }
 
@@ -253,4 +272,54 @@
   .shiftnudge-card {
     @apply bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 dark:bg-black/60 dark:border-white/10;
   }
+  
+  /* Z-index utilities for consistent backgrounds */
+  .z-0 {
+    @apply bg-[hsl(var(--z-0-background))];
+  }
+  
+  .z-10 {
+    @apply bg-[hsl(var(--z-10-background))];
+  }
+  
+  .z-20 {
+    @apply bg-[hsl(var(--z-20-background))];
+  }
+  
+  .z-30 {
+    @apply bg-[hsl(var(--z-30-background))];
+  }
+  
+  .z-40 {
+    @apply bg-[hsl(var(--z-40-background))];
+  }
+  
+  .z-50 {
+    @apply bg-[hsl(var(--z-50-background))];
+  }
+  
+  .z-50-overlay {
+    @apply bg-[hsl(var(--z-50-overlay))]/80;
+  }
+}
+
+/* Z-index overrides for UI components */
+.popover-content, 
+.dropdown-content, 
+.hover-card-content {
+  @apply bg-[hsl(var(--z-50-background))] !important;
+}
+
+.dialog-overlay, 
+.drawer-overlay,
+.sheet-overlay,
+.alert-dialog-overlay {
+  @apply bg-[hsl(var(--z-50-overlay))]/80 !important;
+}
+
+.dialog-content,
+.drawer-content,
+.sheet-content,
+.alert-dialog-content {
+  @apply bg-[hsl(var(--z-40-background))] !important;
 }
