@@ -142,7 +142,7 @@ const About: React.FC = () => {
                     ))}
                   </div>
                 </div>
-                <blockquote className="text-lg font-medium italic mb-4 text-balance text-black dark:text-white">
+                <blockquote className="text-lg font-medium italic mb-4 text-balance bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                   "Drew's ability to build relationships with [our users], and to understand and act on their feedback to deliver valuable outcomes has been instrumental for us. I truly believe we would not have operational adoption without him."
                 </blockquote>
                 <cite className="text-sm text-gray-700 not-italic dark:text-gray-300">— Portfolio Product Lead</cite>

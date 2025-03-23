@@ -57,7 +57,7 @@ const JigsawResultsSection: React.FC = () => {
       
       <div className="p-1 bg-gradient-to-r from-blue-200 via-cyan-400 to-blue-600 rounded-lg">
         <div className="bg-card p-8 rounded-md">
-          <blockquote className="text-xl md:text-2xl italic font-light text-muted-foreground mb-6">
+          <blockquote className="text-xl md:text-2xl italic font-light bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">
             "The redesigned Jigsaw platform has fundamentally changed how we manage our operations. What used to take multiple trained specialists can now be accomplished by a single operator with greater speed and accuracy."
           </blockquote>
           <div className="flex items-center gap-4">
