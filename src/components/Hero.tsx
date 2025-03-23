@@ -19,13 +19,13 @@ const Hero: React.FC = () => {
         {/* Subtle tag line above heading */}
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 flex flex-wrap justify-center gap-2">
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-300/90 dark:bg-gray-800/30 text-gray-700 dark:text-gray-300">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-200/80 dark:bg-gray-700/60 text-gray-700 dark:text-gray-200">
               Human Factors Advocate
             </span>
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-300/90 dark:bg-gray-800/30 text-gray-700 dark:text-gray-300">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-200/80 dark:bg-gray-700/60 text-gray-700 dark:text-gray-200">
               End-to-End Designer
             </span>
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-300/90 dark:bg-gray-800/30 text-gray-700 dark:text-gray-300">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-200/80 dark:bg-gray-700/60 text-gray-700 dark:text-gray-200">
               Product Strategist
             </span>
           </div>
