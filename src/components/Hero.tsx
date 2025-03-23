@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="min-h-[85vh] relative flex items-center justify-center pt-24 md:pt-32 z-0">
+    <section className="min-h-[90vh] relative flex items-center justify-center pt-24 md:pt-32 z-0 mb-16 md:mb-0">
       {/* Background elements with subtle gradients */}
       <div className="absolute inset-0 overflow-hidden z-[-1]">
         {/* Lofi sketch elements with reduced opacity */}
@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
           </TransitionEffect>
 
           <TransitionEffect direction="up" delay={0.4}>
-            <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">
               <a
                 href="#contact"
                 className="group inline-flex items-center justify-center space-x-2 bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-full hover:bg-black/90 dark:hover:bg-white/90 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap z-10 shadow-md"
