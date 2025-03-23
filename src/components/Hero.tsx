@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center text-center">
           <TransitionEffect direction="up" delay={0.2}>
             <h1 className="shiftnudge-heading mb-10 text-balance">
-              Designing usable, accessible, and scalable software isn't easy. <span className="font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent">Let me do it for you.</span>
+              Designing usable, accessible, and scalable software isn't easy. <span className="font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent" style={{ animationDuration: '6s' }}>Let me do it for you.</span>
             </h1>
           </TransitionEffect>
 
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">
               <a
                 href="#contact"
-                className="group inline-flex items-center justify-center space-x-2 bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-full hover:bg-black/90 dark:hover:bg-white/90 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap z-10 shadow-md"
+                className="group inline-flex items-center justify-center space-x-2 bg-blue-500 text-white dark:bg-blue-600 dark:text-white px-6 py-3 rounded-full hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap z-10 shadow-md"
               >
                 <span className="font-medium text-sm">Work With Me</span>
                 <ArrowRight 
