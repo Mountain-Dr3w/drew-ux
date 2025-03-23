@@ -30,20 +30,20 @@ const About: React.FC = () => {
 
   const personalQualities = [
     {
-      title: "Photography Enthusiast",
-      description: "When I'm not designing interfaces, I'm capturing moments through my camera. Photography helps me develop a keen eye for composition and detail that translates directly to my design work."
+      title: "Family Guy",
+      description: "As a young dad, I spend most of my time with my wife and infant daughter. This is where I recharge, and where I draw my passion and energy."
     },
     {
-      title: "Outdoor Explorer",
-      description: "I find inspiration in nature and love hiking, camping, and exploring new landscapes. These adventures refresh my creativity and provide new perspectives for problem-solving."
+      title: "Hoops Nerd",
+      description: "Ever since I watched Bugs Bunny and MJ face off against the Monstars in Space Jam, I've loved basketball. Whether I'm pouring over the latest advanced metrics, catching a Celtics game after work, or coaching youth leagues, you'll always find me somewhere near the game."
     },
     {
-      title: "Continuous Learner",
-      description: "I'm always taking courses, reading books, or picking up new skills. This curiosity keeps my thinking fresh and helps me bring diverse influences into my design solutions."
+      title: "Musician",
+      description: "Piano, drums, guitar, or saxophone - chances are, if you visit my house you'll hear me riffing away on one of these at some point. I started playing when I was a kid, and still use Music as a creative outlet today."
     },
     {
-      title: "Community Volunteer",
-      description: "I regularly volunteer with local tech meetups and mentor emerging designers. Helping others grow reinforces my own skills and keeps me connected to different viewpoints."
+      title: "Passionate Designer",
+      description: "My love for design doesn't end after 5:00 - I live for the craft. You can regularly catch me getting up to speed on industry trends, working on side projects, and improving my craft in whatever way I can."
     }
   ];
 
