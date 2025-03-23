@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -127,16 +128,8 @@
   }
 
   .cursor-dot {
-    @apply fixed pointer-events-none z-[9999] w-1 h-1 rounded-full;
-    margin-left: -0.125rem;
-    margin-top: -0.125rem;
+    @apply fixed pointer-events-none z-[9999] w-1 h-1 rounded-full transform -translate-x-1/2 -translate-y-1/2;
     transition: width 0.15s ease-out, height 0.15s ease-out, opacity 0.15s ease-out;
-  }
-  
-  .cursor-trail {
-    @apply fixed pointer-events-none z-[9998] w-1 h-1 rounded-full;
-    margin-left: -0.125rem;
-    margin-top: -0.125rem;
   }
   
   .cursor-ring {
@@ -153,10 +146,6 @@
     a, button, [role="button"], input, textarea, select, details, [tabindex]:not([tabindex="-1"]) {
       @apply cursor-none;
     }
-  }
-
-  .perspective {
-    perspective: 1000px;
   }
 }
 
@@ -257,22 +246,6 @@
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
-  }
-
-  @keyframes character-reveal {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-character-reveal {
-    animation: character-reveal 0.5s ease-out forwards;
-    display: inline-block;
   }
   
   .shiftnudge-heading {
