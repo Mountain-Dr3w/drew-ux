@@ -19,13 +19,13 @@ const Hero: React.FC = () => {
         {/* Subtle tag line above heading */}
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 flex flex-wrap justify-center gap-2">
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-200/80 dark:bg-gray-700/60 text-gray-700 dark:text-gray-200">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-200/80 dark:bg-gray-600/60 text-gray-700 dark:text-gray-200 shadow-sm">
               Human Factors Advocate
             </span>
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-200/80 dark:bg-gray-700/60 text-gray-700 dark:text-gray-200">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-200/80 dark:bg-gray-600/60 text-gray-700 dark:text-gray-200 shadow-sm">
               End-to-End Designer
             </span>
-            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-200/80 dark:bg-gray-700/60 text-gray-700 dark:text-gray-200">
+            <span className="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-200/80 dark:bg-gray-600/60 text-gray-700 dark:text-gray-200 shadow-sm">
               Product Strategist
             </span>
           </div>
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
                 href="#contact"
-                className="group inline-flex items-center justify-center space-x-2 bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-full hover:bg-black/90 dark:hover:bg-white/90 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap z-10"
+                className="group inline-flex items-center justify-center space-x-2 bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-full hover:bg-black/90 dark:hover:bg-white/90 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap z-10 shadow-md"
               >
                 <span className="font-medium text-sm">Work With Me</span>
                 <ArrowRight 

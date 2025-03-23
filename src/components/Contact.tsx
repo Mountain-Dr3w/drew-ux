@@ -5,7 +5,7 @@ import { Mail, ArrowRight } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className="section-padding bg-[hsl(var(--z-0-background))] relative z-0">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <TransitionEffect delay={0.1}>
           <div className="text-center mb-12">
@@ -25,9 +25,9 @@ const Contact: React.FC = () => {
           <div className="max-w-2xl mx-auto">
             <a 
               href="mailto:drew@drewux.design" 
-              className="group glass-card p-8 rounded-2xl flex flex-col items-center text-center hover:shadow-md transition-shadow duration-300"
+              className="group bg-[hsl(var(--z-10-background))] p-8 rounded-2xl flex flex-col items-center text-center border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-md transition-all duration-300 relative z-10 hover:translate-y-[-4px]"
             >
-              <div className="w-16 h-16 flex items-center justify-center bg-black rounded-full text-white mb-6 dark:bg-white dark:text-black">
+              <div className="w-16 h-16 flex items-center justify-center bg-black rounded-full text-white mb-6 dark:bg-white dark:text-black shadow-sm">
                 <Mail size={24} />
               </div>
               <h3 className="text-xl font-medium mb-2 text-black dark:text-white">Send me an email</h3>

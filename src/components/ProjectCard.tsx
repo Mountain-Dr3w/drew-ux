@@ -24,7 +24,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <Link to={url} className="block h-full">
       <div
-        className="group relative overflow-hidden rounded-lg shiftnudge-card h-full"
+        className={cn(
+          "group relative overflow-hidden rounded-lg h-full z-10 transition-all duration-300",
+          "bg-[hsl(var(--z-10-background))] border border-border",
+          "shadow-sm hover:shadow-md",
+          isHovered ? "translate-y-[-4px]" : ""
+        )}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         style={{

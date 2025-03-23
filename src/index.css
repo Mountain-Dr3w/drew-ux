@@ -46,7 +46,7 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
     
-    /* Z-index related background colors */
+    /* Z-index related background colors - light theme with proper elevation */
     --z-0-background: 0 0% 98%;
     --z-10-background: 0 0% 100%;
     --z-20-background: 0 0% 100%;
@@ -85,7 +85,7 @@
     --input: 0 0% 20%;
     --ring: 0 0% 83.9%;
     
-    /* Z-index related background colors - dark theme */
+    /* Z-index related background colors - dark theme with proper elevation */
     --z-0-background: 0 0% 7%;
     --z-10-background: 0 0% 10%;
     --z-20-background: 0 0% 12%;
@@ -116,9 +116,6 @@
     font-feature-settings: "ss01", "ss03", "cv01", "cv02", "cv03";
     font-family: 'Inter', system-ui, sans-serif;
     letter-spacing: -0.01em;
-  }
-
-  .dark body {
   }
 
   html {
@@ -163,14 +160,6 @@
   
   .text-pretty {
     text-wrap: pretty;
-  }
-  
-  .hero-gradient {
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-  }
-
-  .dark .hero-gradient {
-    background: linear-gradient(to bottom, rgba(18,18,18,0) 0%, rgba(18,18,18,1) 100%);
   }
   
   .section-padding {
@@ -270,7 +259,39 @@
   }
   
   .shiftnudge-card {
-    @apply bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 dark:bg-black/60 dark:border-white/10;
+    @apply bg-[hsl(var(--z-10-background))] border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 dark:border-white/10;
+    transform: translateZ(0);
+  }
+  
+  /* Elevation utilities for consistent backgrounds based on z-index */
+  .elevation-0 {
+    @apply bg-[hsl(var(--z-0-background))];
+    box-shadow: none;
+  }
+  
+  .elevation-1 {
+    @apply bg-[hsl(var(--z-10-background))];
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  
+  .elevation-2 {
+    @apply bg-[hsl(var(--z-20-background))];
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  }
+  
+  .elevation-3 {
+    @apply bg-[hsl(var(--z-30-background))];
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  }
+  
+  .elevation-4 {
+    @apply bg-[hsl(var(--z-40-background))];
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  }
+  
+  .elevation-5 {
+    @apply bg-[hsl(var(--z-50-background))];
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
   }
   
   /* Z-index utilities for consistent backgrounds */
@@ -308,6 +329,7 @@
 .dropdown-content, 
 .hover-card-content {
   @apply bg-[hsl(var(--z-50-background))] !important;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
 }
 
 .dialog-overlay, 
@@ -322,4 +344,5 @@
 .sheet-content,
 .alert-dialog-content {
   @apply bg-[hsl(var(--z-40-background))] !important;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
 }
