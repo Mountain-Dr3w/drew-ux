@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -98,33 +97,9 @@
     font-feature-settings: "ss01", "ss03", "cv01", "cv02", "cv03";
     font-family: 'Inter', system-ui, sans-serif;
     letter-spacing: -0.01em;
-    /* Add subtle gradient background */
-    background-image: 
-      radial-gradient(circle at top right, 
-        rgba(120, 110, 220, 0.04) 0%, 
-        rgba(120, 110, 220, 0.01) 15%,
-        transparent 50%
-      ),
-      radial-gradient(circle at bottom left, 
-        rgba(100, 140, 230, 0.05) 0%, 
-        rgba(100, 140, 230, 0.02) 20%,
-        transparent 60%
-      );
-    background-attachment: fixed;
   }
 
   .dark body {
-    background-image: 
-      radial-gradient(circle at top right, 
-        rgba(120, 110, 220, 0.08) 0%, 
-        rgba(120, 110, 220, 0.03) 15%,
-        transparent 50%
-      ),
-      radial-gradient(circle at bottom left, 
-        rgba(100, 140, 230, 0.1) 0%, 
-        rgba(100, 140, 230, 0.04) 20%,
-        transparent 60%
-      );
   }
 
   html {
@@ -136,7 +111,6 @@
     letter-spacing: -0.03em;
   }
 
-  /* Custom cursor styles - cleaner version */
   .cursor-dot {
     @apply fixed pointer-events-none z-[9999] w-1 h-1 rounded-full transform -translate-x-1/2 -translate-y-1/2;
     transition: width 0.15s ease-out, height 0.15s ease-out, opacity 0.15s ease-out;
@@ -266,7 +240,6 @@
     50% { transform: translateY(-10px); }
   }
   
-  /* ShiftNudge inspired styles */
   .shiftnudge-heading {
     @apply text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter;
     letter-spacing: -0.04em;
