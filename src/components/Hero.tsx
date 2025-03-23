@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">
               <a
                 href="#contact"
-                className="group inline-flex items-center justify-center space-x-2 bg-blue-500 text-white dark:bg-blue-600 dark:text-white px-6 py-3 rounded-full hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap z-10 shadow-md"
+                className="group inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white dark:from-blue-700 dark:via-blue-600 dark:to-blue-500 px-6 py-3 rounded-full hover:opacity-90 transition-opacity duration-300 w-full sm:w-36 h-12 whitespace-nowrap z-10 shadow-md"
               >
                 <span className="font-medium text-sm">Work With Me</span>
                 <ArrowRight 
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
               
               <a
                 href="#projects"
-                className="group inline-flex items-center justify-center space-x-2 border border-black/10 dark:border-white/10 bg-transparent text-black dark:text-white px-6 py-3 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap z-10"
+                className="group inline-flex items-center justify-center space-x-2 border border-black/10 dark:border-white/10 bg-gray-200/80 text-gray-700 dark:bg-gray-600/60 dark:text-gray-200 px-6 py-3 rounded-full hover:bg-gray-300/80 dark:hover:bg-gray-500/60 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap z-10"
               >
                 <span className="font-medium text-sm">View Projects</span>
               </a>
