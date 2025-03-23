@@ -143,11 +143,11 @@ const Navbar: React.FC = () => {
                     </NavigationMenuList>
                   </NavigationMenu>
                   
-                  {/* Call to action */}
+                  {/* Call to action - Updated text from "Need a UX wizard?" to "Product wizard" */}
                   <div className="mt-8 px-6">
                     <div className="relative overflow-hidden rounded-xl p-5 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border border-white/50 dark:border-white/5 shadow-sm group">
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-200/20 to-blue-200/20 dark:from-purple-500/10 dark:to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
-                      <h3 className="font-medium mb-1">Need a UX wizard?</h3>
+                      <h3 className="font-medium mb-1">Product wizard</h3>
                       <p className="text-sm text-muted-foreground mb-3">Let's collaborate on your next project</p>
                       <a 
                         href="#contact" 
@@ -160,13 +160,7 @@ const Navbar: React.FC = () => {
                     </div>
                   </div>
                   
-                  {/* Footer */}
-                  <div className="mt-auto border-t border-gray-200/50 dark:border-white/10 p-6">
-                    <div className="text-sm text-muted-foreground">
-                      <p className="mb-1 font-medium gradient-text">DrewUX</p>
-                      <p>User Experience Wizard</p>
-                    </div>
-                  </div>
+                  {/* Removed footer section that contained "DrewUX User Experience Wizard" */}
                 </div>
               </SheetContent>
             </Sheet>
