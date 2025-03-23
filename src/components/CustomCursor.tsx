@@ -10,10 +10,10 @@ const CustomCursor: React.FC = () => {
   const { theme } = useTheme();
   const isMobile = useIsMobile();
 
-  // Don't render cursor on mobile devices
-  if (isMobile) return null;
-
   useEffect(() => {
+    // Skip effect for mobile devices
+    if (isMobile) return;
+
     const updateCursorPosition = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
       if (!isVisible) setIsVisible(true);
@@ -67,9 +67,10 @@ const CustomCursor: React.FC = () => {
       document.removeEventListener('mouseenter', handleMouseEnter);
       document.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [isVisible]);
+  }, [isVisible, isMobile]);
 
-  if (!isVisible) return null;
+  // Don't render cursor visuals on mobile or when not visible
+  if (isMobile || !isVisible) return null;
 
   return (
     <>
