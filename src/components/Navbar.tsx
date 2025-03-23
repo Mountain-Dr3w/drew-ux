@@ -37,9 +37,9 @@ const Navbar: React.FC = () => {
   }, []);
 
   const menuItems = [
-    { name: 'Projects', icon: <Layers size={18} />, href: '#projects', color: 'bg-[#FEC6A1] dark:bg-orange-600/20' },
-    { name: 'About', icon: <User size={18} />, href: '#about', color: 'bg-[#E5DEFF] dark:bg-purple-600/20' },
-    { name: 'Contact', icon: <MessageSquare size={18} />, href: '#contact', color: 'bg-[#D3E4FD] dark:bg-blue-600/20' }
+    { name: 'Projects', icon: <Layers size={16} />, href: '#projects', color: 'bg-[#FEC6A1] dark:bg-orange-600/20' },
+    { name: 'About', icon: <User size={16} />, href: '#about', color: 'bg-[#E5DEFF] dark:bg-purple-600/20' },
+    { name: 'Contact', icon: <MessageSquare size={16} />, href: '#contact', color: 'bg-[#D3E4FD] dark:bg-blue-600/20' }
   ];
 
   const handleMenuItemClick = (name: string) => {
@@ -90,21 +90,21 @@ const Navbar: React.FC = () => {
               </SheetTrigger>
               <SheetContent 
                 side="right" 
-                className="w-full sm:w-80 p-0 backdrop-blur-lg bg-gradient-to-br from-[#f7f9fc] to-white/95 dark:from-background/90 dark:to-background/80 border-l border-gray-200/50 dark:border-white/10 overflow-hidden" 
+                className="w-full sm:w-72 p-0 backdrop-blur-lg bg-gradient-to-br from-[#f7f9fc] to-white/95 dark:from-background/90 dark:to-background/80 border-l border-gray-200/50 dark:border-white/10 overflow-hidden" 
               >
                 <div className="flex flex-col h-full relative overflow-hidden">
-                  {/* Decorative elements */}
-                  <div className="absolute top-20 right-0 w-32 h-32 rounded-full bg-gradient-to-br from-pink-100/50 to-purple-100/50 dark:from-pink-900/10 dark:to-purple-900/10 blur-xl -z-10"></div>
-                  <div className="absolute bottom-40 left-0 w-40 h-40 rounded-full bg-gradient-to-tr from-blue-100/50 to-teal-100/50 dark:from-blue-900/10 dark:to-teal-900/10 blur-xl -z-10"></div>
+                  {/* Decorative elements - made smaller */}
+                  <div className="absolute top-20 right-0 w-24 h-24 rounded-full bg-gradient-to-br from-pink-100/50 to-purple-100/50 dark:from-pink-900/10 dark:to-purple-900/10 blur-xl -z-10"></div>
+                  <div className="absolute bottom-40 left-0 w-28 h-28 rounded-full bg-gradient-to-tr from-blue-100/50 to-teal-100/50 dark:from-blue-900/10 dark:to-teal-900/10 blur-xl -z-10"></div>
                   
-                  {/* Menu Header */}
-                  <div className="border-b border-gray-200/50 dark:border-white/10 px-6 py-6">
-                    <h2 className="text-xl font-bold gradient-text">Menu</h2>
+                  {/* Menu Header - reduced padding */}
+                  <div className="border-b border-gray-200/50 dark:border-white/10 px-4 py-3">
+                    <h2 className="text-lg font-bold gradient-text">Menu</h2>
                   </div>
                   
-                  {/* Menu Items */}
-                  <NavigationMenu className="max-w-none w-full mt-6">
-                    <NavigationMenuList className="flex flex-col space-y-3 w-full px-4">
+                  {/* Menu Items - tightened spacing and made more compact */}
+                  <NavigationMenu className="max-w-none w-full mt-2">
+                    <NavigationMenuList className="flex flex-col space-y-1 w-full px-2">
                       {menuItems.map((item, index) => (
                         <NavigationMenuItem key={item.name} className="w-full">
                           <NavigationMenuLink asChild>
@@ -112,25 +112,25 @@ const Navbar: React.FC = () => {
                               href={item.href}
                               onClick={() => handleMenuItemClick(item.name)}
                               className={cn(
-                                "group flex items-center justify-between w-full p-4 rounded-xl transition-all duration-300 animate-fade-in",
+                                "group flex items-center justify-between w-full py-2 px-3 rounded-lg transition-all duration-300 animate-fade-in",
                                 activeItem === item.name 
                                   ? "bg-black/5 dark:bg-white/10 shadow-sm" 
                                   : "hover:bg-black/5 dark:hover:bg-white/5"
                               )}
                               style={{ animationDelay: `${index * 100}ms` }}
                             >
-                              <div className="flex items-center space-x-3">
+                              <div className="flex items-center space-x-2">
                                 <div className={cn(
-                                  "flex items-center justify-center w-10 h-10 rounded-xl",
+                                  "flex items-center justify-center w-8 h-8 rounded-lg",
                                   item.color,
                                   "group-hover:scale-110 transition-transform duration-300"
                                 )}>
                                   {item.icon}
                                 </div>
-                                <span className="font-medium">{item.name}</span>
+                                <span className="text-sm font-medium">{item.name}</span>
                               </div>
                               <ChevronRight 
-                                size={16} 
+                                size={14} 
                                 className={cn(
                                   "text-muted-foreground transition-all duration-300",
                                   "group-hover:translate-x-1 group-hover:text-foreground"
@@ -143,24 +143,22 @@ const Navbar: React.FC = () => {
                     </NavigationMenuList>
                   </NavigationMenu>
                   
-                  {/* Call to action - Updated text from "Product wizard" to "Need a Product Wizard?" */}
-                  <div className="mt-8 px-6">
-                    <div className="relative overflow-hidden rounded-xl p-5 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border border-white/50 dark:border-white/5 shadow-sm group">
+                  {/* Call to action - more compact */}
+                  <div className="mt-4 px-4">
+                    <div className="relative overflow-hidden rounded-lg p-3 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border border-white/50 dark:border-white/5 shadow-sm group">
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-200/20 to-blue-200/20 dark:from-purple-500/10 dark:to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
-                      <h3 className="font-medium mb-1">Need a Product Wizard?</h3>
-                      <p className="text-sm text-muted-foreground mb-3">Let's collaborate on your next project</p>
+                      <h3 className="text-sm font-medium mb-0.5">Need a Product Wizard?</h3>
+                      <p className="text-xs text-muted-foreground mb-2">Let's collaborate on your next project</p>
                       <a 
                         href="#contact" 
                         onClick={() => setIsOpen(false)}
-                        className="text-sm font-medium flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline"
+                        className="text-xs font-medium flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline"
                       >
                         Get in touch
-                        <ChevronRight size={14} className="transition-transform group-hover:translate-x-1" />
+                        <ChevronRight size={12} className="transition-transform group-hover:translate-x-1" />
                       </a>
                     </div>
                   </div>
-                  
-                  {/* Removed footer section that contained "DrewUX User Experience Wizard" */}
                 </div>
               </SheetContent>
             </Sheet>
