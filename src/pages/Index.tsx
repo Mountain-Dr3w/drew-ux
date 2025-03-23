@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
+import CustomCursor from '@/components/CustomCursor';
 
 const Index: React.FC = () => {
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
@@ -61,6 +62,7 @@ const Index: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden">
+      <CustomCursor />
       <Navbar />
       <main>
         <section ref={(el) => setSectionRef(el, 0)}>

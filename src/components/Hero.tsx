@@ -11,10 +11,13 @@ const SplitText: React.FC<{ text: string; baseDelay?: number }> = ({ text, baseD
           {word.split('').map((char, charIndex) => (
             <span
               key={`${wordIndex}-${charIndex}`}
-              className="inline-block animate-character-reveal"
+              className="inline-block"
               style={{
-                animationDelay: `${baseDelay + (wordIndex * 0.05) + (charIndex * 0.015)}s`,
+                animationName: 'character-reveal',
+                animationDuration: '0.5s',
+                animationTimingFunction: 'ease-out',
                 animationFillMode: 'forwards',
+                animationDelay: `${baseDelay + (wordIndex * 0.05) + (charIndex * 0.015)}s`,
                 opacity: 0,
                 transform: 'translateY(20px)'
               }}
@@ -68,7 +71,8 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center text-center">
           <h1 
             ref={headingRef}
-            className="shiftnudge-heading mb-10 text-balance opacity-0"
+            className="shiftnudge-heading mb-10 text-balance"
+            style={{ opacity: '0' }}
           >
             <SplitText text="Designing usable, accessible, and scalable software isn't easy." baseDelay={0.3} />
             {' '}
