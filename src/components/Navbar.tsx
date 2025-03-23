@@ -1,11 +1,14 @@
+
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import ThemeToggle from './ThemeToggle';
 import ThemeSwitchingLogo from './ThemeSwitchingLogo';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,55 +47,37 @@ const Navbar: React.FC = () => {
           <ThemeToggle />
         </nav>
 
-        {/* Mobile Menu Button and Theme Toggle */}
-        <div className="md:hidden flex items-center gap-4">
-          <ThemeToggle />
-          <button
-            className="flex flex-col space-y-1.5 w-6 h-6 justify-center"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <span
-              className={cn(
-                'w-6 h-0.5 bg-foreground transition-transform duration-300',
-                mobileMenuOpen && 'transform rotate-45 translate-y-2'
-              )}
-            />
-            <span
-              className={cn(
-                'w-6 h-0.5 bg-foreground transition-opacity duration-300',
-                mobileMenuOpen && 'opacity-0'
-              )}
-            />
-            <span
-              className={cn(
-                'w-6 h-0.5 bg-foreground transition-transform duration-300',
-                mobileMenuOpen && 'transform -rotate-45 -translate-y-2'
-              )}
-            />
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <div
-        className={cn(
-          'fixed inset-0 top-16 bg-background z-40 transform transition-transform duration-300 ease-in-out md:hidden',
-          mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        {/* Mobile Navigation using Sheet component from shadcn/ui */}
+        {isMobile && (
+          <div className="md:hidden flex items-center gap-4">
+            <ThemeToggle />
+            <Sheet>
+              <SheetTrigger asChild>
+                <button
+                  className="flex flex-col space-y-1.5 w-6 h-6 justify-center"
+                  aria-label="Toggle menu"
+                >
+                  <span className="w-6 h-0.5 bg-foreground transition-transform duration-300" />
+                  <span className="w-6 h-0.5 bg-foreground transition-opacity duration-300" />
+                  <span className="w-6 h-0.5 bg-foreground transition-transform duration-300" />
+                </button>
+              </SheetTrigger>
+              <SheetContent side="right" className="pt-16 px-6">
+                <nav className="flex flex-col items-start justify-start space-y-8">
+                  {['Projects', 'About', 'Contact'].map((item) => (
+                    <a
+                      key={item}
+                      href={`#${item.toLowerCase()}`}
+                      className="text-xl font-medium text-foreground hover:text-accent/80"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         )}
-      >
-        <nav className="flex flex-col items-center justify-center h-full space-y-8">
-          {['Projects', 'About', 'Contact'].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-xl font-medium text-foreground hover:text-accent/80"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {item}
-            </a>
-          ))}
-        </nav>
       </div>
     </header>
   );
