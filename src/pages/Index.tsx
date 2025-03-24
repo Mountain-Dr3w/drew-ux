@@ -38,7 +38,7 @@ const Index: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-purple-50/30 to-pink-50/30 dark:from-blue-900/10 dark:via-purple-900/10 dark:to-pink-900/10 animate-gradient-shift" style={{ animationDuration: '20s' }}></div>
       </div>
       
-      {/* Enhanced background elements with additional design elements - increased opacity and size */}
+      {/* Enhanced background elements with additional design elements - removed SVG logo */}
       <div className="fixed inset-0 overflow-hidden z-[-1]">
         {/* Blurred circles - made larger and more visible */}
         <div className="absolute top-1/4 left-[15%] w-96 h-96 rounded-full bg-blue-300/20 dark:bg-blue-500/20 blur-3xl"></div>
@@ -49,14 +49,6 @@ const Index: React.FC = () => {
         <div className="absolute top-40 left-[10%] w-24 h-24 border-2 border-gray-300/40 dark:border-gray-700/40 rounded-full opacity-50 animate-float" style={{ animationDuration: '10s', animationDelay: '1s' }}></div>
         <div className="absolute bottom-[30%] right-[15%] w-40 h-12 bg-gray-100/15 dark:bg-gray-800/15 rounded-sm transform -rotate-6 animate-float" style={{ animationDuration: '12s', animationDelay: '0.5s' }}></div>
         <div className="absolute top-[25%] left-[20%] w-20 h-20 border-4 border-gray-300/30 dark:border-gray-700/30 transform rotate-45 opacity-50 animate-float" style={{ animationDuration: '9s', animationDelay: '2s' }}></div>
-        
-        {/* Add subtle patterns - increased size and opacity */}
-        <div className="absolute top-1/2 left-[30%] w-64 h-64 opacity-20 dark:opacity-20">
-          <img src="/lovable-uploads/Asset 3.svg" alt="" className="w-full h-full" />
-        </div>
-        <div className="absolute bottom-[20%] left-[5%] w-40 h-40 opacity-20 dark:opacity-20">
-          <img src="/lovable-uploads/Asset 3.svg" alt="" className="w-full h-full" />
-        </div>
         
         {/* Dots grid pattern - increased opacity */}
         <div className="absolute inset-0 opacity-20 dark:opacity-15" 
