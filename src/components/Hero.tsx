@@ -1,7 +1,6 @@
 
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
-import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Hero: React.FC = () => {
@@ -50,20 +49,16 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row w-full sm:w-auto items-center justify-center gap-4 mb-10">
               <a
                 href="#contact"
-                className="group inline-flex items-center justify-center space-x-2 bg-blue-600 dark:bg-blue-600/30 backdrop-blur-xl px-6 py-3 rounded-full hover:bg-blue-700 dark:hover:opacity-90 transition-all duration-300 w-full sm:w-40 h-12 whitespace-nowrap z-10 dark:border dark:border-white/30 hover:shadow-xl hover:shadow-blue-500/20 hover:scale-[1.02]"
+                className="group inline-flex items-center justify-center bg-blue-600 dark:bg-blue-600/30 backdrop-blur-xl px-6 py-3 rounded-full hover:bg-blue-700 dark:hover:opacity-90 transition-all duration-300 w-full sm:w-40 h-12 whitespace-nowrap z-10 dark:border dark:border-white/30 hover:shadow-xl hover:shadow-blue-500/20 hover:scale-[1.02]"
               >
-                <span className="font-medium text-sm text-white">Work With Me</span>
-                <ArrowRight 
-                  size={16} 
-                  className="text-white transition-transform duration-300 group-hover:translate-x-1" 
-                />
+                <span className="font-medium text-sm text-white">Let's Connect</span>
               </a>
               
               <a
                 href="#projects"
                 className="group inline-flex items-center justify-center space-x-2 bg-gray-200/80 dark:bg-gray-800/20 backdrop-blur-xl text-gray-700 dark:text-gray-200 px-6 py-3 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700/30 transition-all duration-300 w-full sm:w-40 h-12 whitespace-nowrap z-10 border border-gray-300 dark:border-white/10 shadow-xl hover:shadow-gray-500/10 hover:scale-[1.02]"
               >
-                <span className="font-medium text-sm">View Projects</span>
+                <span className="font-medium text-sm">View My Work</span>
               </a>
             </div>
           </TransitionEffect>
