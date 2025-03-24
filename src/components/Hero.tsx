@@ -1,7 +1,7 @@
 
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
-import { ArrowRight, Circle, Square, Triangle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Hero: React.FC = () => {
@@ -9,23 +9,6 @@ const Hero: React.FC = () => {
     <section className="min-h-[90vh] relative flex items-center justify-center pt-12 md:pt-16 z-0 mb-16 md:mb-0">
       {/* Minimal design elements */}
       <div className="absolute inset-0 overflow-hidden z-[-1] pointer-events-none">
-        {/* Abstract minimal shapes */}
-        <Circle 
-          className="absolute left-[10%] top-[15%] text-blue-200/30 dark:text-blue-500/20" 
-          size={120} 
-          strokeWidth={0.5}
-        />
-        <Square 
-          className="absolute right-[15%] bottom-[15%] text-purple-200/30 dark:text-purple-500/20" 
-          size={80} 
-          strokeWidth={0.5}
-        />
-        <Triangle 
-          className="absolute left-[20%] bottom-[10%] text-indigo-200/30 dark:text-indigo-500/20" 
-          size={100} 
-          strokeWidth={0.5}
-        />
-        
         {/* Dotted pattern */}
         <div className={cn(
           "absolute top-1/4 left-0 w-[200px] h-[200px]",
