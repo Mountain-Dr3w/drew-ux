@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
               
               <a
                 href="#projects"
-                className="group inline-flex items-center justify-center space-x-2 bg-white/10 dark:bg-gray-800/20 backdrop-blur-xl text-gray-900 dark:text-gray-200 px-6 py-3 rounded-full hover:bg-white/20 dark:hover:bg-gray-700/30 transition-all duration-300 w-full sm:w-40 h-12 whitespace-nowrap z-10 border border-gray-200 dark:border-white/10 shadow-xl hover:shadow-gray-500/10 hover:scale-[1.02]"
+                className="group inline-flex items-center justify-center space-x-2 bg-blue-100/80 dark:bg-gray-800/20 backdrop-blur-xl text-blue-800 dark:text-gray-200 px-6 py-3 rounded-full hover:bg-blue-200 dark:hover:bg-gray-700/30 transition-all duration-300 w-full sm:w-40 h-12 whitespace-nowrap z-10 border border-blue-200 dark:border-white/10 shadow-xl hover:shadow-gray-500/10 hover:scale-[1.02]"
               >
                 <span className="font-medium text-sm">View Projects</span>
               </a>
