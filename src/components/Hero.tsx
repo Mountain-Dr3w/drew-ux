@@ -1,12 +1,55 @@
 
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Circle, Square, Triangle } from 'lucide-react';
+import { AspectRatio } from './ui/aspect-ratio';
+import { cn } from '@/lib/utils';
 
 const Hero: React.FC = () => {
   return (
     <section className="min-h-[90vh] relative flex items-center justify-center pt-12 md:pt-16 z-0 mb-16 md:mb-0">
-      {/* Background gradient removed as it's now applied at the page level */}
+      {/* Minimal design elements */}
+      <div className="absolute inset-0 overflow-hidden z-[-1] pointer-events-none">
+        {/* Large semi-transparent design element */}
+        <div className="absolute right-[-5%] top-[10%] w-[300px] h-[300px] opacity-25 dark:opacity-15">
+          <AspectRatio ratio={1/1}>
+            <img 
+              src="/lovable-uploads/Asset 3.svg" 
+              alt="" 
+              className="w-full h-full object-contain"
+            />
+          </AspectRatio>
+        </div>
+        
+        {/* Abstract minimal shapes */}
+        <Circle 
+          className="absolute left-[10%] top-[15%] text-blue-200/30 dark:text-blue-500/20" 
+          size={120} 
+          strokeWidth={0.5}
+        />
+        <Square 
+          className="absolute right-[15%] bottom-[15%] text-purple-200/30 dark:text-purple-500/20" 
+          size={80} 
+          strokeWidth={0.5}
+        />
+        <Triangle 
+          className="absolute left-[20%] bottom-[10%] text-indigo-200/30 dark:text-indigo-500/20" 
+          size={100} 
+          strokeWidth={0.5}
+        />
+        
+        {/* Dotted pattern */}
+        <div className={cn(
+          "absolute top-1/4 left-0 w-[200px] h-[200px]",
+          "bg-gradient-to-r from-transparent to-transparent",
+          "opacity-20 dark:opacity-10",
+          "bg-[radial-gradient(circle,_rgba(0,0,0,0.2)_1px,_transparent_1px)]",
+          "bg-[size:12px_12px]"
+        )}></div>
+        
+        {/* Subtle diagonal line */}
+        <div className="absolute bottom-0 right-0 w-[30%] h-[1px] bg-gradient-to-r from-transparent to-blue-300/20 dark:to-blue-600/30 rotate-45 origin-bottom-left"></div>
+      </div>
       
       <div className="max-w-4xl mx-auto px-6 md:px-8 w-full relative">
         {/* Subtle tag line above heading */}
