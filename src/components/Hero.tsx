@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
           </TransitionEffect>
 
           <TransitionEffect direction="up" delay={0.4}>
-            <div className="flex flex-col w-full sm:flex-row sm:w-auto items-center gap-4 mb-10">
+            <div className="flex flex-col w-full items-center gap-4 mb-10">
               <a
                 href="#contact"
                 className="group inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-600/70 via-blue-500/70 to-blue-400/70 backdrop-blur-xl px-6 py-3 rounded-full hover:opacity-90 transition-all duration-300 w-full sm:w-40 h-12 whitespace-nowrap z-10 shadow-xl border border-white/30 dark:border-white/20 hover:shadow-blue-500/20 hover:scale-[1.02]"
