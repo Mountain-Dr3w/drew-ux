@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="min-h-[90vh] relative flex items-center justify-center pt-24 md:pt-32 z-0 mb-16 md:mb-0">
+    <section className="min-h-[90vh] relative flex items-center justify-center pt-12 md:pt-16 z-0 mb-16 md:mb-0">
       {/* Background gradient removed as it's now applied at the page level */}
       
       <div className="max-w-4xl mx-auto px-6 md:px-8 w-full relative">
