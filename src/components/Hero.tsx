@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
 
         <div className="flex flex-col items-center text-center">
           <TransitionEffect direction="up" delay={0.2}>
-            <h1 className="shiftnudge-heading mb-10 text-balance">
+            <h1 className="shiftnudge-heading font-light mb-10 text-balance">
               Designing usable, accessible, and scalable software isn't easy.<br />
               <span className="font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent" style={{ animationDuration: '6s' }}>Let me do it for you.</span>
             </h1>
