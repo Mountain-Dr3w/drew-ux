@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row w-full sm:w-auto items-center justify-center gap-4 mb-10">
               <a
                 href="#contact"
-                className="group inline-flex items-center justify-center space-x-2 bg-blue-600 backdrop-blur-xl px-6 py-3 rounded-full hover:opacity-90 transition-all duration-300 w-full sm:w-40 h-12 whitespace-nowrap z-10 shadow-xl border border-blue-400/80 dark:border-white/30 hover:shadow-blue-500/20 hover:scale-[1.02]"
+                className="group inline-flex items-center justify-center space-x-2 bg-blue-600/30 backdrop-blur-xl px-6 py-3 rounded-full hover:opacity-90 transition-all duration-300 w-full sm:w-40 h-12 whitespace-nowrap z-10 shadow-xl border border-white/30 dark:border-white/20 hover:shadow-blue-500/20 hover:scale-[1.02]"
               >
                 <span className="font-medium text-sm text-white">Work With Me</span>
                 <ArrowRight 
@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
               
               <a
                 href="#projects"
-                className="group inline-flex items-center justify-center space-x-2 bg-blue-gray-600 dark:bg-gray-800/20 dark:backdrop-blur-xl text-gray-900 dark:text-gray-200 px-6 py-3 rounded-full hover:bg-blue-gray-700 dark:hover:bg-gray-700/30 transition-all duration-300 w-full sm:w-40 h-12 whitespace-nowrap z-10 border border-blue-gray-400/30 dark:border-white/10 shadow-xl hover:shadow-gray-500/10 hover:scale-[1.02]"
+                className="group inline-flex items-center justify-center space-x-2 bg-white/10 dark:bg-gray-800/20 backdrop-blur-xl text-gray-700 dark:text-gray-200 px-6 py-3 rounded-full hover:bg-white/20 dark:hover:bg-gray-700/30 transition-all duration-300 w-full sm:w-40 h-12 whitespace-nowrap z-10 border border-white/30 dark:border-white/10 shadow-xl hover:shadow-gray-500/10 hover:scale-[1.02]"
               >
                 <span className="font-medium text-sm">View Projects</span>
               </a>
