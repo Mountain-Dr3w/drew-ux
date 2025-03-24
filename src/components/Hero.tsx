@@ -39,7 +39,8 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center text-center">
           <TransitionEffect direction="up" delay={0.2}>
             <h1 className="shiftnudge-heading mb-10 text-balance">
-              Designing usable, accessible, and scalable software isn't easy. <span className="font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent" style={{ animationDuration: '6s' }}>Let me do it for you.</span>
+              Designing usable, accessible, and scalable software isn't easy.<br />
+              <span className="font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent" style={{ animationDuration: '6s' }}>Let me do it for you.</span>
             </h1>
           </TransitionEffect>
 
@@ -47,7 +48,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">
               <a
                 href="#contact"
-                className="group inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 backdrop-blur-sm dark:from-blue-700 dark:via-blue-600 dark:to-blue-500 px-6 py-3 rounded-full hover:opacity-90 transition-opacity duration-300 w-full sm:w-36 h-12 whitespace-nowrap z-10 shadow-md border border-white/10 bg-white/10"
+                className="group inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-600/60 via-blue-500/60 to-blue-400/60 backdrop-blur-md dark:from-blue-700/40 dark:via-blue-600/40 dark:to-blue-500/40 px-6 py-3 rounded-full hover:opacity-95 transition-all duration-300 w-full sm:w-36 h-12 whitespace-nowrap z-10 shadow-lg border border-white/20 bg-white/10"
               >
                 <span className="font-medium text-sm text-white">Work With Me</span>
                 <ArrowRight 
@@ -58,7 +59,7 @@ const Hero: React.FC = () => {
               
               <a
                 href="#projects"
-                className="group inline-flex items-center justify-center space-x-2 bg-blue-gray-500/30 backdrop-blur-sm text-gray-700 dark:text-gray-200 px-6 py-3 rounded-full hover:bg-blue-gray-500/40 dark:hover:bg-blue-gray-400/40 transition-colors duration-300 w-full sm:w-36 h-12 whitespace-nowrap z-10 border border-white/20 dark:border-white/10 shadow-sm"
+                className="group inline-flex items-center justify-center space-x-2 bg-blue-gray-500/20 backdrop-blur-md text-gray-700 dark:text-gray-200 px-6 py-3 rounded-full hover:bg-blue-gray-500/30 dark:hover:bg-blue-gray-400/30 transition-all duration-300 w-full sm:w-36 h-12 whitespace-nowrap z-10 border border-white/20 dark:border-white/10 shadow-lg"
               >
                 <span className="font-medium text-sm">View Projects</span>
               </a>
