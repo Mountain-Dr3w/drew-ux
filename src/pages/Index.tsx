@@ -35,7 +35,7 @@ const Index: React.FC = () => {
     <div className="relative">
       {/* More subtle gradient background applied to a fixed position div */}
       <div className="fixed inset-0 z-[-10] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/20 via-purple-50/20 to-pink-50/20 dark:from-blue-900/5 dark:via-purple-900/5 dark:to-pink-900/5 animate-gradient-shift" style={{ animationDuration: '30s' }}></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-purple-50/30 to-pink-50/30 dark:from-blue-900/15 dark:via-purple-900/15 dark:to-pink-900/15 animate-gradient-shift" style={{ animationDuration: '30s' }}></div>
       </div>
       
       {/* Enhanced background elements with additional design elements */}
@@ -50,10 +50,10 @@ const Index: React.FC = () => {
         <div className="absolute bottom-[30%] right-[15%] w-40 h-12 bg-gray-100/10 dark:bg-gray-800/10 rounded-sm transform -rotate-6 animate-float" style={{ animationDuration: '12s', animationDelay: '0.5s' }}></div>
         <div className="absolute top-[25%] left-[20%] w-20 h-20 border-4 border-gray-300/20 dark:border-gray-700/20 transform rotate-45 opacity-40 animate-float" style={{ animationDuration: '9s', animationDelay: '2s' }}></div>
         
-        {/* Dots grid pattern - more subtle */}
-        <div className="absolute inset-0 opacity-10 dark:opacity-10" 
+        {/* Dots grid pattern - increased opacity to 15% */}
+        <div className="absolute inset-0 opacity-15 dark:opacity-15" 
              style={{ 
-               backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.1) 2px, transparent 2px)', 
+               backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.15) 2px, transparent 2px)', 
                backgroundSize: '40px 40px' 
              }}>
         </div>
