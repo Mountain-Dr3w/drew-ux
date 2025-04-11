@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row w-full sm:w-auto items-center justify-center gap-4 md:gap-6 mb-10">
               <a
                 href="#contact"
-                className="group inline-flex items-center justify-center bg-blue-600 dark:bg-blue-600/30 backdrop-blur-xl px-6 py-3 md:px-8 md:py-4 rounded-full hover:bg-blue-700 dark:hover:opacity-90 transition-all duration-300 w-full sm:w-auto min-w-[160px] h-12 md:h-14 whitespace-nowrap z-10 dark:border dark:border-white/30 hover:shadow-xl hover:shadow-blue-500/20 hover:scale-[1.02]"
+                className="group inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-600/80 dark:to-blue-800/80 px-6 py-3 md:px-8 md:py-4 rounded-full hover:bg-blue-700 dark:hover:opacity-90 transition-all duration-300 w-full sm:w-auto min-w-[160px] h-12 md:h-14 whitespace-nowrap z-10 dark:border dark:border-white/10 hover:shadow-xl hover:shadow-blue-500/20 hover:scale-[1.02]"
               >
                 <span className="font-medium text-sm md:text-base text-white">Connect With Me</span>
               </a>
