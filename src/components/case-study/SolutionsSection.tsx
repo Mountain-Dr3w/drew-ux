@@ -14,7 +14,7 @@ const SolutionsSection: React.FC = () => {
             </div>
             <h3 className="text-xl font-medium mb-2">Design System Creation</h3>
             <p className="text-muted-foreground">
-              We developed a comprehensive design system including component libraries, typography guidelines, and color systems.
+              I developed a comprehensive design system including component libraries, typography guidelines, and color systems.
             </p>
           </div>
           <div className="px-6 py-4 bg-muted/30">
@@ -31,7 +31,7 @@ const SolutionsSection: React.FC = () => {
             </div>
             <h3 className="text-xl font-medium mb-2">Information Architecture</h3>
             <p className="text-muted-foreground">
-              We restructured the platform's navigation and content hierarchy based on user needs and common tasks.
+              I restructured the platform's navigation and content hierarchy based on user needs and common tasks.
             </p>
           </div>
           <div className="px-6 py-4 bg-muted/30">
@@ -48,7 +48,7 @@ const SolutionsSection: React.FC = () => {
             </div>
             <h3 className="text-xl font-medium mb-2">Data Visualization</h3>
             <p className="text-muted-foreground">
-              We redesigned dashboards and reports to communicate insights more effectively and highlight key metrics.
+              I redesigned dashboards and reports to communicate insights more effectively and highlight key metrics.
             </p>
           </div>
           <div className="px-6 py-4 bg-muted/30">
@@ -68,25 +68,25 @@ const SolutionsSection: React.FC = () => {
           <div className="relative pl-12 pb-10">
             <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-blue-500 border-4 border-background"></div>
             <h4 className="font-medium text-lg mb-2">Discovery & Research</h4>
-            <p className="text-muted-foreground mb-2">We began with extensive user research to understand pain points and opportunities.</p>
+            <p className="text-muted-foreground mb-2">I began with extensive user research to understand pain points and opportunities.</p>
           </div>
           
           <div className="relative pl-12 pb-10">
             <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-purple-500 border-4 border-background"></div>
             <h4 className="font-medium text-lg mb-2">Design & Prototyping</h4>
-            <p className="text-muted-foreground mb-2">We created wireframes, developed the design system, and built interactive prototypes.</p>
+            <p className="text-muted-foreground mb-2">I created wireframes, developed the design system, and built interactive prototypes.</p>
           </div>
           
           <div className="relative pl-12 pb-10">
             <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-amber-500 border-4 border-background"></div>
             <h4 className="font-medium text-lg mb-2">Testing & Iteration</h4>
-            <p className="text-muted-foreground mb-2">We conducted usability testing with actual users and refined our designs based on feedback.</p>
+            <p className="text-muted-foreground mb-2">I conducted usability testing with actual users and refined my designs based on feedback.</p>
           </div>
           
           <div className="relative pl-12">
             <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-green-500 border-4 border-background"></div>
             <h4 className="font-medium text-lg mb-2">Implementation & Handoff</h4>
-            <p className="text-muted-foreground">We collaborated with developers to implement the design system and ensure design fidelity.</p>
+            <p className="text-muted-foreground">I collaborated with developers to implement the design system and ensure design fidelity.</p>
           </div>
         </div>
       </div>

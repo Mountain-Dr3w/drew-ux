@@ -8,7 +8,7 @@ const ApproachSection: React.FC = () => {
     <CaseStudySection title="Approach">
       <h3 className="text-xl font-medium mb-4">Process</h3>
       <p className="text-muted-foreground mb-6">
-        We began with a comprehensive audit of the existing platform, conducting user interviews and usability testing to identify pain points. This led to a complete redesign that prioritized user needs while maintaining the platform's core functionality.
+        I began with a comprehensive audit of the existing platform, conducting user interviews and usability testing to identify pain points. This led to a complete redesign that prioritized user needs while maintaining the platform's core functionality.
       </p>
       
       <h3 className="text-xl font-medium mb-4">Method</h3>

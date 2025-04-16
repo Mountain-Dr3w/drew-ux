@@ -25,7 +25,7 @@ const DesignImprovementsSection: React.FC = () => {
       </div>
       
       <p className="text-muted-foreground mb-6">
-        The redesign focused on creating a clean, intuitive interface that prioritizes the most important information and actions for users. We implemented a consistent color system, typography hierarchy, and component library to ensure visual coherence across the platform.
+        The redesign focused on creating a clean, intuitive interface that prioritizes the most important information and actions for users. I implemented a consistent color system, typography hierarchy, and component library to ensure visual coherence across the platform.
       </p>
     </CaseStudySection>
   );

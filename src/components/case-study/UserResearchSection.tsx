@@ -34,7 +34,7 @@ const UserResearchSection: React.FC = () => {
           </div>
           <h3 className="text-xl font-medium mb-3">Methods</h3>
           <p className="text-muted-foreground mb-3">
-            We employed a mixed-methods approach including:
+            I employed a mixed-methods approach including:
           </p>
           <ul className="space-y-2 text-muted-foreground">
             <li className="flex items-start gap-2">
