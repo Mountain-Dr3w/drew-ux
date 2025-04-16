@@ -17,8 +17,8 @@ const ChallengesSection: React.FC = () => {
               1
             </div>
             <div>
-              <h4 className="font-medium text-foreground mb-1">Poor User Experience</h4>
-              <p className="text-muted-foreground">User feedback indicated that the existing platform was difficult to navigate and comprehend, leading to user frustration and low engagement.</p>
+              <h4 className="font-medium text-foreground mb-1">Lack of Design</h4>
+              <p className="text-muted-foreground">As a small company, Veriflux did not have the resources to hire a full-time designer. Because of this, design was managed by the developers that were building the product. To be candid, it wasn't user-friendly.</p>
             </div>
           </li>
           <li className="flex gap-4">
@@ -26,8 +26,8 @@ const ChallengesSection: React.FC = () => {
               2
             </div>
             <div>
-              <h4 className="font-medium text-foreground mb-1">Inconsistent Design System</h4>
-              <p className="text-muted-foreground">The startup lacked a cohesive design system, resulting in inconsistent UI elements and confusing user interactions across the platform.</p>
+              <h4 className="font-medium text-foreground mb-1">Lack of User Empathy</h4>
+              <p className="text-muted-foreground">Because of the lack of design support, user research was non-existent. As a result, the team was building something that they thought was valuable, but weren't gaining user adoption.</p>
             </div>
           </li>
           <li className="flex gap-4">
@@ -35,8 +35,8 @@ const ChallengesSection: React.FC = () => {
               3
             </div>
             <div>
-              <h4 className="font-medium text-foreground mb-1">Ineffective Data Visualization</h4>
-              <p className="text-muted-foreground">Data visualization features were not effectively communicating key insights, diminishing the platform's value proposition.</p>
+              <h4 className="font-medium text-foreground mb-1">Racing the Clock</h4>
+              <p className="text-muted-foreground">At Veriflux's current rate of adoption, funding was going to run out before their vision was fully realized.</p>
             </div>
           </li>
           <li className="flex gap-4">
@@ -44,8 +44,8 @@ const ChallengesSection: React.FC = () => {
               4
             </div>
             <div>
-              <h4 className="font-medium text-foreground mb-1">Scaling Design Processes</h4>
-              <p className="text-muted-foreground">The company needed to scale quickly while maintaining quality and implementing a sustainable design process.</p>
+              <h4 className="font-medium text-foreground mb-1">Lack of Design Culture</h4>
+              <p className="text-muted-foreground">Due to some bad experiences in the past and the lack of a full-time designer, the team struggled to grasp the value of design. Because of this, I had to fight to get ideas implemented by ensuring that I was clearly communicating the value of each decision that was made.</p>
             </div>
           </li>
         </ul>
