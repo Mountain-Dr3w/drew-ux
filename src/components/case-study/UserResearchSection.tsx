@@ -6,7 +6,7 @@ import { Lightbulb, Target, LineChart } from 'lucide-react';
 const UserResearchSection: React.FC = () => {
   return (
     <CaseStudySection title="User Research">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div className="flex flex-col gap-6 mb-8">
         <div className="bg-card p-6 rounded-lg border border-border h-full">
           <div className="mb-4 bg-blue-100 dark:bg-blue-900/30 w-10 h-10 rounded-full flex items-center justify-center">
             <Target className="text-blue-600 dark:text-blue-400" size={20} />
