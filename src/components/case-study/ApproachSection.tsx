@@ -16,12 +16,15 @@ const ApproachSection: React.FC = () => {
         </ol>
       </div>
       
-      <div className="rounded-lg overflow-hidden shadow-lg">
-        <img 
-          src="/lovable-uploads/46ce5b83-fce6-4daf-95e0-db5a0aec5fb4.png" 
-          alt="Accessibility audit showing contrast issues in the navigation menu" 
-          className="w-full"
-        />
+      <div>
+        <p className="text-md font-medium mb-4 text-muted-foreground">Accessibility Audit Example</p>
+        <div className="rounded-lg overflow-hidden shadow-lg">
+          <img 
+            src="/lovable-uploads/46ce5b83-fce6-4daf-95e0-db5a0aec5fb4.png" 
+            alt="Accessibility audit showing contrast issues in the navigation menu" 
+            className="w-full"
+          />
+        </div>
       </div>
     </CaseStudySection>
   );
