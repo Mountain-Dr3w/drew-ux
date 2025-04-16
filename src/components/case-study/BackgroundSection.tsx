@@ -14,7 +14,7 @@ const BackgroundSection: React.FC = () => {
 
       <div className="bg-muted/30 p-6 border-l-4 border-green-500 rounded-r-md">
         <p className="italic text-muted-foreground text-lg">
-          "Veriflux came to us with a powerful product that was hindered by usability issues. Our challenge was to refine their user experience while maintaining the robust functionality that made their platform valuable to clients."
+          English Translation: Veriflux is a web app that allows waste management companies to track requests for used food stock pickups, dispatch drivers, and track inventory in transit to dropoff points (typically landfills or recycling plants)
         </p>
       </div>
     </CaseStudySection>
