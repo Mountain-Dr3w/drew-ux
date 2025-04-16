@@ -48,7 +48,7 @@ const VerifluxCaseStudy: React.FC = () => {
         <CaseStudyHero 
           caseNumber="Case Study"
           title="From Food Waste to Impact: A Design Transformation Story"
-          description="Discover how strategic UX design turned Veriflux from a basic tool into a powerful platform that drives sustainability and user engagement in food waste management."
+          description="How strategic UX drove adoption for a waste management and traceability startup"
         />
 
         <BackgroundSection />
