@@ -17,7 +17,7 @@ const ChallengesSection: React.FC = () => {
               1
             </div>
             <div>
-              <h4 className="font-medium text-foreground mb-1">Lack of Design</h4>
+              <h4 className="font-medium text-foreground mb-1">Poor Usability and Accessibility</h4>
               <p className="text-muted-foreground">As a small company, Veriflux did not have the resources to hire a full-time designer. Because of this, design was managed by the developers that were building the product. To be candid, it wasn't user-friendly.</p>
             </div>
           </li>
