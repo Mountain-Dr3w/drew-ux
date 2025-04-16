@@ -20,8 +20,8 @@ const ApproachSection: React.FC = () => {
         <p className="text-md font-medium mb-4 text-muted-foreground">Accessibility Audit Example</p>
         <div className="rounded-lg overflow-hidden shadow-lg">
           <img 
-            src="/lovable-uploads/46ce5b83-fce6-4daf-95e0-db5a0aec5fb4.png" 
-            alt="Accessibility audit showing contrast issues in the navigation menu" 
+            src="/lovable-uploads/22025065-0466-45b1-ad87-e1c51db5aea0.png" 
+            alt="Accessibility audit showing missing alt text for a Routes menu item" 
             className="w-full"
           />
         </div>
