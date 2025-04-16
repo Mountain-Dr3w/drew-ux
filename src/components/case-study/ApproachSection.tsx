@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
 import CaseStudySection from './CaseStudySection';
 
 const ApproachSection: React.FC = () => {
@@ -16,28 +15,13 @@ const ApproachSection: React.FC = () => {
       </ol>
       
       <h3 className="text-xl font-medium mb-4">Method</h3>
-      <ul className="space-y-2 text-muted-foreground mb-6">
-        <li className="flex items-start gap-2">
-          <CheckCircle size={18} className="text-green-500 mt-0.5 flex-shrink-0" />
-          <span>User Research & Interviews</span>
-        </li>
-        <li className="flex items-start gap-2">
-          <CheckCircle size={18} className="text-green-500 mt-0.5 flex-shrink-0" />
-          <span>Design Audits</span>
-        </li>
-        <li className="flex items-start gap-2">
-          <CheckCircle size={18} className="text-green-500 mt-0.5 flex-shrink-0" />
-          <span>Design System Creation</span>
-        </li>
-        <li className="flex items-start gap-2">
-          <CheckCircle size={18} className="text-green-500 mt-0.5 flex-shrink-0" />
-          <span>Iterative Prototyping</span>
-        </li>
-        <li className="flex items-start gap-2">
-          <CheckCircle size={18} className="text-green-500 mt-0.5 flex-shrink-0" />
-          <span>Usability Testing</span>
-        </li>
-      </ul>
+      <div className="rounded-lg overflow-hidden shadow-lg mb-6">
+        <img 
+          src="/lovable-uploads/46ce5b83-fce6-4daf-95e0-db5a0aec5fb4.png" 
+          alt="Accessibility audit showing contrast issues in the navigation menu" 
+          className="w-full"
+        />
+      </div>
     </CaseStudySection>
   );
 };
