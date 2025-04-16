@@ -9,7 +9,7 @@ interface ProblemStatementSectionProps {
 const ProblemStatementSection: React.FC<ProblemStatementSectionProps> = ({ 
   customStatement 
 }) => {
-  const defaultStatement = "Veriflux has a tool focused on design for function rather than design for adoption. While the system can track waste effectively, it lacks visual appeal and intuitive workflows, requiring a lot of manual training to maintain. How might we create an intuitive platform that drives user adoption while maintaining powerful functionality?";
+  const defaultStatement = "Potential users were hesitant to adopt Veriflux because of perceived administrative burden, unusable UI, and a lack of added value over existing processes.";
   
   const statement = customStatement || defaultStatement;
   
