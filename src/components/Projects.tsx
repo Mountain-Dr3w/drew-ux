@@ -5,6 +5,12 @@ import TransitionEffect from './TransitionEffect';
 
 const projectsData = [
   {
+    title: "CyberShield: Transforming Threat Intelligence",
+    description: "How I redesigned complex security data visualization to enhance decision-making and threat response for defense contractors.",
+    imageUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    url: "/case-study/deftech",
+  },
+  {
     title: "Design Thinking Meets Waste Traceability",
     description: "How I helped Veriflux transform their product experience to drive user adoption and create a sustainable impact in food waste management.",
     imageUrl: "/lovable-uploads/e0e3973c-7205-4722-a4aa-d618d7144397.png",
