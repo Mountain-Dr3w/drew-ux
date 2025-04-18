@@ -1,7 +1,6 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
-import { Lightbulb, Target, LineChart } from 'lucide-react';
+import { Lightbulb, Target, LineChart, Users } from 'lucide-react';
 
 const DefTechResearchSection: React.FC = () => {
   return (
