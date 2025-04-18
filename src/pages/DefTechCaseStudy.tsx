@@ -42,7 +42,7 @@ const DefTechCaseStudy: React.FC = () => {
     <div className="min-h-screen bg-background">
       <CaseStudyHeader />
 
-      <main className="container py-12 md:py-16 lg:py-24">
+      <main className="px-6 py-12 md:py-16 lg:py-24">
         <CaseStudyHero 
           caseNumber="Case Study"
           title="LogisticsPro: Empowering Defense Leaders with Strategic Logistics Intelligence"
