@@ -1,16 +1,13 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { TrendingUp, Clock, Shield } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const DefTechResultsSection: React.FC = () => {
-  return (
-    <CaseStudySection title="Results & Impact">
+  return <CaseStudySection title="Results & Impact">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
         <Card className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent"></div>
-          <CardContent className="p-6 relative z-10">
+          <CardContent className="p-6 relative z-10 bg-transparent">
             <div className="flex items-center gap-2 mb-3">
               <Clock className="text-blue-500" size={24} />
               <h3 className="text-xl font-medium">Efficiency</h3>
@@ -106,8 +103,6 @@ const DefTechResultsSection: React.FC = () => {
           </div>
         </CardContent>
       </Card>
-    </CaseStudySection>
-  );
+    </CaseStudySection>;
 };
-
 export default DefTechResultsSection;
