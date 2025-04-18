@@ -12,7 +12,7 @@ const DefTechIntroSection: React.FC = () => {
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-          <div className="bg-card p-6 rounded-lg border border-border relative overflow-hidden">
+          <div className="bg-background dark:bg-card p-6 rounded-lg border border-border relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent"></div>
             <div className="relative z-10">
               <Truck className="h-10 w-10 text-blue-500 mb-4" />
@@ -21,7 +21,7 @@ const DefTechIntroSection: React.FC = () => {
             </div>
           </div>
           
-          <div className="bg-card p-6 rounded-lg border border-border relative overflow-hidden">
+          <div className="bg-background dark:bg-card p-6 rounded-lg border border-border relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent"></div>
             <div className="relative z-10">
               <BarChart className="h-10 w-10 text-purple-500 mb-4" />
@@ -30,7 +30,7 @@ const DefTechIntroSection: React.FC = () => {
             </div>
           </div>
           
-          <div className="bg-card p-6 rounded-lg border border-border relative overflow-hidden">
+          <div className="bg-background dark:bg-card p-6 rounded-lg border border-border relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent"></div>
             <div className="relative z-10">
               <Shield className="h-10 w-10 text-emerald-500 mb-4" />
