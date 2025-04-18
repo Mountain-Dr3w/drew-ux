@@ -1,7 +1,9 @@
+
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { TrendingUp, Clock, Shield } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+
 const DefTechResultsSection: React.FC = () => {
   return <CaseStudySection title="Results & Impact">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
@@ -42,7 +44,7 @@ const DefTechResultsSection: React.FC = () => {
       
       <Card className="mb-10 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent"></div>
-        <CardContent className="p-8 relative z-10">
+        <CardContent className="p-8 relative z-10 bg-transparent">
           <h3 className="text-2xl font-medium mb-6 text-center">Business Impact</h3>
           <div className="space-y-6">
             <p className="text-muted-foreground text-lg leading-relaxed">
@@ -79,7 +81,7 @@ const DefTechResultsSection: React.FC = () => {
       
       <Card className="mt-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent"></div>
-        <CardContent className="p-8 relative z-10">
+        <CardContent className="p-8 relative z-10 bg-transparent">
           <h3 className="text-2xl font-medium mb-6 text-center">Lessons Learned</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div>
@@ -106,3 +108,4 @@ const DefTechResultsSection: React.FC = () => {
     </CaseStudySection>;
 };
 export default DefTechResultsSection;
+
