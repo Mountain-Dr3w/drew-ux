@@ -1,7 +1,7 @@
 
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
-import { AlertOctagon, Users, Clock, Database } from 'lucide-react';
+import { AlertOctagon, Timer, Database, Network } from 'lucide-react';
 
 const DefTechChallengesSection: React.FC = () => {
   return (
@@ -17,8 +17,8 @@ const DefTechChallengesSection: React.FC = () => {
               1
             </div>
             <div>
-              <h4 className="font-medium text-foreground mb-1">Information Overload</h4>
-              <p className="text-muted-foreground">Security analysts were overwhelmed by the sheer volume of threat intelligence data, making it difficult to identify genuine threats from false positives.</p>
+              <h4 className="font-medium text-foreground mb-1">Data Fragmentation</h4>
+              <p className="text-muted-foreground">Critical logistics data was scattered across multiple systems, making it difficult to get a comprehensive view of operations.</p>
             </div>
           </li>
           <li className="flex gap-4">
@@ -26,8 +26,8 @@ const DefTechChallengesSection: React.FC = () => {
               2
             </div>
             <div>
-              <h4 className="font-medium text-foreground mb-1">Fragmented Tools</h4>
-              <p className="text-muted-foreground">Teams were using multiple siloed tools for different aspects of threat intelligence, leading to inefficient workflows and missed connections between related threats.</p>
+              <h4 className="font-medium text-foreground mb-1">Delayed Decision Making</h4>
+              <p className="text-muted-foreground">Leaders lacked real-time visibility into resource availability and operational status, leading to slower strategic decisions.</p>
             </div>
           </li>
           <li className="flex gap-4">
@@ -35,8 +35,8 @@ const DefTechChallengesSection: React.FC = () => {
               3
             </div>
             <div>
-              <h4 className="font-medium text-foreground mb-1">Technical Complexity</h4>
-              <p className="text-muted-foreground">Existing solutions required extensive technical knowledge, making them inaccessible to stakeholders who needed to understand security posture but lacked technical expertise.</p>
+              <h4 className="font-medium text-foreground mb-1">Complex Dependencies</h4>
+              <p className="text-muted-foreground">Understanding the impact of logistics decisions across different operational areas was challenging due to complex interdependencies.</p>
             </div>
           </li>
           <li className="flex gap-4">
@@ -44,8 +44,8 @@ const DefTechChallengesSection: React.FC = () => {
               4
             </div>
             <div>
-              <h4 className="font-medium text-foreground mb-1">Decision Paralysis</h4>
-              <p className="text-muted-foreground">Security teams struggled to prioritize threats and actions due to poor visualization of threat severity, impact, and relationships between different security events.</p>
+              <h4 className="font-medium text-foreground mb-1">Limited Forecasting</h4>
+              <p className="text-muted-foreground">Existing tools provided limited ability to predict future resource needs and potential bottlenecks in the supply chain.</p>
             </div>
           </li>
         </ul>
@@ -53,7 +53,7 @@ const DefTechChallengesSection: React.FC = () => {
       
       <div className="bg-black text-white dark:bg-white dark:text-black p-8 rounded-lg">
         <p className="text-xl md:text-2xl font-light leading-relaxed mb-4">
-          "Defense contractors need a unified threat intelligence platform that transforms overwhelming security data into clear, actionable insights while maintaining compliance with strict defense industry standards."
+          "Defense logistics leaders need a unified platform that provides real-time operational visibility and predictive insights to make faster, more informed strategic decisions."
         </p>
       </div>
     </CaseStudySection>

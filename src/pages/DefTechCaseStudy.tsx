@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import CaseStudyHeader from '@/components/case-study/CaseStudyHeader';
 import CaseStudyHero from '@/components/case-study/CaseStudyHero';
-import CaseStudySection from '@/components/case-study/CaseStudySection';
 import NextCaseStudySection from '@/components/case-study/NextCaseStudySection';
 import DefTechIntroSection from '@/components/deftech/DefTechIntroSection';
 import DefTechChallengesSection from '@/components/deftech/DefTechChallengesSection';
@@ -46,8 +45,8 @@ const DefTechCaseStudy: React.FC = () => {
       <main className="container py-12 md:py-16 lg:py-24">
         <CaseStudyHero 
           caseNumber="Case Study"
-          title="CyberShield: Transforming Threat Intelligence for Defense Contractors"
-          description="How we redesigned and simplified complex security data visualization to enhance decision-making for defense cybersecurity teams"
+          title="LogisticsPro: Empowering Defense Leaders with Strategic Logistics Intelligence"
+          description="How we transformed complex logistics data into an intuitive decision support platform for defense leadership"
         />
 
         <DefTechIntroSection />
