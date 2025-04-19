@@ -8,10 +8,11 @@ import ApproachSection from '@/components/case-study/ApproachSection';
 import UserResearchSection from '@/components/case-study/UserResearchSection';
 import ProblemStatementSection from '@/components/case-study/ProblemStatementSection';
 import SolutionsSection from '@/components/case-study/SolutionsSection';
-import DesignAuditSection from '@/components/case-study/DesignAuditSection';
-import DesignImprovementsSection from '@/components/case-study/DesignImprovementsSection';
-import NewFeaturesSection from '@/components/case-study/NewFeaturesSection';
+import DesignImplementationSection from '@/components/case-study/DesignImplementationSection';
+import RouteTrackingSection from '@/components/case-study/RouteTrackingSection';
+import AnalyticsDashboardSection from '@/components/case-study/AnalyticsDashboardSection';
 import ResultsSection from '@/components/case-study/ResultsSection';
+import NextCaseStudySection from '@/components/case-study/NextCaseStudySection';
 
 const VerifluxCaseStudy: React.FC = () => {
   useEffect(() => {
@@ -57,10 +58,14 @@ const VerifluxCaseStudy: React.FC = () => {
         <ApproachSection />
         <UserResearchSection />
         <SolutionsSection />
-        <DesignAuditSection />
-        <DesignImprovementsSection />
-        <NewFeaturesSection />
+        <DesignImplementationSection />
+        <RouteTrackingSection />
+        <AnalyticsDashboardSection />
         <ResultsSection />
+        <NextCaseStudySection
+          title="Jigsaw: Redesigning Military Mission Planning"
+          link="/case-study/jigsaw"
+        />
       </main>
     </div>
   );
