@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { Lightbulb, Target, LineChart, Users } from 'lucide-react';
@@ -70,19 +69,19 @@ const DefTechResearchSection: React.FC = () => {
           <ul className="space-y-3 text-muted-foreground pl-[50px]">
             <li className="flex items-start gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-              <span>Leaders needed comprehensive dashboards that highlight critical supply chain bottlenecks</span>
+              <span>Leadership needed real-time visibility into mission-critical resources to reduce decision-making time from days to minutes</span>
             </li>
             <li className="flex items-start gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-              <span>Multiple systems caused significant delays in resource allocation decisions</span>
+              <span>Integrated data visualization across multiple supply chains could prevent stockouts and reduce over-provisioning by 40%</span>
             </li>
             <li className="flex items-start gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-              <span>Predictive analytics were crucial for proactive resource management</span>
+              <span>Automated resource tracking and predictive analytics could increase operational readiness rates by up to 35%</span>
             </li>
             <li className="flex items-start gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-              <span>Visual representation of resource dependencies was essential for planning</span>
+              <span>Cross-unit resource sharing capabilities could optimize asset utilization and reduce emergency procurement costs by 25%</span>
             </li>
           </ul>
         </div>
