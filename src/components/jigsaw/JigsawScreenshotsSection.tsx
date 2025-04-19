@@ -1,11 +1,8 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { ArrowRight, CalendarDays, Map } from 'lucide-react';
-
 const JigsawScreenshotsSection: React.FC = () => {
-  return (
-    <CaseStudySection title="Solution">
+  return <CaseStudySection title="Solution">
       <div className="space-y-10">
         {/* Gantt Section */}
         <div className="space-y-4">
@@ -89,7 +86,7 @@ const JigsawScreenshotsSection: React.FC = () => {
           
           <div className="relative group overflow-hidden rounded-lg border border-border">
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-            <img src="/lovable-uploads/33b41f76-0c7d-459e-83a4-1523b835b647.png" alt="Jigsaw split view showing timeline and map interface" className="w-full h-auto rounded-lg transition-transform duration-500 group-hover:scale-[1.02]" />
+            <img src="/lovable-uploads/33b41f76-0c7d-459e-83a4-1523b835b647.png" alt="Jigsaw split view showing timeline and map interface" className="w-full h-full rounded-lg transition-transform duration-500 group-hover:scale-[1.02]" />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pointer-events-none">
               <p className="text-white text-lg font-medium">Split-View Mission Planning Interface</p>
               <p className="text-white/80 text-sm">Combined timeline and map visualization for enhanced spatial awareness</p>
@@ -153,8 +150,6 @@ const JigsawScreenshotsSection: React.FC = () => {
           </div>
         </div>
       </div>
-    </CaseStudySection>
-  );
+    </CaseStudySection>;
 };
-
 export default JigsawScreenshotsSection;
