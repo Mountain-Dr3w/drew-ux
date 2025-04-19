@@ -122,7 +122,11 @@ const DefTechPrototypesSection: React.FC = () => {
           <h3 className="text-xl font-medium mb-6">Resource Management Dashboard</h3>
           <div className="bg-card rounded-lg border border-border overflow-hidden">
             <div className="relative bg-muted/50 h-80 flex items-center justify-center">
-              <Layers className="w-32 h-32 text-purple-300" />
+              <img 
+                src="/lovable-uploads/af410691-e911-4748-9117-3129f4c06085.png" 
+                alt="Resource Management Dashboard" 
+                className="w-full h-full object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-background/80 flex items-end justify-center p-4">
                 <div className="bg-background/90 p-2 rounded-md inline-block">
                   <p className="text-xs text-muted-foreground">High-fidelity mockup of the logistics dashboard</p>
