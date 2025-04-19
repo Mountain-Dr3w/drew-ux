@@ -1,6 +1,7 @@
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { LineChart, Truck, Layers } from 'lucide-react';
+
 const DefTechPrototypesSection: React.FC = () => {
   return <CaseStudySection title="Prototypes & Testing">
       <div className="space-y-10">
@@ -13,55 +14,11 @@ const DefTechPrototypesSection: React.FC = () => {
           <div className="">
             <div className="bg-card p-3 rounded-lg border border-border overflow-hidden">
               <div className="relative bg-[#F6F6F7] rounded-lg h-52 mb-3">
-                <div className="absolute inset-0 p-3">
-                  <div className="h-full border border-[#8E9196]/20 rounded bg-white p-2">
-                    <div className="flex items-center justify-between mb-3 border-b pb-1">
-                      <div className="flex items-center gap-1">
-                        <div className="w-20 h-4 bg-[#8E9196]/20 rounded text-xs flex items-center justify-center text-[#8E9196]">Supply Chain</div>
-                        <div className="w-14 h-4 bg-[#8E9196]/20 rounded text-xs flex items-center justify-center text-[#8E9196]">Filters</div>
-                      </div>
-                      <div className="flex gap-1">
-                        <div className="w-6 h-6 rounded-full bg-[#8E9196]/10 flex items-center justify-center text-xs text-[#8E9196]">⚙️</div>
-                        <div className="w-6 h-6 rounded-full bg-[#8E9196]/10 flex items-center justify-center text-xs text-[#8E9196]">?</div>
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-3 gap-2 mb-3">
-                      <div className="col-span-2 h-16 bg-[#8E9196]/10 rounded p-1">
-                        <div className="h-full flex items-end justify-between gap-1">
-                          <div className="w-4 h-[40%] bg-[#8E9196]/20 rounded"></div>
-                          <div className="w-4 h-[60%] bg-[#8E9196]/20 rounded"></div>
-                          <div className="w-4 h-[30%] bg-[#8E9196]/20 rounded"></div>
-                          <div className="w-4 h-[80%] bg-[#8E9196]/20 rounded"></div>
-                          <div className="w-4 h-[45%] bg-[#8E9196]/20 rounded"></div>
-                          <div className="w-4 h-[65%] bg-[#8E9196]/20 rounded"></div>
-                        </div>
-                      </div>
-                      <div className="space-y-1">
-                        <div className="h-4 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-1 text-[#8E9196]">Resource Status</div>
-                        <div className="h-4 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-1 text-[#8E9196]">Fleet Overview</div>
-                        <div className="h-4 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-1 text-[#8E9196]">Inventory</div>
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-4 gap-1">
-                      <div className="h-12 bg-[#8E9196]/10 rounded p-1 text-[#8E9196] text-xs">
-                        <div className="text-center mb-0.5">Fleet A</div>
-                        <div className="text-center font-medium">86%</div>
-                      </div>
-                      <div className="h-12 bg-[#8E9196]/10 rounded p-1 text-[#8E9196] text-xs">
-                        <div className="text-center mb-0.5">Fleet B</div>
-                        <div className="text-center font-medium">73%</div>
-                      </div>
-                      <div className="h-12 bg-[#8E9196]/10 rounded p-1 text-[#8E9196] text-xs">
-                        <div className="text-center mb-0.5">Fleet C</div>
-                        <div className="text-center font-medium">92%</div>
-                      </div>
-                      <div className="h-12 bg-[#8E9196]/10 rounded p-1 text-[#8E9196] text-xs">
-                        <div className="text-center mb-0.5">Fleet D</div>
-                        <div className="text-center font-medium">65%</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <img 
+                  src="/lovable-uploads/3a4e4845-c784-4528-985d-a680d196e41b.png" 
+                  alt="Early wireframe of supply chain visualization" 
+                  className="w-full h-full object-cover rounded-lg"
+                />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                   <h3 className="text-white text-base font-medium mb-1">Early Wireframe</h3>
                   <p className="text-white/80 text-xs">
