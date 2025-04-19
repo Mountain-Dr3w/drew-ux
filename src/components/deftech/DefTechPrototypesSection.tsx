@@ -19,12 +19,12 @@ const DefTechPrototypesSection: React.FC = () => {
                   <div className="h-full border border-[#8E9196]/20 rounded bg-white p-3">
                     <div className="flex items-center justify-between mb-4 border-b pb-2">
                       <div className="flex items-center gap-2">
-                        <div className="w-24 h-5 bg-[#8E9196]/20 rounded text-xs flex items-center justify-center text-[#8E9196]">Supply Chain</div>
-                        <div className="w-16 h-5 bg-[#8E9196]/20 rounded text-xs flex items-center justify-center text-[#8E9196]">Filters</div>
+                        <div className="w-20 h-4 bg-[#8E9196]/20 rounded text-xs flex items-center justify-center text-[#8E9196]">Supply Chain</div>
+                        <div className="w-14 h-4 bg-[#8E9196]/20 rounded text-xs flex items-center justify-center text-[#8E9196]">Filters</div>
                       </div>
                       <div className="flex gap-2">
-                        <div className="w-8 h-8 rounded-full bg-[#8E9196]/10 flex items-center justify-center text-xs text-[#8E9196]">⚙️</div>
-                        <div className="w-8 h-8 rounded-full bg-[#8E9196]/10 flex items-center justify-center text-xs text-[#8E9196]">?</div>
+                        <div className="w-6 h-6 rounded-full bg-[#8E9196]/10 flex items-center justify-center text-xs text-[#8E9196]">⚙️</div>
+                        <div className="w-6 h-6 rounded-full bg-[#8E9196]/10 flex items-center justify-center text-xs text-[#8E9196]">?</div>
                       </div>
                     </div>
                     <div className="grid grid-cols-3 gap-3 mb-4">
@@ -39,34 +39,34 @@ const DefTechPrototypesSection: React.FC = () => {
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <div className="h-6 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-2 text-[#8E9196]">Resource Status</div>
-                        <div className="h-6 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-2 text-[#8E9196]">Fleet Overview</div>
-                        <div className="h-6 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-2 text-[#8E9196]">Inventory</div>
+                        <div className="h-5 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-2 text-[#8E9196]">Resource Status</div>
+                        <div className="h-5 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-2 text-[#8E9196]">Fleet Overview</div>
+                        <div className="h-5 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-2 text-[#8E9196]">Inventory</div>
                       </div>
                     </div>
                     <div className="grid grid-cols-4 gap-2">
-                      <div className="h-16 bg-[#8E9196]/10 rounded p-2 text-[#8E9196] text-xs">
-                        <div className="text-center mb-1">Fleet A</div>
-                        <div className="text-center font-medium">86%</div>
+                      <div className="h-12 bg-[#8E9196]/10 rounded p-1 text-[#8E9196] text-xs">
+                        <div className="text-center mb-1 text-[10px]">Fleet A</div>
+                        <div className="text-center font-medium text-[10px]">86%</div>
                       </div>
-                      <div className="h-16 bg-[#8E9196]/10 rounded p-2 text-[#8E9196] text-xs">
-                        <div className="text-center mb-1">Fleet B</div>
-                        <div className="text-center font-medium">73%</div>
+                      <div className="h-12 bg-[#8E9196]/10 rounded p-1 text-[#8E9196] text-xs">
+                        <div className="text-center mb-1 text-[10px]">Fleet B</div>
+                        <div className="text-center font-medium text-[10px]">73%</div>
                       </div>
-                      <div className="h-16 bg-[#8E9196]/10 rounded p-2 text-[#8E9196] text-xs">
-                        <div className="text-center mb-1">Fleet C</div>
-                        <div className="text-center font-medium">92%</div>
+                      <div className="h-12 bg-[#8E9196]/10 rounded p-1 text-[#8E9196] text-xs">
+                        <div className="text-center mb-1 text-[10px]">Fleet C</div>
+                        <div className="text-center font-medium text-[10px]">92%</div>
                       </div>
-                      <div className="h-16 bg-[#8E9196]/10 rounded p-2 text-[#8E9196] text-xs">
-                        <div className="text-center mb-1">Fleet D</div>
-                        <div className="text-center font-medium">65%</div>
+                      <div className="h-12 bg-[#8E9196]/10 rounded p-1 text-[#8E9196] text-xs">
+                        <div className="text-center mb-1 text-[10px]">Fleet D</div>
+                        <div className="text-center font-medium text-[10px]">65%</div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                  <h3 className="text-white text-xl font-medium mb-2">Early Wireframe</h3>
-                  <p className="text-white/80 text-sm">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <h3 className="text-white text-base font-medium mb-1">Early Wireframe</h3>
+                  <p className="text-white/80 text-xs">
                     Initial lo-fi wireframe with basic data visualization elements
                   </p>
                 </div>
