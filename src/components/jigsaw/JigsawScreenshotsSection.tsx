@@ -6,7 +6,7 @@ const JigsawScreenshotsSection: React.FC = () => {
       <div className="space-y-10">
         {/* Gantt Section */}
         <div className="space-y-4">
-          <h3 className="text-2xl font-medium">Gantt- Based Planning Interface</h3>
+          <h3 className="text-2xl font-medium">Gantt-Based Planning Interface</h3>
           <p className="text-muted-foreground mb-6">
             We completely redesigned the Jigsaw planning interface to enhance visual clarity, improve resource conflict detection, and provide an intuitive timeline-based view for aerial refueling operations management.
           </p>
