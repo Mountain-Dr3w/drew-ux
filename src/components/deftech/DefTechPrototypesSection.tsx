@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { LineChart, Truck, Layers } from 'lucide-react';
@@ -102,7 +101,7 @@ const DefTechPrototypesSection: React.FC = () => {
               <LineChart className="mr-2 h-4 w-4 text-blue-500" />
               Testing Insights
             </h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <ul className="space-y-2 text-base text-muted-foreground">
               <li className="flex items-start gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-1.5"></div>
                 <span>Users preferred real-time visualization of fleet and inventory status</span>
@@ -183,4 +182,3 @@ const DefTechPrototypesSection: React.FC = () => {
 };
 
 export default DefTechPrototypesSection;
-
