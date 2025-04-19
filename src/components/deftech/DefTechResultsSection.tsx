@@ -1,17 +1,14 @@
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
-import { TrendingUp, Clock, BarChart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+
 const DefTechResultsSection: React.FC = () => {
   return <CaseStudySection title="Results & Impact">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
         <Card className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent"></div>
           <CardContent className="p-6 relative z-10 bg-transparent">
-            <div className="flex items-center gap-2 mb-3">
-              <Clock className="text-blue-500" size={24} />
-              <h3 className="text-xl font-medium">Efficiency</h3>
-            </div>
+            <h3 className="text-xl font-medium mb-3">Efficiency</h3>
             <p className="text-4xl font-bold mb-2 text-blue-500">62%</p>
             <p className="text-muted-foreground">Reduction in resource allocation time</p>
           </CardContent>
@@ -19,10 +16,7 @@ const DefTechResultsSection: React.FC = () => {
         <Card className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent"></div>
           <CardContent className="p-6 relative z-10 bg-transparent">
-            <div className="flex items-center gap-2 mb-3">
-              <TrendingUp className="text-purple-500" size={24} />
-              <h3 className="text-xl font-medium">Adoption</h3>
-            </div>
+            <h3 className="text-xl font-medium mb-3">Adoption</h3>
             <p className="text-4xl font-bold mb-2 text-purple-500">96%</p>
             <p className="text-muted-foreground">User adoption rate among logistics teams</p>
           </CardContent>
@@ -30,10 +24,7 @@ const DefTechResultsSection: React.FC = () => {
         <Card className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent"></div>
           <CardContent className="p-6 relative z-10 bg-transparent">
-            <div className="flex items-center gap-2 mb-3">
-              <BarChart className="text-green-500" size={24} />
-              <h3 className="text-xl font-medium">Cost Savings</h3>
-            </div>
+            <h3 className="text-xl font-medium mb-3">Cost Savings</h3>
             <p className="text-4xl font-bold mb-2 text-green-500">42%</p>
             <p className="text-muted-foreground">Reduction in logistics operational costs</p>
           </CardContent>
