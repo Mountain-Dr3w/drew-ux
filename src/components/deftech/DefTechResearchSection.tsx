@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { Lightbulb, Target, LineChart, Users } from 'lucide-react';
@@ -70,19 +69,19 @@ const DefTechResearchSection: React.FC = () => {
           <ul className="space-y-3 text-muted-foreground pl-[50px]">
             <li className="flex items-start gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-              <span>Leaders needed comprehensive dashboards that highlight critical supply chain bottlenecks</span>
+              <span>Strategic dashboards must consolidate data from multiple systems to provide a holistic view of resource availability and operational readiness</span>
             </li>
             <li className="flex items-start gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-              <span>Multiple systems caused significant delays in resource allocation decisions</span>
+              <span>Customizable role-based views are critical for different levels of leadership to make targeted, rapid decisions</span>
             </li>
             <li className="flex items-start gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-              <span>Predictive analytics were crucial for proactive resource management</span>
+              <span>Predictive analytics must go beyond current status to forecast potential resource constraints and mission impact</span>
             </li>
             <li className="flex items-start gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-              <span>Visual representation of resource dependencies was essential for planning</span>
+              <span>Visual resource dependency mapping is essential for understanding complex interdependencies in logistics operations</span>
             </li>
           </ul>
         </div>
