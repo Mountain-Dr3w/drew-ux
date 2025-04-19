@@ -6,7 +6,7 @@ const JigsawScreenshotsSection: React.FC = () => {
       <div className="space-y-10">
         {/* Gantt Section */}
         <div className="space-y-4">
-          <h3 className="text-2xl font-medium">Advanced Gantt Planning Interface</h3>
+          <h3 className="text-2xl font-medium">Gantt- Based Planning Interface</h3>
           <p className="text-muted-foreground mb-6">
             We completely redesigned the Jigsaw planning interface to enhance visual clarity, improve resource conflict detection, and provide an intuitive timeline-based view for aerial refueling operations management.
           </p>
@@ -31,7 +31,8 @@ const JigsawScreenshotsSection: React.FC = () => {
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
                   <ArrowRight size={18} className="text-blue-500 mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Color-coded timeline bars showing mission types, statuses, and resource allocation</span>
+                  <span className="text-muted-foreground">Color-coded refueling requests showing mission types, receiver type, and resource allocation
+                </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ArrowRight size={18} className="text-blue-500 mt-1 flex-shrink-0" />
