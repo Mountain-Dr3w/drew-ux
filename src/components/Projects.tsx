@@ -1,13 +1,12 @@
-
 import React from 'react';
 import ProjectCard from './ProjectCard';
 import TransitionEffect from './TransitionEffect';
 
 const projectsData = [
   {
-    title: "CyberShield: Transforming Threat Intelligence",
-    description: "How I redesigned complex security data visualization to enhance decision-making and threat response for defense contractors.",
-    imageUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    title: "Revolutionizing Logistics and Readiness for the USAF",
+    description: "Empowering military decision-makers to use all of the data at their disposal to make choices that optimize readiness",
+    imageUrl: "/lovable-uploads/f0075149-b5c6-43b0-9085-723a84367eb7.png",
     url: "/case-study/deftech",
   },
   {
@@ -21,13 +20,7 @@ const projectsData = [
     description: "Redesigning a complex air refueling management tool to maximize user adoption and operational efficiency for military planning personnel.",
     imageUrl: "/lovable-uploads/424622bd-bc00-4f6e-9a37-6678fbb643ab.png",
     url: "/case-study/jigsaw",
-  },
-  {
-    title: "Revolutionizing Logistics and Readiness for the USAF",
-    description: "Empowering military decision-makers to use all of the data at their disposal to make choices that optimize readiness",
-    imageUrl: "/lovable-uploads/f0075149-b5c6-43b0-9085-723a84367eb7.png",
-    url: "#",
-  },
+  }
 ];
 
 const Projects: React.FC = () => {
