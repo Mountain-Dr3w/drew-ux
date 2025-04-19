@@ -1,10 +1,8 @@
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { LineChart, Truck, Layers } from 'lucide-react';
-
 const DefTechPrototypesSection: React.FC = () => {
-  return (
-    <CaseStudySection title="Prototypes & Testing">
+  return <CaseStudySection title="Prototypes & Testing">
       <div className="space-y-10">
         <p className="text-lg text-muted-foreground mb-8">
           Throughout the design process, we created and tested multiple iterations of key interface components, refining our approach based on continuous feedback from logistics managers and supply chain experts.
@@ -15,11 +13,7 @@ const DefTechPrototypesSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-card p-4 rounded-lg border border-border overflow-hidden">
               <div className="relative bg-muted/50 rounded-lg h-64 mb-4">
-                <img 
-                  src="/lovable-uploads/783b14fa-3eef-4bac-8595-fe54560b0620.png"
-                  alt="Early wireframe of logistics dashboard"
-                  className="object-cover object-center w-full h-full opacity-60"
-                />
+                <img src="/lovable-uploads/783b14fa-3eef-4bac-8595-fe54560b0620.png" alt="Early wireframe of logistics dashboard" className="object-cover object-center w-full h-full opacity-60" />
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-background/80 flex items-end justify-center p-4">
                   <div className="bg-background/90 p-2 rounded-md inline-block">
                     <p className="text-xs text-muted-foreground">Early wireframe prototype</p>
@@ -109,7 +103,7 @@ const DefTechPrototypesSection: React.FC = () => {
           <h3 className="text-xl font-medium mb-6">Usability Testing Results</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-card p-6 rounded-lg border border-border">
-              <div className="text-4xl font-bold text-green-500 mb-2">91%</div>
+              <div className="text-4xl font-bold text-primary-500 mb-2">91%</div>
               <h4 className="text-lg font-medium mb-1">Task Completion</h4>
               <p className="text-sm text-muted-foreground">
                 High success rate for critical logistics management tasks
@@ -134,8 +128,6 @@ const DefTechPrototypesSection: React.FC = () => {
           </div>
         </div>
       </div>
-    </CaseStudySection>
-  );
+    </CaseStudySection>;
 };
-
 export default DefTechPrototypesSection;
