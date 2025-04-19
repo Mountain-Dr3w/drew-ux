@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -43,7 +42,7 @@ const Hero: React.FC = () => {
               Designing usable, accessible, and scalable software isn't easy.<br />
               <span 
                 className="font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent" 
-                style={{ animationDuration: '2s' }}
+                style={{ animationDuration: '4s' }}
               >
                 Let me do it for you.
               </span>
