@@ -21,7 +21,7 @@ const DefTechIntroSection: React.FC = () => {
           <div className="bg-background dark:bg-card p-6 rounded-lg border border-border relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent"></div>
             <div className="relative z-10 bg-transparent">
-              <BarChart className="h-10 w-10 text-purple-500 mb-4" />
+              
               <h3 className="text-xl font-medium mb-2">Resource Planning</h3>
               <p className="text-muted-foreground">Data-driven allocation of personnel, equipment, and supplies</p>
             </div>
@@ -30,7 +30,7 @@ const DefTechIntroSection: React.FC = () => {
           <div className="bg-background dark:bg-card p-6 rounded-lg border border-border relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent"></div>
             <div className="relative z-10 bg-transparent">
-              <Shield className="h-10 w-10 text-emerald-500 mb-4" />
+              
               <h3 className="text-xl font-medium mb-2">Operational Readiness</h3>
               <p className="text-muted-foreground">Real-time monitoring of force readiness and capability status</p>
             </div>
