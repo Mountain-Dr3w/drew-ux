@@ -1,7 +1,6 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
-import { LineChart, Truck, Layers } from 'lucide-react';
+import { LineChart, Truck } from 'lucide-react';
 import WireframeImage from './WireframeImage';
 
 const DefTechPrototypesSection: React.FC = () => {
@@ -57,8 +56,12 @@ const DefTechPrototypesSection: React.FC = () => {
         <div>
           <h3 className="text-xl font-medium mb-6">Resource Management Dashboard</h3>
           <div className="bg-card rounded-lg border border-border overflow-hidden">
-            <div className="relative bg-muted/50 h-80 flex items-center justify-center">
-              <Layers className="w-32 h-32 text-purple-300" />
+            <div className="relative bg-muted/50 h-[500px]">
+              <img 
+                src="/lovable-uploads/8c53e158-8a65-4d2b-a58f-1003b557be43.png" 
+                alt="Forward Edge logistics dashboard showing metrics, inventory optimization, and predictive analytics"
+                className="w-full h-full object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-background/80 flex items-end justify-center p-4">
                 <div className="bg-background/90 p-2 rounded-md inline-block">
                   <p className="text-sm text-muted-foreground">High-fidelity mockup of the logistics dashboard</p>
@@ -67,18 +70,18 @@ const DefTechPrototypesSection: React.FC = () => {
             </div>
             <div className="p-6">
               <h4 className="text-xl font-medium mb-3">Key Design Decisions</h4>
-              <ul className="space-y-3 text-base text-muted-foreground">
+              <ul className="space-y-3">
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-                  <span>Created simplified resource allocation scoring for easy decision-making</span>
+                  <span className="text-base text-muted-foreground">Created simplified resource allocation scoring for easy decision-making</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-                  <span>Implemented drill-down capabilities for detailed inventory and fleet management</span>
+                  <span className="text-base text-muted-foreground">Implemented drill-down capabilities for detailed inventory and fleet management</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2.5"></div>
-                  <span>Added comparative metrics to show efficiency improvements over time</span>
+                  <span className="text-base text-muted-foreground">Added comparative metrics to show efficiency improvements over time</span>
                 </li>
               </ul>
             </div>
