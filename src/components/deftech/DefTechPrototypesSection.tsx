@@ -1,7 +1,7 @@
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
-import { LineChart, Truck } from 'lucide-react';
-import WireframeImage from './WireframeImage';
+import { LineChart } from 'lucide-react';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const DefTechPrototypesSection: React.FC = () => {
   return (
@@ -56,7 +56,7 @@ const DefTechPrototypesSection: React.FC = () => {
         <div>
           <h3 className="text-xl font-medium mb-6">Resource Management Dashboard</h3>
           <div className="bg-card rounded-lg border border-border overflow-hidden">
-            <div className="relative bg-muted/50 h-[500px]">
+            <AspectRatio ratio={16 / 9}>
               <img 
                 src="/lovable-uploads/8c53e158-8a65-4d2b-a58f-1003b557be43.png" 
                 alt="Forward Edge logistics dashboard showing metrics, inventory optimization, and predictive analytics"
@@ -67,7 +67,7 @@ const DefTechPrototypesSection: React.FC = () => {
                   <p className="text-sm text-muted-foreground">High-fidelity mockup of the logistics dashboard</p>
                 </div>
               </div>
-            </div>
+            </AspectRatio>
             <div className="p-6">
               <h4 className="text-xl font-medium mb-3">Key Design Decisions</h4>
               <ul className="space-y-3">
