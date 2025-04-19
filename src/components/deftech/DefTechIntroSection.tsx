@@ -1,8 +1,6 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { Truck, BarChart, Shield } from 'lucide-react';
-
 const DefTechIntroSection: React.FC = () => {
   return <CaseStudySection title="Background">
       <div className="space-y-6">
@@ -14,7 +12,7 @@ const DefTechIntroSection: React.FC = () => {
           <div className="bg-background dark:bg-card p-6 rounded-lg border border-border relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent"></div>
             <div className="relative z-10 bg-transparent">
-              <Truck className="h-10 w-10 text-blue-500 mb-4" />
+              
               <h3 className="text-xl font-medium mb-2">Supply Chain Optimization</h3>
               <p className="text-muted-foreground">Real-time tracking and optimization of defense logistics operations</p>
             </div>

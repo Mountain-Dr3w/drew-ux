@@ -11,9 +11,7 @@ const DefTechSolutionSection: React.FC = () => {
             <Card className="overflow-hidden border-b-4 border-b-blue-500 h-full">
               <CardContent className="p-6 bg-transparent">
                 <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 dark:bg-blue-900/30 w-10 h-10 rounded-full flex items-center justify-center mr-3">
-                    <Truck className="text-blue-600 dark:text-blue-400" size={20} />
-                  </div>
+                  
                   <h4 className="font-medium text-lg">Real-time Visibility</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
@@ -25,9 +23,7 @@ const DefTechSolutionSection: React.FC = () => {
             <Card className="overflow-hidden border-b-4 border-b-purple-500 h-full">
               <CardContent className="p-6 bg-transparent">
                 <div className="flex items-center mb-4">
-                  <div className="bg-purple-100 dark:bg-purple-900/30 w-10 h-10 rounded-full flex items-center justify-center mr-3">
-                    <Box className="text-purple-600 dark:text-purple-400" size={20} />
-                  </div>
+                  
                   <h4 className="font-medium text-lg">Resource Optimization</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
@@ -39,9 +35,7 @@ const DefTechSolutionSection: React.FC = () => {
             <Card className="overflow-hidden border-b-4 border-b-amber-500 h-full">
               <CardContent className="p-6 bg-transparent">
                 <div className="flex items-center mb-4">
-                  <div className="bg-amber-100 dark:bg-amber-900/30 w-10 h-10 rounded-full flex items-center justify-center mr-3">
-                    <BarChart className="text-amber-600 dark:text-amber-400" size={20} />
-                  </div>
+                  
                   <h4 className="font-medium text-lg">Data-Driven Insights</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
@@ -53,9 +47,7 @@ const DefTechSolutionSection: React.FC = () => {
             <Card className="overflow-hidden border-b-4 border-b-green-500 h-full">
               <CardContent className="p-6 bg-transparent">
                 <div className="flex items-center mb-4">
-                  <div className="bg-green-100 dark:bg-green-900/30 w-10 h-10 rounded-full flex items-center justify-center mr-3">
-                    <Route className="text-green-600 dark:text-green-400" size={20} />
-                  </div>
+                  
                   <h4 className="font-medium text-lg">Streamlined Operations</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
