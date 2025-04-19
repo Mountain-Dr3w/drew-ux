@@ -1,3 +1,4 @@
+
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { LineChart, Truck, Layers } from 'lucide-react';
@@ -17,32 +18,56 @@ const DefTechPrototypesSection: React.FC = () => {
                 <div className="absolute inset-0 p-4">
                   <div className="h-full border border-[#8E9196]/20 rounded bg-white p-3">
                     <div className="flex items-center justify-between mb-4 border-b pb-2">
-                      <div className="w-32 h-4 bg-[#8E9196]/20 rounded"></div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-24 h-5 bg-[#8E9196]/20 rounded text-xs flex items-center justify-center text-[#8E9196]">Supply Chain</div>
+                        <div className="w-16 h-5 bg-[#8E9196]/20 rounded text-xs flex items-center justify-center text-[#8E9196]">Filters</div>
+                      </div>
                       <div className="flex gap-2">
-                        <div className="w-8 h-8 rounded-full bg-[#8E9196]/10"></div>
-                        <div className="w-8 h-8 rounded-full bg-[#8E9196]/10"></div>
+                        <div className="w-8 h-8 rounded-full bg-[#8E9196]/10 flex items-center justify-center text-xs text-[#8E9196]">⚙️</div>
+                        <div className="w-8 h-8 rounded-full bg-[#8E9196]/10 flex items-center justify-center text-xs text-[#8E9196]">?</div>
                       </div>
                     </div>
                     <div className="grid grid-cols-3 gap-3 mb-4">
-                      <div className="col-span-2 h-24 bg-[#8E9196]/10 rounded"></div>
+                      <div className="col-span-2 h-24 bg-[#8E9196]/10 rounded p-2">
+                        <div className="h-full flex items-end justify-between gap-2">
+                          <div className="w-6 h-[40%] bg-[#8E9196]/20 rounded"></div>
+                          <div className="w-6 h-[60%] bg-[#8E9196]/20 rounded"></div>
+                          <div className="w-6 h-[30%] bg-[#8E9196]/20 rounded"></div>
+                          <div className="w-6 h-[80%] bg-[#8E9196]/20 rounded"></div>
+                          <div className="w-6 h-[45%] bg-[#8E9196]/20 rounded"></div>
+                          <div className="w-6 h-[65%] bg-[#8E9196]/20 rounded"></div>
+                        </div>
+                      </div>
                       <div className="space-y-2">
-                        <div className="h-4 w-full bg-[#8E9196]/20 rounded"></div>
-                        <div className="h-4 w-3/4 bg-[#8E9196]/20 rounded"></div>
-                        <div className="h-4 w-1/2 bg-[#8E9196]/20 rounded"></div>
+                        <div className="h-6 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-2 text-[#8E9196]">Resource Status</div>
+                        <div className="h-6 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-2 text-[#8E9196]">Fleet Overview</div>
+                        <div className="h-6 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-2 text-[#8E9196]">Inventory</div>
                       </div>
                     </div>
                     <div className="grid grid-cols-4 gap-2">
-                      <div className="h-16 bg-[#8E9196]/10 rounded"></div>
-                      <div className="h-16 bg-[#8E9196]/10 rounded"></div>
-                      <div className="h-16 bg-[#8E9196]/10 rounded"></div>
-                      <div className="h-16 bg-[#8E9196]/10 rounded"></div>
+                      <div className="h-16 bg-[#8E9196]/10 rounded p-2 text-[#8E9196] text-xs">
+                        <div className="text-center mb-1">Fleet A</div>
+                        <div className="text-center font-medium">86%</div>
+                      </div>
+                      <div className="h-16 bg-[#8E9196]/10 rounded p-2 text-[#8E9196] text-xs">
+                        <div className="text-center mb-1">Fleet B</div>
+                        <div className="text-center font-medium">73%</div>
+                      </div>
+                      <div className="h-16 bg-[#8E9196]/10 rounded p-2 text-[#8E9196] text-xs">
+                        <div className="text-center mb-1">Fleet C</div>
+                        <div className="text-center font-medium">92%</div>
+                      </div>
+                      <div className="h-16 bg-[#8E9196]/10 rounded p-2 text-[#8E9196] text-xs">
+                        <div className="text-center mb-1">Fleet D</div>
+                        <div className="text-center font-medium">65%</div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                   <h3 className="text-white text-xl font-medium mb-2">Early Wireframe</h3>
                   <p className="text-white/80 text-sm">
-                    Initial lo-fi wireframe focusing on core logistics data visualization
+                    Initial lo-fi wireframe with basic data visualization elements
                   </p>
                 </div>
               </div>
