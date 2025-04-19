@@ -1,12 +1,9 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { Truck, Box, BarChart, Route } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const DefTechSolutionSection: React.FC = () => {
-  return (
-    <CaseStudySection title="Solution Design">
+  return <CaseStudySection title="Solution Design">
       <div className="space-y-10">
         <div>
           <h3 className="text-2xl font-medium mb-6">Design Principles</h3>
@@ -103,74 +100,8 @@ const DefTechSolutionSection: React.FC = () => {
           </div>
         </div>
 
-        <div>
-          <h3 className="text-2xl font-medium mb-6">Information Architecture</h3>
-          <div className="bg-card p-6 rounded-lg border border-border overflow-hidden">
-            <div className="h-80 bg-transparent rounded-lg flex items-center justify-center">
-              <div className="w-full max-w-3xl">
-                <div className="flex flex-col">
-                  <div className="bg-blue-500 text-white p-4 rounded-t-lg text-center font-medium">
-                    Logistics Command Center (Entry Point)
-                  </div>
-                  
-                  <div className="grid grid-cols-3 gap-0.5 mt-0.5">
-                    <div className="bg-purple-500 text-white p-3 text-center">
-                      Supply Chain
-                    </div>
-                    <div className="bg-amber-500 text-white p-3 text-center">
-                      Resource Planning
-                    </div>
-                    <div className="bg-green-500 text-white p-3 text-center">
-                      Operations
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-3 gap-0.5 mt-0.5">
-                    <div className="flex flex-col gap-0.5">
-                      <div className="bg-purple-400 text-white p-2 text-sm text-center">
-                        Inventory Tracking
-                      </div>
-                      <div className="bg-purple-400 text-white p-2 text-sm text-center">
-                        Route Planning
-                      </div>
-                      <div className="bg-purple-400 text-white p-2 text-sm text-center">
-                        Delivery Status
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-0.5">
-                      <div className="bg-amber-400 text-white p-2 text-sm text-center">
-                        Personnel
-                      </div>
-                      <div className="bg-amber-400 text-white p-2 text-sm text-center">
-                        Equipment
-                      </div>
-                      <div className="bg-amber-400 text-white p-2 text-sm text-center">
-                        Forecasting
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-0.5">
-                      <div className="bg-green-400 text-white p-2 text-sm text-center">
-                        Performance
-                      </div>
-                      <div className="bg-green-400 text-white p-2 text-sm text-center">
-                        Compliance
-                      </div>
-                      <div className="bg-green-400 text-white p-2 text-sm text-center">
-                        Reporting
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <p className="text-sm text-muted-foreground mt-4 text-center">
-              Information architecture diagram showing main navigation paths and feature organization
-            </p>
-          </div>
-        </div>
+        
       </div>
-    </CaseStudySection>
-  );
+    </CaseStudySection>;
 };
-
 export default DefTechSolutionSection;
