@@ -1,11 +1,8 @@
-
 import React from 'react';
 import CaseStudySection from './CaseStudySection';
 import { Palette, LayoutGrid, BarChart2 } from 'lucide-react';
-
 const SolutionsSection: React.FC = () => {
-  return (
-    <CaseStudySection title="Solutions">
+  return <CaseStudySection title="Solutions">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
         <div className="bg-card rounded-lg border border-border overflow-hidden">
           <div className="p-6 border-b border-border">
@@ -17,15 +14,11 @@ const SolutionsSection: React.FC = () => {
               I developed a comprehensive design system including component libraries, typography guidelines, and color systems.
             </p>
           </div>
-          <div className="px-6 py-4 bg-muted/30">
-            <p className="text-sm text-muted-foreground">
-              Established a foundation for consistent UX across all platform touchpoints.
-            </p>
-          </div>
+          
         </div>
         
         <div className="bg-card rounded-lg border border-border overflow-hidden">
-          <div className="p-6 border-b border-border">
+          <div className="p-6 border-b border-border py-[24px]">
             <div className="bg-purple-100 dark:bg-purple-900/30 w-12 h-12 rounded-full flex items-center justify-center mb-4">
               <LayoutGrid className="text-purple-600 dark:text-purple-400" size={24} />
             </div>
@@ -34,11 +27,7 @@ const SolutionsSection: React.FC = () => {
               I restructured the platform's navigation and content hierarchy based on user needs and common tasks.
             </p>
           </div>
-          <div className="px-6 py-4 bg-muted/30">
-            <p className="text-sm text-muted-foreground">
-              Created intuitive pathways for different user types and workflows.
-            </p>
-          </div>
+          
         </div>
         
         <div className="bg-card rounded-lg border border-border overflow-hidden">
@@ -51,11 +40,7 @@ const SolutionsSection: React.FC = () => {
               I redesigned dashboards and reports to communicate insights more effectively and highlight key metrics.
             </p>
           </div>
-          <div className="px-6 py-4 bg-muted/30">
-            <p className="text-sm text-muted-foreground">
-              Used appropriate chart types and visual hierarchies for data clarity.
-            </p>
-          </div>
+          
         </div>
       </div>
       
@@ -90,8 +75,6 @@ const SolutionsSection: React.FC = () => {
           </div>
         </div>
       </div>
-    </CaseStudySection>
-  );
+    </CaseStudySection>;
 };
-
 export default SolutionsSection;
