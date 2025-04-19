@@ -6,60 +6,60 @@ import { LineChart, Truck, Layers } from 'lucide-react';
 const DefTechPrototypesSection: React.FC = () => {
   return <CaseStudySection title="Prototypes & Testing">
       <div className="space-y-10">
-        <p className="text-lg text-muted-foreground mb-8">
+        <p className="text-base text-muted-foreground mb-6">
           Throughout the design process, we created and tested multiple iterations of key interface components, refining our approach based on continuous feedback from logistics managers and supply chain experts.
         </p>
         
         <div>
-          <h3 className="text-xl font-medium mb-6">Supply Chain Visualization</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-card p-4 rounded-lg border border-border overflow-hidden">
-              <div className="relative bg-[#F6F6F7] rounded-lg h-64 mb-4">
-                <div className="absolute inset-0 p-4">
-                  <div className="h-full border border-[#8E9196]/20 rounded bg-white p-3">
-                    <div className="flex items-center justify-between mb-4 border-b pb-2">
-                      <div className="flex items-center gap-2">
+          <h3 className="text-lg font-medium mb-4">Supply Chain Visualization</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-card p-3 rounded-lg border border-border overflow-hidden">
+              <div className="relative bg-[#F6F6F7] rounded-lg h-52 mb-3">
+                <div className="absolute inset-0 p-3">
+                  <div className="h-full border border-[#8E9196]/20 rounded bg-white p-2">
+                    <div className="flex items-center justify-between mb-3 border-b pb-1">
+                      <div className="flex items-center gap-1">
                         <div className="w-20 h-4 bg-[#8E9196]/20 rounded text-xs flex items-center justify-center text-[#8E9196]">Supply Chain</div>
                         <div className="w-14 h-4 bg-[#8E9196]/20 rounded text-xs flex items-center justify-center text-[#8E9196]">Filters</div>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-1">
                         <div className="w-6 h-6 rounded-full bg-[#8E9196]/10 flex items-center justify-center text-xs text-[#8E9196]">⚙️</div>
                         <div className="w-6 h-6 rounded-full bg-[#8E9196]/10 flex items-center justify-center text-xs text-[#8E9196]">?</div>
                       </div>
                     </div>
-                    <div className="grid grid-cols-3 gap-3 mb-4">
-                      <div className="col-span-2 h-24 bg-[#8E9196]/10 rounded p-2">
-                        <div className="h-full flex items-end justify-between gap-2">
-                          <div className="w-6 h-[40%] bg-[#8E9196]/20 rounded"></div>
-                          <div className="w-6 h-[60%] bg-[#8E9196]/20 rounded"></div>
-                          <div className="w-6 h-[30%] bg-[#8E9196]/20 rounded"></div>
-                          <div className="w-6 h-[80%] bg-[#8E9196]/20 rounded"></div>
-                          <div className="w-6 h-[45%] bg-[#8E9196]/20 rounded"></div>
-                          <div className="w-6 h-[65%] bg-[#8E9196]/20 rounded"></div>
+                    <div className="grid grid-cols-3 gap-2 mb-3">
+                      <div className="col-span-2 h-16 bg-[#8E9196]/10 rounded p-1">
+                        <div className="h-full flex items-end justify-between gap-1">
+                          <div className="w-4 h-[40%] bg-[#8E9196]/20 rounded"></div>
+                          <div className="w-4 h-[60%] bg-[#8E9196]/20 rounded"></div>
+                          <div className="w-4 h-[30%] bg-[#8E9196]/20 rounded"></div>
+                          <div className="w-4 h-[80%] bg-[#8E9196]/20 rounded"></div>
+                          <div className="w-4 h-[45%] bg-[#8E9196]/20 rounded"></div>
+                          <div className="w-4 h-[65%] bg-[#8E9196]/20 rounded"></div>
                         </div>
                       </div>
-                      <div className="space-y-2">
-                        <div className="h-5 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-2 text-[#8E9196]">Resource Status</div>
-                        <div className="h-5 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-2 text-[#8E9196]">Fleet Overview</div>
-                        <div className="h-5 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-2 text-[#8E9196]">Inventory</div>
+                      <div className="space-y-1">
+                        <div className="h-4 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-1 text-[#8E9196]">Resource Status</div>
+                        <div className="h-4 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-1 text-[#8E9196]">Fleet Overview</div>
+                        <div className="h-4 w-full bg-[#8E9196]/20 rounded text-xs flex items-center px-1 text-[#8E9196]">Inventory</div>
                       </div>
                     </div>
-                    <div className="grid grid-cols-4 gap-2">
+                    <div className="grid grid-cols-4 gap-1">
                       <div className="h-12 bg-[#8E9196]/10 rounded p-1 text-[#8E9196] text-xs">
-                        <div className="text-center mb-1 text-[10px]">Fleet A</div>
-                        <div className="text-center font-medium text-[10px]">86%</div>
+                        <div className="text-center mb-0.5">Fleet A</div>
+                        <div className="text-center font-medium">86%</div>
                       </div>
                       <div className="h-12 bg-[#8E9196]/10 rounded p-1 text-[#8E9196] text-xs">
-                        <div className="text-center mb-1 text-[10px]">Fleet B</div>
-                        <div className="text-center font-medium text-[10px]">73%</div>
+                        <div className="text-center mb-0.5">Fleet B</div>
+                        <div className="text-center font-medium">73%</div>
                       </div>
                       <div className="h-12 bg-[#8E9196]/10 rounded p-1 text-[#8E9196] text-xs">
-                        <div className="text-center mb-1 text-[10px]">Fleet C</div>
-                        <div className="text-center font-medium text-[10px]">92%</div>
+                        <div className="text-center mb-0.5">Fleet C</div>
+                        <div className="text-center font-medium">92%</div>
                       </div>
                       <div className="h-12 bg-[#8E9196]/10 rounded p-1 text-[#8E9196] text-xs">
-                        <div className="text-center mb-1 text-[10px]">Fleet D</div>
-                        <div className="text-center font-medium text-[10px]">65%</div>
+                        <div className="text-center mb-0.5">Fleet D</div>
+                        <div className="text-center font-medium">65%</div>
                       </div>
                     </div>
                   </div>
@@ -71,9 +71,9 @@ const DefTechPrototypesSection: React.FC = () => {
                   </p>
                 </div>
               </div>
-              <div className="bg-muted/30 p-3 rounded-md">
-                <h4 className="text-base font-medium mb-2">Early Iteration</h4>
-                <p className="text-sm text-muted-foreground">
+              <div className="bg-muted/30 p-2 rounded-md">
+                <h4 className="text-sm font-medium mb-1">Early Iteration</h4>
+                <p className="text-xs text-muted-foreground">
                   Initial concept focused on displaying raw logistics data. Testing revealed the need for more intuitive, actionable insights.
                 </p>
               </div>
@@ -183,3 +183,4 @@ const DefTechPrototypesSection: React.FC = () => {
 };
 
 export default DefTechPrototypesSection;
+
