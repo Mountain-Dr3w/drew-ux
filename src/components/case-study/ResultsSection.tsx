@@ -87,9 +87,7 @@ const ResultsSection: React.FC = () => {
       
       <div className="p-1 bg-gradient-to-r from-green-200 via-green-400 to-green-600 rounded-lg">
         <div className="bg-card p-8 rounded-md">
-          <blockquote className="text-xl md:text-2xl italic font-light bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">
-            "The redesigned platform not only improved our metrics but transformed how our team thinks about product design. We now have a framework for building user-centered features that's been critical to our growth and environmental impact."
-          </blockquote>
+          <blockquote className="text-xl md:text-2xl italic font-light bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">"The redesigned platform not only improved our adoption but transformed how our team thinks about product design. We now have a framework for building user-centered features that's been critical to our growth and environmental impact."</blockquote>
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-muted rounded-full"></div>
             <div>
