@@ -58,8 +58,8 @@ const DefTechCaseStudy: React.FC = () => {
         <DefTechResultsSection />
         
         <NextCaseStudySection 
-          title="Design Thinking Meets Waste Traceability" 
-          link="/case-study/veriflux" 
+          title="Modernizing an Air-to-Air Refueling System" 
+          link="/case-study/jigsaw" 
         />
       </main>
     </div>
