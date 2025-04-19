@@ -90,8 +90,8 @@ const ResultsSection: React.FC = () => {
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-muted rounded-full"></div>
             <div>
-              <p className="font-medium">Sarah Kerrigan</p>
-              <p className="text-muted-foreground text-sm">CEO, Veriflux</p>
+              <p className="font-medium">Lead Engineer</p>
+              <p className="text-muted-foreground text-sm">Veriflux</p>
             </div>
           </div>
         </div>
