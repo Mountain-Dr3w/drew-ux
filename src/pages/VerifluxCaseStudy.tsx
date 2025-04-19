@@ -63,7 +63,7 @@ const VerifluxCaseStudy: React.FC = () => {
         <AnalyticsDashboardSection />
         <ResultsSection />
         <NextCaseStudySection
-          title="Jigsaw: Redesigning Military Mission Planning"
+          title="Jigsaw: Modernizing Aerial Refueling"
           link="/case-study/jigsaw"
         />
       </main>
