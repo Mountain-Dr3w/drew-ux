@@ -2,7 +2,6 @@ import React from 'react';
 import CaseStudySection from './CaseStudySection';
 import { TrendingUp, ThumbsUp, Clock, RecycleIcon, Truck, CircleCheck } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
-
 const ResultsSection: React.FC = () => {
   return <CaseStudySection title="Results & Impact">
       
@@ -87,7 +86,7 @@ const ResultsSection: React.FC = () => {
       
       <div className="p-1 bg-gradient-to-r from-green-200 via-green-400 to-green-600 rounded-lg">
         <div className="bg-card p-8 rounded-md">
-          <blockquote className="text-xl md:text-2xl italic font-light bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">"Our product designer didn't just redesign an interface—they fundamentally transformed how we approach sustainability technology. Their intuitive design and user-centric approach turned Veriflux from a niche solution into a game-changing platform, driving a remarkable 52% increase in user adoption and setting a new standard for environmental impact tracking."</blockquote>
+          <blockquote className="text-xl md:text-2xl italic font-light bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">"Drew didn't just redesign our UI—he fundamentally transformed how we approach our product. His collaborative, user-centric approach turned Veriflux from a niche solution into a game-changing platform, driving a remarkable 52% increase in user adoption and setting a new standard for environmental impact tracking."</blockquote>
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-muted rounded-full"></div>
             <div>
