@@ -18,25 +18,25 @@ const DefTechApproachSection: React.FC = () => {
             
             <div className="relative pl-12 pb-10">
               <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-blue-500 border-4 border-background"></div>
-              <h4 className="font-medium text-lg mb-2">Discovery & Research (6 weeks)</h4>
-              <p className="text-muted-foreground mb-2">Conducted contextual inquiries with 24 security analysts and stakeholders across 5 defense contractors to understand workflows, pain points, and information needs.</p>
+              <h4 className="font-medium text-lg mb-2">Discovery & Research</h4>
+              <p className="text-muted-foreground mb-2">Conducted contextual inquiries with 24 logistics experts and stakeholders across 5 defense contractors to understand workflows, pain points, and information needs.</p>
             </div>
             
             <div className="relative pl-12 pb-10">
               <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-purple-500 border-4 border-background"></div>
-              <h4 className="font-medium text-lg mb-2">Design Exploration (4 weeks)</h4>
+              <h4 className="font-medium text-lg mb-2">Design Exploration</h4>
               <p className="text-muted-foreground mb-2">Created information architecture, user flows, and wireframes based on research insights, focusing on simplifying complex data visualization while maintaining depth of information.</p>
             </div>
             
             <div className="relative pl-12 pb-10">
               <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-amber-500 border-4 border-background"></div>
-              <h4 className="font-medium text-lg mb-2">Prototype & Testing (5 weeks)</h4>
-              <p className="text-muted-foreground mb-2">Developed interactive prototypes and conducted usability testing with security teams from three major defense contractors, iterating based on feedback.</p>
+              <h4 className="font-medium text-lg mb-2">Prototype & Testing</h4>
+              <p className="text-muted-foreground mb-2">Developed interactive prototypes and conducted usability testing with logistics teams from three different USAF bases, iterating based on feedback.</p>
             </div>
             
             <div className="relative pl-12">
               <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-green-500 border-4 border-background"></div>
-              <h4 className="font-medium text-lg mb-2">Implementation & Validation (8 weeks)</h4>
+              <h4 className="font-medium text-lg mb-2">Implementation & Validation</h4>
               <p className="text-muted-foreground">Collaborated closely with engineering teams to implement the design system, created documentation for complex components, and conducted post-launch validation studies.</p>
             </div>
           </div>
@@ -49,7 +49,7 @@ const DefTechApproachSection: React.FC = () => {
           <div className="flex flex-col items-center bg-card p-6 rounded-lg border border-border">
             <Users className="h-10 w-10 text-blue-500 mb-3" />
             <h4 className="text-lg font-medium mb-2">Contextual Inquiry</h4>
-            <p className="text-muted-foreground text-center">Observed security teams in their natural environment to understand real-world workflows</p>
+            <p className="text-muted-foreground text-center">Observed logistics and readiness teams in their natural environment to understand real-world workflows</p>
           </div>
           <div className="flex flex-col items-center bg-card p-6 rounded-lg border border-border">
             <LineChart className="h-10 w-10 text-purple-500 mb-3" />
