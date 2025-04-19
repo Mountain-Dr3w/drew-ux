@@ -102,9 +102,7 @@ const ResultsSection: React.FC = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="max-w-md">
           <h3 className="text-2xl font-medium mb-4">Ready to see more?</h3>
-          <p className="text-muted-foreground mb-6">
-            Explore another case study to see how we approach different design challenges across industries.
-          </p>
+          <p className="text-muted-foreground mb-6">Explore another case study to see how I approach different design challenges across industries.</p>
         </div>
         
         <div className="flex-shrink-0">
