@@ -1,3 +1,4 @@
+
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { LineChart, Truck, Layers } from 'lucide-react';
@@ -13,7 +14,7 @@ const DefTechPrototypesSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-card p-4 rounded-lg border border-border overflow-hidden">
               <div className="relative bg-muted/50 rounded-lg h-64 mb-4">
-                <img src="/lovable-uploads/783b14fa-3eef-4bac-8595-fe54560b0620.png" alt="Early wireframe of logistics dashboard" className="object-cover object-center w-full h-full opacity-60" />
+                <img src="/lovable-uploads/783b14fa-3eef-4bac-8595-fe54560b0620.png" alt="Early wireframe of logistics dashboard" className="object-cover object-center w-full h-full" />
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-background/80 flex items-end justify-center p-4">
                   <div className="bg-background/90 p-2 rounded-md inline-block">
                     <p className="text-xs text-muted-foreground">Early wireframe prototype</p>

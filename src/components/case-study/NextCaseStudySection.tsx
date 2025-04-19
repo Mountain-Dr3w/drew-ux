@@ -20,7 +20,7 @@ const NextCaseStudySection: React.FC<NextCaseStudySectionProps> = ({ title, link
         <TransitionEffect direction="up" delay={0.2}>
           <Link 
             to={link} 
-            className="group inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-6 py-3 rounded-full transition-all duration-300"
+            className="group inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-600/80 dark:to-blue-800/80 hover:bg-blue-700 dark:hover:opacity-90 text-white px-6 py-3 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 hover:scale-[1.02]"
           >
             <span className="font-medium">View Case Study</span>
             <ArrowRight 
