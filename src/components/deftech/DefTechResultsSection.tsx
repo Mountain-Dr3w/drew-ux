@@ -1,9 +1,7 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { TrendingUp, Clock, BarChart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const DefTechResultsSection: React.FC = () => {
   return <CaseStudySection title="Results & Impact">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
@@ -71,8 +69,8 @@ const DefTechResultsSection: React.FC = () => {
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-muted rounded-full"></div>
               <div>
-                <p className="font-medium">Col. Michael Roberts</p>
-                <p className="text-muted-foreground text-sm">Director of Logistics Operations</p>
+                <p className="font-medium">USAF Colonel</p>
+                <p className="text-muted-foreground text-sm">Director of Operations, LRS</p>
               </div>
             </div>
           </CardContent>
