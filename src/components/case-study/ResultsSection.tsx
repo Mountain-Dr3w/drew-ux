@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CaseStudySection from './CaseStudySection';
 import { TrendingUp, ThumbsUp, Clock, RecycleIcon, Truck, CircleCheck } from 'lucide-react';
@@ -6,7 +5,6 @@ import { Separator } from '@/components/ui/separator';
 
 const ResultsSection: React.FC = () => {
   return <CaseStudySection title="Results & Impact">
-      
       
       <div className="bg-card rounded-lg border border-border overflow-hidden mb-10">
         <div className="p-6 border-b border-border">
@@ -89,7 +87,7 @@ const ResultsSection: React.FC = () => {
       
       <div className="p-1 bg-gradient-to-r from-green-200 via-green-400 to-green-600 rounded-lg">
         <div className="bg-card p-8 rounded-md">
-          <blockquote className="text-xl md:text-2xl italic font-light bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">"We didn't just redesign an app—we rewrote the playbook for sustainable tech. What started as a platform overhaul became a catalyst for real environmental change, proving that great design can be a powerful driver of impact." </blockquote>
+          <blockquote className="text-xl md:text-2xl italic font-light bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">"As a product designer, I didn't just redesign an interface—I reimagined how users interact with sustainability. By focusing on intuitive design and user-centric features, we saw user adoption skyrocket by 52%, transforming Veriflux from a niche tool to an essential platform for environmental impact."</blockquote>
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-muted rounded-full"></div>
             <div>
