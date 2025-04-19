@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react';
 import CaseStudyHeader from '@/components/case-study/CaseStudyHeader';
 import CaseStudyHero from '@/components/case-study/CaseStudyHero';
-import CaseStudySection from '@/components/case-study/CaseStudySection';
 import ProblemStatementSection from '@/components/case-study/ProblemStatementSection';
 import JigsawIntroSection from '@/components/jigsaw/JigsawIntroSection';
 import JigsawChallengesSection from '@/components/jigsaw/JigsawChallengesSection';
 import JigsawApproachSection from '@/components/jigsaw/JigsawApproachSection';
 import JigsawScreenshotsSection from '@/components/jigsaw/JigsawScreenshotsSection';
-import JigsawMapPlanningSection from '@/components/jigsaw/JigsawMapPlanningSection';
 import JigsawResultsSection from '@/components/jigsaw/JigsawResultsSection';
 import NextCaseStudySection from '@/components/case-study/NextCaseStudySection';
 
@@ -56,7 +54,6 @@ const JigsawCaseStudy: React.FC = () => {
         <ProblemStatementSection customStatement={jigsawProblemStatement} />
         <JigsawApproachSection />
         <JigsawScreenshotsSection />
-        <JigsawMapPlanningSection />
         <JigsawResultsSection />
         
         <NextCaseStudySection 
