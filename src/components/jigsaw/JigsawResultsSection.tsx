@@ -12,10 +12,10 @@ const JigsawResultsSection: React.FC = () => {
           <div className="relative z-10">
             <div className="flex items-center gap-2 mb-3">
               <TrendingUp className="text-blue-500" size={24} />
-              <h3 className="text-xl font-medium">Efficiency</h3>
+              <h3 className="text-xl font-medium">Planning Speed</h3>
             </div>
-            <p className="text-4xl font-bold mb-2 text-blue-500">42%</p>
-            <p className="text-muted-foreground">Increase in operator efficiency</p>
+            <p className="text-4xl font-bold mb-2 text-blue-500">85%</p>
+            <p className="text-muted-foreground">Faster mission planning process</p>
           </div>
         </div>
         <div className="bg-card p-6 rounded-lg border border-border relative overflow-hidden">
@@ -23,10 +23,10 @@ const JigsawResultsSection: React.FC = () => {
           <div className="relative z-10">
             <div className="flex items-center gap-2 mb-3">
               <ThumbsUp className="text-cyan-500" size={24} />
-              <h3 className="text-xl font-medium">Adoption</h3>
+              <h3 className="text-xl font-medium">Resource Utilization</h3>
             </div>
-            <p className="text-4xl font-bold mb-2 text-cyan-500">96%</p>
-            <p className="text-muted-foreground">User satisfaction rating</p>
+            <p className="text-4xl font-bold mb-2 text-cyan-500">23%</p>
+            <p className="text-muted-foreground">Improved tanker utilization rate</p>
           </div>
         </div>
         <div className="bg-card p-6 rounded-lg border border-border relative overflow-hidden">
@@ -36,8 +36,8 @@ const JigsawResultsSection: React.FC = () => {
               <Clock className="text-purple-500" size={24} />
               <h3 className="text-xl font-medium">Training</h3>
             </div>
-            <p className="text-4xl font-bold mb-2 text-purple-500">-65%</p>
-            <p className="text-muted-foreground">Reduction in onboarding time</p>
+            <p className="text-4xl font-bold mb-2 text-purple-500">-78%</p>
+            <p className="text-muted-foreground">Reduction in planner training time</p>
           </div>
         </div>
       </div>
@@ -46,11 +46,11 @@ const JigsawResultsSection: React.FC = () => {
         <h3 className="text-2xl font-medium mb-6 text-center">Operational Impact</h3>
         <div className="space-y-6">
           <p className="text-muted-foreground text-lg leading-relaxed">
-            The redesigned Jigsaw platform transformed how air resources are managed and coordinated, resulting in significant improvements in operational efficiency and decision-making speed. Operators can now visualize complex mission data more intuitively, leading to faster response times and better resource allocation.
+            The redesigned Jigsaw planning interface has transformed how the Air Force manages aerial refueling operations. Planners who previously spent 8+ hours creating daily schedules can now complete the same work in approximately 1-2 hours, with greater accuracy and fewer conflicts.
           </p>
           
           <p className="text-muted-foreground text-lg leading-relaxed">
-            The new interface dramatically reduced training requirements for new operators, allowing teams to become proficient with the system in days rather than weeks. This has been particularly valuable for deployment in time-sensitive operational environments.
+            By making tanker resource allocation more efficient, Jigsaw has enabled Air Mobility Command to support more missions with the same number of aircraft. The intuitive gantt visualization has also improved coordination between planners and operators, reducing miscommunications and ensuring smoother execution of complex refueling operations.
           </p>
         </div>
       </div>
@@ -58,13 +58,13 @@ const JigsawResultsSection: React.FC = () => {
       <div className="p-1 bg-gradient-to-r from-blue-200 via-cyan-400 to-blue-600 rounded-lg">
         <div className="bg-card p-8 rounded-md">
           <blockquote className="text-xl md:text-2xl italic font-light bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">
-            "The redesigned Jigsaw platform has fundamentally changed how we manage our operations. What used to take multiple trained specialists can now be accomplished by a single operator with greater speed and accuracy."
+            "Before the new Jigsaw planning interface, we were spending up to 10 hours daily just building tanker plans. Now we can create better schedules in a fraction of the time, allowing us to respond to changing mission requirements much more effectively."
           </blockquote>
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-muted rounded-full"></div>
             <div>
-              <p className="font-medium">Col. James Reynolds</p>
-              <p className="text-muted-foreground text-sm">Director of Operations</p>
+              <p className="font-medium">Maj. Sarah Johnson</p>
+              <p className="text-muted-foreground text-sm">Lead Tanker Planner, 609th Air Operations Center</p>
             </div>
           </div>
         </div>

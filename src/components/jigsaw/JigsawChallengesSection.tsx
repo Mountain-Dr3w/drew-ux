@@ -1,53 +1,54 @@
 
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
-import { X, AlertTriangle, Clock, Layout } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 
 const JigsawChallengesSection: React.FC = () => {
   return (
     <CaseStudySection title="Challenges">
-      <div className="space-y-8">
-        <p className="text-lg leading-relaxed text-muted-foreground mb-8">
-          The Jigsaw platform faced several significant challenges that were impacting operational efficiency and user satisfaction:
-        </p>
-        
-        <div className="space-y-6">
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center flex-shrink-0">
-              <Layout className="text-red-600 dark:text-red-400" size={20} />
+      <div className="mb-8 bg-card p-6 rounded-lg border border-border">
+        <h3 className="text-xl font-medium mb-4 flex items-center gap-2">
+          <AlertTriangle size={20} className="text-amber-500" />
+          <span>Planning Interface Pain Points</span>
+        </h3>
+        <ul className="space-y-6 text-muted-foreground">
+          <li className="flex gap-4">
+            <div className="flex-shrink-0 bg-amber-100 dark:bg-amber-950/50 text-amber-700 dark:text-amber-400 w-8 h-8 rounded-full flex items-center justify-center font-medium">
+              1
             </div>
             <div>
-              <h3 className="text-xl font-medium mb-2">Complex Interface</h3>
-              <p className="text-muted-foreground">
-                The interface was cluttered with information, making it difficult for users to quickly find what they needed. Data visualization was functional but not optimized for quick comprehension during time-sensitive operations.
-              </p>
+              <h4 className="font-medium text-foreground mb-1">Complex Timeline Visualization</h4>
+              <p className="text-muted-foreground">Tanker planners struggled to visualize hundreds of sorties, refueling operations, and aircraft maintenance windows simultaneously. The existing gantt interface was cluttered, making it difficult to spot conflicts and optimization opportunities.</p>
             </div>
-          </div>
-          
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center flex-shrink-0">
-              <Clock className="text-amber-600 dark:text-amber-400" size={20} />
+          </li>
+          <li className="flex gap-4">
+            <div className="flex-shrink-0 bg-amber-100 dark:bg-amber-950/50 text-amber-700 dark:text-amber-400 w-8 h-8 rounded-full flex items-center justify-center font-medium">
+              2
             </div>
             <div>
-              <h3 className="text-xl font-medium mb-2">Steep Learning Curve</h3>
-              <p className="text-muted-foreground">
-                New users required extensive training to become proficient with the system. The lack of intuitive workflows and clear visual hierarchy made onboarding challenging and time-consuming.
-              </p>
+              <h4 className="font-medium text-foreground mb-1">Dependency Management</h4>
+              <p className="text-muted-foreground">Aerial refueling operations involve complex dependencies between receiver aircraft, tankers, airspace, and crew availability. The original system lacked intuitive visual indicators for these relationships, forcing planners to maintain mental models of these connections.</p>
             </div>
-          </div>
-          
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
-              <AlertTriangle className="text-blue-600 dark:text-blue-400" size={20} />
+          </li>
+          <li className="flex gap-4">
+            <div className="flex-shrink-0 bg-amber-100 dark:bg-amber-950/50 text-amber-700 dark:text-amber-400 w-8 h-8 rounded-full flex items-center justify-center font-medium">
+              3
             </div>
             <div>
-              <h3 className="text-xl font-medium mb-2">Technical Constraints</h3>
-              <p className="text-muted-foreground">
-                The system needed to maintain compatibility with existing infrastructure while introducing modern UX patterns. Any redesign had to carefully balance innovation with the technical realities of the platform.
-              </p>
+              <h4 className="font-medium text-foreground mb-1">Resource Conflicts</h4>
+              <p className="text-muted-foreground">When planning aerial refueling missions, identifying and resolving resource conflicts (like double-booked tankers or airspace) was a manual process prone to errors. The system didn't automatically highlight these conflicts, requiring time-consuming review processes.</p>
             </div>
-          </div>
-        </div>
+          </li>
+          <li className="flex gap-4">
+            <div className="flex-shrink-0 bg-amber-100 dark:bg-amber-950/50 text-amber-700 dark:text-amber-400 w-8 h-8 rounded-full flex items-center justify-center font-medium">
+              4
+            </div>
+            <div>
+              <h4 className="font-medium text-foreground mb-1">Learning Curve</h4>
+              <p className="text-muted-foreground">The previous Jigsaw planning interface had a steep learning curve requiring weeks of training. This created operational challenges during personnel rotations and limited the ability to quickly onboard new planners during surge operations.</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </CaseStudySection>
   );

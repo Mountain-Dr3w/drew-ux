@@ -1,103 +1,111 @@
 
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
-import { Users, Search, Lightbulb, Edit } from 'lucide-react';
+import { Users, Calendar, MoveHorizontal, ChartGantt } from 'lucide-react';
 
 const JigsawApproachSection: React.FC = () => {
   return (
     <CaseStudySection title="Approach">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-        <div className="bg-card rounded-lg border border-border overflow-hidden">
-          <div className="p-6 border-b border-border">
-            <div className="bg-blue-100 dark:bg-blue-900/30 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-              <Search className="text-blue-600 dark:text-blue-400" size={24} />
+      <div className="space-y-8">
+        <p className="text-muted-foreground">
+          Working directly with tanker planners at the 609th Air Operations Center, I took a user-centered approach to redesigning the Jigsaw planning interface. The goal was to maintain the powerful functionality needed for complex aerial refueling operations while dramatically improving usability and visual clarity.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-card p-6 rounded-lg border border-border">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-blue-100 dark:bg-blue-900/30 w-10 h-10 rounded-full flex items-center justify-center">
+                <Users className="text-blue-600 dark:text-blue-400" size={20} />
+              </div>
+              <h3 className="text-lg font-medium">User Research</h3>
             </div>
-            <h3 className="text-xl font-medium mb-2">Discovery & User Research</h3>
-            <p className="text-muted-foreground">
-              We conducted extensive user interviews with operators, analysts, and commanders to understand their workflows, pain points, and priorities.
-            </p>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2"></div>
+                <span>Conducted 12 contextual interviews with tanker planners during active planning sessions</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2"></div>
+                <span>Observed current planning workflows using both legacy systems and manual processes</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2"></div>
+                <span>Created journey maps to identify pain points in the current gantt-based planning process</span>
+              </li>
+            </ul>
           </div>
-          <div className="px-6 py-4 bg-muted/30">
-            <p className="text-sm text-muted-foreground">
-              Created detailed user personas and task flows to guide design decisions.
-            </p>
+          
+          <div className="bg-card p-6 rounded-lg border border-border">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-purple-100 dark:bg-purple-900/30 w-10 h-10 rounded-full flex items-center justify-center">
+                <ChartGantt className="text-purple-600 dark:text-purple-400" size={20} />
+              </div>
+              <h3 className="text-lg font-medium">Information Architecture</h3>
+            </div>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2"></div>
+                <span>Reorganized timeline data visualization hierarchy for mission-critical operations</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2"></div>
+                <span>Created visual taxonomy for mission types, resource categories, and dependency types</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2"></div>
+                <span>Designed progressive disclosure patterns for complex planning information</span>
+              </li>
+            </ul>
           </div>
         </div>
-        
-        <div className="bg-card rounded-lg border border-border overflow-hidden">
-          <div className="p-6 border-b border-border">
-            <div className="bg-purple-100 dark:bg-purple-900/30 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-              <Lightbulb className="text-purple-600 dark:text-purple-400" size={24} />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-card p-6 rounded-lg border border-border">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-amber-100 dark:bg-amber-900/30 w-10 h-10 rounded-full flex items-center justify-center">
+                <Calendar className="text-amber-600 dark:text-amber-400" size={20} />
+              </div>
+              <h3 className="text-lg font-medium">Prototyping</h3>
             </div>
-            <h3 className="text-xl font-medium mb-2">Design Strategy</h3>
-            <p className="text-muted-foreground">
-              We developed a comprehensive design system focused on clarity, hierarchy, and task efficiency for time-critical operations.
-            </p>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2"></div>
+                <span>Created lo-fi wireframes of the gantt interface focused on planning workflows</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2"></div>
+                <span>Developed interactive prototypes of key planning interactions like conflict resolution</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2"></div>
+                <span>Used real mission data to test visualization effectiveness with actual scenarios</span>
+              </li>
+            </ul>
           </div>
-          <div className="px-6 py-4 bg-muted/30">
-            <p className="text-sm text-muted-foreground">
-              Created visual language that accommodates information density while maintaining usability.
-            </p>
+          
+          <div className="bg-card p-6 rounded-lg border border-border">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-green-100 dark:bg-green-900/30 w-10 h-10 rounded-full flex items-center justify-center">
+                <MoveHorizontal className="text-green-600 dark:text-green-400" size={20} />
+              </div>
+              <h3 className="text-lg font-medium">Iterative Testing</h3>
+            </div>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2"></div>
+                <span>Conducted usability testing with tanker planners using task-based scenarios</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2"></div>
+                <span>Measured task completion time against baseline metrics from the legacy system</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2"></div>
+                <span>Refined designs based on direct feedback from operational users</span>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-card rounded-lg border border-border overflow-hidden">
-          <div className="p-6 border-b border-border">
-            <div className="bg-green-100 dark:bg-green-900/30 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-              <Edit className="text-green-600 dark:text-green-400" size={24} />
-            </div>
-            <h3 className="text-xl font-medium mb-2">Iterative Prototyping</h3>
-            <p className="text-muted-foreground">
-              We developed and tested multiple iterations of the interface with actual users, refining based on feedback and usability findings.
-            </p>
-          </div>
-          <div className="px-6 py-4 bg-muted/30">
-            <p className="text-sm text-muted-foreground">
-              Conducted usability testing in simulated operational environments to validate designs.
-            </p>
-          </div>
-        </div>
-        
-        <div className="bg-card rounded-lg border border-border overflow-hidden">
-          <div className="p-6 border-b border-border">
-            <div className="bg-amber-100 dark:bg-amber-900/30 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-              <Users className="text-amber-600 dark:text-amber-400" size={24} />
-            </div>
-            <h3 className="text-xl font-medium mb-2">Collaborative Implementation</h3>
-            <p className="text-muted-foreground">
-              We worked closely with engineering teams to ensure the design vision was implemented faithfully while respecting technical constraints.
-            </p>
-          </div>
-          <div className="px-6 py-4 bg-muted/30">
-            <p className="text-sm text-muted-foreground">
-              Created detailed specifications and documentation to guide development.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <div className="mt-10 p-6 bg-muted/30 rounded-lg border border-border">
-        <h3 className="text-xl font-medium mb-4">Key Design Principles</h3>
-        <ul className="space-y-3">
-          <li className="flex gap-2">
-            <span className="text-primary font-bold">•</span>
-            <span className="text-muted-foreground"><span className="font-medium text-foreground">Clarity over decoration:</span> Every visual element serves a functional purpose</span>
-          </li>
-          <li className="flex gap-2">
-            <span className="text-primary font-bold">•</span>
-            <span className="text-muted-foreground"><span className="font-medium text-foreground">Progressive disclosure:</span> Show the right information at the right time</span>
-          </li>
-          <li className="flex gap-2">
-            <span className="text-primary font-bold">•</span>
-            <span className="text-muted-foreground"><span className="font-medium text-foreground">Consistent patterns:</span> Maintain familiar interactions across different modules</span>
-          </li>
-          <li className="flex gap-2">
-            <span className="text-primary font-bold">•</span>
-            <span className="text-muted-foreground"><span className="font-medium text-foreground">Visual hierarchy:</span> Guide users to the most important information first</span>
-          </li>
-        </ul>
       </div>
     </CaseStudySection>
   );

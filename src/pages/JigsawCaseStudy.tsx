@@ -4,7 +4,6 @@ import CaseStudyHeader from '@/components/case-study/CaseStudyHeader';
 import CaseStudyHero from '@/components/case-study/CaseStudyHero';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import ProblemStatementSection from '@/components/case-study/ProblemStatementSection';
-import { Card } from '@/components/ui/card';
 import JigsawIntroSection from '@/components/jigsaw/JigsawIntroSection';
 import JigsawChallengesSection from '@/components/jigsaw/JigsawChallengesSection';
 import JigsawApproachSection from '@/components/jigsaw/JigsawApproachSection';
@@ -39,7 +38,7 @@ const JigsawCaseStudy: React.FC = () => {
     };
   }, []);
 
-  const jigsawProblemStatement = "The existing Jigsaw platform provides critical air resource management functionality but suffers from a cluttered interface and complex workflows that require extensive training. How might we redesign the system to maintain its powerful capabilities while dramatically improving usability, reducing training time, and enhancing operational efficiency?";
+  const jigsawProblemStatement = "Air Force tanker planners spend hours manually scheduling aerial refueling missions using legacy systems that don't effectively visualize complex resource dependencies. How might we redesign the planning interface to give planners a clear picture of tanker availability, receiver requirements, and potential conflicts while reducing planning time by at least 50%?";
 
   return (
     <div className="min-h-screen bg-background">
@@ -48,8 +47,8 @@ const JigsawCaseStudy: React.FC = () => {
       <main className="container py-12 md:py-16 lg:py-24">
         <CaseStudyHero 
           caseNumber="Case Study"
-          title="Jigsaw: Modernizing Air Resource Management"
-          description="How we redesigned a critical aerospace management platform to improve operational efficiency and user experience for military and aviation personnel."
+          title="Jigsaw: Reinventing Air Force Tanker Planning"
+          description="How we redesigned the mission planning interface for Kessel Run's aerial refueling platform, dramatically reducing scheduling time and improving resource utilization for the Air Force."
         />
 
         <JigsawIntroSection />
