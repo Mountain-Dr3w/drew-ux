@@ -33,7 +33,7 @@ const JigsawResultsSection: React.FC = () => {
               
               <h3 className="text-xl font-medium">Training</h3>
             </div>
-            <p className="text-4xl font-bold mb-2 text-purple-500">-78%</p>
+            <p className="text-4xl font-bold mb-2 text-purple-500">78%</p>
             <p className="text-muted-foreground">Reduction in planner training time</p>
           </div>
         </div>
