@@ -9,7 +9,7 @@ const DefTechApproachSection: React.FC = () => {
       <div>
         <h3 className="text-xl font-medium mb-4">Our Process</h3>
         <p className="text-muted-foreground mb-4">
-          I led the UX design effort for CyberShield using a four-phase approach:
+          I led the UX design effort for Forward Edge using a four-phase approach:
         </p>
         
         <div className="bg-card p-8 rounded-lg border border-border mb-8">
@@ -54,12 +54,12 @@ const DefTechApproachSection: React.FC = () => {
           <div className="flex flex-col items-center bg-card p-6 rounded-lg border border-border">
             <LineChart className="h-10 w-10 text-purple-500 mb-3" />
             <h4 className="text-lg font-medium mb-2">Task Analysis</h4>
-            <p className="text-muted-foreground text-center">Documented detailed steps in threat identification and response processes</p>
+            <p className="text-muted-foreground text-center">Documented detailed steps in logistics management and resource allocation processes</p>
           </div>
           <div className="flex flex-col items-center bg-card p-6 rounded-lg border border-border">
             <PenTool className="h-10 w-10 text-green-500 mb-3" />
             <h4 className="text-lg font-medium mb-2">Collaborative Design</h4>
-            <p className="text-muted-foreground text-center">Conducted workshops with security teams to co-create visualization concepts</p>
+            <p className="text-muted-foreground text-center">Conducted workshops with logistics teams to co-create visualization concepts</p>
           </div>
         </div>
       </div>
