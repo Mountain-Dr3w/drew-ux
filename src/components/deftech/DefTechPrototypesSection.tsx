@@ -111,7 +111,7 @@ const DefTechPrototypesSection: React.FC = () => {
             </div>
             
             <div className="bg-card p-6 rounded-lg border border-border">
-              <div className="text-4xl font-bold text-blue-500 mb-2">65%</div>
+              <div className="text-4xl font-bold text-primary-500 mb-2">65%</div>
               <h4 className="text-lg font-medium mb-1">Time Reduction</h4>
               <p className="text-sm text-muted-foreground">
                 Significant decrease in time required for resource allocation
@@ -119,7 +119,7 @@ const DefTechPrototypesSection: React.FC = () => {
             </div>
             
             <div className="bg-card p-6 rounded-lg border border-border">
-              <div className="text-4xl font-bold text-purple-500 mb-2">89%</div>
+              <div className="text-4xl font-bold text-primary-500 mb-2">89%</div>
               <h4 className="text-lg font-medium mb-1">User Satisfaction</h4>
               <p className="text-sm text-muted-foreground">
                 Positive feedback on the intuitive logistics management interface
