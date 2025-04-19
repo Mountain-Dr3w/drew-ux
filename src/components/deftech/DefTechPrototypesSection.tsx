@@ -1,7 +1,7 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { LineChart, Truck, Layers } from 'lucide-react';
+
 const DefTechPrototypesSection: React.FC = () => {
   return <CaseStudySection title="Prototypes & Testing">
       <div className="space-y-10">
@@ -13,12 +13,37 @@ const DefTechPrototypesSection: React.FC = () => {
           <h3 className="text-xl font-medium mb-6">Supply Chain Visualization</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-card p-4 rounded-lg border border-border overflow-hidden">
-              <div className="relative bg-muted/50 rounded-lg h-64 mb-4">
-                <img src="/lovable-uploads/783b14fa-3eef-4bac-8595-fe54560b0620.png" alt="Early wireframe of logistics dashboard" className="object-cover object-center w-full h-full" />
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-background/80 flex items-end justify-center p-4">
-                  <div className="bg-background/90 p-2 rounded-md inline-block">
-                    <p className="text-xs text-muted-foreground">Early wireframe prototype</p>
+              <div className="relative bg-[#F6F6F7] rounded-lg h-64 mb-4">
+                <div className="absolute inset-0 p-4">
+                  <div className="h-full border border-[#8E9196]/20 rounded bg-white p-3">
+                    <div className="flex items-center justify-between mb-4 border-b pb-2">
+                      <div className="w-32 h-4 bg-[#8E9196]/20 rounded"></div>
+                      <div className="flex gap-2">
+                        <div className="w-8 h-8 rounded-full bg-[#8E9196]/10"></div>
+                        <div className="w-8 h-8 rounded-full bg-[#8E9196]/10"></div>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-3 gap-3 mb-4">
+                      <div className="col-span-2 h-24 bg-[#8E9196]/10 rounded"></div>
+                      <div className="space-y-2">
+                        <div className="h-4 w-full bg-[#8E9196]/20 rounded"></div>
+                        <div className="h-4 w-3/4 bg-[#8E9196]/20 rounded"></div>
+                        <div className="h-4 w-1/2 bg-[#8E9196]/20 rounded"></div>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-4 gap-2">
+                      <div className="h-16 bg-[#8E9196]/10 rounded"></div>
+                      <div className="h-16 bg-[#8E9196]/10 rounded"></div>
+                      <div className="h-16 bg-[#8E9196]/10 rounded"></div>
+                      <div className="h-16 bg-[#8E9196]/10 rounded"></div>
+                    </div>
                   </div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                  <h3 className="text-white text-xl font-medium mb-2">Early Wireframe</h3>
+                  <p className="text-white/80 text-sm">
+                    Initial lo-fi wireframe focusing on core logistics data visualization
+                  </p>
                 </div>
               </div>
               <div className="bg-muted/30 p-3 rounded-md">
@@ -131,4 +156,5 @@ const DefTechPrototypesSection: React.FC = () => {
       </div>
     </CaseStudySection>;
 };
+
 export default DefTechPrototypesSection;
