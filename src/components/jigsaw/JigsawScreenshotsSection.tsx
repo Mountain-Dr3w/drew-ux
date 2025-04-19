@@ -1,11 +1,8 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { ArrowRight, CalendarDays } from 'lucide-react';
-
 const JigsawScreenshotsSection: React.FC = () => {
-  return (
-    <CaseStudySection title="Solution">
+  return <CaseStudySection title="Solution">
       <div className="space-y-10">
         <div className="space-y-4">
           <h3 className="text-2xl font-medium">Advanced Gantt Planning Interface</h3>
@@ -15,11 +12,7 @@ const JigsawScreenshotsSection: React.FC = () => {
           
           <div className="relative group overflow-hidden rounded-lg border border-border">
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-            <img 
-              src="/lovable-uploads/424622bd-bc00-4f6e-9a37-6678fbb643ab.png"
-              alt="Jigsaw gantt interface showing aerial refueling mission scheduling"
-              className="w-full h-auto rounded-lg transition-transform duration-500 group-hover:scale-[1.02]"
-            />
+            <img src="/lovable-uploads/424622bd-bc00-4f6e-9a37-6678fbb643ab.png" alt="Jigsaw gantt interface showing aerial refueling mission scheduling" className="w-full h-auto rounded-lg transition-transform duration-500 group-hover:scale-[1.02]" />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pointer-events-none">
               <p className="text-white text-lg font-medium">Multi-level Mission Timeline</p>
               <p className="text-white/80 text-sm">Interactive gantt visualization for tanker scheduling and resource management</p>
@@ -83,21 +76,8 @@ const JigsawScreenshotsSection: React.FC = () => {
           </div>
         </div>
         
-        <div className="relative group overflow-hidden rounded-lg border border-border mt-8">
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-          <img 
-            src="/lovable-uploads/424622bd-bc00-4f6e-9a37-6678fbb643ab.png"
-            alt="Jigsaw resource allocation view showing tanker and receiver aircraft assignments"
-            className="w-full h-auto rounded-lg transition-transform duration-500 group-hover:scale-[1.02]"
-          />
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pointer-events-none">
-            <p className="text-white text-lg font-medium">Resource Allocation View</p>
-            <p className="text-white/80 text-sm">Optimized visualization showing tanker assets matched with receiver requirements</p>
-          </div>
-        </div>
+        
       </div>
-    </CaseStudySection>
-  );
+    </CaseStudySection>;
 };
-
 export default JigsawScreenshotsSection;
