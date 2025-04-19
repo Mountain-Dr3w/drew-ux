@@ -18,7 +18,7 @@ const DefTechResultsSection: React.FC = () => {
         </Card>
         <Card className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent"></div>
-          <CardContent className="p-6 relative z-10">
+          <CardContent className="p-6 relative z-10 bg-transparent">
             <div className="flex items-center gap-2 mb-3">
               <TrendingUp className="text-purple-500" size={24} />
               <h3 className="text-xl font-medium">Adoption</h3>
@@ -29,7 +29,7 @@ const DefTechResultsSection: React.FC = () => {
         </Card>
         <Card className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent"></div>
-          <CardContent className="p-6 relative z-10">
+          <CardContent className="p-6 relative z-10 bg-transparent">
             <div className="flex items-center gap-2 mb-3">
               <Shield className="text-green-500" size={24} />
               <h3 className="text-xl font-medium">Security</h3>
