@@ -48,7 +48,7 @@ const DefTechResultsSection: React.FC = () => {
           <h3 className="text-2xl font-medium mb-6 text-center">Business Impact</h3>
           <div className="space-y-6">
             <p className="text-muted-foreground text-lg leading-relaxed">
-              The redesigned LogisticsPro platform transformed how defense logistics teams manage supply chain operations, leading to measurable improvements in efficiency, resource allocation, and cost management.
+              The redesigned Forward Edge platform transformed how defense logistics teams manage supply chain operations, leading to measurable improvements in efficiency, resource allocation, and cost management.
             </p>
             
             <p className="text-muted-foreground text-lg leading-relaxed">
@@ -66,7 +66,7 @@ const DefTechResultsSection: React.FC = () => {
         <Card className="rounded-md">
           <CardContent className="p-8">
             <blockquote className="text-xl md:text-2xl italic font-light bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">
-              "LogisticsPro has completely transformed our supply chain management. What used to take days of manual tracking now happens in real-time, and the insights have helped us optimize our entire logistics operation."
+              "Forward Edge has completely transformed our supply chain management. What used to take days of manual tracking now happens in real-time, and the insights have helped us optimize our entire logistics operation."
             </blockquote>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-muted rounded-full"></div>

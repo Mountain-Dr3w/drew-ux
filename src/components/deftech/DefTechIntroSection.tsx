@@ -1,11 +1,13 @@
+
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { Truck, BarChart, Shield } from 'lucide-react';
+
 const DefTechIntroSection: React.FC = () => {
   return <CaseStudySection title="Background">
       <div className="space-y-6">
         <p className="text-lg leading-relaxed text-muted-foreground">
-          LogisticsPro is an advanced decision support platform designed for defense logistics leadership. The platform integrates data from multiple sources to provide real-time visibility into supply chain operations, resource allocation, and operational readiness, enabling leaders to make informed strategic decisions.
+          Forward Edge is an advanced decision support platform designed for defense logistics leadership. The platform integrates data from multiple sources to provide real-time visibility into supply chain operations, resource allocation, and operational readiness, enabling leaders to make informed strategic decisions.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
@@ -39,7 +41,7 @@ const DefTechIntroSection: React.FC = () => {
 
         <div className="bg-muted/30 p-6 border-l-4 border-blue-500 rounded-r-md mt-8">
           <p className="italic text-muted-foreground text-lg">
-            In plain terms: LogisticsPro helps defense leaders visualize, analyze, and optimize their logistics operations by transforming complex data into actionable strategic insights.
+            In plain terms: Forward Edge helps defense leaders visualize, analyze, and optimize their logistics operations by transforming complex data into actionable strategic insights.
           </p>
         </div>
       </div>
