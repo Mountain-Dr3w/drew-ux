@@ -1,7 +1,6 @@
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { LineChart, Truck, Layers } from 'lucide-react';
-
 const DefTechPrototypesSection: React.FC = () => {
   return <CaseStudySection title="Prototypes & Testing">
       <div className="space-y-10">
@@ -11,7 +10,7 @@ const DefTechPrototypesSection: React.FC = () => {
         
         <div>
           <h3 className="text-lg font-medium mb-4">Supply Chain Visualization</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="">
             <div className="bg-card p-3 rounded-lg border border-border overflow-hidden">
               <div className="relative bg-[#F6F6F7] rounded-lg h-52 mb-3">
                 <div className="absolute inset-0 p-3">
@@ -101,7 +100,7 @@ const DefTechPrototypesSection: React.FC = () => {
               <LineChart className="mr-2 h-4 w-4 text-blue-500" />
               Testing Insights
             </h4>
-            <ul className="space-y-2 text-base text-muted-foreground">
+            <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-1.5"></div>
                 <span>Users preferred real-time visualization of fleet and inventory status</span>
@@ -122,11 +121,7 @@ const DefTechPrototypesSection: React.FC = () => {
           <h3 className="text-xl font-medium mb-6">Resource Management Dashboard</h3>
           <div className="bg-card rounded-lg border border-border overflow-hidden">
             <div className="relative bg-muted/50 h-80 flex items-center justify-center">
-              <img 
-                src="/lovable-uploads/af410691-e911-4748-9117-3129f4c06085.png" 
-                alt="Resource Management Dashboard" 
-                className="w-full h-full object-cover"
-              />
+              <Layers className="w-32 h-32 text-purple-300" />
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-background/80 flex items-end justify-center p-4">
                 <div className="bg-background/90 p-2 rounded-md inline-block">
                   <p className="text-xs text-muted-foreground">High-fidelity mockup of the logistics dashboard</p>
@@ -184,5 +179,4 @@ const DefTechPrototypesSection: React.FC = () => {
       </div>
     </CaseStudySection>;
 };
-
 export default DefTechPrototypesSection;
