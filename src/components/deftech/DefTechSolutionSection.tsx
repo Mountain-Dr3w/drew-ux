@@ -1,7 +1,7 @@
 
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
-import { LayoutDashboard, Network, Bell, BarChart } from 'lucide-react';
+import { Truck, Box, BarChart, Route } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const DefTechSolutionSection: React.FC = () => {
@@ -12,57 +12,57 @@ const DefTechSolutionSection: React.FC = () => {
           <h3 className="text-2xl font-medium mb-6">Design Principles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="overflow-hidden border-b-4 border-b-blue-500 h-full">
-              <CardContent className="p-6">
+              <CardContent className="p-6 bg-transparent">
                 <div className="flex items-center mb-4">
                   <div className="bg-blue-100 dark:bg-blue-900/30 w-10 h-10 rounded-full flex items-center justify-center mr-3">
-                    <Bell className="text-blue-600 dark:text-blue-400" size={20} />
+                    <Truck className="text-blue-600 dark:text-blue-400" size={20} />
                   </div>
-                  <h4 className="font-medium text-lg">Clarity in Noise</h4>
+                  <h4 className="font-medium text-lg">Real-time Visibility</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  Design interfaces that help analysts quickly distinguish genuine threats from noise, using visual hierarchy and pattern recognition.
+                  Design interfaces that provide immediate insight into supply chain status, fleet locations, and inventory levels.
                 </p>
               </CardContent>
             </Card>
             
             <Card className="overflow-hidden border-b-4 border-b-purple-500 h-full">
-              <CardContent className="p-6">
+              <CardContent className="p-6 bg-transparent">
                 <div className="flex items-center mb-4">
                   <div className="bg-purple-100 dark:bg-purple-900/30 w-10 h-10 rounded-full flex items-center justify-center mr-3">
-                    <Network className="text-purple-600 dark:text-purple-400" size={20} />
+                    <Box className="text-purple-600 dark:text-purple-400" size={20} />
                   </div>
-                  <h4 className="font-medium text-lg">Reveal Relationships</h4>
+                  <h4 className="font-medium text-lg">Resource Optimization</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  Make connections between threats visible and interactive, allowing analysts to discover patterns and related incidents.
+                  Enable smart allocation of resources through intuitive inventory management and personnel deployment tools.
                 </p>
               </CardContent>
             </Card>
             
             <Card className="overflow-hidden border-b-4 border-b-amber-500 h-full">
-              <CardContent className="p-6">
+              <CardContent className="p-6 bg-transparent">
                 <div className="flex items-center mb-4">
                   <div className="bg-amber-100 dark:bg-amber-900/30 w-10 h-10 rounded-full flex items-center justify-center mr-3">
                     <BarChart className="text-amber-600 dark:text-amber-400" size={20} />
                   </div>
-                  <h4 className="font-medium text-lg">Progressive Disclosure</h4>
+                  <h4 className="font-medium text-lg">Data-Driven Insights</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  Layer information from high-level summaries to detailed technical data, allowing different stakeholders to access appropriate depth.
+                  Present actionable analytics and KPIs that help leadership make informed decisions about logistics operations.
                 </p>
               </CardContent>
             </Card>
             
             <Card className="overflow-hidden border-b-4 border-b-green-500 h-full">
-              <CardContent className="p-6">
+              <CardContent className="p-6 bg-transparent">
                 <div className="flex items-center mb-4">
                   <div className="bg-green-100 dark:bg-green-900/30 w-10 h-10 rounded-full flex items-center justify-center mr-3">
-                    <LayoutDashboard className="text-green-600 dark:text-green-400" size={20} />
+                    <Route className="text-green-600 dark:text-green-400" size={20} />
                   </div>
-                  <h4 className="font-medium text-lg">Contextual Actions</h4>
+                  <h4 className="font-medium text-lg">Streamlined Operations</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  Present relevant actions and tools at the right moment in the analysis workflow to streamline response processes.
+                  Simplify complex logistics workflows through intuitive interfaces and automated processes.
                 </p>
               </CardContent>
             </Card>
@@ -76,13 +76,13 @@ const DefTechSolutionSection: React.FC = () => {
             <div className="bg-card rounded-lg border border-border overflow-hidden">
               <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-500 relative overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Network className="h-24 w-24 text-white opacity-30" />
+                  <Truck className="h-24 w-24 text-white opacity-30" />
                 </div>
               </div>
-              <div className="p-6">
-                <h4 className="text-xl font-medium mb-2">Threat Network Visualization</h4>
+              <div className="p-6 bg-transparent">
+                <h4 className="text-xl font-medium mb-2">Supply Chain Dashboard</h4>
                 <p className="text-muted-foreground mb-4">
-                  Interactive graph visualization showing relationships between threats, affected systems, and potential attack vectors. Allows analysts to explore connections and identify attack patterns.
+                  Comprehensive view of supply chain operations, including real-time tracking of resources, inventory levels, and delivery status across multiple locations.
                 </p>
               </div>
             </div>
@@ -90,13 +90,13 @@ const DefTechSolutionSection: React.FC = () => {
             <div className="bg-card rounded-lg border border-border overflow-hidden">
               <div className="h-48 bg-gradient-to-r from-amber-500 to-red-500 relative overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <LayoutDashboard className="h-24 w-24 text-white opacity-30" />
+                  <BarChart className="h-24 w-24 text-white opacity-30" />
                 </div>
               </div>
-              <div className="p-6">
-                <h4 className="text-xl font-medium mb-2">Role-Based Dashboards</h4>
+              <div className="p-6 bg-transparent">
+                <h4 className="text-xl font-medium mb-2">Resource Management Hub</h4>
                 <p className="text-muted-foreground mb-4">
-                  Customized views for different user roles, from detailed technical displays for analysts to high-level security posture overviews for executives and leadership teams.
+                  Centralized system for managing personnel, equipment, and supplies with predictive analytics for optimal resource allocation.
                 </p>
               </div>
             </div>
@@ -106,57 +106,57 @@ const DefTechSolutionSection: React.FC = () => {
         <div>
           <h3 className="text-2xl font-medium mb-6">Information Architecture</h3>
           <div className="bg-card p-6 rounded-lg border border-border overflow-hidden">
-            <div className="h-80 bg-muted/50 rounded-lg flex items-center justify-center">
+            <div className="h-80 bg-transparent rounded-lg flex items-center justify-center">
               <div className="w-full max-w-3xl">
                 <div className="flex flex-col">
                   <div className="bg-blue-500 text-white p-4 rounded-t-lg text-center font-medium">
-                    Dashboard (Entry Point)
+                    Logistics Command Center (Entry Point)
                   </div>
                   
                   <div className="grid grid-cols-3 gap-0.5 mt-0.5">
                     <div className="bg-purple-500 text-white p-3 text-center">
-                      Threat Explorer
+                      Supply Chain
                     </div>
                     <div className="bg-amber-500 text-white p-3 text-center">
-                      Security Posture
+                      Resource Planning
                     </div>
                     <div className="bg-green-500 text-white p-3 text-center">
-                      Alert Management
+                      Operations
                     </div>
                   </div>
                   
                   <div className="grid grid-cols-3 gap-0.5 mt-0.5">
                     <div className="flex flex-col gap-0.5">
                       <div className="bg-purple-400 text-white p-2 text-sm text-center">
-                        Network View
+                        Inventory Tracking
                       </div>
                       <div className="bg-purple-400 text-white p-2 text-sm text-center">
-                        Timeline View
+                        Route Planning
                       </div>
                       <div className="bg-purple-400 text-white p-2 text-sm text-center">
-                        Detailed Analysis
+                        Delivery Status
                       </div>
                     </div>
                     <div className="flex flex-col gap-0.5">
                       <div className="bg-amber-400 text-white p-2 text-sm text-center">
-                        Risk Scores
+                        Personnel
                       </div>
                       <div className="bg-amber-400 text-white p-2 text-sm text-center">
-                        Compliance Status
+                        Equipment
                       </div>
                       <div className="bg-amber-400 text-white p-2 text-sm text-center">
-                        Vulnerability Map
+                        Forecasting
                       </div>
                     </div>
                     <div className="flex flex-col gap-0.5">
                       <div className="bg-green-400 text-white p-2 text-sm text-center">
-                        Alert Queue
+                        Performance
                       </div>
                       <div className="bg-green-400 text-white p-2 text-sm text-center">
-                        Investigation Tools
+                        Compliance
                       </div>
                       <div className="bg-green-400 text-white p-2 text-sm text-center">
-                        Response Actions
+                        Reporting
                       </div>
                     </div>
                   </div>
