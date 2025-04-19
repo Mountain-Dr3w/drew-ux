@@ -1,47 +1,10 @@
-
 import React from 'react';
 import CaseStudySection from './CaseStudySection';
 import { TrendingUp, ThumbsUp, Clock, RecycleIcon, Truck, CircleCheck } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
-
 const ResultsSection: React.FC = () => {
-  return (
-    <CaseStudySection title="Results & Impact">
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
-        <div className="bg-card p-6 rounded-lg border border-border relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent"></div>
-          <div className="relative z-10">
-            <div className="flex items-center gap-2 mb-3">
-              <TrendingUp className="text-green-500" size={24} />
-              <h3 className="text-xl font-medium">Waste Reduction</h3>
-            </div>
-            <p className="text-4xl font-bold mb-2 text-green-500">42%</p>
-            <p className="text-muted-foreground">Average decrease in food waste</p>
-          </div>
-        </div>
-        <div className="bg-card p-6 rounded-lg border border-border relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent"></div>
-          <div className="relative z-10">
-            <div className="flex items-center gap-2 mb-3">
-              <ThumbsUp className="text-green-500" size={24} />
-              <h3 className="text-xl font-medium">User Growth</h3>
-            </div>
-            <p className="text-4xl font-bold mb-2 text-green-500">3.5x</p>
-            <p className="text-muted-foreground">Increase in platform adoption</p>
-          </div>
-        </div>
-        <div className="bg-card p-6 rounded-lg border border-border relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent"></div>
-          <div className="relative z-10">
-            <div className="flex items-center gap-2 mb-3">
-              <Clock className="text-green-500" size={24} />
-              <h3 className="text-xl font-medium">Time Savings</h3>
-            </div>
-            <p className="text-4xl font-bold mb-2 text-green-500">68%</p>
-            <p className="text-muted-foreground">Reduction in reporting time</p>
-          </div>
-        </div>
-      </div>
+  return <CaseStudySection title="Results & Impact">
+      
       
       <div className="bg-card rounded-lg border border-border overflow-hidden mb-10">
         <div className="p-6 border-b border-border">
@@ -95,7 +58,7 @@ const ResultsSection: React.FC = () => {
       </div>
       
       <div className="bg-muted/30 p-8 rounded-lg border border-border mb-10">
-        <h3 className="text-2xl font-medium mb-6 text-center">Business Outcomes</h3>
+        <h3 className="text-2xl font-medium mb-6 text-left">Business Outcomes</h3>
         <div className="space-y-6">
           <p className="text-muted-foreground text-lg leading-relaxed">
             The redesigned platform transformed how Veriflux's clients interact with waste management data, resulting in significant improvements in user engagement and satisfaction. The new design system also enabled the Veriflux team to develop new features more efficiently while maintaining consistency.
@@ -148,15 +111,9 @@ const ResultsSection: React.FC = () => {
         </div>
         
         <div className="flex-shrink-0">
-          <img 
-            src="/lovable-uploads/Asset%203.svg" 
-            alt="Veriflux logo" 
-            className="h-16 w-auto opacity-50"
-          />
+          <img src="/lovable-uploads/Asset%203.svg" alt="Veriflux logo" className="h-16 w-auto opacity-50" />
         </div>
       </div>
-    </CaseStudySection>
-  );
+    </CaseStudySection>;
 };
-
 export default ResultsSection;
