@@ -49,17 +49,17 @@ const DefTechApproachSection: React.FC = () => {
           <div className="flex flex-col items-center bg-card p-6 rounded-lg border border-border">
             <Users className="h-10 w-10 text-blue-500 mb-3" />
             <h4 className="text-lg font-medium mb-2">Contextual Inquiry</h4>
-            <p className="text-muted-foreground text-center">Identified how teams could reduce mission-critical equipment downtime by 47% through improved resource tracking</p>
+            <p className="text-muted-foreground text-center">Observed logistics and readiness teams in their natural environment to understand real-world workflows</p>
           </div>
           <div className="flex flex-col items-center bg-card p-6 rounded-lg border border-border">
             <LineChart className="h-10 w-10 text-purple-500 mb-3" />
             <h4 className="text-lg font-medium mb-2">Task Analysis</h4>
-            <p className="text-muted-foreground text-center">Discovered opportunities to cut resource allocation time by 62% through streamlined approval workflows</p>
+            <p className="text-muted-foreground text-center">Documented detailed steps in logistics management and resource allocation processes</p>
           </div>
           <div className="flex flex-col items-center bg-card p-6 rounded-lg border border-border">
             <PenTool className="h-10 w-10 text-green-500 mb-3" />
             <h4 className="text-lg font-medium mb-2">Collaborative Design</h4>
-            <p className="text-muted-foreground text-center">Created predictive models that helped teams reduce emergency resupply missions by 38% through better forecasting</p>
+            <p className="text-muted-foreground text-center">Conducted workshops with logistics teams to co-create visualization concepts</p>
           </div>
         </div>
       </div>
