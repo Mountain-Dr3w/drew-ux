@@ -1,17 +1,14 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { TrendingUp, ThumbsUp, Clock } from 'lucide-react';
-
 const JigsawResultsSection: React.FC = () => {
-  return (
-    <CaseStudySection title="Results & Impact">
+  return <CaseStudySection title="Results & Impact">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
         <div className="bg-card p-6 rounded-lg border border-border relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent"></div>
-          <div className="relative z-10">
+          <div className="relative z-10 bg-transparent">
             <div className="flex items-center gap-2 mb-3">
-              <TrendingUp className="text-blue-500" size={24} />
+              
               <h3 className="text-xl font-medium">Planning Speed</h3>
             </div>
             <p className="text-4xl font-bold mb-2 text-blue-500">85%</p>
@@ -20,9 +17,9 @@ const JigsawResultsSection: React.FC = () => {
         </div>
         <div className="bg-card p-6 rounded-lg border border-border relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent"></div>
-          <div className="relative z-10">
+          <div className="relative z-10 bg-transparent">
             <div className="flex items-center gap-2 mb-3">
-              <ThumbsUp className="text-cyan-500" size={24} />
+              
               <h3 className="text-xl font-medium">Resource Utilization</h3>
             </div>
             <p className="text-4xl font-bold mb-2 text-cyan-500">23%</p>
@@ -31,9 +28,9 @@ const JigsawResultsSection: React.FC = () => {
         </div>
         <div className="bg-card p-6 rounded-lg border border-border relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent"></div>
-          <div className="relative z-10">
+          <div className="relative z-10 bg-transparent">
             <div className="flex items-center gap-2 mb-3">
-              <Clock className="text-purple-500" size={24} />
+              
               <h3 className="text-xl font-medium">Training</h3>
             </div>
             <p className="text-4xl font-bold mb-2 text-purple-500">-78%</p>
@@ -43,7 +40,7 @@ const JigsawResultsSection: React.FC = () => {
       </div>
       
       <div className="bg-muted/30 p-8 rounded-lg border border-border mb-10">
-        <h3 className="text-2xl font-medium mb-6 text-center">Operational Impact</h3>
+        <h3 className="text-2xl font-medium mb-6 text-left">Operational Impact</h3>
         <div className="space-y-6">
           <p className="text-muted-foreground text-lg leading-relaxed">
             The redesigned Jigsaw planning interface has transformed how the Air Force manages aerial refueling operations. Planners who previously spent 8+ hours creating daily schedules can now complete the same work in approximately 1-2 hours, with greater accuracy and fewer conflicts.
@@ -63,14 +60,12 @@ const JigsawResultsSection: React.FC = () => {
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-muted rounded-full"></div>
             <div>
-              <p className="font-medium">Maj. Sarah Johnson</p>
+              <p className="font-medium">Air Force Major</p>
               <p className="text-muted-foreground text-sm">Lead Tanker Planner, 609th Air Operations Center</p>
             </div>
           </div>
         </div>
       </div>
-    </CaseStudySection>
-  );
+    </CaseStudySection>;
 };
-
 export default JigsawResultsSection;
