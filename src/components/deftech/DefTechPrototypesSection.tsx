@@ -1,7 +1,9 @@
+
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { LineChart } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import WireframeImage from './WireframeImage';
 
 const DefTechPrototypesSection: React.FC = () => {
   return (
