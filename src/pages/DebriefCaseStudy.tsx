@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import CaseStudyHeader from '@/components/case-study/CaseStudyHeader';
 import CaseStudyHero from '@/components/case-study/CaseStudyHero';
@@ -65,7 +64,7 @@ const DebriefCaseStudy: React.FC = () => {
         <DebriefPrototypesSection />
         <DebriefResultsSection />
         <NextCaseStudySection
-          title="From Food Waste to Impact: A Design Transformation Story"
+          title="Design Thinking Meets Waste Traceability"
           link="/case-study/veriflux"
         />
       </main>

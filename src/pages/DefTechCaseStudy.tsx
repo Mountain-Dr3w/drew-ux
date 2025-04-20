@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import CaseStudyHeader from '@/components/case-study/CaseStudyHeader';
 import CaseStudyHero from '@/components/case-study/CaseStudyHero';
@@ -58,8 +57,8 @@ const DefTechCaseStudy: React.FC = () => {
         <DefTechResultsSection />
         
         <NextCaseStudySection 
-          title="Modernizing an Air-to-Air Refueling System" 
-          link="/case-study/jigsaw" 
+          title="Streamlining Post-Flight Analysis for Pilots"
+          link="/case-study/debrief"
         />
       </main>
     </div>

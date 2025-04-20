@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import CaseStudyHeader from '@/components/case-study/CaseStudyHeader';
 import CaseStudyHero from '@/components/case-study/CaseStudyHero';
@@ -62,6 +61,7 @@ const VerifluxCaseStudy: React.FC = () => {
         <RouteTrackingSection />
         <AnalyticsDashboardSection />
         <ResultsSection />
+        
         <NextCaseStudySection
           title="Revolutionizing Logistics and Readiness for the USAF"
           link="/case-study/deftech"

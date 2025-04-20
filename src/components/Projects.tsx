@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ProjectCard from './ProjectCard';
 import TransitionEffect from './TransitionEffect';
@@ -8,6 +9,12 @@ const projectsData = [
     description: "Empowering military decision-makers to use all of the data at their disposal to make choices that optimize readiness",
     imageUrl: "/lovable-uploads/f0075149-b5c6-43b0-9085-723a84367eb7.png",
     url: "/case-study/deftech",
+  },
+  {
+    title: "Debrief: Streamlining Post-Flight Analysis",
+    description: "How a human-centered UX approach improved flight safety and operational efficiency for aviation professionals",
+    imageUrl: "/lovable-uploads/424622bd-bc00-4f6e-9a37-6678fbb643ab.png",
+    url: "/case-study/debrief",
   },
   {
     title: "Design Thinking Meets Waste Traceability",
