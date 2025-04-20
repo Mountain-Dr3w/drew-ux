@@ -1,3 +1,4 @@
+
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { Card, CardContent } from '@/components/ui/card';
@@ -62,7 +63,7 @@ const DebriefResultsSection: React.FC = () => {
               <div className="w-12 h-12 bg-muted rounded-full"></div>
               <div>
                 <p className="font-medium">Director of Flight Operations</p>
-                <p className="text-muted-foreground text-sm">Major North American Airline</p>
+                <p className="text-muted-foreground text-sm">USAF Fighter Squadron</p>
               </div>
             </div>
           </CardContent>
