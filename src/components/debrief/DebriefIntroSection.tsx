@@ -1,7 +1,6 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
-import { FlightTakeoff, FlightLand, Clock } from 'lucide-react';
+import { PlaneTakeoff, PlaneLanding, Clock } from 'lucide-react';
 
 const DebriefIntroSection: React.FC = () => {
   return (
