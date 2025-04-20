@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { Card, CardContent } from '@/components/ui/card';
@@ -26,9 +25,9 @@ const DebriefResultsSection: React.FC = () => {
         <Card className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent"></div>
           <CardContent className="p-6 relative z-10 bg-transparent">
-            <h3 className="text-xl font-medium mb-3">ROI</h3>
-            <p className="text-4xl font-bold mb-2 text-green-500">3.2x</p>
-            <p className="text-muted-foreground">Return on investment in 12 months</p>
+            <h3 className="text-xl font-medium mb-3">MX Time</h3>
+            <p className="text-4xl font-bold mb-2 text-green-500">10%</p>
+            <p className="text-muted-foreground">Maintenance time cut on average</p>
           </CardContent>
         </Card>
       </div>
