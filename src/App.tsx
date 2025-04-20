@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import VerifluxCaseStudy from "./pages/VerifluxCaseStudy";
 import JigsawCaseStudy from "./pages/JigsawCaseStudy";
 import DefTechCaseStudy from "./pages/DefTechCaseStudy";
+import DebriefCaseStudy from "./pages/DebriefCaseStudy";
 import { ThemeProvider } from "./hooks/use-theme";
 import CustomCursor from "./components/CustomCursor";
 import ProtectedCaseStudy from "./components/ProtectedCaseStudy";
@@ -60,6 +61,15 @@ const App = () => (
                 <ProtectedRoute 
                   path="/case-study/deftech"
                   element={<DefTechCaseStudy />}
+                />
+              } 
+            />
+            <Route 
+              path="/case-study/debrief" 
+              element={
+                <ProtectedRoute 
+                  path="/case-study/debrief"
+                  element={<DebriefCaseStudy />}
                 />
               } 
             />
