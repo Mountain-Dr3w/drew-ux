@@ -13,7 +13,7 @@ const projectsData = [
   {
     title: "Debrief: Streamlining Post-Flight Analysis",
     description: "How a human-centered UX approach improved flight safety and operational efficiency for aviation professionals",
-    imageUrl: "/lovable-uploads/424622bd-bc00-4f6e-9a37-6678fbb643ab.png",
+    imageUrl: "/lovable-uploads/4c672ff6-c950-4435-afb3-f29ba004a6a3.png",
     url: "/case-study/debrief",
   },
   {
