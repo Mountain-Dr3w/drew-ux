@@ -1,13 +1,8 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
-import { useRandomGradient } from '@/hooks/useRandomGradient';
 
 const Hero: React.FC = () => {
-  // Get the gradient style directly from the hook
-  const gradientStyle = useRandomGradient();
-
   return (
     <section className="min-h-[80vh] relative flex items-center justify-center pt-8 md:pt-10 lg:pt-12 z-0 mb-8 md:mb-0">
       {/* Minimal design elements */}
@@ -47,8 +42,9 @@ const Hero: React.FC = () => {
             <h1 className="shiftnudge-heading mb-6 md:mb-8 lg:mb-10 text-balance max-w-4xl mx-auto font-normal">
               <div className="mb-4">Designing usable, accessible, and scalable software isn't easy.</div>
               <span
-                className="font-bold hero-animated-gradient"
-                style={gradientStyle}
+                className={cn(
+                  "font-bold hero-animated-gradient"
+                )}
               >
                 Let me do it for you.
               </span>

@@ -363,11 +363,20 @@
 }
 
 .hero-animated-gradient {
+  font-size: inherit;
   font-weight: 700;
+  /* Layered gradients for organic movement, reduced color count */
+  background:
+    linear-gradient(120deg, #8b5cf6 0%, #1eaedb 50%, #f97316 100%),
+    linear-gradient(160deg, #d946ef 0%, #8b5cf6 60%, #f97316 100%);
+  background-size: 200% 200%, 250% 250%;
+  background-position: 50% 50%, 60% 40%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
+  animation: hero-grad-move 4s cubic-bezier(0.76, 0, 0.24, 1) infinite alternate,
+             hero-grad-move2 7s cubic-bezier(0.9, 0.01, 0.1, 0.99) infinite reverse;
   position: relative;
 }
 
