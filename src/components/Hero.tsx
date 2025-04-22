@@ -1,9 +1,9 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
+import { BadgeCheck, BadgeInfo } from 'lucide-react';
 
 // Apple-inspired blue: strong but understated, no harsh gradient
 const appleBlueButton =
@@ -43,6 +43,17 @@ const Hero: React.FC = () => {
               Let me do it for you.
             </span>
           </h1>
+        </TransitionEffect>
+
+        <TransitionEffect direction="up" delay={0.3}>
+          <div className="flex flex-wrap items-center gap-3 mb-6">
+            <Badge variant="client" className="flex items-center gap-2">
+              <BadgeCheck className="h-4 w-4" /> UI/UX Design
+            </Badge>
+            <Badge variant="subtle" className="flex items-center gap-2">
+              <BadgeInfo className="h-4 w-4" /> Web Development
+            </Badge>
+          </div>
         </TransitionEffect>
 
         <TransitionEffect direction="up" delay={0.4}>
