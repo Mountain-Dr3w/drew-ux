@@ -23,7 +23,6 @@ const Hero: React.FC = () => {
           <div className="flex flex-wrap items-center gap-3 mb-6">
             <Badge variant="client">UX Designer</Badge>
             <Badge variant="subtle">Product Strategist</Badge>
-            <Badge variant="strategist">Product Strategist</Badge>
           </div>
         </TransitionEffect>
 
@@ -50,3 +49,4 @@ const Hero: React.FC = () => {
     </section>;
 };
 export default Hero;
+
