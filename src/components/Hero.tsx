@@ -1,8 +1,14 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
+
+const appleButton =
+  'apple-btn relative bg-white/60 dark:bg-white/10 backdrop-blur-lg border border-zinc-200/80 dark:border-white/10 text-black dark:text-white font-semibold shadow-lg hover:bg-white/80 hover:dark:bg-white/20 hover:shadow-xl transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/50 active:scale-95';
+const appleButtonOutline =
+  'apple-btn relative bg-white/10 dark:bg-white/5 backdrop-blur-lg border border-zinc-300/60 dark:border-white/15 text-black dark:text-white font-semibold shadow-sm hover:bg-white/20 hover:dark:bg-white/10 hover:shadow-md transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/30 active:scale-95';
 
 const Hero: React.FC = () => {
   return (
@@ -60,14 +66,20 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row w-full sm:w-auto items-center justify-center gap-4 md:gap-6 mb-10">
               <Button
                 asChild
-                className="w-full sm:w-auto min-w-[160px]"
+                className={cn(
+                  "w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base",
+                  appleButton
+                )}
               >
                 <a href="#contact">Connect With Me</a>
               </Button>
               <Button
                 asChild
                 variant="outline"
-                className="w-full sm:w-auto min-w-[160px]"
+                className={cn(
+                  "w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base border-2",
+                  appleButtonOutline
+                )}
               >
                 <a href="#projects">View My Work</a>
               </Button>
