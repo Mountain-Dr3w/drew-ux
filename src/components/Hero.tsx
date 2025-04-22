@@ -41,13 +41,19 @@ const Hero: React.FC = () => {
           <TransitionEffect direction="up" delay={0.2}>
             <h1 className="shiftnudge-heading mb-6 md:mb-8 lg:mb-10 text-balance max-w-4xl mx-auto font-normal">
               <div className="mb-4">Designing usable, accessible, and scalable software isn't easy.</div>
-              <span
-                className={cn(
-                  "font-bold hero-animated-gradient"
-                )}
-              >
-                Let me do it for you.
-              </span>
+              {(() => {
+                // Dynamic animated gradient
+                const { useRandomGradient } = require('@/hooks/useRandomGradient');
+                const gradientStyle = useRandomGradient();
+                return (
+                  <span
+                    className="font-bold hero-animated-gradient"
+                    style={gradientStyle}
+                  >
+                    Let me do it for you.
+                  </span>
+                );
+              })()}
             </h1>
           </TransitionEffect>
 
