@@ -3,42 +3,49 @@ import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
-
-const badgeClass =
-  "inline-block text-sm md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full border transition-shadow " +
-  "bg-[#F1F1F4] border-[#E4E4E7] text-[#403E43] shadow-sm " +
-  "dark:bg-[#232328] dark:border-[#232328] dark:text-gray-200/80";
+import { Badge } from './ui/badge';
 
 const Hero: React.FC = () => {
-  return <section className="min-h-[90vh] relative flex items-center justify-center pt-12 md:pt-16 lg:pt-20 z-0 mb-16 md:mb-0">
+  return (
+    <section className="min-h-[90vh] relative flex items-center justify-center pt-12 md:pt-16 lg:pt-20 z-0 mb-16 md:mb-0">
       <div className="absolute inset-0 overflow-hidden z-[-1] pointer-events-none">
-        <div className={cn("absolute top-1/4 left-0 w-[200px] h-[200px]", "bg-gradient-to-r from-transparent to-transparent", "opacity-20 dark:opacity-10", "bg-[radial-gradient(circle,_rgba(0,0,0,0.2)_1px,_transparent_1px)]", "bg-[size:12px_12px]")}></div>
-        
+        <div
+          className={cn(
+            "absolute top-1/4 left-0 w-[200px] h-[200px]",
+            "bg-gradient-to-r from-transparent to-transparent",
+            "opacity-20 dark:opacity-10",
+            "bg-[radial-gradient(circle,_rgba(0,0,0,0.2)_1px,_transparent_1px)]",
+            "bg-[size:12px_12px]"
+          )}
+        ></div>
         <div className="absolute bottom-0 right-0 w-[30%] h-[1px] bg-gradient-to-r from-transparent to-blue-300/20 dark:to-blue-600/30 rotate-45 origin-bottom-left"></div>
       </div>
-      
+
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2 md:gap-3">
-            <span className={badgeClass}>
+            <Badge variant="secondary" className="backdrop-blur-sm/0 bg-gray-200/70 dark:bg-gray-700/60 font-medium">
               Human Factors Advocate
-            </span>
-            <span className={badgeClass}>
+            </Badge>
+            <Badge variant="secondary" className="backdrop-blur-sm/0 bg-gray-200/70 dark:bg-gray-700/60 font-medium">
               End-to-End Designer
-            </span>
-            <span className={badgeClass}>
+            </Badge>
+            <Badge variant="secondary" className="backdrop-blur-sm/0 bg-gray-200/70 dark:bg-gray-700/60 font-medium">
               Product Strategist
-            </span>
+            </Badge>
           </div>
         </TransitionEffect>
-
         <div className="flex flex-col items-center text-center">
           <TransitionEffect direction="up" delay={0.2}>
             <h1 className="shiftnudge-heading mb-10 md:mb-12 lg:mb-14 text-balance max-w-4xl mx-auto font-normal">
-              Designing usable, accessible, and scalable software isn't easy.<br />
-              <span className="font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent" style={{
-              animationDuration: '4s'
-            }}>
+              Designing usable, accessible, and scalable software isn't easy.
+              <br />
+              <span
+                className="font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent"
+                style={{
+                  animationDuration: '4s'
+                }}
+              >
                 Let me do it for you.
               </span>
             </h1>
@@ -52,7 +59,6 @@ const Hero: React.FC = () => {
               >
                 <a href="#contact">Connect With Me</a>
               </Button>
-              
               <Button
                 asChild
                 variant="outline"
@@ -64,7 +70,8 @@ const Hero: React.FC = () => {
           </TransitionEffect>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
-export default Hero;
 
+export default Hero;
