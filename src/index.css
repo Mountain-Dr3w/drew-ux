@@ -365,35 +365,37 @@
 .hero-animated-gradient {
   font-size: inherit;
   font-weight: 700;
-  /* Expanded color palette with more vibrant colors */
+  /* Three layered gradients with more varied directions and colors */
   background:
-    linear-gradient(120deg, #8b5cf6 0%, #1eaedb 40%, #f97316 70%, #d946ef 100%),
-    linear-gradient(160deg, #d946ef 0%, #8b5cf6 50%, #0ea5e9 80%, #f97316 100%);
-  background-size: 200% 200%, 250% 250%;
-  background-position: 50% 50%, 60% 40%;
+    linear-gradient(120deg, #8b5cf6 0%, #1eaedb 30%, #f97316 60%, #d946ef 100%),
+    linear-gradient(155deg, #d946ef 0%, #8b5cf6 35%, #0ea5e9 65%, #f97316 100%),
+    radial-gradient(circle at 60% 40%, #33C3F0 0%, #f97316 60%, #8b5cf6 100%);
+  background-size: 220% 180%, 180% 220%, 300% 200%;
+  background-position: 51% 43%, 69% 30%, 40% 80%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  animation: hero-grad-move 4s cubic-bezier(0.76, 0, 0.24, 1) infinite alternate,
-             hero-grad-move2 7s cubic-bezier(0.9, 0.01, 0.1, 0.99) infinite reverse;
+  animation: hero-grad-random-move 7s cubic-bezier(0.76,0,0.24,1) infinite alternate,
+             hero-grad-random-move2 8.4s cubic-bezier(0.9,0.01,0.1,0.99) infinite reverse;
   position: relative;
 }
 
-@keyframes hero-grad-move {
-  0%   { background-position: 58% 40%, 60% 40%; }
-  22%  { background-position: 90% 12%, 60% 40%; }
-  38%  { background-position: 80% 85%, 60% 60%; }
-  51%  { background-position: 63% 61%, 60% 90%; }
-  63%  { background-position: 22% 81%, 60% 43%; }
-  74%  { background-position: 41% 53%, 83% 72%; }
-  100% { background-position: 15% 21%, 30% 80%; }
+@keyframes hero-grad-random-move {
+  0%   { background-position: 51% 43%, 69% 30%, 40% 80%; }
+  20%  { background-position: 65% 28%, 74% 60%, 70% 70%; }
+  32%  { background-position: 32% 80%, 40% 55%, 15% 50%; }
+  47%  { background-position: 76% 68%, 88% 45%, 70% 40%; }
+  63%  { background-position: 19% 21%, 20% 70%, 60% 60%; }
+  78%  { background-position: 56% 54%, 33% 10%, 80% 20%; }
+  100% { background-position: 15% 59%, 90% 56%, 44% 89%; }
 }
-@keyframes hero-grad-move2 {
-  0%   { background-position: 50% 60%, 37% 80%; }
-  16%  { background-position: 90% 80%, 44% 23%; }
-  32%  { background-position: 99% 43%, 80% 11%; }
-  56%  { background-position: 12% 85%, 13% 77%; }
-  78%  { background-position: 66% 54%, 36% 20%; }
-  100% { background-position: 14% 25%, 33% 19%; }
+
+@keyframes hero-grad-random-move2 {
+  0%   { background-position: 48% 60%, 47% 61%, 70% 22%; }
+  17%  { background-position: 90% 80%, 44% 23%, 21% 37%; }
+  38%  { background-position: 51% 44%, 80% 11%, 57% 90%; }
+  61%  { background-position: 12% 85%, 13% 77%, 13% 77%; }
+  82%  { background-position: 66% 94%, 36% 20%, 36% 50%; }
+  100% { background-position: 44% 39%, 13% 99%, 84% 75%; }
 }
