@@ -16,13 +16,13 @@ const ThemeSwitchingLogo: React.FC = () => {
           <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             {theme === "dark" ? (
               <>
-                <stop offset="0%" stopColor="#a855f7" />
-                <stop offset="100%" stopColor="#3b82f6" />
+                <stop offset="0%" stopColor="#0070c9" />
+                <stop offset="100%" stopColor="#6000ff" />
               </>
             ) : (
               <>
-                <stop offset="0%" stopColor="#9333ea" />
-                <stop offset="100%" stopColor="#3b82f6" />
+                <stop offset="0%" stopColor="#007aff" />
+                <stop offset="100%" stopColor="#5856d6" />
               </>
             )}
           </linearGradient>
@@ -33,7 +33,7 @@ const ThemeSwitchingLogo: React.FC = () => {
         />
       </svg>
       <span 
-        className={`font-bold text-xl tracking-tight ${theme === "dark" ? "text-white" : "text-black"}`}
+        className={`font-medium text-lg tracking-tight ${theme === "dark" ? "text-white" : "text-black"}`}
       >
         DrewUX
       </span>
