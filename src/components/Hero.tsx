@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
           <h1 className="shiftnudge-heading mb-10 md:mb-12 lg:mb-14 text-balance max-w-4xl mx-auto font-normal">
             Designing usable, accessible, and scalable software isn't easy.
             <span
-              className="block mt-8 md:mt-10 font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent"
+              className="block mt-2 md:mt-2 font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent"
               style={{
                 animationDuration: '4s'
               }}
@@ -60,7 +60,6 @@ const Hero: React.FC = () => {
 
         <TransitionEffect direction="up" delay={0.4}>
           <div className="flex flex-col sm:flex-row w-full items-start justify-start gap-4 md:gap-6 mb-10">
-            {/* Primary Apple blue call-to-action */}
             <Button
               asChild
               className={cn(
@@ -70,7 +69,6 @@ const Hero: React.FC = () => {
             >
               <a href="#contact">Connect With Me</a>
             </Button>
-            {/* Secondary subtle Apple-style button */}
             <Button
               asChild
               className={cn(
