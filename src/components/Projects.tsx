@@ -32,8 +32,20 @@ const projectsData = [
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="section-padding relative z-0">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+    <section id="projects" className="py-24 md:py-32 relative z-0">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
+        <div className="text-center mb-16">
+          <TransitionEffect delay={0.1}>
+            <span className="text-sm font-medium text-gray-500 dark:text-gray-400">FEATURED PROJECTS</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-2 mb-4 text-black dark:text-white">
+              My Design Work
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
+              A collection of my most impactful UX design projects across various industries
+            </p>
+          </TransitionEffect>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projectsData.map((project, index) => (
             <TransitionEffect key={index} delay={0.1 + index * 0.1} threshold={0.2}>
