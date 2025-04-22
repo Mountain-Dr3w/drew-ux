@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -53,12 +52,11 @@ const Hero: React.FC = () => {
           </TransitionEffect>
 
           <TransitionEffect direction="up" delay={0.4}>
-            <div className="flex flex-col sm:flex-row w-full sm:w-auto items-center justify-center gap-3 md:gap-4 mb-6">
+            <div className="flex flex-col sm:flex-row w-full items-center justify-center gap-3 md:gap-4 mb-6">
               <a
                 href="#contact"
                 className={cn(
                   "group inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-600/80 dark:to-blue-800/80 px-5 py-2 md:px-6 md:py-3 rounded-full hover:bg-blue-700 dark:hover:opacity-90 transition-all duration-300 w-full sm:w-auto min-w-[140px] h-10 md:h-12 whitespace-nowrap z-10",
-                  // Add shadow, border, and remove in dark mode for Connect button:
                   "border border-gray-300 shadow-xl hover:shadow-blue-500/20 dark:border-transparent dark:shadow-none"
                 )}
               >
@@ -80,4 +78,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-
