@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -30,61 +29,45 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
-        <TransitionEffect direction="up" delay={0.1}>
-          <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2 md:gap-3">
-            <Badge variant="subtle">
-              Human Factors Advocate
-            </Badge>
-            <Badge variant="subtle">
-              End-to-End Designer
-            </Badge>
-            <Badge variant="subtle">
-              Product Strategist
-            </Badge>
-          </div>
+        <TransitionEffect direction="up" delay={0.2}>
+          <h1 className="shiftnudge-heading mb-10 md:mb-12 lg:mb-14 text-balance max-w-4xl mx-auto font-normal">
+            Designing usable, accessible, and scalable software isn't easy.
+            <br className="mb-8 md:mb-10" />
+            <span
+              className="block mt-8 md:mt-10 font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent"
+              style={{
+                animationDuration: '4s'
+              }}
+            >
+              Let me do it for you.
+            </span>
+          </h1>
         </TransitionEffect>
 
-        <div className="flex flex-col items-center text-center">
-          <TransitionEffect direction="up" delay={0.2}>
-            <h1 className="shiftnudge-heading mb-10 md:mb-12 lg:mb-14 text-balance max-w-4xl mx-auto font-normal">
-              Designing usable, accessible, and scalable software isn't easy.
-              <br />
-              <span
-                className="font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent"
-                style={{
-                  animationDuration: '4s'
-                }}
-              >
-                Let me do it for you.
-              </span>
-            </h1>
-          </TransitionEffect>
-
-          <TransitionEffect direction="up" delay={0.4}>
-            <div className="flex flex-col sm:flex-row w-full sm:w-auto items-center justify-center gap-4 md:gap-6 mb-10">
-              {/* Primary Apple blue call-to-action */}
-              <Button
-                asChild
-                className={cn(
-                  "w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base",
-                  appleBlueButton
-                )}
-              >
-                <a href="#contact">Connect With Me</a>
-              </Button>
-              {/* Secondary subtle Apple-style button */}
-              <Button
-                asChild
-                className={cn(
-                  "w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base",
-                  appleSecondaryButton
-                )}
-              >
-                <a href="#projects">View My Work</a>
-              </Button>
-            </div>
-          </TransitionEffect>
-        </div>
+        <TransitionEffect direction="up" delay={0.4}>
+          <div className="flex flex-col sm:flex-row w-full sm:w-auto items-center justify-center gap-4 md:gap-6 mb-10">
+            {/* Primary Apple blue call-to-action */}
+            <Button
+              asChild
+              className={cn(
+                "w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base",
+                appleBlueButton
+              )}
+            >
+              <a href="#contact">Connect With Me</a>
+            </Button>
+            {/* Secondary subtle Apple-style button */}
+            <Button
+              asChild
+              className={cn(
+                "w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base",
+                appleSecondaryButton
+              )}
+            >
+              <a href="#projects">View My Work</a>
+            </Button>
+          </div>
+        </TransitionEffect>
       </div>
     </section>
   );
