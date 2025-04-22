@@ -43,9 +43,25 @@ const Hero: React.FC = () => {
             <h1 className="shiftnudge-heading mb-6 md:mb-8 lg:mb-10 text-balance max-w-4xl mx-auto font-normal">
               <div className="mb-4">Designing usable, accessible, and scalable software isn't easy.</div>
               <span
-                className="font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent"
+                className={cn(
+                  "font-bold bg-clip-text text-transparent animate-gradient-shift"
+                )}
                 style={{
-                  animationDuration: '4s',
+                  // Custom multi-color gradient, wide for movement, lots of stops for smooth rainbow
+                  background: `linear-gradient(90deg,
+                    #ff1e56 0%,     /* vivid pink */
+                    #fdc52f 14%,   /* gold/yellow */
+                    #44fadd 28%,   /* teal */
+                    #1eaedb 42%,   /* blue */
+                    #8b5cf6 56%,   /* purple */
+                    #d946ef 70%,   /* magenta pink */
+                    #f97316 84%,   /* orange */
+                    #ff1e56 100%   /* back to vivid pink */
+                  )`,
+                  backgroundSize: '300% 300%',
+                  animation: 'gradient-shift 4s ease infinite',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
                 }}
               >
                 Let me do it for you.
@@ -81,3 +97,4 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
