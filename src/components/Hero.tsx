@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -43,7 +42,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row w-full sm:w-auto items-center justify-center gap-4 md:gap-6 mb-10">
               <Button
                 asChild
-                className="w-full sm:w-auto min-w-[160px] h-12 md:h-14 rounded-lg hover:shadow-xl hover:shadow-black/20 hover:scale-[1.02]"
+                className="w-full sm:w-auto min-w-[160px]"
               >
                 <a href="#contact">Connect With Me</a>
               </Button>
@@ -51,7 +50,7 @@ const Hero: React.FC = () => {
               <Button
                 asChild
                 variant="outline"
-                className="w-full sm:w-auto min-w-[160px] h-12 md:h-14 rounded-lg hover:shadow-xl hover:shadow-gray-500/10 hover:scale-[1.02]"
+                className="w-full sm:w-auto min-w-[160px]"
               >
                 <a href="#projects">View My Work</a>
               </Button>

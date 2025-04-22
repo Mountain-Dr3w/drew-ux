@@ -6,22 +6,30 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  // Pillowed styling and playful shadow for all buttons
+  "inline-flex items-center justify-center gap-2 rounded-full text-base font-semibold whitespace-nowrap shadow-[0_2px_14px_0_rgba(30,174,219,0.14)] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98] [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90",
-        destructive: "bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90",
-        outline: "border border-black/20 bg-white text-black hover:bg-black/10 dark:border-white/20 dark:bg-black dark:text-white dark:hover:bg-white/10",
-        secondary: "bg-black/10 text-black hover:bg-black/20 dark:bg-white/10 dark:text-white dark:hover:bg-white/20",
-        ghost: "hover:bg-black/10 hover:text-black dark:hover:bg-white/10 dark:hover:text-white",
-        link: "text-black underline-offset-4 hover:underline dark:text-white",
+        default: 
+          "bg-[#231F39] text-white hover:bg-[#302A50] dark:bg-white dark:text-[#231F39] dark:hover:bg-zinc-100 " +
+          "shadow-xl hover:shadow-2xl hover:scale-[1.06]",
+        destructive: 
+          "bg-red-500 text-white hover:bg-red-600 shadow-xl hover:shadow-2xl hover:scale-[1.06]",
+        outline: 
+          "border-2 border-[#231F39]/80 bg-white text-[#231F39] hover:bg-[#F9F8FC] dark:border-white/20 dark:bg-[#221c3d] dark:text-white dark:hover:bg-[#2B234A] shadow-xl hover:shadow-2xl hover:scale-[1.06]",
+        secondary: 
+          "bg-[#E5DEFF] text-[#231F39] hover:bg-[#f3eeff] dark:bg-[#302A50] dark:text-white dark:hover:bg-[#433B69] shadow-md hover:shadow-xl hover:scale-[1.04]",
+        ghost: 
+          "bg-transparent text-[#231F39] hover:bg-[#f1f1f9] dark:text-white dark:hover:bg-[#2B234A] shadow-none",
+        link: 
+          "text-[#8B5CF6] underline-offset-4 hover:underline shadow-none",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
+        default: "h-12 px-8 py-3",
+        sm: "h-10 px-5 py-2 text-sm",
+        lg: "h-14 px-8 py-4 text-lg",
+        icon: "h-12 w-12",
       },
     },
     defaultVariants: {
