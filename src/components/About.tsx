@@ -1,155 +1,129 @@
 
 import React from 'react';
-import TransitionEffect from './TransitionEffect';
-import { Check, Star } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { motion } from 'framer-motion';
+import { CheckCircle2 } from 'lucide-react';
 
 const About: React.FC = () => {
-  const isMobile = useIsMobile();
+  const skills = [
+    "UX Research & Strategy", 
+    "UI Design & Prototyping",
+    "Interaction Design",
+    "Design Systems",
+    "Usability Testing",
+    "Human Factors",
+    "Accessibility (WCAG)",
+    "Product Strategy"
+  ];
   
-  const qualities = [
+  const experience = [
     {
-      title: "End-to-End Product Design",
-      description: "I take ideas all the way from exploratory research to polished, high-fidelity designs—creating experiences that are not just beautiful, but intuitive, functional, and built to scale."
+      role: "Senior UX Designer",
+      company: "Tech Solutions Inc.",
+      period: "2020 - Present",
+      description: "Leading UX design for enterprise software products, focusing on complex workflows and user-centered design."
     },
     {
-      title: "Product Strategy",
-      description: "I connect user needs with business goals to shape products that are both valuable and viable. By blending research, data, and design thinking, I help define clear roadmaps, prioritize features, and create experiences that drive real impact."
+      role: "Product Designer",
+      company: "AeroTech Systems",
+      period: "2017 - 2020",
+      description: "Designed flight operations software, conducted user research, and created prototypes for aviation professionals."
     },
     {
-      title: "Technical Collaboration",
-      description: "With deep knowledge of component architecture and design systems, I partner closely with engineering to create solutions that balance innovation with implementation realities and constraints."
-    },
-    {
-      title: "User-Centered Approach",
-      description: "I dig deep to understand what users truly need by listening, researching, and testing. Every design decision I make is guided by real insights and a genuine focus on creating better experiences."
+      role: "UX Consultant",
+      company: "Design Agency",
+      period: "2015 - 2017",
+      description: "Worked with multiple clients across industries to improve digital experiences and product strategies."
     }
   ];
-
-  const personalQualities = [
-    {
-      title: "Family Guy",
-      description: "As a young dad, I spend most of my time with my wife and infant daughter. This is where I recharge, and where I draw my passion and energy."
-    },
-    {
-      title: "Hoops Nerd",
-      description: "Ever since I watched Bugs Bunny and MJ face off against the Monstars in Space Jam, I've loved basketball. Whether I'm pouring over the latest advanced metrics, catching a Celtics game after work, or coaching youth leagues, you'll always find me somewhere near the game."
-    },
-    {
-      title: "Musician",
-      description: "Piano, drums, guitar, or saxophone - chances are, if you visit my house you'll hear me riffing away on one of these at some point. I started playing when I was a kid, and still use Music as a creative outlet today."
-    },
-    {
-      title: "Passionate Designer",
-      description: "My love for design doesn't end after 5:00 - I live for the craft. You can regularly catch me getting up to speed on industry trends, working on side projects, and improving my craft in whatever way I can."
-    }
-  ];
-
+  
   return (
-    <section id="about" className="min-h-screen py-24 md:py-32 relative flex items-center">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 -left-10 -right-10 h-32 rounded-[50%] bg-gradient-to-r from-black/2 via-black/1 to-muted blur-3xl -z-10 transform translate-y-[-45%] dark:from-white/2 dark:via-white/1 dark:to-muted" />
-        
-        <div className="absolute top-20 right-[5%] w-24 h-24 border-2 border-dashed border-gray-300/40 dark:border-gray-700/40 rounded-md rotate-12 opacity-60"></div>
-        <div className="absolute bottom-[30%] right-[15%] w-32 h-8 bg-gray-100/20 dark:bg-gray-800/20 rounded-sm transform -rotate-6"></div>
-        <div className="absolute top-[25%] left-[20%] w-12 h-12 border-2 border-gray-300/30 dark:border-gray-700/30 transform rotate-45"></div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto px-4 md:px-8 w-full relative">
-        <TransitionEffect delay={0.1}>
-          <div className="text-center mb-12">
-            <span className="inline-block px-3 py-1 text-sm font-medium bg-black/10 text-black rounded-full mb-3 dark:bg-white/10 dark:text-white">
-              Who I Am
-            </span>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 text-black dark:text-white">
-              Your key to driving user and business outcomes
-            </h2>
-          </div>
-        </TransitionEffect>
-        
-        <TransitionEffect delay={0.2}>
-          <div className="max-w-5xl mx-auto mb-12">
-            <Tabs defaultValue="at-work" className="w-full">
-              <div className="flex justify-center mb-8">
-                <TabsList className="bg-gray-100/70 dark:bg-gray-800/50">
-                  <TabsTrigger value="at-work" className="text-sm px-6">At Work</TabsTrigger>
-                  <TabsTrigger value="outside-work" className="text-sm px-6">Outside of Work</TabsTrigger>
-                </TabsList>
+    <section id="about" className="py-24 px-6 md:px-12 lg:px-24">
+      <div className="container max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="mb-16 text-center"
+        >
+          <span className="text-sm font-medium text-blue-500 mb-2 block">About</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">My Background</h2>
+          <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
+            I'm a product designer who combines human factors expertise with design thinking to create impactful digital experiences.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <h3 className="text-2xl font-bold mb-6">My Approach</h3>
+            <p className="text-neutral-600 dark:text-neutral-400 mb-6">
+              With over 8 years of experience in UX/UI design, I've developed a deep understanding of how to create digital products that are both beautiful and functional. I believe in a user-centered approach that balances business goals with user needs.
+            </p>
+            <p className="text-neutral-600 dark:text-neutral-400 mb-8">
+              My background in human factors gives me unique insight into cognitive processes, accessibility considerations, and creating systems that work intuitively for all users. I'm passionate about creating products that make complex tasks feel simple.
+            </p>
+            
+            <h4 className="font-bold text-xl mb-4">My Skills</h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+              {skills.map((skill, index) => (
+                <div key={index} className="flex items-center">
+                  <CheckCircle2 size={16} className="text-blue-500 mr-2" />
+                  <span>{skill}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h3 className="text-2xl font-bold mb-6">Experience</h3>
+            
+            <div className="space-y-8">
+              {experience.map((job, index) => (
+                <div key={index} className="relative pl-6 border-l-2 border-neutral-200 dark:border-neutral-800">
+                  <div className="absolute left-[-8px] top-0 w-3 h-3 rounded-full bg-blue-500" />
+                  <div className="mb-1 flex justify-between">
+                    <h4 className="font-bold">{job.role}</h4>
+                    <span className="text-sm text-neutral-500 dark:text-neutral-400">{job.period}</span>
+                  </div>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-1">{job.company}</p>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400">{job.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12">
+              <h3 className="font-bold text-xl mb-4">Education</h3>
+              <div className="mb-4">
+                <p className="font-bold">Masters in Human-Computer Interaction</p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400">Carnegie Mellon University, 2015</p>
               </div>
-              
-              <TabsContent value="at-work" className="mt-0 space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {qualities.map((quality, index) => (
-                    <div key={index} className="bg-white/50 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200/80 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-all duration-300">
-                      <h3 className="text-lg font-medium mb-3 text-black dark:text-white">
-                        {quality.title}
-                      </h3>
-                      <p className="text-gray-700 dark:text-gray-300 text-pretty">
-                        {quality.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </TabsContent>
-              
-              <TabsContent value="outside-work" className="mt-0">
-                <div className="flex flex-col md:flex-row gap-8">
-                  {!isMobile && (
-                    <div className="md:w-2/5">
-                      <div className="rounded-xl border border-gray-200/80 dark:border-white/10 shadow-md overflow-hidden h-full">
-                        <img 
-                          src="/lovable-uploads/f073a10d-33bb-42dc-88f5-205f14398adf.png" 
-                          alt="Drew conversing with colleagues" 
-                          className="object-cover w-full h-full"
-                        />
-                      </div>
-                    </div>
-                  )}
-                  
-                  <div className={isMobile ? "w-full" : "md:w-3/5"}>
-                    <div className="grid grid-cols-1 gap-6">
-                      {personalQualities.map((quality, index) => (
-                        <div key={index} className="bg-white/50 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200/80 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-all duration-300">
-                          <h3 className="text-lg font-medium mb-3 text-black dark:text-white">
-                            {quality.title}
-                          </h3>
-                          <p className="text-gray-700 dark:text-gray-300 text-pretty">
-                            {quality.description}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </TabsContent>
-            </Tabs>
-          </div>
-        </TransitionEffect>
-        
-        <TransitionEffect delay={0.4}>
-          <div className="mt-16 relative max-w-2xl mx-auto p-1">
-            <div className="rounded-2xl overflow-hidden bg-gradient-to-tr from-purple-600 to-blue-500 shadow-sm p-8">
-              <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={20} className="text-white fill-white" />
-                    ))}
-                  </div>
-                </div>
-                <blockquote className="text-lg font-medium italic mb-4 text-balance text-white">
-                  "Drew's ability to build relationships with [our users], and to understand and act on their feedback to deliver valuable outcomes has been instrumental for us. I truly believe we would not have operational adoption without him."
-                </blockquote>
-                <cite className="text-sm text-white/80 not-italic">— Portfolio Product Lead</cite>
+              <div>
+                <p className="font-bold">Bachelor of Science in Psychology</p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400">University of Michigan, 2013</p>
               </div>
             </div>
-            
-            <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-black/10 -z-10 dark:bg-white/5" />
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-black/10 -z-10 dark:bg-white/5" />
-          </div>
-        </TransitionEffect>
+          </motion.div>
+        </div>
+
+        <div className="mt-24 flex flex-col md:flex-row items-center justify-center gap-6 text-center">
+          <p className="text-xl font-bold">Ready to discuss your project?</p>
+          <a 
+            href="#contact" 
+            className="px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full font-medium hover:opacity-90 transition-opacity"
+          >
+            Let's Talk
+          </a>
+        </div>
       </div>
     </section>
   );
