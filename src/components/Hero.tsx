@@ -1,6 +1,8 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
+import { Button } from './ui/button';
 
 const Hero: React.FC = () => {
   return <section className="min-h-[90vh] relative flex items-center justify-center pt-12 md:pt-16 lg:pt-20 z-0 mb-16 md:mb-0">
@@ -39,38 +41,20 @@ const Hero: React.FC = () => {
 
           <TransitionEffect direction="up" delay={0.4}>
             <div className="flex flex-col sm:flex-row w-full sm:w-auto items-center justify-center gap-4 md:gap-6 mb-10">
-              <a 
-                href="#contact" 
-                className="group inline-flex items-center justify-center 
-                  bg-black text-white 
-                  dark:bg-white dark:text-black 
-                  px-6 py-3 md:px-8 md:py-4 
-                  rounded-lg hover:opacity-90 
-                  transition-all duration-300 
-                  w-full sm:w-auto min-w-[160px] 
-                  h-12 md:h-14 
-                  whitespace-nowrap z-10 
-                  border border-transparent 
-                  hover:shadow-xl hover:shadow-black/20 
-                  hover:scale-[1.02]"
+              <Button
+                asChild
+                className="w-full sm:w-auto min-w-[160px] h-12 md:h-14 rounded-lg hover:shadow-xl hover:shadow-black/20 hover:scale-[1.02]"
               >
-                <span className="font-medium text-sm md:text-base">Connect With Me</span>
-              </a>
+                <a href="#contact">Connect With Me</a>
+              </Button>
               
-              <a href="#projects" className="group inline-flex items-center justify-center 
-                bg-gray-200/80 dark:bg-gray-800/20 backdrop-blur-xl 
-                text-gray-700 dark:text-gray-200 
-                px-6 py-3 md:px-8 md:py-4 
-                rounded-lg hover:bg-gray-300 dark:hover:bg-gray-700/30 
-                transition-all duration-300 
-                w-full sm:w-auto min-w-[160px] 
-                h-12 md:h-14 
-                whitespace-nowrap z-10 
-                border border-gray-300 dark:border-white/10 
-                shadow-xl hover:shadow-gray-500/10 
-                hover:scale-[1.02]">
-                <span className="font-medium text-sm md:text-base">View My Work</span>
-              </a>
+              <Button
+                asChild
+                variant="outline"
+                className="w-full sm:w-auto min-w-[160px] h-12 md:h-14 rounded-lg hover:shadow-xl hover:shadow-gray-500/10 hover:scale-[1.02]"
+              >
+                <a href="#projects">View My Work</a>
+              </Button>
             </div>
           </TransitionEffect>
         </div>
