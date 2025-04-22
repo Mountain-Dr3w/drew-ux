@@ -1,22 +1,12 @@
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
-
 const Hero: React.FC = () => {
-  return (
-    <section className="min-h-[80vh] relative flex items-center justify-center pt-8 md:pt-10 lg:pt-12 z-0 mb-8 md:mb-0">
+  return <section className="min-h-[80vh] relative flex items-center justify-center pt-8 md:pt-10 lg:pt-12 z-0 mb-8 md:mb-0">
       {/* Minimal design elements */}
       <div className="absolute inset-0 overflow-hidden z-[-1] pointer-events-none">
         {/* Dotted pattern */}
-        <div
-          className={cn(
-            "absolute top-1/4 left-0 w-[200px] h-[200px]",
-            "bg-gradient-to-r from-transparent to-transparent",
-            "opacity-20 dark:opacity-10",
-            "bg-[radial-gradient(circle,_rgba(0,0,0,0.2)_1px,_transparent_1px)]",
-            "bg-[size:12px_12px]"
-          )}
-        ></div>
+        <div className={cn("absolute top-1/4 left-0 w-[200px] h-[200px]", "bg-gradient-to-r from-transparent to-transparent", "opacity-20 dark:opacity-10", "bg-[radial-gradient(circle,_rgba(0,0,0,0.2)_1px,_transparent_1px)]", "bg-[size:12px_12px]")}></div>
 
         {/* Subtle diagonal line */}
         <div className="absolute bottom-0 right-0 w-[30%] h-[1px] bg-gradient-to-r from-transparent to-blue-300/20 dark:to-blue-600/30 rotate-45 origin-bottom-left"></div>
@@ -41,11 +31,7 @@ const Hero: React.FC = () => {
           <TransitionEffect direction="up" delay={0.2}>
             <h1 className="shiftnudge-heading mb-6 md:mb-8 lg:mb-10 text-balance max-w-4xl mx-auto font-normal">
               <div className="mb-4">Designing usable, accessible, and scalable software isn't easy.</div>
-              <span
-                className={cn(
-                  "font-bold hero-animated-gradient"
-                )}
-              >
+              <span className={cn("font-bold hero-animated-gradient")}>
                 Let me do it for you.
               </span>
             </h1>
@@ -53,31 +39,17 @@ const Hero: React.FC = () => {
 
           <TransitionEffect direction="up" delay={0.4}>
             <div className="flex flex-col sm:flex-row w-full items-center justify-center gap-3 md:gap-4 mb-6 px-4 sm:px-0">
-              <a
-                href="#contact"
-                className={cn(
-                  "group inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-600/80 dark:to-blue-800/80 px-5 py-2 md:px-6 md:py-3 rounded-full hover:bg-blue-700 dark:hover:opacity-90 transition-all duration-300 w-full sm:w-auto min-w-[140px] h-12 md:h-14 whitespace-nowrap z-10",
-                  "border border-gray-300 shadow-xl hover:shadow-blue-500/20 dark:border-transparent dark:shadow-none text-sm md:text-base"
-                )}
-              >
-                <span className="font-medium">Connect With Me</span>
+              <a href="#contact" className={cn("group inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-600/80 dark:to-blue-800/80 px-5 py-2 md:px-6 md:py-3 rounded-full hover:bg-blue-700 dark:hover:opacity-90 transition-all duration-300 w-full sm:w-auto min-w-[140px] h-12 md:h-14 whitespace-nowrap z-10", "border border-gray-300 shadow-xl hover:shadow-blue-500/20 dark:border-transparent dark:shadow-none text-sm md:text-base")}>
+                <span className="font-medium text-slate-50">Connect With Me</span>
               </a>
 
-              <a
-                href="#projects"
-                className={cn(
-                  "group inline-flex items-center justify-center space-x-2 bg-gray-200/80 dark:bg-gray-800/20 backdrop-blur-xl text-gray-700 dark:text-gray-200 px-5 py-2 md:px-6 md:py-3 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700/30 transition-all duration-300 w-full sm:w-auto min-w-[140px] h-12 md:h-14 whitespace-nowrap z-10",
-                  "border border-gray-300 dark:border-white/10 shadow-xl hover:shadow-gray-500/10 hover:scale-[1.02] text-sm md:text-base"
-                )}
-              >
+              <a href="#projects" className={cn("group inline-flex items-center justify-center space-x-2 bg-gray-200/80 dark:bg-gray-800/20 backdrop-blur-xl text-gray-700 dark:text-gray-200 px-5 py-2 md:px-6 md:py-3 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700/30 transition-all duration-300 w-full sm:w-auto min-w-[140px] h-12 md:h-14 whitespace-nowrap z-10", "border border-gray-300 dark:border-white/10 shadow-xl hover:shadow-gray-500/10 hover:scale-[1.02] text-sm md:text-base")}>
                 <span className="font-medium">View My Work</span>
               </a>
             </div>
           </TransitionEffect>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
