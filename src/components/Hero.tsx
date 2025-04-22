@@ -1,3 +1,4 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -36,11 +37,11 @@ const Hero: React.FC = () => {
         </TransitionEffect>
 
         <TransitionEffect direction="up" delay={0.4}>
-          <div className="flex flex-row w-full items-start justify-start gap-4 md:gap-6 mb-10">
-            <Button asChild className={cn("w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base", appleBlueButton)}>
+          <div className="flex flex-col sm:flex-row w-full items-stretch justify-start gap-4 md:gap-6 mb-10">
+            <Button asChild className={cn("w-full min-w-[160px] h-12 rounded-full px-8 py-3 text-base", appleBlueButton)}>
               <a href="#contact">Connect With Me</a>
             </Button>
-            <Button asChild className={cn("w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base", appleSecondaryButton)}>
+            <Button asChild className={cn("w-full min-w-[160px] h-12 rounded-full px-8 py-3 text-base", appleSecondaryButton)}>
               <a href="#projects">View My Work</a>
             </Button>
           </div>
