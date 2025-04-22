@@ -58,8 +58,8 @@ const JigsawCaseStudy: React.FC = () => {
         <JigsawResultsSection />
         
         <NextCaseStudySection 
-          title="Revolutionizing Logistics and Readiness for the USAF" 
-          link="/case-study/deftech" 
+          title="Design Thinking Meets Waste Traceability" 
+          link="/case-study/veriflux" 
         />
       </main>
     </div>

@@ -1,52 +1,75 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-
-// Apple-inspired blue: strong but understated, no harsh gradient
-const appleBlueButton = 'bg-gradient-to-b from-[#4086EC] to-[#1B6FF6] text-white font-semibold shadow-md hover:brightness-110 hover:shadow-lg transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#93beff]/40 active:scale-97';
-
-// Modern, soft glass secondary with blue border/text. Simple, subtle Apple style.
-const appleSecondaryButton = 'bg-white/80 dark:bg-zinc-900/50 backdrop-blur-lg border border-[#B1C8F9] text-[#2562B7] dark:text-[#B3C9E2] font-semibold shadow-sm hover:bg-white hover:dark:bg-zinc-900/70 hover:border-blue-400 hover:shadow-md transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#93beff]/30 active:scale-97';
 
 const Hero: React.FC = () => {
-  return <section className="min-h-[90vh] relative flex items-center justify-center pt-12 md:pt-16 lg:pt-20 z-0 mb-16 md:mb-0">
+  return (
+    <section className="min-h-[90vh] relative flex items-center justify-center pt-12 md:pt-16 lg:pt-20 z-0 mb-16 md:mb-0">
+      {/* Minimal design elements */}
       <div className="absolute inset-0 overflow-hidden z-[-1] pointer-events-none">
-        <div className={cn("absolute top-1/4 left-0 w-[200px] h-[200px]", "bg-gradient-to-r from-transparent to-transparent", "opacity-20 dark:opacity-10", "bg-[radial-gradient(circle,_rgba(0,0,0,0.2)_1px,_transparent_1px)]", "bg-[size:12px_12px]")}></div>
+        {/* Dotted pattern */}
+        <div className={cn(
+          "absolute top-1/4 left-0 w-[200px] h-[200px]",
+          "bg-gradient-to-r from-transparent to-transparent",
+          "opacity-20 dark:opacity-10",
+          "bg-[radial-gradient(circle,_rgba(0,0,0,0.2)_1px,_transparent_1px)]",
+          "bg-[size:12px_12px]"
+        )}></div>
+        
+        {/* Subtle diagonal line */}
         <div className="absolute bottom-0 right-0 w-[30%] h-[1px] bg-gradient-to-r from-transparent to-blue-300/20 dark:to-blue-600/30 rotate-45 origin-bottom-left"></div>
       </div>
-
+      
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
-        <TransitionEffect direction="up" delay={0.3}>
-          <div className="flex flex-wrap items-center gap-3 mb-6">
-            <Badge variant="client">UX Designer</Badge>
-            <Badge variant="subtle">Product Strategist</Badge>
-          </div>
-        </TransitionEffect>
-
-        <TransitionEffect direction="up" delay={0.2}>
-          <h1 className="shiftnudge-heading mb-10 md:mb-12 lg:mb-14 text-balance max-w-4xl mx-auto font-normal">
-            Designing usable, accessible, and scalable software isn't easy.
-            <span className="block mt-2 md:mt-2 font-bold text-indigo-600 dark:text-indigo-300 text-nowrap">
-              Let me do it for you.
+        {/* Subtle tag line above heading */}
+        <TransitionEffect direction="up" delay={0.1}>
+          <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2 md:gap-3">
+            <span className="inline-block text-sm md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full bg-gray-200/80 dark:bg-gray-600/60 text-gray-700 dark:text-gray-200 shadow-sm">
+              Human Factors Advocate
             </span>
-          </h1>
-        </TransitionEffect>
-
-        <TransitionEffect direction="up" delay={0.4}>
-          <div className="flex flex-col sm:flex-row w-full items-stretch justify-start gap-4 md:gap-6 mb-10">
-            <Button asChild className={cn("w-full min-w-[160px] h-12 rounded-full px-8 py-3 text-base", appleBlueButton)}>
-              <a href="#contact">Connect With Me</a>
-            </Button>
-            <Button asChild className={cn("w-full min-w-[160px] h-12 rounded-full px-8 py-3 text-base", appleSecondaryButton)}>
-              <a href="#projects">View My Work</a>
-            </Button>
+            <span className="inline-block text-sm md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full bg-gray-200/80 dark:bg-gray-600/60 text-gray-700 dark:text-gray-200 shadow-sm">
+              End-to-End Designer
+            </span>
+            <span className="inline-block text-sm md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full bg-gray-200/80 dark:bg-gray-600/60 text-gray-700 dark:text-gray-200 shadow-sm">
+              Product Strategist
+            </span>
           </div>
         </TransitionEffect>
-      </div>
-    </section>;
-};
-export default Hero;
 
+        <div className="flex flex-col items-center text-center">
+          <TransitionEffect direction="up" delay={0.2}>
+            <h1 className="shiftnudge-heading mb-10 md:mb-12 lg:mb-14 text-balance max-w-4xl mx-auto">
+              Designing usable, accessible, and scalable software isn't easy.<br />
+              <span 
+                className="font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent" 
+                style={{ animationDuration: '4s' }}
+              >
+                Let me do it for you.
+              </span>
+            </h1>
+          </TransitionEffect>
+
+          <TransitionEffect direction="up" delay={0.4}>
+            <div className="flex flex-col sm:flex-row w-full sm:w-auto items-center justify-center gap-4 md:gap-6 mb-10">
+              <a
+                href="#contact"
+                className="group inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-600/80 dark:to-blue-800/80 px-6 py-3 md:px-8 md:py-4 rounded-full hover:bg-blue-700 dark:hover:opacity-90 transition-all duration-300 w-full sm:w-auto min-w-[160px] h-12 md:h-14 whitespace-nowrap z-10 dark:border dark:border-white/10 hover:shadow-xl hover:shadow-blue-500/20 hover:scale-[1.02]"
+              >
+                <span className="font-medium text-sm md:text-base text-white">Connect With Me</span>
+              </a>
+              
+              <a
+                href="#projects"
+                className="group inline-flex items-center justify-center space-x-2 bg-gray-200/80 dark:bg-gray-800/20 backdrop-blur-xl text-gray-700 dark:text-gray-200 px-6 py-3 md:px-8 md:py-4 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700/30 transition-all duration-300 w-full sm:w-auto min-w-[160px] h-12 md:h-14 whitespace-nowrap z-10 border border-gray-300 dark:border-white/10 shadow-xl hover:shadow-gray-500/10 hover:scale-[1.02]"
+              >
+                <span className="font-medium text-sm md:text-base">View My Work</span>
+              </a>
+            </div>
+          </TransitionEffect>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

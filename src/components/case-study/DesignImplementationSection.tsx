@@ -1,10 +1,13 @@
+
 import React from 'react';
 import CaseStudySection from './CaseStudySection';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Map, LayoutGrid, LineChart } from 'lucide-react';
+
 const DesignImplementationSection: React.FC = () => {
-  return <CaseStudySection title="Design Implementation">
+  return (
+    <CaseStudySection title="Design Implementation">
       <div className="space-y-8">
         <div className="bg-card p-6 rounded-lg border border-border">
           <h3 className="text-xl font-medium mb-4">Design System Components</h3>
@@ -73,8 +76,47 @@ const DesignImplementationSection: React.FC = () => {
           </div>
         </div>
 
-        
+        <Tabs defaultValue="wireframes" className="w-full">
+          <TabsList className="grid grid-cols-3 mb-8">
+            <TabsTrigger value="wireframes">Wireframes</TabsTrigger>
+            <TabsTrigger value="mockups">Mockups</TabsTrigger>
+            <TabsTrigger value="prototypes">Prototypes</TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="wireframes" className="space-y-4">
+            <div className="border border-border rounded-lg overflow-hidden p-2">
+              <div className="bg-muted/30 aspect-video rounded-md flex items-center justify-center">
+                <div className="text-sm text-muted-foreground">Low-fidelity wireframes focused on information architecture</div>
+              </div>
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="mockups" className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="border border-border rounded-lg overflow-hidden p-2">
+                <div className="bg-muted/30 aspect-video rounded-md flex items-center justify-center">
+                  <div className="text-sm text-muted-foreground">Dashboard mockup with improved data visualization</div>
+                </div>
+              </div>
+              <div className="border border-border rounded-lg overflow-hidden p-2">
+                <div className="bg-muted/30 aspect-video rounded-md flex items-center justify-center">
+                  <div className="text-sm text-muted-foreground">Route planning interface with logistics optimization</div>
+                </div>
+              </div>
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="prototypes" className="space-y-4">
+            <div className="border border-border rounded-lg overflow-hidden p-2">
+              <div className="bg-muted/30 aspect-video rounded-md flex items-center justify-center">
+                <div className="text-sm text-muted-foreground">Interactive prototypes for usability testing</div>
+              </div>
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
-    </CaseStudySection>;
+    </CaseStudySection>
+  );
 };
+
 export default DesignImplementationSection;
