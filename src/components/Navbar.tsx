@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import ThemeToggle from './ThemeToggle';
@@ -99,12 +100,9 @@ const Navbar: React.FC = () => {
               </SheetTrigger>
               <SheetContent 
                 side="right" 
-                className="w-full sm:w-72 p-0 backdrop-blur-lg bg-background/95 border-l border-gray-200/50 dark:border-white/10 overflow-y-auto" 
+                className="w-full sm:w-72 p-0 bg-background border-l border-gray-200/50 dark:border-white/10 overflow-y-auto" 
               >
                 <div className="flex flex-col h-full relative">
-                  <div className="absolute top-16 right-0 w-12 h-12 rounded-full bg-gradient-to-br from-pink-100/50 to-purple-100/50 dark:from-pink-900/10 dark:to-purple-900/10 blur-xl -z-10"></div>
-                  <div className="absolute bottom-40 left-0 w-12 h-12 rounded-full bg-gradient-to-tr from-blue-100/50 to-teal-100/50 dark:from-blue-900/10 dark:to-teal-900/10 blur-xl -z-10"></div>
-                  
                   <div className="border-b border-gray-200/50 dark:border-white/10 px-4 py-3 flex items-center justify-between">
                     <h2 className="text-base font-bold text-foreground">Menu</h2>
                     <button

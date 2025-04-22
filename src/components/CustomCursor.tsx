@@ -16,23 +16,22 @@ const CustomCursor: React.FC = () => {
     if (isMobile) return;
 
     let requestId: number;
-    let lastX = 0;
-    let lastY = 0;
+    let mouseX = 0;
+    let mouseY = 0;
     const dotEase = 1; // Instant movement for dot
     const ringEase = 0.15; // Smooth movement for ring
     
     const updateCursorPosition = (e: MouseEvent) => {
       if (!isVisible) setIsVisible(true);
       
-      // Use direct DOM manipulation with requestAnimationFrame for better performance
-      if (cursorDotRef.current) {
-        // Dot follows cursor directly
-        cursorDotRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
-      }
+      // Store mouse position for both dot and ring
+      mouseX = e.clientX;
+      mouseY = e.clientY;
       
-      // Store the current position for the ring
-      lastX = e.clientX;
-      lastY = e.clientY;
+      // Dot follows cursor directly and instantly
+      if (cursorDotRef.current) {
+        cursorDotRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+      }
     };
     
     // Separate animation loop for the trailing ring effect
@@ -44,8 +43,8 @@ const CustomCursor: React.FC = () => {
         const centerY = rect.top + rect.height / 2;
         
         // Calculate new position with smoothing
-        const newX = centerX + (lastX - centerX) * ringEase;
-        const newY = centerY + (lastY - centerY) * ringEase;
+        const newX = centerX + (mouseX - centerX) * ringEase;
+        const newY = centerY + (mouseY - centerY) * ringEase;
         
         // Apply the new position
         cursorRingRef.current.style.transform = `translate3d(${newX}px, ${newY}px, 0) translate(-50%, -50%)`;
@@ -92,10 +91,10 @@ const CustomCursor: React.FC = () => {
       setIsHovering(isClickable(target));
     };
 
-    // Start animation loop
+    // Start the animation loop
     requestId = requestAnimationFrame(animateRing);
     
-    // Use passive event listeners to improve performance
+    // Use passive event listeners for better performance
     window.addEventListener('mousemove', updateCursorPosition, { passive: true });
     window.addEventListener('mousemove', handleElementHover, { passive: true });
     document.addEventListener('mouseenter', handleMouseEnter);
@@ -121,7 +120,13 @@ const CustomCursor: React.FC = () => {
         className="cursor-dot"
         style={{ 
           backgroundColor: theme === "dark" ? "white" : "black",
-          pointerEvents: "none"
+          pointerEvents: "none",
+          position: "fixed",
+          width: "8px",
+          height: "8px",
+          borderRadius: "50%",
+          zIndex: 9999,
+          transform: "translate(-50%, -50%)"
         }}
       />
       <div 
@@ -129,7 +134,15 @@ const CustomCursor: React.FC = () => {
         className={`cursor-ring ${isHovering ? 'hover' : ''}`}
         style={{ 
           borderColor: theme === "dark" ? "rgba(255, 255, 255, 0.5)" : "rgba(0, 0, 0, 0.5)",
-          pointerEvents: "none"
+          pointerEvents: "none",
+          position: "fixed",
+          width: isHovering ? "40px" : "30px",
+          height: isHovering ? "40px" : "30px",
+          borderRadius: "50%",
+          border: "2px solid",
+          zIndex: 9998,
+          transition: "width 0.2s, height 0.2s",
+          transform: "translate(-50%, -50%)"
         }}
       />
     </>
