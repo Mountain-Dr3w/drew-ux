@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -6,9 +5,9 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 
 const appleButton =
-  'apple-btn relative bg-white/60 dark:bg-white/10 backdrop-blur-lg border border-zinc-200/80 dark:border-white/10 text-black dark:text-white font-semibold shadow-lg hover:bg-white/80 hover:dark:bg-white/20 hover:shadow-xl transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/50 active:scale-95';
+  'apple-btn relative bg-white/80 dark:bg-white/20 backdrop-blur-lg border border-zinc-200/60 dark:border-white/20 text-neutral-800 dark:text-white font-semibold shadow-md hover:bg-white/90 hover:dark:bg-white/30 hover:shadow-lg transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/50 active:scale-95';
 const appleButtonOutline =
-  'apple-btn relative bg-white/10 dark:bg-white/5 backdrop-blur-lg border border-zinc-300/60 dark:border-white/15 text-black dark:text-white font-semibold shadow-sm hover:bg-white/20 hover:dark:bg-white/10 hover:shadow-md transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/30 active:scale-95';
+  'apple-btn relative bg-white/10 dark:bg-white/5 backdrop-blur-lg border border-zinc-300/60 dark:border-white/15 text-neutral-800 dark:text-white font-semibold shadow-sm hover:bg-white/20 hover:dark:bg-white/10 hover:shadow-md transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/30 active:scale-95';
 
 const Hero: React.FC = () => {
   return (
