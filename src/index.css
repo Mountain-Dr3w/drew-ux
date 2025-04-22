@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -93,15 +92,6 @@
     --z-40-background: 0 0% 16%;
     --z-50-background: 0 0% 18%;
     --z-50-overlay: 0 0% 0%;
-  }
-
-  /* Add marker font to css variables */
-  :root {
-    --marker-font: 'Permanent Marker', cursive;
-  }
-
-  .font-marker {
-    font-family: var(--marker-font), cursive;
   }
 }
 

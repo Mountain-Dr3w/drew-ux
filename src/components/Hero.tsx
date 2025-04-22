@@ -33,24 +33,10 @@ const Hero: React.FC = () => {
           <TransitionEffect direction="up" delay={0.2}>
             <h1 className="shiftnudge-heading mb-12 md:mb-14 lg:mb-16 text-balance max-w-4xl mx-auto font-normal">
               <div className="mb-8">Designing usable, accessible, and scalable software isn't easy.</div>
-              <span
-                className={cn(
-                  "font-marker", // creative marker font
-                  "text-[2.4rem] md:text-[3rem] lg:text-[3.7rem]",
-                  "inline-block",
-                  "text-[#f25f92] dark:text-[#fa6dac]", // bright "marker" pink shades - adjust for dark mode as well
-                  "drop-shadow-[0_2px_2px_rgba(0,0,0,0.10)]",
-                  "leading-[1.1]",
-                  "z-10"
-                )}
-                style={{
-                  // A little transform for wobble/playfulness
-                  transform: "rotate(-3deg) skew(-1.5deg, 0.5deg)",
-                  letterSpacing: "0.01em",
-                  transition: "color 0.25s",
-                }}
-              >
-                let me do it for you.
+              <span className="font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent" style={{
+              animationDuration: '4s'
+            }}>
+                Let me do it for you.
               </span>
             </h1>
           </TransitionEffect>
@@ -71,4 +57,3 @@ const Hero: React.FC = () => {
     </section>;
 };
 export default Hero;
-
