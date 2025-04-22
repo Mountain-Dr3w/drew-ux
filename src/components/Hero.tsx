@@ -1,13 +1,20 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 
+// Enhanced Apple style with a very airy, frosted bluish-white, subtle border and shadow
 const appleButton =
-  'apple-btn relative bg-white/80 dark:bg-white/20 backdrop-blur-lg border border-zinc-200/60 dark:border-white/20 text-neutral-800 dark:text-white font-semibold shadow-md hover:bg-white/90 hover:dark:bg-white/30 hover:shadow-lg transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/50 active:scale-95';
+  'apple-btn relative bg-gradient-to-b from-white/90 to-blue-50/60 dark:from-white/10 dark:to-blue-950/20 backdrop-blur-xl border border-blue-200/60 dark:border-blue-300/20 text-blue-900 dark:text-white font-semibold shadow-lg hover:brightness-105 hover:shadow-xl transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/50 active:scale-97';
+
+// Outlined style that’s even more subtle, with glass/frost & barely-there border
 const appleButtonOutline =
-  'apple-btn relative bg-white/10 dark:bg-white/5 backdrop-blur-lg border border-zinc-300/60 dark:border-white/15 text-neutral-800 dark:text-white font-semibold shadow-sm hover:bg-white/20 hover:dark:bg-white/10 hover:shadow-md transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/30 active:scale-95';
+  'apple-btn relative bg-white/30 dark:bg-white/10 backdrop-blur-lg border border-blue-100/60 dark:border-blue-200/10 text-blue-900 dark:text-white font-semibold shadow-md hover:bg-white/60 hover:dark:bg-blue-900/20 hover:shadow-lg transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-200/40 active:scale-97';
+
+const subtleBadge =
+  'border-none px-3 py-1.5 rounded-full shadow-none font-medium text-xs transition-colors duration-200';
 
 const Hero: React.FC = () => {
   return (
@@ -29,17 +36,26 @@ const Hero: React.FC = () => {
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2 md:gap-3">
             <Badge
-              className="bg-[#e9f0fb] text-[#2d2e30] dark:bg-[#233042] dark:text-white"
+              className={cn(
+                subtleBadge,
+                "bg-[#f2fce2]/85 text-[#55684e] dark:bg-[#28342c]/70 dark:text-[#e6ffe4]"
+              )}
             >
               Human Factors Advocate
             </Badge>
             <Badge
-              className="bg-[#ede8fb] text-[#2d2e30] dark:bg-[#342759] dark:text-white"
+              className={cn(
+                subtleBadge,
+                "bg-[#e5deff]/80 text-[#656180] dark:bg-[#2e2640]/70 dark:text-[#cac2fc]"
+              )}
             >
               End-to-End Designer
             </Badge>
             <Badge
-              className="bg-[#e8fbe9] text-[#2d2e30] dark:bg-[#1B3520] dark:text-white"
+              className={cn(
+                subtleBadge,
+                "bg-[#d3e4fd]/90 text-[#4d6070] dark:bg-[#233147]/70 dark:text-[#bad9fa]"
+              )}
             >
               Product Strategist
             </Badge>
@@ -91,3 +107,4 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
