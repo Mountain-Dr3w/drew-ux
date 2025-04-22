@@ -18,19 +18,19 @@ const CustomCursor: React.FC = () => {
     let requestId: number;
     let mouseX = 0;
     let mouseY = 0;
-    const dotEase = 1; // Instant movement for dot
     const ringEase = 0.15; // Smooth movement for ring
     
     const updateCursorPosition = (e: MouseEvent) => {
       if (!isVisible) setIsVisible(true);
       
-      // Store mouse position for both dot and ring
+      // Store mouse position
       mouseX = e.clientX;
       mouseY = e.clientY;
       
       // Dot follows cursor directly and instantly
       if (cursorDotRef.current) {
-        cursorDotRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+        cursorDotRef.current.style.left = `${mouseX}px`;
+        cursorDotRef.current.style.top = `${mouseY}px`;
       }
     };
     
@@ -47,7 +47,8 @@ const CustomCursor: React.FC = () => {
         const newY = centerY + (mouseY - centerY) * ringEase;
         
         // Apply the new position
-        cursorRingRef.current.style.transform = `translate3d(${newX}px, ${newY}px, 0) translate(-50%, -50%)`;
+        cursorRingRef.current.style.left = `${newX}px`;
+        cursorRingRef.current.style.top = `${newY}px`;
       }
       
       // Continue the animation loop
@@ -120,13 +121,15 @@ const CustomCursor: React.FC = () => {
         className="cursor-dot"
         style={{ 
           backgroundColor: theme === "dark" ? "white" : "black",
-          pointerEvents: "none",
           position: "fixed",
+          left: "0",
+          top: "0",
           width: "8px",
           height: "8px",
           borderRadius: "50%",
+          transform: "translate(-50%, -50%)",
           zIndex: 9999,
-          transform: "translate(-50%, -50%)"
+          pointerEvents: "none"
         }}
       />
       <div 
@@ -134,15 +137,17 @@ const CustomCursor: React.FC = () => {
         className={`cursor-ring ${isHovering ? 'hover' : ''}`}
         style={{ 
           borderColor: theme === "dark" ? "rgba(255, 255, 255, 0.5)" : "rgba(0, 0, 0, 0.5)",
-          pointerEvents: "none",
           position: "fixed",
+          left: "0",
+          top: "0",
           width: isHovering ? "40px" : "30px",
           height: isHovering ? "40px" : "30px",
           borderRadius: "50%",
           border: "2px solid",
+          transform: "translate(-50%, -50%)",
           zIndex: 9998,
           transition: "width 0.2s, height 0.2s",
-          transform: "translate(-50%, -50%)"
+          pointerEvents: "none"
         }}
       />
     </>
