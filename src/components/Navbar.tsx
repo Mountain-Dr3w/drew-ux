@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import ThemeToggle from './ThemeToggle';
@@ -6,11 +7,13 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, X, ChevronRight, Home, Layers, User, MessageSquare } from 'lucide-react';
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from '@/components/ui/navigation-menu';
+
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const isMobile = useIsMobile();
   const [isOpen, setIsOpen] = useState(false);
   const [activeItem, setActiveItem] = useState<string | null>(null);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -18,6 +21,7 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   const menuItems = [{
     name: 'Projects',
     icon: <Layers size={24} />,
@@ -31,10 +35,12 @@ const Navbar: React.FC = () => {
     icon: <MessageSquare size={24} />,
     href: '#contact'
   }];
+
   const handleMenuItemClick = (name: string) => {
     setActiveItem(name);
     setIsOpen(false);
   };
+
   return <header className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 md:px-8', isScrolled ? 'bg-background/90 backdrop-blur-sm border-b border-gray-200 dark:bg-background/90 dark:border-white/10' : 'bg-transparent')}>
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
@@ -102,4 +108,5 @@ const Navbar: React.FC = () => {
       </div>
     </header>;
 };
+
 export default Navbar;
