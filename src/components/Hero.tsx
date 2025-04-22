@@ -1,7 +1,9 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
+
 const Hero: React.FC = () => {
   return <section className="min-h-[90vh] relative flex items-center justify-center pt-12 md:pt-16 lg:pt-20 z-0 mb-16 md:mb-0">
       <div className="absolute inset-0 overflow-hidden z-[-1] pointer-events-none">
@@ -10,12 +12,12 @@ const Hero: React.FC = () => {
       </div>
       
       <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
-        <TransitionEffect direction="up" delay={0.1}>
-          
-        </TransitionEffect>
-
         <div className="flex flex-col items-center text-center">
           <TransitionEffect direction="up" delay={0.2}>
+            <div className="flex justify-center mb-6 space-x-2">
+              <Badge variant="default">UI/UX Design</Badge>
+              <Badge variant="secondary">Web Development</Badge>
+            </div>
             <h1 className="font-display mb-8 md:mb-10 lg:mb-12 max-w-3xl mx-auto tracking-tight text-4xl md:text-5xl lg:text-6xl font-medium">
               Designing usable, accessible, and scalable software isn't easy.
               <span className="block mt-4 text-black dark:text-white font-semibold">
@@ -26,7 +28,7 @@ const Hero: React.FC = () => {
 
           <TransitionEffect direction="up" delay={0.4}>
             <div className="flex flex-col sm:flex-row w-full sm:w-auto items-center justify-center gap-4 md:gap-5 mb-10">
-              <a href="#contact" className="group inline-flex items-center justify-center bg-black dark:bg-white px-6 py-3 md:px-8 md:py-4 rounded-full hover:bg-gray-900 dark:hover:bg-gray-100 transition-all duration-300 w-full sm:w-auto min-w-[160px] text-white dark:text-black font-medium">
+              <a href="#contact" className="group inline-flex items-center justify-center bg-blue-500 text-white px-6 py-3 md:px-8 md:py-4 rounded-full hover:bg-blue-600 transition-all duration-300 w-full sm:w-auto min-w-[160px] font-medium">
                 <span className="text-sm md:text-base">Connect With Me</span>
               </a>
               
@@ -39,4 +41,6 @@ const Hero: React.FC = () => {
       </div>
     </section>;
 };
+
 export default Hero;
+
