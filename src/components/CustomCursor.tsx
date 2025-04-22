@@ -12,64 +12,47 @@ const CustomCursor: React.FC = () => {
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    // Skip effect for mobile devices
     if (isMobile) return;
 
     let requestId: number;
     let mouseX = 0;
     let mouseY = 0;
     const ringEase = 0.15; // Smooth movement for ring
-    
+
     const updateCursorPosition = (e: MouseEvent) => {
       if (!isVisible) setIsVisible(true);
-      
-      // Store mouse position
+
       mouseX = e.clientX;
       mouseY = e.clientY;
-      
-      // Dot follows cursor directly and instantly
+
+      // Dot follows cursor directly and instantly, using transform for perfect centering
       if (cursorDotRef.current) {
-        cursorDotRef.current.style.left = `${mouseX}px`;
-        cursorDotRef.current.style.top = `${mouseY}px`;
+        cursorDotRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
       }
     };
-    
-    // Separate animation loop for the trailing ring effect
+
     const animateRing = () => {
       if (cursorRingRef.current) {
-        // Get current position
         const rect = cursorRingRef.current.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
-        
-        // Calculate new position with smoothing
+
         const newX = centerX + (mouseX - centerX) * ringEase;
         const newY = centerY + (mouseY - centerY) * ringEase;
-        
-        // Apply the new position
-        cursorRingRef.current.style.left = `${newX}px`;
-        cursorRingRef.current.style.top = `${newY}px`;
+
+        cursorRingRef.current.style.transform = `translate3d(${newX}px, ${newY}px, 0) translate(-50%, -50%)`;
       }
-      
-      // Continue the animation loop
+
       requestId = requestAnimationFrame(animateRing);
     };
 
-    const handleMouseEnter = () => {
-      setIsVisible(true);
-    };
-
-    const handleMouseLeave = () => {
-      setIsVisible(false);
-    };
+    const handleMouseEnter = () => setIsVisible(true);
+    const handleMouseLeave = () => setIsVisible(false);
 
     const handleElementHover = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      
-      // Check if the target is or is inside a clickable element
       const isClickable = (element: HTMLElement | null): boolean => {
         if (!element) return false;
-        
         if (
           element.tagName.toLowerCase() === 'a' || 
           element.tagName.toLowerCase() === 'button' || 
@@ -81,27 +64,21 @@ const CustomCursor: React.FC = () => {
         ) {
           return true;
         }
-        
         if (element.parentElement && element.parentElement !== document.body) {
           return isClickable(element.parentElement);
         }
-        
         return false;
       };
-      
       setIsHovering(isClickable(target));
     };
 
-    // Start the animation loop
     requestId = requestAnimationFrame(animateRing);
-    
-    // Use passive event listeners for better performance
+
     window.addEventListener('mousemove', updateCursorPosition, { passive: true });
     window.addEventListener('mousemove', handleElementHover, { passive: true });
     document.addEventListener('mouseenter', handleMouseEnter);
     document.addEventListener('mouseleave', handleMouseLeave);
 
-    // Clean up all event listeners and animation frame
     return () => {
       window.removeEventListener('mousemove', updateCursorPosition);
       window.removeEventListener('mousemove', handleElementHover);
@@ -111,7 +88,6 @@ const CustomCursor: React.FC = () => {
     };
   }, [isVisible, isMobile]);
 
-  // Don't render cursor visuals on mobile or when not visible
   if (isMobile || !isVisible) return null;
 
   return (

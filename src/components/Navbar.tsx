@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import ThemeToggle from './ThemeToggle';
@@ -100,7 +99,7 @@ const Navbar: React.FC = () => {
               </SheetTrigger>
               <SheetContent 
                 side="right" 
-                className="w-full sm:w-72 p-0 bg-black dark:bg-black border-l border-gray-200/50 dark:border-white/10 overflow-y-auto" 
+                className="w-full sm:w-72 p-0 bg-background dark:bg-background border-l border-gray-200/50 dark:border-white/10 overflow-y-auto"
               >
                 <div className="flex flex-col h-full relative">
                   <div className="border-b border-gray-200/50 dark:border-white/10 px-4 py-3 flex items-center justify-between">
