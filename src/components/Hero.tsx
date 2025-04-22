@@ -6,9 +6,7 @@ import { Badge } from '@/components/ui/badge';
 const Hero: React.FC = () => {
   return (
     <section className="min-h-[90vh] relative flex items-center justify-center pt-12 md:pt-16 lg:pt-20 z-0 mb-16 md:mb-0">
-      {/* Minimal design elements */}
       <div className="absolute inset-0 overflow-hidden z-[-1] pointer-events-none">
-        {/* Dotted pattern */}
         <div className={cn(
           "absolute top-1/4 left-0 w-[200px] h-[200px]",
           "bg-gradient-to-r from-transparent to-transparent",
@@ -17,12 +15,10 @@ const Hero: React.FC = () => {
           "bg-[size:12px_12px]"
         )}></div>
         
-        {/* Subtle diagonal line */}
         <div className="absolute bottom-0 right-0 w-[30%] h-[1px] bg-gradient-to-r from-transparent to-blue-300/20 dark:to-blue-600/30 rotate-45 origin-bottom-left"></div>
       </div>
       
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
-        {/* Subtle tag line above heading */}
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2 md:gap-3">
             <Badge variant="secondary" className="text-sm md:text-base">
@@ -30,6 +26,9 @@ const Hero: React.FC = () => {
             </Badge>
             <Badge variant="secondary" className="text-sm md:text-base">
               Product Strategist
+            </Badge>
+            <Badge variant="secondary" className="text-sm md:text-base">
+              End-to-End Designer
             </Badge>
           </div>
         </TransitionEffect>
