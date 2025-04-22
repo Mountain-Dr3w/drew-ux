@@ -1,14 +1,17 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 
-// Updated glassy outline style (secondary button)
-const glassyButton =
-  'relative bg-zinc-100/70 dark:bg-zinc-900/40 backdrop-blur-lg border border-zinc-300/40 dark:border-zinc-700/40 text-zinc-800 dark:text-zinc-100 font-semibold shadow-md hover:bg-white/80 hover:dark:bg-zinc-800/70 hover:border-zinc-400/60 hover:shadow-lg transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400/40 active:scale-97';
+// Define a nice bright blue gradient for primary call-to-action
+const blueButton =
+  'bg-gradient-to-b from-blue-500 to-blue-600 text-white font-semibold shadow-lg hover:brightness-110 hover:shadow-xl transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/50 active:scale-97';
 
-// Slightly restyled badges: see usage below as variant="subtle"
+// Soft, glassy secondary button with blue border/text
+const secondaryButton =
+  'bg-white/60 dark:bg-zinc-900/40 backdrop-blur-lg border border-blue-400/60 dark:border-blue-500/40 text-blue-700 dark:text-blue-200 font-semibold shadow-md hover:bg-white/80 hover:dark:bg-zinc-800/70 hover:border-blue-500/80 hover:shadow-lg transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/40 active:scale-97';
 
 const Hero: React.FC = () => {
   return (
@@ -63,7 +66,7 @@ const Hero: React.FC = () => {
                 asChild
                 className={cn(
                   "w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base",
-                  'bg-gradient-to-b from-blue-500 to-blue-600 text-white font-semibold shadow-lg hover:brightness-110 hover:shadow-xl transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/50 active:scale-97'
+                  blueButton
                 )}
               >
                 <a href="#contact">Connect With Me</a>
@@ -72,7 +75,7 @@ const Hero: React.FC = () => {
                 asChild
                 className={cn(
                   "w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base",
-                  'bg-gradient-to-b from-blue-500 to-blue-600 text-white font-semibold shadow-lg hover:brightness-110 hover:shadow-xl transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/50 active:scale-97'
+                  secondaryButton
                 )}
               >
                 <a href="#projects">View My Work</a>

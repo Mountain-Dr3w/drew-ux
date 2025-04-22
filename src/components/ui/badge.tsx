@@ -16,7 +16,7 @@ const badgeVariants = cva(
           "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80 px-3 py-1.5",
         outline: "text-foreground bg-transparent border px-3 py-1.5",
         client: "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-md px-4 py-2 shadow-sm hover:shadow-md transition-shadow",
-        subtle: "border-none px-4 py-2 bg-zinc-100/75 dark:bg-zinc-800/60 text-zinc-800 dark:text-zinc-100 shadow-none font-medium",
+        subtle: "border-none px-5 py-2 bg-zinc-200/90 dark:bg-zinc-800/80 text-zinc-800 dark:text-zinc-100 shadow-none font-medium",
       },
     },
     defaultVariants: {
@@ -36,4 +36,3 @@ function Badge({ className, variant, ...props }: BadgeProps) {
 }
 
 export { Badge, badgeVariants }
-
