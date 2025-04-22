@@ -5,13 +5,13 @@ import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 
-// Define a nice bright blue gradient for primary call-to-action
-const blueButton =
-  'bg-gradient-to-b from-blue-500 to-blue-600 text-white font-semibold shadow-lg hover:brightness-110 hover:shadow-xl transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/50 active:scale-97';
+// Apple-inspired blue: strong but understated, no harsh gradient
+const appleBlueButton =
+  'bg-gradient-to-b from-[#4086EC] to-[#1B6FF6] text-white font-semibold shadow-md hover:brightness-110 hover:shadow-lg transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#93beff]/40 active:scale-97';
 
-// Soft, glassy secondary button with blue border/text
-const secondaryButton =
-  'bg-white/60 dark:bg-zinc-900/40 backdrop-blur-lg border border-blue-400/60 dark:border-blue-500/40 text-blue-700 dark:text-blue-200 font-semibold shadow-md hover:bg-white/80 hover:dark:bg-zinc-800/70 hover:border-blue-500/80 hover:shadow-lg transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/40 active:scale-97';
+// Modern, soft glass secondary with blue border/text. Simple, subtle Apple style.
+const appleSecondaryButton =
+  'bg-white/80 dark:bg-zinc-900/50 backdrop-blur-lg border border-[#B1C8F9] text-[#2562B7] dark:text-[#B3C9E2] font-semibold shadow-sm hover:bg-white hover:dark:bg-zinc-900/70 hover:border-blue-400 hover:shadow-md transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#93beff]/30 active:scale-97';
 
 const Hero: React.FC = () => {
   return (
@@ -62,20 +62,22 @@ const Hero: React.FC = () => {
 
           <TransitionEffect direction="up" delay={0.4}>
             <div className="flex flex-col sm:flex-row w-full sm:w-auto items-center justify-center gap-4 md:gap-6 mb-10">
+              {/* Primary Apple blue call-to-action */}
               <Button
                 asChild
                 className={cn(
                   "w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base",
-                  blueButton
+                  appleBlueButton
                 )}
               >
                 <a href="#contact">Connect With Me</a>
               </Button>
+              {/* Secondary subtle Apple-style button */}
               <Button
                 asChild
                 className={cn(
                   "w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base",
-                  secondaryButton
+                  appleSecondaryButton
                 )}
               >
                 <a href="#projects">View My Work</a>
