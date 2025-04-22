@@ -57,9 +57,9 @@ const JigsawCaseStudy: React.FC = () => {
         <JigsawResultsSection />
         
         <NextCaseStudySection 
-        title="Design Thinking Meets Waste Traceability"
-        link="/case-study/veriflux"
-      />
+          title="From Food Waste to Impact: A Design Transformation Story"
+          link="/case-study/veriflux"
+        />
       </main>
     </div>
   );

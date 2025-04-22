@@ -64,8 +64,8 @@ const DebriefCaseStudy: React.FC = () => {
         <DebriefPrototypesSection />
         <DebriefResultsSection />
         <NextCaseStudySection
-          title="Design Thinking Meets Waste Traceability"
-          link="/case-study/veriflux"
+          title="Revolutionizing Logistics and Readiness for the USAF"
+          link="/case-study/deftech"
         />
       </main>
     </div>
