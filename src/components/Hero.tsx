@@ -1,8 +1,13 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
+import { useRandomGradient } from '@/hooks/useRandomGradient';
 
 const Hero: React.FC = () => {
+  // Get the gradient style directly from the hook
+  const gradientStyle = useRandomGradient();
+
   return (
     <section className="min-h-[80vh] relative flex items-center justify-center pt-8 md:pt-10 lg:pt-12 z-0 mb-8 md:mb-0">
       {/* Minimal design elements */}
@@ -41,19 +46,12 @@ const Hero: React.FC = () => {
           <TransitionEffect direction="up" delay={0.2}>
             <h1 className="shiftnudge-heading mb-6 md:mb-8 lg:mb-10 text-balance max-w-4xl mx-auto font-normal">
               <div className="mb-4">Designing usable, accessible, and scalable software isn't easy.</div>
-              {(() => {
-                // Dynamic animated gradient
-                const { useRandomGradient } = require('@/hooks/useRandomGradient');
-                const gradientStyle = useRandomGradient();
-                return (
-                  <span
-                    className="font-bold hero-animated-gradient"
-                    style={gradientStyle}
-                  >
-                    Let me do it for you.
-                  </span>
-                );
-              })()}
+              <span
+                className="font-bold hero-animated-gradient"
+                style={gradientStyle}
+              >
+                Let me do it for you.
+              </span>
             </h1>
           </TransitionEffect>
 
