@@ -1,3 +1,4 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -56,7 +57,7 @@ const Hero: React.FC = () => {
               <a
                 href="#contact"
                 className={cn(
-                  "group inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-600/80 dark:to-blue-800/80 px-5 py-2 md:px-6 md:py-3 rounded-full hover:bg-blue-700 dark:hover:opacity-90 transition-all duration-300 w-full min-w-[140px] h-10 md:h-12 whitespace-nowrap z-10",
+                  "group inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-600/80 dark:to-blue-800/80 px-5 py-2 md:px-6 md:py-3 rounded-full hover:bg-blue-700 dark:hover:opacity-90 transition-all duration-300 w-full sm:w-auto min-w-[140px] h-10 md:h-12 whitespace-nowrap z-10",
                   "border border-gray-300 shadow-xl hover:shadow-blue-500/20 dark:border-transparent dark:shadow-none"
                 )}
               >
@@ -65,7 +66,9 @@ const Hero: React.FC = () => {
 
               <a
                 href="#projects"
-                className="group inline-flex items-center justify-center space-x-2 bg-gray-200/80 dark:bg-gray-800/20 backdrop-blur-xl text-gray-700 dark:text-gray-200 px-5 py-2 md:px-6 md:py-3 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700/30 transition-all duration-300 w-full min-w-[140px] h-10 md:h-12 whitespace-nowrap z-10 border border-gray-300 dark:border-white/10 shadow-xl hover:shadow-gray-500/10 hover:scale-[1.02]"
+                className={cn(
+                  "group inline-flex items-center justify-center space-x-2 bg-gray-200/80 dark:bg-gray-800/20 backdrop-blur-xl text-gray-700 dark:text-gray-200 px-5 py-2 md:px-6 md:py-3 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700/30 transition-all duration-300 w-full sm:w-auto min-w-[140px] h-10 md:h-12 whitespace-nowrap z-10 border border-gray-300 dark:border-white/10 shadow-xl hover:shadow-gray-500/10 hover:scale-[1.02]"
+                )}
               >
                 <span className="font-medium text-sm md:text-base">View My Work</span>
               </a>
