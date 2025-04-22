@@ -10,7 +10,7 @@ const appleButton =
 
 // Outlined style that’s even more subtle, with glass/frost & barely-there border
 const appleButtonOutline =
-  'apple-btn relative bg-white/30 dark:bg-white/10 backdrop-blur-lg border border-blue-100/60 dark:border-blue-200/10 text-blue-900 dark:text-white font-semibold shadow-md hover:bg-white/60 hover:dark:bg-blue-900/20 hover:shadow-lg transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-200/40 active:scale-97';
+  'apple-btn relative bg-white/10 dark:bg-white/5 backdrop-blur-lg border border-zinc-200/40 dark:border-zinc-700/30 text-zinc-900 dark:text-white/90 font-semibold shadow-sm hover:bg-white/20 hover:dark:bg-white/10 hover:shadow-md transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300/50 active:scale-97';
 
 const subtleBadge =
   'border-none px-3 py-1.5 rounded-full shadow-none font-medium text-xs transition-colors duration-200';
@@ -34,17 +34,18 @@ const Hero: React.FC = () => {
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2 md:gap-3">
-            <Badge>
+            <Badge variant="outline">
               Human Factors Advocate
             </Badge>
-            <Badge>
+            <Badge variant="outline">
               End-to-End Designer
             </Badge>
-            <Badge>
+            <Badge variant="outline">
               Product Strategist
             </Badge>
           </div>
         </TransitionEffect>
+
         <div className="flex flex-col items-center text-center">
           <TransitionEffect direction="up" delay={0.2}>
             <h1 className="shiftnudge-heading mb-10 md:mb-12 lg:mb-14 text-balance max-w-4xl mx-auto font-normal">
