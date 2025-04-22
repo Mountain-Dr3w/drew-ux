@@ -216,11 +216,25 @@
     box-shadow: 0 28px 48px -5px rgba(200,205,220, 0.13), 0 10px 10px -5px rgba(120,128,144,0.05);
   }
 
-  .z-0, .z-10, .z-20, .z-30, .z-40, .z-50, .z-50-overlay {
-    @apply;
-    /* Only use bg from CSS var, don't apply z- classes directly from Tailwind here. */
+  /* Z-index utility classes - removing empty @apply directive */
+  .z-0 {
+    background-color: hsl(var(--z-0-background));
   }
-
+  .z-10 {
+    background-color: hsl(var(--z-10-background));
+  }
+  .z-20 {
+    background-color: hsl(var(--z-20-background));
+  }
+  .z-30 {
+    background-color: hsl(var(--z-30-background));
+  }
+  .z-40 {
+    background-color: hsl(var(--z-40-background));
+  }
+  .z-50 {
+    background-color: hsl(var(--z-50-background));
+  }
   .z-50-overlay {
     @apply bg-[hsl(var(--z-50-overlay))]/80;
   }
@@ -271,4 +285,3 @@ button:hover, .btn:hover, .apple-btn:hover {
 .badge-blue { background: #e9f0fb !important; color: #273046 !important; }
 .badge-purple { background: #ede8fb !important; color: #342759 !important; }
 .badge-green { background: #e8fbe9 !important; color: #1B3520 !important; }
-
