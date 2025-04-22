@@ -32,7 +32,7 @@ const Index: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative w-full min-h-screen">
       {/* More subtle gradient background applied to a fixed position div */}
       <div className="fixed inset-0 z-[-10] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-purple-50/30 to-pink-50/30 dark:from-blue-900/15 dark:via-purple-900/15 dark:to-pink-900/15 animate-gradient-shift" style={{ animationDuration: '30s' }}></div>
@@ -60,7 +60,11 @@ const Index: React.FC = () => {
       </div>
       
       <Navbar />
-      <main className="relative z-0">
+      <main className="relative z-0 flex flex-col items-center w-full max-w-[2200px] lg:px-16 xl:px-32 2xl:px-64 mx-auto">
+        {/* 
+          Use max-w-[2200px] to allow very wide screens, and responsive px for horizontal padding.
+          This makes layout scale up for 4k but keeps content from getting too wide to be usable.
+        */}
         <Hero />
         <Projects />
         <About />
@@ -71,3 +75,4 @@ const Index: React.FC = () => {
 };
 
 export default Index;
+
