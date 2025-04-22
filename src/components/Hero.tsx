@@ -1,3 +1,4 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -45,7 +46,7 @@ const Hero: React.FC = () => {
         </TransitionEffect>
 
         <TransitionEffect direction="up" delay={0.4}>
-          <div className="flex flex-col sm:flex-row w-full sm:w-auto items-center justify-center gap-4 md:gap-6 mb-10">
+          <div className="flex flex-col sm:flex-row w-full items-start justify-start gap-4 md:gap-6 mb-10">
             {/* Primary Apple blue call-to-action */}
             <Button
               asChild
