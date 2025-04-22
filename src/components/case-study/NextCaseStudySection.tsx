@@ -13,11 +13,11 @@ const NextCaseStudySection: React.FC<NextCaseStudySectionProps> = ({ title, link
   return (
     <section className="mt-24 pt-10 border-t border-border">
       <div className="flex flex-col items-center text-center">
-        <TransitionEffect direction="up" delay={0.1}>
+        <TransitionEffect direction="up" delay={0.1} threshold={0.1}>
           <p className="text-muted-foreground mb-4">Next Case Study</p>
           <h2 className="text-3xl font-medium tracking-tight mb-6">{title}</h2>
         </TransitionEffect>
-        <TransitionEffect direction="up" delay={0.2}>
+        <TransitionEffect direction="up" delay={0.2} threshold={0.1}>
           <Link 
             to={link} 
             className="group inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-600/80 dark:to-blue-800/80 hover:bg-blue-700 dark:hover:opacity-90 text-white px-6 py-3 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 hover:scale-[1.02]"

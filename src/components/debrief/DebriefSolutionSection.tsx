@@ -3,8 +3,11 @@ import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Check } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const DebriefSolutionSection: React.FC = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <CaseStudySection title="Solution">
       <div className="space-y-10">
@@ -13,7 +16,7 @@ const DebriefSolutionSection: React.FC = () => {
         </p>
 
         <Tabs defaultValue="interface" className="w-full">
-          <TabsList className="grid w-full grid-cols-3">
+          <TabsList className={`grid w-full ${isMobile ? 'grid-cols-1 gap-2' : 'grid-cols-3'}`}>
             <TabsTrigger value="interface">Streamlined Interface</TabsTrigger>
             <TabsTrigger value="standardization">Data Standardization</TabsTrigger>
             <TabsTrigger value="analytics">Analytics & Insights</TabsTrigger>

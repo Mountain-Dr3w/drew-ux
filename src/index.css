@@ -234,8 +234,7 @@
   }
   
   @keyframes float {
-    0%,
-    100% { transform: translateY(0); }
+    0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
   }
   
@@ -314,18 +313,6 @@
   
   .z-50-overlay {
     @apply bg-[hsl(var(--z-50-overlay))]/80;
-  }
-
-  /* Badge: Improved contrast with solid blue and white text */
-  .badge-blue {
-    @apply bg-blue-500 text-white font-semibold shadow-sm;
-  }
-
-  /* Emphasis for hero "Let me do it for you" text */
-  .hero-emphasis {
-    @apply font-extrabold text-transparent bg-clip-text;
-    background-image: linear-gradient(90deg,#007aff 0%,#5856d6 100%);
-    letter-spacing: -0.03em;
   }
 }
 
