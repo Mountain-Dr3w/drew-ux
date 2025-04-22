@@ -1,3 +1,4 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -31,7 +32,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center text-center">
           <TransitionEffect direction="up" delay={0.2}>
             <h1 className="shiftnudge-heading mb-12 md:mb-14 lg:mb-16 text-balance max-w-4xl mx-auto font-normal">
-              Designing usable, accessible, and scalable software isn't easy.<br className="mb-6" />
+              <div className="mb-8">Designing usable, accessible, and scalable software isn't easy.</div>
               <span className="font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent" style={{
               animationDuration: '4s'
             }}>
