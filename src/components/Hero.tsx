@@ -1,19 +1,15 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 
-// Enhanced Apple style with a very airy, frosted bluish-white, subtle border and shadow
-const appleButton =
-  'apple-btn relative bg-gradient-to-b from-white/90 to-blue-50/60 dark:from-white/10 dark:to-blue-950/20 backdrop-blur-xl border border-blue-200/60 dark:border-blue-300/20 text-blue-900 dark:text-white font-semibold shadow-lg hover:brightness-105 hover:shadow-xl transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/50 active:scale-97';
+// Updated glassy outline style (secondary button)
+const glassyButton =
+  'relative bg-zinc-100/70 dark:bg-zinc-900/40 backdrop-blur-lg border border-zinc-300/40 dark:border-zinc-700/40 text-zinc-800 dark:text-zinc-100 font-semibold shadow-md hover:bg-white/80 hover:dark:bg-zinc-800/70 hover:border-zinc-400/60 hover:shadow-lg transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400/40 active:scale-97';
 
-// Outlined style that’s even more subtle, with glass/frost & barely-there border
-const appleButtonOutline =
-  'apple-btn relative bg-white/10 dark:bg-white/5 backdrop-blur-lg border border-zinc-200/40 dark:border-zinc-700/30 text-zinc-900 dark:text-white/90 font-semibold shadow-sm hover:bg-white/20 hover:dark:bg-white/10 hover:shadow-md transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300/50 active:scale-97';
-
-const subtleBadge =
-  'border-none px-3 py-1.5 rounded-full shadow-none font-medium text-xs transition-colors duration-200';
+// Slightly restyled badges: see usage below as variant="subtle"
 
 const Hero: React.FC = () => {
   return (
@@ -34,13 +30,13 @@ const Hero: React.FC = () => {
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2 md:gap-3">
-            <Badge variant="outline">
+            <Badge variant="subtle">
               Human Factors Advocate
             </Badge>
-            <Badge variant="outline">
+            <Badge variant="subtle">
               End-to-End Designer
             </Badge>
-            <Badge variant="outline">
+            <Badge variant="subtle">
               Product Strategist
             </Badge>
           </div>
@@ -68,7 +64,8 @@ const Hero: React.FC = () => {
                 asChild
                 className={cn(
                   "w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base",
-                  appleButton
+                  // Default button as-is
+                  'apple-btn relative bg-gradient-to-b from-white/90 to-blue-50/60 dark:from-white/10 dark:to-blue-950/20 backdrop-blur-xl border border-blue-200/60 dark:border-blue-300/20 text-blue-900 dark:text-white font-semibold shadow-lg hover:brightness-105 hover:shadow-xl transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/50 active:scale-97'
                 )}
               >
                 <a href="#contact">Connect With Me</a>
@@ -78,7 +75,7 @@ const Hero: React.FC = () => {
                 variant="outline"
                 className={cn(
                   "w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base border-2",
-                  appleButtonOutline
+                  glassyButton
                 )}
               >
                 <a href="#projects">View My Work</a>
@@ -92,3 +89,4 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
