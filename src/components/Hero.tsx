@@ -5,16 +5,16 @@ import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 
-// Shadcn-zinc Apple-inspired buttons
+// Enhanced Apple style with a very airy, frosted bluish-white, subtle border and shadow
 const appleButton =
-  'apple-btn relative bg-gradient-to-b from-zinc-50/80 to-zinc-100/70 dark:from-zinc-800/80 dark:to-zinc-900/60 backdrop-blur-xl border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-zinc-50 font-semibold shadow-lg hover:brightness-105 hover:shadow-xl transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300/60 active:scale-97';
+  'apple-btn relative bg-gradient-to-b from-white/90 to-blue-50/60 dark:from-white/10 dark:to-blue-950/20 backdrop-blur-xl border border-blue-200/60 dark:border-blue-300/20 text-blue-900 dark:text-white font-semibold shadow-lg hover:brightness-105 hover:shadow-xl transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/50 active:scale-97';
 
-// Even more subtle outline
+// Outlined style that’s even more subtle, with glass/frost & barely-there border
 const appleButtonOutline =
-  'apple-btn relative bg-white/40 dark:bg-zinc-900/30 backdrop-blur-lg border border-zinc-200/60 dark:border-zinc-700/30 text-zinc-900 dark:text-zinc-50 font-semibold shadow-md hover:bg-zinc-100/80 hover:dark:bg-zinc-800/40 hover:shadow-lg transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-200/30 active:scale-97';
+  'apple-btn relative bg-white/30 dark:bg-white/10 backdrop-blur-lg border border-blue-100/60 dark:border-blue-200/10 text-blue-900 dark:text-white font-semibold shadow-md hover:bg-white/60 hover:dark:bg-blue-900/20 hover:shadow-lg transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-200/40 active:scale-97';
 
 const subtleBadge =
-  'border-none px-3 py-1.5 rounded-full shadow-none font-medium text-xs transition-colors duration-200 bg-zinc-100/80 dark:bg-zinc-800/70 text-zinc-700 dark:text-zinc-100';
+  'border-none px-3 py-1.5 rounded-full shadow-none font-medium text-xs transition-colors duration-200';
 
 const Hero: React.FC = () => {
   return (
@@ -25,11 +25,11 @@ const Hero: React.FC = () => {
             "absolute top-1/4 left-0 w-[200px] h-[200px]",
             "bg-gradient-to-r from-transparent to-transparent",
             "opacity-20 dark:opacity-10",
-            "bg-[radial-gradient(circle,_rgba(0,0,0,0.1)_1px,_transparent_1px)]",
+            "bg-[radial-gradient(circle,_rgba(0,0,0,0.2)_1px,_transparent_1px)]",
             "bg-[size:12px_12px]"
           )}
         ></div>
-        <div className="absolute bottom-0 right-0 w-[30%] h-[1px] bg-gradient-to-r from-transparent to-zinc-200/30 dark:to-zinc-700/30 rotate-45 origin-bottom-left"></div>
+        <div className="absolute bottom-0 right-0 w-[30%] h-[1px] bg-gradient-to-r from-transparent to-blue-300/20 dark:to-blue-600/30 rotate-45 origin-bottom-left"></div>
       </div>
 
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
@@ -37,21 +37,24 @@ const Hero: React.FC = () => {
           <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2 md:gap-3">
             <Badge
               className={cn(
-                subtleBadge
+                subtleBadge,
+                "bg-[#f2fce2]/85 text-[#55684e] dark:bg-[#28342c]/70 dark:text-[#e6ffe4]"
               )}
             >
               Human Factors Advocate
             </Badge>
             <Badge
               className={cn(
-                subtleBadge
+                subtleBadge,
+                "bg-[#e5deff]/80 text-[#656180] dark:bg-[#2e2640]/70 dark:text-[#cac2fc]"
               )}
             >
               End-to-End Designer
             </Badge>
             <Badge
               className={cn(
-                subtleBadge
+                subtleBadge,
+                "bg-[#d3e4fd]/90 text-[#4d6070] dark:bg-[#233147]/70 dark:text-[#bad9fa]"
               )}
             >
               Product Strategist
@@ -64,7 +67,7 @@ const Hero: React.FC = () => {
               Designing usable, accessible, and scalable software isn't easy.
               <br />
               <span
-                className="font-bold animate-gradient-shift bg-gradient-to-r from-zinc-700 via-zinc-500 to-zinc-900 bg-300% bg-clip-text text-transparent dark:from-zinc-100 dark:via-zinc-400 dark:to-zinc-300"
+                className="font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent"
                 style={{
                   animationDuration: '4s'
                 }}
@@ -104,3 +107,4 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
