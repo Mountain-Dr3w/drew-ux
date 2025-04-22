@@ -25,8 +25,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <Link to={url} className="block h-full">
       <div
         className={cn(
-          "group relative overflow-hidden rounded-lg h-full z-10 transition-all duration-300",
-          "bg-[hsl(var(--z-10-background))] border border-border",
+          "group relative overflow-hidden rounded-xl h-full transition-all duration-300",
+          "bg-white dark:bg-black/40 border border-gray-200/50 dark:border-white/10",
           "shadow-sm hover:shadow-md",
           isHovered ? "translate-y-[-4px]" : ""
         )}
@@ -36,13 +36,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           transitionDelay: `${delay}s`,
         }}
       >      
-        <div className="relative h-64 overflow-hidden">
+        <div className="relative h-[200px] md:h-[240px] overflow-hidden">
           <div className={cn(
             "absolute inset-0 bg-cover bg-center transition-transform duration-700",
             isHovered ? "scale-105" : "scale-100"
           )} 
           style={{ backgroundImage: `url(${imageUrl})` }} />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         </div>
         
         <div className="p-6">
@@ -54,7 +54,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </p>
           <div className={cn(
             "flex items-center font-medium text-sm transition-all duration-300",
-            isHovered ? "text-black dark:text-white" : "text-gray-700 dark:text-gray-300"
+            isHovered ? "text-black dark:text-white" : "text-gray-600 dark:text-gray-400"
           )}>
             <span className="mr-2">View project</span>
             <ArrowRight size={14} className={cn(

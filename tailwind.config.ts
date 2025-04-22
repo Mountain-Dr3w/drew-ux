@@ -19,9 +19,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ["Geist Sans", "Inter", "system-ui", "sans-serif"],
-				display: ["Geist Sans", "SF Pro Display", "Inter", "system-ui", "sans-serif"],
-				geist: ["Geist Sans", "Inter", "system-ui", "sans-serif"],
+				sans: ["Inter", "system-ui", "sans-serif"],
+				display: ["SF Pro Display", "Inter", "system-ui", "sans-serif"],
+				sf: ["SF Pro Display", "Inter", "system-ui", "sans-serif"],
+				geist: ["Inter", "system-ui", "sans-serif"],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -68,17 +69,17 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				blue: {
-					DEFAULT: '#1EAEDB',
-					50: '#e6f7ff',
-					100: '#bae3ff',
-					200: '#7cc4fa',
-					300: '#4ca3f5',
-					400: '#1a88f3',
-					500: '#0c7be0',
-					600: '#0062b3',
-					700: '#0050a1',
-					800: '#003c75',
-					900: '#002855'
+					DEFAULT: '#007AFF',
+					50: '#E5F2FF',
+					100: '#BFE0FF',
+					200: '#99CAFF',
+					300: '#66ADFF',
+					400: '#3391FF',
+					500: '#007AFF',
+					600: '#0062CC',
+					700: '#004999',
+					800: '#003166',
+					900: '#001833'
 				}
 			},
 			borderRadius: {

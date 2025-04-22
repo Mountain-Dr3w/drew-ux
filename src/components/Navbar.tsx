@@ -8,8 +8,6 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { 
   Menu, 
   X, 
-  ChevronRight,
-  Home,
   Layers,
   User,
   MessageSquare
@@ -37,9 +35,9 @@ const Navbar: React.FC = () => {
   }, []);
 
   const menuItems = [
-    { name: 'Projects', icon: <Layers size={24} />, href: '#projects', color: 'bg-[#FEC6A1] dark:bg-orange-600/20' },
-    { name: 'About', icon: <User size={24} />, href: '#about', color: 'bg-[#E5DEFF] dark:bg-purple-600/20' },
-    { name: 'Contact', icon: <MessageSquare size={24} />, href: '#contact', color: 'bg-[#D3E4FD] dark:bg-blue-600/20' }
+    { name: 'Projects', icon: <Layers size={20} />, href: '#projects', color: 'bg-[#FEC6A1]/10 dark:bg-orange-600/10' },
+    { name: 'About', icon: <User size={20} />, href: '#about', color: 'bg-[#E5DEFF]/10 dark:bg-purple-600/10' },
+    { name: 'Contact', icon: <MessageSquare size={20} />, href: '#contact', color: 'bg-[#D3E4FD]/10 dark:bg-blue-600/10' }
   ];
 
   const handleMenuItemClick = (name: string) => {
@@ -52,7 +50,7 @@ const Navbar: React.FC = () => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 md:px-8',
         isScrolled 
-          ? 'bg-background/90 backdrop-blur-sm border-b border-gray-200 dark:bg-background/90 dark:border-white/10' 
+          ? 'bg-white/80 backdrop-blur-md dark:bg-black/80 border-b border-gray-200/30 dark:border-white/10' 
           : 'bg-transparent'
       )}
     >
@@ -67,7 +65,7 @@ const Navbar: React.FC = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-foreground hover:text-black/60 dark:hover:text-white/60 transition-colors"
+              className="text-sm font-medium text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white transition-colors"
             >
               {item.name}
             </a>
@@ -82,36 +80,33 @@ const Navbar: React.FC = () => {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <button
-                  className="flex justify-center items-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 text-foreground transition-all hover:shadow-md dark:hover:bg-white/20"
+                  className="flex justify-center items-center w-10 h-10 rounded-full text-gray-700 dark:text-gray-300"
                   aria-label="Toggle menu"
                 >
-                  <Menu size={28} />
+                  <Menu size={24} />
                 </button>
               </SheetTrigger>
               <SheetContent 
                 side="right" 
-                className="w-full sm:w-72 p-0 backdrop-blur-lg bg-gradient-to-br from-[#f7f9fc] to-white/95 dark:from-background/90 dark:to-background/80 border-l border-gray-200/50 dark:border-white/10 overflow-y-auto" 
+                className="w-full sm:w-80 p-0 backdrop-blur-xl bg-white/90 dark:bg-black/90 border-l border-gray-200/20 dark:border-white/10" 
               >
                 <div className="flex flex-col h-full relative">
-                  {/* Decorative elements - made smaller */}
                   <div className="absolute top-16 right-0 w-12 h-12 rounded-full bg-gradient-to-br from-pink-100/50 to-purple-100/50 dark:from-pink-900/10 dark:to-purple-900/10 blur-xl -z-10"></div>
                   <div className="absolute bottom-40 left-0 w-12 h-12 rounded-full bg-gradient-to-tr from-blue-100/50 to-teal-100/50 dark:from-blue-900/10 dark:to-teal-900/10 blur-xl -z-10"></div>
                   
-                  {/* Menu Header - compact */}
-                  <div className="border-b border-gray-200/50 dark:border-white/10 px-4 py-3 flex items-center justify-between">
-                    <h2 className="text-base font-bold gradient-text">Menu</h2>
+                  <div className="border-b border-gray-200/20 dark:border-white/10 px-6 py-4 flex items-center justify-between">
+                    <h2 className="text-base font-medium">Menu</h2>
                     <button
                       onClick={() => setIsOpen(false)}
-                      className="flex justify-center items-center w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 text-foreground hover:bg-black/10 dark:hover:bg-white/20"
+                      className="flex justify-center items-center w-8 h-8 rounded-full text-gray-600 dark:text-gray-400"
                       aria-label="Close menu"
                     >
-                      <X size={24} />
+                      <X size={20} />
                     </button>
                   </div>
                   
-                  {/* Menu Items - BIGGER touch targets */}
                   <NavigationMenu className="max-w-none w-full">
-                    <NavigationMenuList className="flex flex-col w-full px-1">
+                    <NavigationMenuList className="flex flex-col w-full px-4 mt-6">
                       {menuItems.map((item, index) => (
                         <NavigationMenuItem key={item.name} className="w-full mb-2">
                           <NavigationMenuLink asChild>
@@ -119,30 +114,20 @@ const Navbar: React.FC = () => {
                               href={item.href}
                               onClick={() => handleMenuItemClick(item.name)}
                               className={cn(
-                                "group flex items-center justify-between w-full py-5 px-4 rounded-lg transition-all duration-300 animate-fade-in",
+                                "flex items-center w-full py-3 px-4 rounded-lg transition-all duration-300 animate-fade-in",
                                 activeItem === item.name 
-                                  ? "bg-black/5 dark:bg-white/10 shadow-sm" 
-                                  : "hover:bg-black/5 dark:hover:bg-white/5"
+                                  ? "bg-gray-100 dark:bg-white/5" 
+                                  : ""
                               )}
                               style={{ animationDelay: `${index * 100}ms` }}
                             >
-                              <div className="flex items-center space-x-3">
-                                <div className={cn(
-                                  "flex items-center justify-center w-10 h-10 rounded-lg",
-                                  item.color,
-                                  "group-hover:scale-110 transition-transform duration-300"
-                                )}>
-                                  {item.icon}
-                                </div>
-                                <span className="text-xl font-medium">{item.name}</span>
+                              <div className={cn(
+                                "flex items-center justify-center w-8 h-8 rounded-full",
+                                item.color
+                              )}>
+                                {item.icon}
                               </div>
-                              <ChevronRight 
-                                size={20} 
-                                className={cn(
-                                  "text-muted-foreground transition-all duration-300",
-                                  "group-hover:translate-x-1 group-hover:text-foreground"
-                                )} 
-                              />
+                              <span className="text-base ml-3 text-gray-900 dark:text-gray-100">{item.name}</span>
                             </a>
                           </NavigationMenuLink>
                         </NavigationMenuItem>
@@ -150,21 +135,14 @@ const Navbar: React.FC = () => {
                     </NavigationMenuList>
                   </NavigationMenu>
                   
-                  {/* Call to action - made more visible and compact */}
-                  <div className="mt-auto px-4 pb-4 sticky bottom-0 left-0 right-0">
-                    <div className="relative overflow-hidden rounded-lg p-4 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border border-white/50 dark:border-white/5 shadow-sm group">
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-200/20 to-blue-200/20 dark:from-purple-500/10 dark:to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
-                      <h3 className="text-base font-medium mb-1">Need a Product Wizard?</h3>
-                      <p className="text-sm text-muted-foreground mb-2">Let's collaborate on your next project</p>
-                      <a 
-                        href="#contact" 
-                        onClick={() => setIsOpen(false)}
-                        className="text-sm font-medium flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline"
-                      >
-                        Get in touch
-                        <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
-                      </a>
-                    </div>
+                  <div className="mt-auto mx-6 mb-8">
+                    <a 
+                      href="#contact" 
+                      onClick={() => setIsOpen(false)}
+                      className="block w-full bg-black dark:bg-white text-white dark:text-black font-medium py-3 px-4 rounded-lg text-center"
+                    >
+                      Get in touch
+                    </a>
                   </div>
                 </div>
               </SheetContent>
