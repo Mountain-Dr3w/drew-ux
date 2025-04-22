@@ -62,7 +62,7 @@ const VerifluxCaseStudy: React.FC = () => {
         <AnalyticsDashboardSection />
         <ResultsSection />
         
-        <NextCaseStudySection
+        <NextCaseStudySection 
           title="Revolutionizing Logistics and Readiness for the USAF"
           link="/case-study/deftech"
         />

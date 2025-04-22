@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import CaseStudyHeader from '@/components/case-study/CaseStudyHeader';
 import CaseStudyHero from '@/components/case-study/CaseStudyHero';
@@ -58,9 +57,9 @@ const JigsawCaseStudy: React.FC = () => {
         <JigsawResultsSection />
         
         <NextCaseStudySection 
-          title="Design Thinking Meets Waste Traceability" 
-          link="/case-study/veriflux" 
-        />
+        title="Design Thinking Meets Waste Traceability"
+        link="/case-study/veriflux"
+      />
       </main>
     </div>
   );

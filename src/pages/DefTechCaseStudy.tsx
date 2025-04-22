@@ -57,8 +57,8 @@ const DefTechCaseStudy: React.FC = () => {
         <DefTechResultsSection />
         
         <NextCaseStudySection 
-          title="Streamlining Post-Flight Analysis for Pilots"
-          link="/case-study/debrief"
+          title="Modernizing an Air-to-Air Refueling System"
+          link="/case-study/jigsaw"
         />
       </main>
     </div>
