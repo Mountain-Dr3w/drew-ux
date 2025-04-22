@@ -17,7 +17,7 @@ const badgeVariants = cva(
         outline: "text-foreground bg-transparent border px-3 py-1.5",
         client: "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-md px-4 py-2 shadow-sm hover:shadow-md transition-shadow",
         subtle: "border-none px-5 py-2 bg-zinc-200/90 dark:bg-zinc-800/80 text-zinc-800 dark:text-zinc-100 shadow-none font-medium",
-        strategist: "border-transparent bg-[#6E59A5] text-white hover:bg-[#6E59A5]/80 px-3 py-1.5"
+        strategist: "border-none px-5 py-2 bg-[#E9F0FB] dark:bg-[#6E59A5]/80 text-[#4D2D7A] dark:text-white shadow-none font-medium", // Apple glass style w/ purple
       },
     },
     defaultVariants: {

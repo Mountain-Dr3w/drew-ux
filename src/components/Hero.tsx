@@ -1,3 +1,4 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -21,21 +22,21 @@ const Hero: React.FC = () => {
           <div className="flex flex-wrap items-center gap-3 mb-6">
             <Badge variant="client">UX Designer</Badge>
             <Badge variant="subtle">Product Strategist</Badge>
-            
+            <Badge variant="strategist">Product Strategist</Badge>
           </div>
         </TransitionEffect>
 
         <TransitionEffect direction="up" delay={0.2}>
           <h1 className="shiftnudge-heading mb-10 md:mb-12 lg:mb-14 text-balance max-w-4xl mx-auto font-normal">
             Designing usable, accessible, and scalable software isn't easy.
-            <span className="block mt-2 md:mt-2 font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="block mt-2 md:mt-2 font-bold text-indigo-600 dark:text-indigo-300">
               Let me do it for you.
             </span>
           </h1>
         </TransitionEffect>
 
         <TransitionEffect direction="up" delay={0.4}>
-          <div className="flex flex-col sm:flex-row w-full items-start justify-start gap-4 md:gap-6 mb-10">
+          <div className="flex flex-row w-full items-start justify-start gap-4 md:gap-6 mb-10">
             <Button asChild className={cn("w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base", appleBlueButton)}>
               <a href="#contact">Connect With Me</a>
             </Button>
