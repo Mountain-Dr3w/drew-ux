@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -47,16 +46,13 @@ const Hero: React.FC = () => {
                   "font-bold bg-clip-text text-transparent animate-gradient-shift"
                 )}
                 style={{
-                  // Custom multi-color gradient, wide for movement, lots of stops for smooth rainbow
+                  // Refined multi-color gradient with fewer, more harmonious colors
                   background: `linear-gradient(90deg,
-                    #ff1e56 0%,     /* vivid pink */
-                    #fdc52f 14%,   /* gold/yellow */
-                    #44fadd 28%,   /* teal */
-                    #1eaedb 42%,   /* blue */
-                    #8b5cf6 56%,   /* purple */
-                    #d946ef 70%,   /* magenta pink */
-                    #f97316 84%,   /* orange */
-                    #ff1e56 100%   /* back to vivid pink */
+                    #8b5cf6 0%,     /* soft purple */
+                    #1eaedb 25%,    /* teal blue */
+                    #d946ef 50%,    /* magenta pink */
+                    #f97316 75%,    /* warm orange */
+                    #8b5cf6 100%    /* back to soft purple */
                   )`,
                   backgroundSize: '300% 300%',
                   animation: 'gradient-shift 4s ease infinite',
@@ -97,4 +93,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-
