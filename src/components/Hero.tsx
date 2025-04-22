@@ -1,6 +1,8 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
+
 const Hero: React.FC = () => {
   return <section className="min-h-[90vh] relative flex items-center justify-center pt-12 md:pt-16 lg:pt-20 z-0 mb-16 md:mb-0">
       {/* Minimal design elements */}
@@ -13,16 +15,15 @@ const Hero: React.FC = () => {
       </div>
       
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
-        {/* Subtle tag line above heading */}
         <TransitionEffect direction="up" delay={0.1}>
-          <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2 md:gap-3">
-            <span className="inline-block text-sm md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full bg-gray-200/80 dark:bg-gray-600/60 text-gray-700 dark:text-gray-200 shadow-sm">
+          <div className="text-center mb-6 md:mb-8 flex flex-wrap justify-center gap-2 md:gap-3">
+            <span className="inline-block text-xs md:text-sm font-medium px-2 py-1 md:px-3 md:py-1 rounded-full bg-gray-200/60 dark:bg-gray-600/40 text-gray-700 dark:text-gray-200 shadow-sm">
               Human Factors Advocate
             </span>
-            <span className="inline-block text-sm md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full bg-gray-200/80 dark:bg-gray-600/60 text-gray-700 dark:text-gray-200 shadow-sm">
+            <span className="inline-block text-xs md:text-sm font-medium px-2 py-1 md:px-3 md:py-1 rounded-full bg-gray-200/60 dark:bg-gray-600/40 text-gray-700 dark:text-gray-200 shadow-sm">
               End-to-End Designer
             </span>
-            <span className="inline-block text-sm md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full bg-gray-200/80 dark:bg-gray-600/60 text-gray-700 dark:text-gray-200 shadow-sm">
+            <span className="inline-block text-xs md:text-sm font-medium px-2 py-1 md:px-3 md:py-1 rounded-full bg-gray-200/60 dark:bg-gray-600/40 text-gray-700 dark:text-gray-200 shadow-sm">
               Product Strategist
             </span>
           </div>
@@ -30,7 +31,7 @@ const Hero: React.FC = () => {
 
         <div className="flex flex-col items-center text-center">
           <TransitionEffect direction="up" delay={0.2}>
-            <h1 className="shiftnudge-heading mb-10 md:mb-12 lg:mb-14 text-balance max-w-4xl mx-auto font-normal">
+            <h1 className="shiftnudge-heading mb-12 md:mb-14 lg:mb-16 text-balance max-w-4xl mx-auto font-normal">
               Designing usable, accessible, and scalable software isn't easy.<br />
               <span className="font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent" style={{
               animationDuration: '4s'
