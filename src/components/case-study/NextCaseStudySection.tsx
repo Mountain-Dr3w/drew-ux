@@ -7,14 +7,19 @@ import TransitionEffect from '@/components/TransitionEffect';
 interface NextCaseStudySectionProps {
   title: string;
   link: string;
+  subtitle?: string;
 }
 
-const NextCaseStudySection: React.FC<NextCaseStudySectionProps> = ({ title, link }) => {
+const NextCaseStudySection: React.FC<NextCaseStudySectionProps> = ({ 
+  title, 
+  link,
+  subtitle = "Next Case Study" 
+}) => {
   return (
     <section className="mt-24 pt-10 border-t border-border">
       <div className="flex flex-col items-center text-center">
         <TransitionEffect direction="up" delay={0.1}>
-          <p className="text-muted-foreground mb-4">Next Case Study</p>
+          <p className="text-muted-foreground mb-4">{subtitle}</p>
           <h2 className="text-3xl font-medium tracking-tight mb-6">{title}</h2>
         </TransitionEffect>
         <TransitionEffect direction="up" delay={0.2}>
