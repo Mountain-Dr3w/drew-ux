@@ -1,38 +1,31 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
-
 const Index: React.FC = () => {
   useEffect(() => {
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animated');
         }
       });
     };
-
     const observer = new IntersectionObserver(handleIntersection, {
       root: null,
       rootMargin: '0px',
-      threshold: 0.1,
+      threshold: 0.1
     });
-
-    document.querySelectorAll('.animate-on-scroll').forEach((element) => {
+    document.querySelectorAll('.animate-on-scroll').forEach(element => {
       observer.observe(element);
     });
-
     return () => {
       observer.disconnect();
     };
   }, []);
-
-  return (
-    <div className="relative">
+  return <div className="relative">
       {/* Simplified, clean background inspired by Apple's design */}
       <div className="fixed inset-0 z-[-10] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-900"></div>
@@ -45,23 +38,20 @@ const Index: React.FC = () => {
         <div className="absolute bottom-1/3 right-[10%] w-[600px] h-[600px] rounded-full bg-purple-50/20 dark:bg-purple-900/5 blur-3xl"></div>
         
         {/* Dots pattern - very subtle */}
-        <div className="absolute inset-0 opacity-5 dark:opacity-10" 
-             style={{ 
-               backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px)', 
-               backgroundSize: '50px 50px' 
-             }}>
+        <div className="absolute inset-0 opacity-5 dark:opacity-10" style={{
+        backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px)',
+        backgroundSize: '50px 50px'
+      }}>
         </div>
       </div>
       
       <Navbar />
-      <main className="relative z-0">
+      <main className="relative z-0 bg-zinc-950">
         <Hero />
         <Projects />
         <About />
         <Contact />
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
