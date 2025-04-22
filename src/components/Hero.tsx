@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
           </div>
         </TransitionEffect>
 
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-center w-full">
           <TransitionEffect direction="up" delay={0.2}>
             <h1 className="shiftnudge-heading mb-6 md:mb-8 lg:mb-10 text-balance max-w-4xl mx-auto font-normal">
               <div className="mb-4">Designing usable, accessible, and scalable software isn't easy.</div>
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
           </TransitionEffect>
 
           <TransitionEffect direction="up" delay={0.4}>
-            <div className="flex flex-col sm:flex-row w-full items-center justify-center gap-3 md:gap-4 mb-6">
+            <div className="flex flex-col sm:flex-row w-full items-center justify-center gap-3 md:gap-4 mb-6 px-4 sm:px-0">
               <a
                 href="#contact"
                 className={cn(
