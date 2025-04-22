@@ -33,21 +33,21 @@ const Index: React.FC = () => {
 
   return (
     <div className="relative">
-      {/* Simplified, clean background inspired by Apple's design */}
+      {/* Updated background with a dark, sophisticated off-black */}
       <div className="fixed inset-0 z-[-10] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-900"></div>
+        <div className="absolute inset-0 bg-[#1A1F2C] dark:bg-[#221F26]"></div>
       </div>
       
       {/* Subtle background elements */}
       <div className="fixed inset-0 overflow-hidden z-[-5]">
         {/* Large, soft gradient circles */}
-        <div className="absolute top-1/4 left-[15%] w-[800px] h-[800px] rounded-full bg-blue-50/30 dark:bg-blue-900/5 blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-[10%] w-[600px] h-[600px] rounded-full bg-purple-50/20 dark:bg-purple-900/5 blur-3xl"></div>
+        <div className="absolute top-1/4 left-[15%] w-[800px] h-[800px] rounded-full bg-blue-900/10 dark:bg-blue-900/5 blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-[10%] w-[600px] h-[600px] rounded-full bg-purple-900/10 dark:bg-purple-900/5 blur-3xl"></div>
         
         {/* Dots pattern - very subtle */}
         <div className="absolute inset-0 opacity-5 dark:opacity-10" 
              style={{ 
-               backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px)', 
+               backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)', 
                backgroundSize: '50px 50px' 
              }}>
         </div>
