@@ -1,3 +1,4 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -43,22 +44,8 @@ const Hero: React.FC = () => {
               <div className="mb-4">Designing usable, accessible, and scalable software isn't easy.</div>
               <span
                 className={cn(
-                  "font-bold bg-clip-text text-transparent animate-gradient-shift"
+                  "font-bold hero-animated-gradient"
                 )}
-                style={{
-                  // Refined multi-color gradient with fewer, more harmonious colors
-                  background: `linear-gradient(90deg,
-                    #8b5cf6 0%,     /* soft purple */
-                    #1eaedb 25%,    /* teal blue */
-                    #d946ef 50%,    /* magenta pink */
-                    #f97316 75%,    /* warm orange */
-                    #8b5cf6 100%    /* back to soft purple */
-                  )`,
-                  backgroundSize: '300% 300%',
-                  animation: 'gradient-shift 4s ease infinite',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                }}
               >
                 Let me do it for you.
               </span>
@@ -93,3 +80,4 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+

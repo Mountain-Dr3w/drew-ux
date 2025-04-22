@@ -361,3 +361,39 @@
   @apply bg-[hsl(var(--z-40-background))] !important;
   box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
 }
+
+.hero-animated-gradient {
+  font-size: inherit;
+  font-weight: 700;
+  /* Layered gradients for organic movement, reduced color count */
+  background:
+    linear-gradient(120deg, #8b5cf6 0%, #1eaedb 50%, #f97316 100%),
+    linear-gradient(160deg, #d946ef 0%, #8b5cf6 60%, #f97316 100%);
+  background-size: 200% 200%, 250% 250%;
+  background-position: 50% 50%, 60% 40%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: hero-grad-move 4s cubic-bezier(0.76, 0, 0.24, 1) infinite alternate,
+             hero-grad-move2 7s cubic-bezier(0.9, 0.01, 0.1, 0.99) infinite reverse;
+  position: relative;
+}
+
+@keyframes hero-grad-move {
+  0%   { background-position: 58% 40%, 60% 40%; }
+  22%  { background-position: 90% 12%, 60% 40%; }
+  38%  { background-position: 80% 85%, 60% 60%; }
+  51%  { background-position: 63% 61%, 60% 90%; }
+  63%  { background-position: 22% 81%, 60% 43%; }
+  74%  { background-position: 41% 53%, 83% 72%; }
+  100% { background-position: 15% 21%, 30% 80%; }
+}
+@keyframes hero-grad-move2 {
+  0%   { background-position: 50% 60%, 37% 80%; }
+  16%  { background-position: 90% 80%, 44% 23%; }
+  32%  { background-position: 99% 43%, 80% 11%; }
+  56%  { background-position: 12% 85%, 13% 77%; }
+  78%  { background-position: 66% 54%, 36% 20%; }
+  100% { background-position: 14% 25%, 33% 19%; }
+}
