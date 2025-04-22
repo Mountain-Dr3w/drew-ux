@@ -23,13 +23,19 @@ const Hero: React.FC = () => {
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2 md:gap-3">
-            <Badge variant="secondary">
+            <Badge
+              className="bg-blue-300/30 text-blue-900 dark:bg-blue-300/20 dark:text-blue-100"
+            >
               Human Factors Advocate
             </Badge>
-            <Badge variant="secondary">
+            <Badge
+              className="bg-purple-300/35 text-purple-900 dark:bg-purple-400/10 dark:text-purple-100"
+            >
               End-to-End Designer
             </Badge>
-            <Badge variant="secondary">
+            <Badge
+              className="bg-emerald-200/45 text-emerald-950 dark:bg-emerald-400/10 dark:text-emerald-100"
+            >
               Product Strategist
             </Badge>
           </div>
