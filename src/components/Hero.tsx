@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -10,6 +9,7 @@ const appleBlueButton = 'bg-gradient-to-b from-[#4086EC] to-[#1B6FF6] text-white
 
 // Modern, soft glass secondary with blue border/text. Simple, subtle Apple style.
 const appleSecondaryButton = 'bg-white/80 dark:bg-zinc-900/50 backdrop-blur-lg border border-[#B1C8F9] text-[#2562B7] dark:text-[#B3C9E2] font-semibold shadow-sm hover:bg-white hover:dark:bg-zinc-900/70 hover:border-blue-400 hover:shadow-md transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#93beff]/30 active:scale-97';
+
 const Hero: React.FC = () => {
   return <section className="min-h-[90vh] relative flex items-center justify-center pt-12 md:pt-16 lg:pt-20 z-0 mb-16 md:mb-0">
       <div className="absolute inset-0 overflow-hidden z-[-1] pointer-events-none">
@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
         <TransitionEffect direction="up" delay={0.2}>
           <h1 className="shiftnudge-heading mb-10 md:mb-12 lg:mb-14 text-balance max-w-4xl mx-auto font-normal">
             Designing usable, accessible, and scalable software isn't easy.
-            <span className="block mt-2 md:mt-2 font-bold text-indigo-600 dark:text-indigo-300">
+            <span className="block mt-2 md:mt-2 font-bold text-indigo-600 dark:text-indigo-300 text-nowrap">
               Let me do it for you.
             </span>
           </h1>
