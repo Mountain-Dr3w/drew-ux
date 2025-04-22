@@ -1,6 +1,7 @@
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
 
 const Hero: React.FC = () => {
   return (
@@ -24,15 +25,12 @@ const Hero: React.FC = () => {
         {/* Subtle tag line above heading */}
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2 md:gap-3">
-            <span className="inline-block text-sm md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full bg-gray-200/80 dark:bg-gray-600/60 text-gray-700 dark:text-gray-200 shadow-sm">
+            <Badge variant="secondary" className="text-sm md:text-base">
               Human Factors Advocate
-            </span>
-            <span className="inline-block text-sm md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full bg-gray-200/80 dark:bg-gray-600/60 text-gray-700 dark:text-gray-200 shadow-sm">
-              End-to-End Designer
-            </span>
-            <span className="inline-block text-sm md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full bg-gray-200/80 dark:bg-gray-600/60 text-gray-700 dark:text-gray-200 shadow-sm">
+            </Badge>
+            <Badge variant="secondary" className="text-sm md:text-base">
               Product Strategist
-            </span>
+            </Badge>
           </div>
         </TransitionEffect>
 
