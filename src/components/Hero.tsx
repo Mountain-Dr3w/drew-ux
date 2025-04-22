@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -24,13 +23,13 @@ const Hero: React.FC = () => {
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2 md:gap-3">
-            <Badge variant="secondary" className="backdrop-blur-sm/0 bg-gray-200/70 dark:bg-gray-700/60 font-medium">
+            <Badge variant="secondary">
               Human Factors Advocate
             </Badge>
-            <Badge variant="secondary" className="backdrop-blur-sm/0 bg-gray-200/70 dark:bg-gray-700/60 font-medium">
+            <Badge variant="secondary">
               End-to-End Designer
             </Badge>
-            <Badge variant="secondary" className="backdrop-blur-sm/0 bg-gray-200/70 dark:bg-gray-700/60 font-medium">
+            <Badge variant="secondary">
               Product Strategist
             </Badge>
           </div>
