@@ -7,15 +7,16 @@ import { Badge } from '@/components/ui/badge';
 const Hero: React.FC = () => {
   return (
     <section className="min-h-[90vh] relative flex items-center justify-center pt-12 md:pt-16 lg:pt-20 z-0 mb-16 md:mb-0">
-      {/* Subtle, nearly-solid background for less gradient effect */}
-      <div className="absolute inset-0 z-[-1] pointer-events-none bg-[#F1F0FB] dark:bg-[#1a1733]" />
+      {/* Remove the purplish background */}
+      <div className="absolute inset-0 z-[-1] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-5 md:mb-7 flex flex-wrap justify-center gap-2 md:gap-3">
-            <Badge className="badge-blue">Human Factors Advocate</Badge>
-            <Badge className="badge-blue">Product Strategist</Badge>
-            <Badge className="badge-blue">End-to-End Designer</Badge>
+            {/* Updated badges with semi-transparent backgrounds */}
+            <Badge className="bg-blue-500/70 text-white font-semibold shadow-sm">Human Factors Advocate</Badge>
+            <Badge className="bg-blue-500/70 text-white font-semibold shadow-sm">Product Strategist</Badge>
+            <Badge className="bg-blue-500/70 text-white font-semibold shadow-sm">End-to-End Designer</Badge>
           </div>
         </TransitionEffect>
 
