@@ -1,7 +1,9 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
+
 const Hero: React.FC = () => {
   return <section className="min-h-[90vh] relative flex items-center justify-center pt-12 md:pt-16 lg:pt-20 z-0 mb-16 md:mb-0">
       <div className="absolute inset-0 overflow-hidden z-[-1] pointer-events-none">
@@ -10,9 +12,7 @@ const Hero: React.FC = () => {
       </div>
       
       <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
-        <TransitionEffect direction="up" delay={0.1}>
-          
-        </TransitionEffect>
+        {/* Removing the empty TransitionEffect that was causing the error */}
 
         <div className="flex flex-col items-center text-center">
           <TransitionEffect direction="up" delay={0.2}>
@@ -39,4 +39,5 @@ const Hero: React.FC = () => {
       </div>
     </section>;
 };
+
 export default Hero;
