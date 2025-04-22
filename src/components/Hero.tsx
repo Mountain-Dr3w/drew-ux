@@ -24,17 +24,17 @@ const Hero: React.FC = () => {
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2 md:gap-3">
             <Badge
-              className="bg-blue-300/30 text-blue-900 dark:bg-blue-300/20 dark:text-blue-100"
+              className="bg-[#e9f0fb] text-[#2d2e30] dark:bg-[#233042] dark:text-white"
             >
               Human Factors Advocate
             </Badge>
             <Badge
-              className="bg-purple-300/35 text-purple-900 dark:bg-purple-400/10 dark:text-purple-100"
+              className="bg-[#ede8fb] text-[#2d2e30] dark:bg-[#342759] dark:text-white"
             >
               End-to-End Designer
             </Badge>
             <Badge
-              className="bg-emerald-200/45 text-emerald-950 dark:bg-emerald-400/10 dark:text-emerald-100"
+              className="bg-[#e8fbe9] text-[#2d2e30] dark:bg-[#1B3520] dark:text-white"
             >
               Product Strategist
             </Badge>
