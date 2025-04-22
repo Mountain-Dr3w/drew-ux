@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -35,28 +34,13 @@ const Hero: React.FC = () => {
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2 md:gap-3">
-            <Badge
-              className={cn(
-                subtleBadge,
-                "bg-[#f2fce2]/85 text-[#55684e] dark:bg-[#28342c]/70 dark:text-[#e6ffe4]"
-              )}
-            >
+            <Badge>
               Human Factors Advocate
             </Badge>
-            <Badge
-              className={cn(
-                subtleBadge,
-                "bg-[#e5deff]/80 text-[#656180] dark:bg-[#2e2640]/70 dark:text-[#cac2fc]"
-              )}
-            >
+            <Badge>
               End-to-End Designer
             </Badge>
-            <Badge
-              className={cn(
-                subtleBadge,
-                "bg-[#d3e4fd]/90 text-[#4d6070] dark:bg-[#233147]/70 dark:text-[#bad9fa]"
-              )}
-            >
+            <Badge>
               Product Strategist
             </Badge>
           </div>
@@ -107,4 +91,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-
