@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -31,6 +30,20 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
+        <TransitionEffect direction="up" delay={0.3}>
+          <div className="flex flex-wrap items-center gap-3 mb-6">
+            <Badge variant="client" className="flex items-center gap-2">
+              <BadgeCheck className="h-4 w-4" /> UX Designer
+            </Badge>
+            <Badge variant="subtle" className="flex items-center gap-2">
+              <BadgeInfo className="h-4 w-4" /> Human Factors Advocate
+            </Badge>
+            <Badge variant="client" className="flex items-center gap-2">
+              <BadgeCheck className="h-4 w-4" /> Product Strategist
+            </Badge>
+          </div>
+        </TransitionEffect>
+
         <TransitionEffect direction="up" delay={0.2}>
           <h1 className="shiftnudge-heading mb-10 md:mb-12 lg:mb-14 text-balance max-w-4xl mx-auto font-normal">
             Designing usable, accessible, and scalable software isn't easy.
@@ -43,17 +56,6 @@ const Hero: React.FC = () => {
               Let me do it for you.
             </span>
           </h1>
-        </TransitionEffect>
-
-        <TransitionEffect direction="up" delay={0.3}>
-          <div className="flex flex-wrap items-center gap-3 mb-6">
-            <Badge variant="client" className="flex items-center gap-2">
-              <BadgeCheck className="h-4 w-4" /> UI/UX Design
-            </Badge>
-            <Badge variant="subtle" className="flex items-center gap-2">
-              <BadgeInfo className="h-4 w-4" /> Web Development
-            </Badge>
-          </div>
         </TransitionEffect>
 
         <TransitionEffect direction="up" delay={0.4}>
@@ -86,4 +88,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-
