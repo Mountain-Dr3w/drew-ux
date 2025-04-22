@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
@@ -64,18 +63,16 @@ const Hero: React.FC = () => {
                 asChild
                 className={cn(
                   "w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base",
-                  // Default button as-is
-                  'apple-btn relative bg-gradient-to-b from-white/90 to-blue-50/60 dark:from-white/10 dark:to-blue-950/20 backdrop-blur-xl border border-blue-200/60 dark:border-blue-300/20 text-blue-900 dark:text-white font-semibold shadow-lg hover:brightness-105 hover:shadow-xl transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/50 active:scale-97'
+                  'bg-gradient-to-b from-blue-500 to-blue-600 text-white font-semibold shadow-lg hover:brightness-110 hover:shadow-xl transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/50 active:scale-97'
                 )}
               >
                 <a href="#contact">Connect With Me</a>
               </Button>
               <Button
                 asChild
-                variant="outline"
                 className={cn(
-                  "w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base border-2",
-                  glassyButton
+                  "w-full sm:w-auto min-w-[160px] h-12 rounded-full px-8 py-3 text-base",
+                  'bg-gradient-to-b from-blue-500 to-blue-600 text-white font-semibold shadow-lg hover:brightness-110 hover:shadow-xl transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/50 active:scale-97'
                 )}
               >
                 <a href="#projects">View My Work</a>
@@ -89,4 +86,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-
