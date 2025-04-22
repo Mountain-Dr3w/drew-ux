@@ -1,7 +1,13 @@
+
 import React from 'react';
 import TransitionEffect from './TransitionEffect';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
+
+const badgeClass =
+  "inline-block text-sm md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full border transition-shadow " +
+  "bg-[#F1F1F4] border-[#E4E4E7] text-[#403E43] shadow-sm " +
+  "dark:bg-[#232328] dark:border-[#232328] dark:text-gray-200/80";
 
 const Hero: React.FC = () => {
   return <section className="min-h-[90vh] relative flex items-center justify-center pt-12 md:pt-16 lg:pt-20 z-0 mb-16 md:mb-0">
@@ -14,13 +20,13 @@ const Hero: React.FC = () => {
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-10 w-full relative">
         <TransitionEffect direction="up" delay={0.1}>
           <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2 md:gap-3">
-            <span className="inline-block text-sm md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full bg-gray-200/80 dark:bg-gray-600/60 text-gray-700 dark:text-gray-200 shadow-sm">
+            <span className={badgeClass}>
               Human Factors Advocate
             </span>
-            <span className="inline-block text-sm md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full bg-gray-200/80 dark:bg-gray-600/60 text-gray-700 dark:text-gray-200 shadow-sm">
+            <span className={badgeClass}>
               End-to-End Designer
             </span>
-            <span className="inline-block text-sm md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full bg-gray-200/80 dark:bg-gray-600/60 text-gray-700 dark:text-gray-200 shadow-sm">
+            <span className={badgeClass}>
               Product Strategist
             </span>
           </div>
@@ -61,3 +67,4 @@ const Hero: React.FC = () => {
     </section>;
 };
 export default Hero;
+
