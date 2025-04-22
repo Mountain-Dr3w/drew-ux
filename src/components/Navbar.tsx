@@ -1,88 +1,179 @@
+
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { cn } from '@/lib/utils';
 import ThemeToggle from './ThemeToggle';
-import { Menu, X } from 'lucide-react';
+import ThemeSwitchingLogo from './ThemeSwitchingLogo';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { 
+  Menu, 
+  X, 
+  ChevronRight,
+  Home,
+  Layers,
+  User,
+  MessageSquare
+} from 'lucide-react';
+import { 
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuLink
+} from '@/components/ui/navigation-menu';
+
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
+  const isMobile = useIsMobile();
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState<string | null>(null);
 
-  // Handle scroll effects
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-
-      // Detect which section is in view for highlighting nav items
-      const sections = ['hero', 'projects', 'about', 'contact'];
-      const current = sections.find(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
-        }
-        return false;
-      });
-      if (current) {
-        setActiveSection(current);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
+
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  const navItems = [{
-    label: 'Projects',
-    href: '#projects'
-  }, {
-    label: 'About',
-    href: '#about'
-  }, {
-    label: 'Contact',
-    href: '#contact'
-  }];
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
+
+  const menuItems = [
+    { name: 'Projects', icon: <Layers size={24} />, href: '#projects', color: 'bg-[#FEC6A1] dark:bg-orange-600/20' },
+    { name: 'About', icon: <User size={24} />, href: '#about', color: 'bg-[#E5DEFF] dark:bg-purple-600/20' },
+    { name: 'Contact', icon: <MessageSquare size={24} />, href: '#contact', color: 'bg-[#D3E4FD] dark:bg-blue-600/20' }
+  ];
+
+  const handleMenuItemClick = (name: string) => {
+    setActiveItem(name);
+    setIsOpen(false);
   };
-  return <>
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12 ${isScrolled ? 'bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
-        <div className="container max-w-6xl mx-auto flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <svg viewBox="0 0 333.75 292.5" className="h-8 w-auto mr-2" aria-label="Logo">
-              <path fill="currentColor" d="M187.5,0h-61.68V84.57h61.68c34.01,0,61.68,27.68,61.68,61.68s-27.66,61.68-61.68,61.68h-61.68v84.57h61.68c80.63,0,146.25-65.59,146.25-146.25S268.13,0,187.5,0ZM61.88,84.57L0,207.92H125.83V84.57H61.88Z" />
-            </svg>
-            <span className="text-xl font-semibold text-neutral-50">Drew<span className="text-blue-500">UX</span></span>
-          </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map(item => <a key={item.label} href={item.href} className={`text-sm font-medium transition-colors hover:text-blue-500 ${activeSection === item.href.substring(1) ? 'text-blue-500' : ''}`}>
-                {item.label}
-              </a>)}
-            <ThemeToggle />
-          </nav>
+  return (
+    <header
+      className={cn(
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 md:px-8',
+        isScrolled 
+          ? 'bg-background/90 backdrop-blur-sm border-b border-gray-200 dark:bg-background/90 dark:border-white/10' 
+          : 'bg-transparent'
+      )}
+    >
+      <div className="max-w-6xl mx-auto flex items-center justify-between">
+        <a href="#" className="flex items-center gap-2">
+          <ThemeSwitchingLogo />
+        </a>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center md:hidden">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-8">
+          {menuItems.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-sm font-medium text-foreground hover:text-black/60 dark:hover:text-white/60 transition-colors"
+            >
+              {item.name}
+            </a>
+          ))}
+          <ThemeToggle />
+        </nav>
+
+        {/* Mobile Navigation */}
+        {isMobile && (
+          <div className="md:hidden flex items-center gap-4">
             <ThemeToggle />
-            <button onClick={toggleMobileMenu} className="ml-4 p-2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors" aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}>
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <button
+                  className="flex justify-center items-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 text-foreground transition-all hover:shadow-md dark:hover:bg-white/20"
+                  aria-label="Toggle menu"
+                >
+                  <Menu size={28} />
+                </button>
+              </SheetTrigger>
+              <SheetContent 
+                side="right" 
+                className="w-full sm:w-72 p-0 backdrop-blur-lg bg-gradient-to-br from-[#f7f9fc] to-white/95 dark:from-background/90 dark:to-background/80 border-l border-gray-200/50 dark:border-white/10 overflow-y-auto" 
+              >
+                <div className="flex flex-col h-full relative">
+                  {/* Decorative elements - made smaller */}
+                  <div className="absolute top-16 right-0 w-12 h-12 rounded-full bg-gradient-to-br from-pink-100/50 to-purple-100/50 dark:from-pink-900/10 dark:to-purple-900/10 blur-xl -z-10"></div>
+                  <div className="absolute bottom-40 left-0 w-12 h-12 rounded-full bg-gradient-to-tr from-blue-100/50 to-teal-100/50 dark:from-blue-900/10 dark:to-teal-900/10 blur-xl -z-10"></div>
+                  
+                  {/* Menu Header - compact */}
+                  <div className="border-b border-gray-200/50 dark:border-white/10 px-4 py-3 flex items-center justify-between">
+                    <h2 className="text-base font-bold gradient-text">Menu</h2>
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="flex justify-center items-center w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 text-foreground hover:bg-black/10 dark:hover:bg-white/20"
+                      aria-label="Close menu"
+                    >
+                      <X size={24} />
+                    </button>
+                  </div>
+                  
+                  {/* Menu Items - BIGGER touch targets */}
+                  <NavigationMenu className="max-w-none w-full">
+                    <NavigationMenuList className="flex flex-col w-full px-1">
+                      {menuItems.map((item, index) => (
+                        <NavigationMenuItem key={item.name} className="w-full mb-2">
+                          <NavigationMenuLink asChild>
+                            <a 
+                              href={item.href}
+                              onClick={() => handleMenuItemClick(item.name)}
+                              className={cn(
+                                "group flex items-center justify-between w-full py-5 px-4 rounded-lg transition-all duration-300 animate-fade-in",
+                                activeItem === item.name 
+                                  ? "bg-black/5 dark:bg-white/10 shadow-sm" 
+                                  : "hover:bg-black/5 dark:hover:bg-white/5"
+                              )}
+                              style={{ animationDelay: `${index * 100}ms` }}
+                            >
+                              <div className="flex items-center space-x-3">
+                                <div className={cn(
+                                  "flex items-center justify-center w-10 h-10 rounded-lg",
+                                  item.color,
+                                  "group-hover:scale-110 transition-transform duration-300"
+                                )}>
+                                  {item.icon}
+                                </div>
+                                <span className="text-xl font-medium">{item.name}</span>
+                              </div>
+                              <ChevronRight 
+                                size={20} 
+                                className={cn(
+                                  "text-muted-foreground transition-all duration-300",
+                                  "group-hover:translate-x-1 group-hover:text-foreground"
+                                )} 
+                              />
+                            </a>
+                          </NavigationMenuLink>
+                        </NavigationMenuItem>
+                      ))}
+                    </NavigationMenuList>
+                  </NavigationMenu>
+                  
+                  {/* Call to action - made more visible and compact */}
+                  <div className="mt-auto px-4 pb-4 sticky bottom-0 left-0 right-0">
+                    <div className="relative overflow-hidden rounded-lg p-4 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border border-white/50 dark:border-white/5 shadow-sm group">
+                      <div className="absolute inset-0 bg-gradient-to-br from-purple-200/20 to-blue-200/20 dark:from-purple-500/10 dark:to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                      <h3 className="text-base font-medium mb-1">Need a Product Wizard?</h3>
+                      <p className="text-sm text-muted-foreground mb-2">Let's collaborate on your next project</p>
+                      <a 
+                        href="#contact" 
+                        onClick={() => setIsOpen(false)}
+                        className="text-sm font-medium flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        Get in touch
+                        <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
-        </div>
-      </header>
-
-      {/* Mobile Menu */}
-      <div className={`fixed inset-0 bg-white dark:bg-black z-40 transform transition-transform duration-300 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
-        <div className="h-full flex flex-col px-6 py-24">
-          <nav className="flex flex-col space-y-8 items-center">
-            {navItems.map(item => <a key={item.label} href={item.href} className="text-2xl font-medium" onClick={() => setMobileMenuOpen(false)}>
-                {item.label}
-              </a>)}
-          </nav>
-        </div>
+        )}
       </div>
-    </>;
+    </header>
+  );
 };
+
 export default Navbar;
