@@ -41,10 +41,7 @@ const Hero: React.FC = () => {
           <h1 className="shiftnudge-heading mb-10 md:mb-12 lg:mb-14 text-balance max-w-4xl mx-auto font-normal">
             Designing usable, accessible, and scalable software isn't easy.
             <span
-              className="block mt-2 md:mt-2 font-bold animate-gradient-shift bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-300% bg-clip-text text-transparent"
-              style={{
-                animationDuration: '4s'
-              }}
+              className="block mt-2 md:mt-2 font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent"
             >
               Let me do it for you.
             </span>
