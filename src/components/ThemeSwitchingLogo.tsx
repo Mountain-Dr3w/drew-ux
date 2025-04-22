@@ -16,13 +16,13 @@ const ThemeSwitchingLogo: React.FC = () => {
           <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             {theme === "dark" ? (
               <>
-                <stop offset="0%" stopColor="#a855f7" />
-                <stop offset="100%" stopColor="#3b82f6" />
+                <stop offset="0%" stopColor="#8b5cf6" />
+                <stop offset="100%" stopColor="#d946ef" />
               </>
             ) : (
               <>
-                <stop offset="0%" stopColor="#9333ea" />
-                <stop offset="100%" stopColor="#3b82f6" />
+                <stop offset="0%" stopColor="#1eaedb" />
+                <stop offset="100%" stopColor="#f97316" />
               </>
             )}
           </linearGradient>
