@@ -7,6 +7,7 @@ const CustomCursor: React.FC = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
   const { theme } = useTheme();
   const isMobile = useIsMobile();
 
@@ -15,6 +16,9 @@ const CustomCursor: React.FC = () => {
 
     const updateCursorPosition = (e: MouseEvent) => {
       if (!isVisible) setIsVisible(true);
+      
+      // Store the position in state
+      setPosition({ x: e.clientX, y: e.clientY });
       
       if (cursorRef.current) {
         // Apply position directly to the parent container
@@ -60,6 +64,11 @@ const CustomCursor: React.FC = () => {
     document.addEventListener('mouseleave', handleMouseLeave);
     document.addEventListener('mousemove', handleElementHover);
 
+    // Set the cursor position to last known position on component mount
+    if (cursorRef.current && position.x && position.y) {
+      cursorRef.current.style.transform = `translate(calc(${position.x}px - 50%), calc(${position.y}px - 50%))`;
+    }
+
     // Clean up
     return () => {
       document.removeEventListener('mousemove', updateCursorPosition);
@@ -67,7 +76,7 @@ const CustomCursor: React.FC = () => {
       document.removeEventListener('mouseleave', handleMouseLeave);
       document.removeEventListener('mousemove', handleElementHover);
     };
-  }, [isVisible, isMobile]);
+  }, [isVisible, isMobile, position.x, position.y]);
 
   // Don't render on mobile or when cursor is not visible
   if (isMobile || !isVisible) return null;
