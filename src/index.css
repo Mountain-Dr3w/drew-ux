@@ -1,4 +1,5 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -350,8 +351,8 @@
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  animation: hero-grad-random-move 7s cubic-bezier(0.76,0,0.24,1) infinite alternate,
-             hero-grad-random-move2 8.4s cubic-bezier(0.9,0.01,0.1,0.99) infinite reverse;
+  animation: hero-grad-random-move 20s cubic-bezier(0.76,0,0.24,1) infinite alternate,
+             hero-grad-random-move2 25s cubic-bezier(0.9,0.01,0.1,0.99) infinite reverse;
   position: relative;
 }
 
@@ -373,3 +374,4 @@
   82%  { background-position: 66% 94%, 36% 20%, 36% 50%; }
   100% { background-position: 44% 39%, 13% 99%, 84% 75%; }
 }
+
