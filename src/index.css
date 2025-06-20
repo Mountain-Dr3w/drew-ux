@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -100,12 +101,6 @@
     @apply border-border;
   }
 
-  @media (min-width: 768px) {
-    * {
-      cursor: none;
-    }
-  }
-
   html, body {
     @apply overflow-x-hidden;
   }
@@ -129,27 +124,6 @@
   @media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2) {
     body {
       text-rendering: optimizeLegibility;
-    }
-  }
-
-  .cursor-dot {
-    @apply fixed pointer-events-none z-[9999] w-1 h-1 rounded-full transform -translate-x-1/2 -translate-y-1/2;
-    transition: width 0.15s ease-out, height 0.15s ease-out, opacity 0.15s ease-out;
-  }
-  
-  .cursor-ring {
-    @apply fixed pointer-events-none z-[9998] w-6 h-6 rounded-full transform -translate-x-1/2 -translate-y-1/2 border border-opacity-50;
-    transition: width 0.2s ease-out, height 0.2s ease-out, opacity 0.2s ease-out;
-  }
-  
-  .cursor-ring.hover {
-    @apply w-10 h-10;
-    transition: width 0.15s ease-out, height 0.15s ease-out;
-  }
-  
-  @media (min-width: 768px) {
-    a, button, [role="button"], input, textarea, select, details, [tabindex]:not([tabindex="-1"]) {
-      @apply cursor-none;
     }
   }
 }

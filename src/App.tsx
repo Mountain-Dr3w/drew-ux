@@ -11,7 +11,6 @@ import JigsawCaseStudy from "./pages/JigsawCaseStudy";
 import DefTechCaseStudy from "./pages/DefTechCaseStudy";
 import DebriefCaseStudy from "./pages/DebriefCaseStudy";
 import { ThemeProvider } from "./hooks/use-theme";
-import CustomCursor from "./components/CustomCursor";
 import ProtectedCaseStudy from "./components/ProtectedCaseStudy";
 
 const queryClient = new QueryClient();
@@ -31,7 +30,6 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider>
       <TooltipProvider>
-        <CustomCursor />
         <Toaster />
         <Sonner />
         <BrowserRouter>
