@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,6 +11,7 @@ import DefTechCaseStudy from "./pages/DefTechCaseStudy";
 import DebriefCaseStudy from "./pages/DebriefCaseStudy";
 import { ThemeProvider } from "./hooks/use-theme";
 import ProtectedCaseStudy from "./components/ProtectedCaseStudy";
+import Portfolio from "./pages/Portfolio";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +35,15 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route 
+              path="/portfolio" 
+              element={
+                <ProtectedRoute 
+                  path="/portfolio"
+                  element={<Portfolio />}
+                />
+              } 
+            />
             <Route 
               path="/case-study/veriflux" 
               element={
