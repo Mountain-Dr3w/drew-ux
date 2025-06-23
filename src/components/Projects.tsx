@@ -2,7 +2,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 import TransitionEffect from './TransitionEffect';
-import { useLocation } from 'react-router-dom';
 
 const projectsData = [
   {
@@ -32,21 +31,9 @@ const projectsData = [
 ];
 
 const Projects: React.FC = () => {
-  const location = useLocation();
-  const isOnHomePage = location.pathname === '/';
-  
   return (
     <section id="projects" className="section-padding relative z-0">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        {isOnHomePage && (
-          <div className="text-center mb-16">
-            <h2 className="shiftnudge-heading mb-6">Featured Work</h2>
-            <p className="shiftnudge-subheading mb-8">
-              Selected case studies showcasing my approach to complex design challenges
-            </p>
-          </div>
-        )}
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projectsData.map((project, index) => (
             <TransitionEffect key={index} delay={0.1 + index * 0.1} threshold={0.2}>
@@ -54,19 +41,11 @@ const Projects: React.FC = () => {
                 title={project.title}
                 description={project.description}
                 imageUrl={project.imageUrl}
-                url={isOnHomePage ? "/portfolio" : project.url}
+                url={project.url}
               />
             </TransitionEffect>
           ))}
         </div>
-        
-        {isOnHomePage && (
-          <div className="text-center mt-12">
-            <p className="text-muted-foreground">
-              Click any project to view the complete portfolio
-            </p>
-          </div>
-        )}
       </div>
     </section>
   );

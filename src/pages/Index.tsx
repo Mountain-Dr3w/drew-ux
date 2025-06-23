@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Projects from '@/components/Projects';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 
@@ -46,7 +45,7 @@ const Index: React.FC = () => {
         
         {/* Floating geometric elements */}
         <div className="absolute top-20 right-[5%] w-32 h-32 border-4 border-dashed border-gray-300/30 dark:border-gray-700/30 rounded-md rotate-12 opacity-40 animate-float" style={{ animationDuration: '8s' }}></div>
-        <div className="absolute top-40 left-[10%] w-24 h-24 border-2 border-gray-300/30 dark:border-gray-700/30 rounded-full opacity-40 animate-float" style={{ animationDuration: '10s', animationDelay: '1s' }}></div>
+        <div className="absolute top-40 left-[10%] w-24 h-24 border-2 border-gray-300/30 dark:border-gray-700/30 rounded-circle opacity-40 animate-float" style={{ animationDuration: '10s', animationDelay: '1s' }}></div>
         <div className="absolute bottom-[30%] right-[15%] w-40 h-12 bg-gray-100/10 dark:bg-gray-800/10 rounded-sm transform -rotate-6 animate-float" style={{ animationDuration: '12s', animationDelay: '0.5s' }}></div>
         <div className="absolute top-[25%] left-[20%] w-20 h-20 border-4 border-gray-300/20 dark:border-gray-700/20 transform rotate-45 opacity-40 animate-float" style={{ animationDuration: '9s', animationDelay: '2s' }}></div>
         
@@ -66,7 +65,6 @@ const Index: React.FC = () => {
           This makes layout scale up for 4k but keeps content from getting too wide to be usable.
         */}
         <Hero />
-        <Projects />
         <About />
         <Contact />
       </main>
@@ -75,4 +73,3 @@ const Index: React.FC = () => {
 };
 
 export default Index;
-
