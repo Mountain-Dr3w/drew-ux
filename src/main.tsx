@@ -9,10 +9,9 @@ if (typeof document !== 'undefined') {
   if (savedTheme) {
     document.documentElement.classList.add(savedTheme);
   } else {
-    // Check for system preference
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    document.documentElement.classList.add(prefersDark ? 'dark' : 'light');
-    localStorage.setItem('theme', prefersDark ? 'dark' : 'light');
+    // Default to dark mode
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
   }
 }
 
