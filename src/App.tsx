@@ -17,11 +17,9 @@ import Portfolio from "./pages/Portfolio";
 const queryClient = new QueryClient();
 
 // Wrapper to handle redirects with location state
-const ProtectedRoute = ({ path, element }: { path: string, element: React.ReactNode }) => {
-  const location = useLocation();
-  
+const ProtectedRoute = ({ path, element, category = 'product' }: { path: string, element: React.ReactNode, category?: 'service' | 'product' }) => {
   return (
-    <ProtectedCaseStudy>
+    <ProtectedCaseStudy category={category}>
       {element}
     </ProtectedCaseStudy>
   );
@@ -87,6 +85,7 @@ const App = () => (
                 <ProtectedRoute
                   path="/case-study/forge"
                   element={<ForgeCaseStudy />}
+                  category="service"
                 />
               }
             />

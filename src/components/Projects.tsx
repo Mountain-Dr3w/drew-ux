@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
           {/* Image */}
           <div className="relative aspect-[4/3] lg:aspect-auto overflow-hidden">
             <img
-              src="/lovable-uploads/portal-services.png"
+              src="/lovable-uploads/Service-bluepint.png"
               alt="FORGE Platform"
               className="absolute inset-0 w-full h-full object-cover"
             />

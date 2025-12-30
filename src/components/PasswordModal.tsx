@@ -13,17 +13,18 @@ interface PasswordModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   onAuthorized?: () => void;
+  category?: 'service' | 'product';
 }
 
 interface PasswordForm {
   password: string;
 }
 
-const PasswordModal: React.FC<PasswordModalProps> = ({ open, onOpenChange, onAuthorized }) => {
+const PasswordModal: React.FC<PasswordModalProps> = ({ open, onOpenChange, onAuthorized, category = 'product' }) => {
   const [error, setError] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
-  
+
   const form = useForm<PasswordForm>({
     defaultValues: {
       password: '',
@@ -31,18 +32,40 @@ const PasswordModal: React.FC<PasswordModalProps> = ({ open, onOpenChange, onAut
   });
 
   const onSubmit = (data: PasswordForm) => {
-    if (data.password === 'goceltics') {
-      localStorage.setItem('caseStudyAccess', 'true');
-      setError(false);
-      toast({
-        title: "Access Granted",
-        description: "You now have access to case studies",
-      });
-      
-      if (onAuthorized) {
-        onAuthorized();
+    const servicePassword = 'Drew26';
+    const productPassword = 'goceltics';
+
+    const isServiceValid = data.password === servicePassword;
+    const isProductValid = data.password === productPassword;
+
+    // Check if password matches the required category
+    const isValid = category === 'service' ? isServiceValid : isProductValid;
+
+    // Also allow either password to grant access to both
+    if (isServiceValid || isProductValid) {
+      if (isServiceValid) {
+        localStorage.setItem('serviceDesignAccess', 'true');
+      }
+      if (isProductValid) {
+        localStorage.setItem('caseStudyAccess', 'true');
+      }
+
+      if (isValid) {
+        setError(false);
+        toast({
+          title: "Access Granted",
+          description: "You now have access to case studies",
+        });
+
+        if (onAuthorized) {
+          onAuthorized();
+        } else {
+          onOpenChange(false);
+        }
       } else {
-        onOpenChange(false);
+        // Wrong category password
+        setError(true);
+        form.reset();
       }
     } else {
       setError(true);
@@ -62,7 +85,7 @@ const PasswordModal: React.FC<PasswordModalProps> = ({ open, onOpenChange, onAut
             Please enter the password to view this case study.
           </DialogDescription>
         </DialogHeader>
-        
+
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
@@ -71,10 +94,10 @@ const PasswordModal: React.FC<PasswordModalProps> = ({ open, onOpenChange, onAut
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input 
-                      type="password" 
-                      placeholder="Enter password" 
-                      {...field} 
+                    <Input
+                      type="password"
+                      placeholder="Enter password"
+                      {...field}
                       className={error ? "border-red-500" : ""}
                       autoFocus
                     />
