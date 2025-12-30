@@ -51,9 +51,11 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full bg-foreground flex items-center justify-center transition-transform group-hover:scale-110">
-              <span className="text-background font-medium text-sm">DM</span>
-            </div>
+            <img
+              src="/lovable-uploads/Asset 3.svg"
+              alt="Drew McFarland"
+              className="h-8 w-auto transition-transform group-hover:scale-110"
+            />
             <span className="hidden md:block text-sm font-medium">
               Drew McFarland
             </span>
