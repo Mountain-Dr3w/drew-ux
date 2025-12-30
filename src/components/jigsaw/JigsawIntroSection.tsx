@@ -53,7 +53,7 @@ const JigsawIntroSection: React.FC = () => {
             <div className="mt-4 pt-4 border-t border-border">
               <p className="text-sm text-muted-foreground">
                 <strong className="text-foreground">What is Kessel Run?</strong><br />
-                The USAF's software factory that builds modern tools for military operations. Named after the Star Wars reference. They bring Silicon Valley practices to defense software.
+                The USAF's software factory that builds modern tools for military operations. Our mission was to build war-winning software our users loved by adapting Silicon Valley practices to defense software.
               </p>
             </div>
           </div>
