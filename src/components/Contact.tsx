@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
           Designed & built by Drew McFarland
         </p>
         <p className="text-sm text-muted-foreground">
-          Boston, MA — {new Date().getFullYear()}
+          Nashville, TN — {new Date().getFullYear()}
         </p>
       </footer>
     </section>

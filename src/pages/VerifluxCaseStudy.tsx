@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import CustomCursor from '@/components/CustomCursor';
 import CaseStudyHeader from '@/components/case-study/CaseStudyHeader';
 import CaseStudyHero from '@/components/case-study/CaseStudyHero';
 import BackgroundSection from '@/components/case-study/BackgroundSection';
@@ -41,7 +42,8 @@ const VerifluxCaseStudy: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background noise">
+      <CustomCursor />
       <CaseStudyHeader />
 
       <main className="container py-12 md:py-16 lg:py-24">

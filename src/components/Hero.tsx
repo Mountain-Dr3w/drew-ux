@@ -25,11 +25,11 @@ const Hero: React.FC = () => {
   return (
     <section
       ref={containerRef}
-      className="min-h-screen flex flex-col justify-center relative px-6 md:px-12 lg:px-24"
+      className="min-h-screen flex flex-col justify-center relative px-6 md:px-12 lg:px-24 pt-20"
     >
       {/* Decorative elements */}
-      <div className="absolute top-8 right-8 md:top-12 md:right-12 text-sm text-muted-foreground tracking-wide">
-        <span className="font-serif">Based in</span> Boston, MA
+      <div className="absolute top-24 right-8 md:top-28 md:right-12 text-sm text-muted-foreground tracking-wide">
+        <span className="font-serif">Based in</span> Nashville, TN
       </div>
 
       <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 text-sm text-muted-foreground">
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
         <h1 className="reveal reveal-delay-1 heading-xl mb-8">
           <span className="block">I design</span>
           <span className="block">
-            <span className="font-serif">products</span> that
+            <span className="font-serif">experiences</span> that
           </span>
           <span className="block">
             people{' '}

@@ -9,6 +9,7 @@ import VerifluxCaseStudy from "./pages/VerifluxCaseStudy";
 import JigsawCaseStudy from "./pages/JigsawCaseStudy";
 import DefTechCaseStudy from "./pages/DefTechCaseStudy";
 import DebriefCaseStudy from "./pages/DebriefCaseStudy";
+import ForgeCaseStudy from "./pages/ForgeCaseStudy";
 import { ThemeProvider } from "./hooks/use-theme";
 import ProtectedCaseStudy from "./components/ProtectedCaseStudy";
 import Portfolio from "./pages/Portfolio";
@@ -71,14 +72,23 @@ const App = () => (
                 />
               } 
             />
-            <Route 
-              path="/case-study/debrief" 
+            <Route
+              path="/case-study/debrief"
               element={
-                <ProtectedRoute 
+                <ProtectedRoute
                   path="/case-study/debrief"
                   element={<DebriefCaseStudy />}
                 />
-              } 
+              }
+            />
+            <Route
+              path="/case-study/forge"
+              element={
+                <ProtectedRoute
+                  path="/case-study/forge"
+                  element={<ForgeCaseStudy />}
+                />
+              }
             />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

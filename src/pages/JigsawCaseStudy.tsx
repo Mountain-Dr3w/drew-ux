@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import CustomCursor from '@/components/CustomCursor';
 import CaseStudyHeader from '@/components/case-study/CaseStudyHeader';
 import CaseStudyHero from '@/components/case-study/CaseStudyHero';
 import ProblemStatementSection from '@/components/case-study/ProblemStatementSection';
@@ -39,7 +40,8 @@ const JigsawCaseStudy: React.FC = () => {
   const jigsawProblemStatement = "Air Force tanker planners spend hours manually scheduling aerial refueling missions using legacy systems that don't effectively visualize complex resource dependencies. How might we redesign the planning interface to give planners a clear picture of tanker availability, receiver requirements, and potential conflicts while reducing planning time by at least 50%?";
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background noise">
+      <CustomCursor />
       <CaseStudyHeader />
 
       <main className="container py-12 md:py-16 lg:py-24">

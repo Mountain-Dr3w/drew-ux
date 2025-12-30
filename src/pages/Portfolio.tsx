@@ -7,6 +7,16 @@ import { Link } from 'react-router-dom';
 const projectsData = [
   {
     number: '01',
+    title: 'FORGE',
+    subtitle: 'Space Force DevSecOps Platform',
+    description:
+      'Transforming developer onboarding from months to days through service design.',
+    tags: ['Service Design', 'DevOps', 'Space Force'],
+    imageUrl: '/lovable-uploads/portal-services.png',
+    url: '/case-study/forge',
+  },
+  {
+    number: '02',
     title: 'Forward Edge',
     subtitle: 'Defense Logistics Intelligence',
     description:
@@ -16,7 +26,7 @@ const projectsData = [
     url: '/case-study/deftech',
   },
   {
-    number: '02',
+    number: '03',
     title: 'Debrief',
     subtitle: 'Post-Flight Analysis',
     description:
@@ -26,7 +36,7 @@ const projectsData = [
     url: '/case-study/debrief',
   },
   {
-    number: '03',
+    number: '04',
     title: 'Veriflux',
     subtitle: 'Waste Traceability Platform',
     description:
@@ -36,7 +46,7 @@ const projectsData = [
     url: '/case-study/veriflux',
   },
   {
-    number: '04',
+    number: '05',
     title: 'Jigsaw',
     subtitle: 'Air Refueling Systems',
     description:
