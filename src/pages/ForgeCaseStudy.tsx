@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import CustomCursor from '@/components/CustomCursor';
 import CaseStudyHeader from '@/components/case-study/CaseStudyHeader';
 import CaseStudyHero from '@/components/case-study/CaseStudyHero';
-import NextCaseStudySection from '@/components/case-study/NextCaseStudySection';
 import ForgeIntroSection from '@/components/forge/ForgeIntroSection';
 import ForgeDiscoverySection from '@/components/forge/ForgeDiscoverySection';
 import ForgeFrictionSection from '@/components/forge/ForgeFrictionSection';
@@ -55,11 +54,6 @@ const ForgeCaseStudy: React.FC = () => {
         <ForgeSynthesisSection />
         <ForgeSolutionSection />
         <ForgeResultsSection />
-
-        <NextCaseStudySection
-          title="Empowering Defense Leaders with Strategic Logistics Intelligence"
-          link="/case-study/deftech"
-        />
       </main>
     </div>
   );

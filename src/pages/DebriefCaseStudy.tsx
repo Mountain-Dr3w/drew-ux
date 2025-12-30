@@ -3,7 +3,6 @@ import CustomCursor from '@/components/CustomCursor';
 import CaseStudyHeader from '@/components/case-study/CaseStudyHeader';
 import CaseStudyHero from '@/components/case-study/CaseStudyHero';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
-import NextCaseStudySection from '@/components/case-study/NextCaseStudySection';
 import DebriefIntroSection from '@/components/debrief/DebriefIntroSection';
 import DebriefChallengesSection from '@/components/debrief/DebriefChallengesSection';
 import DebriefApproachSection from '@/components/debrief/DebriefApproachSection';
@@ -65,10 +64,6 @@ const DebriefCaseStudy: React.FC = () => {
         <DebriefSolutionSection />
         <DebriefPrototypesSection />
         <DebriefResultsSection />
-        <NextCaseStudySection
-          title="Revolutionizing Logistics and Readiness for the USAF"
-          link="/case-study/deftech"
-        />
       </main>
     </div>
   );

@@ -8,7 +8,6 @@ import JigsawChallengesSection from '@/components/jigsaw/JigsawChallengesSection
 import JigsawApproachSection from '@/components/jigsaw/JigsawApproachSection';
 import JigsawScreenshotsSection from '@/components/jigsaw/JigsawScreenshotsSection';
 import JigsawResultsSection from '@/components/jigsaw/JigsawResultsSection';
-import NextCaseStudySection from '@/components/case-study/NextCaseStudySection';
 
 const JigsawCaseStudy: React.FC = () => {
   useEffect(() => {
@@ -57,11 +56,6 @@ const JigsawCaseStudy: React.FC = () => {
         <JigsawApproachSection />
         <JigsawScreenshotsSection />
         <JigsawResultsSection />
-        
-        <NextCaseStudySection 
-          title="From Food Waste to Impact: A Design Transformation Story"
-          link="/case-study/veriflux"
-        />
       </main>
     </div>
   );

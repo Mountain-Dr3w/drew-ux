@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import CustomCursor from '@/components/CustomCursor';
 import CaseStudyHeader from '@/components/case-study/CaseStudyHeader';
 import CaseStudyHero from '@/components/case-study/CaseStudyHero';
-import NextCaseStudySection from '@/components/case-study/NextCaseStudySection';
 import DefTechIntroSection from '@/components/deftech/DefTechIntroSection';
 import DefTechChallengesSection from '@/components/deftech/DefTechChallengesSection';
 import DefTechApproachSection from '@/components/deftech/DefTechApproachSection';
@@ -57,11 +56,6 @@ const DefTechCaseStudy: React.FC = () => {
         <DefTechSolutionSection />
         <DefTechPrototypesSection />
         <DefTechResultsSection />
-        
-        <NextCaseStudySection 
-          title="Modernizing an Air-to-Air Refueling System"
-          link="/case-study/jigsaw"
-        />
       </main>
     </div>
   );

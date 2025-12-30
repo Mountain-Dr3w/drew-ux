@@ -41,7 +41,7 @@ const serviceDesignProjects = [
     description:
       'Transformed developer onboarding from months to days through service blueprinting and friction logging.',
     tags: ['Service Design', 'DevOps', 'Space Force'],
-    imageUrl: '/lovable-uploads/Service-bluepint.png',
+    imageUrl: '/lovable-uploads/portal-onboarding.png',
     url: '/case-study/forge',
   },
 ];

@@ -12,7 +12,6 @@ import DesignImplementationSection from '@/components/case-study/DesignImplement
 import RouteTrackingSection from '@/components/case-study/RouteTrackingSection';
 import AnalyticsDashboardSection from '@/components/case-study/AnalyticsDashboardSection';
 import ResultsSection from '@/components/case-study/ResultsSection';
-import NextCaseStudySection from '@/components/case-study/NextCaseStudySection';
 
 const VerifluxCaseStudy: React.FC = () => {
   useEffect(() => {
@@ -63,11 +62,6 @@ const VerifluxCaseStudy: React.FC = () => {
         <RouteTrackingSection />
         <AnalyticsDashboardSection />
         <ResultsSection />
-        
-        <NextCaseStudySection 
-          title="Streamlining Post-Flight Analysis for Pilots"
-          link="/case-study/debrief"
-        />
       </main>
     </div>
   );
