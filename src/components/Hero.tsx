@@ -1,55 +1,90 @@
-import React from 'react';
-import TransitionEffect from './TransitionEffect';
-import { cn } from '@/lib/utils';
-const Hero: React.FC = () => {
-  return <section className="min-h-[80vh] relative flex items-center justify-center pt-8 md:pt-10 lg:pt-12 z-0 mb-8 md:mb-0">
-      {/* Minimal design elements */}
-      <div className="absolute inset-0 overflow-hidden z-[-1] pointer-events-none">
-        {/* Dotted pattern */}
-        <div className={cn("absolute top-1/4 left-0 w-[200px] h-[200px]", "bg-gradient-to-r from-transparent to-transparent", "opacity-20 dark:opacity-10", "bg-[radial-gradient(circle,_rgba(0,0,0,0.2)_1px,_transparent_1px)]", "bg-[size:12px_12px]")}></div>
+import React, { useEffect, useRef } from 'react';
+import { ArrowDown } from 'lucide-react';
 
-        {/* Subtle diagonal line */}
-        <div className="absolute bottom-0 right-0 w-[30%] h-[1px] bg-gradient-to-r from-transparent to-blue-300/20 dark:to-blue-600/30 rotate-45 origin-bottom-left"></div>
+const Hero: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const reveals = containerRef.current?.querySelectorAll('.reveal');
+    reveals?.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section
+      ref={containerRef}
+      className="min-h-screen flex flex-col justify-center relative px-6 md:px-12 lg:px-24"
+    >
+      {/* Decorative elements */}
+      <div className="absolute top-8 right-8 md:top-12 md:right-12 text-sm text-muted-foreground tracking-wide">
+        <span className="font-serif">Based in</span> Boston, MA
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 md:px-6 lg:px-8 w-full relative">
-        <TransitionEffect direction="up" delay={0.1}>
-          <div className="text-center mb-4 md:mb-6 flex flex-wrap justify-center gap-2">
-            <span className="inline-block text-xs md:text-sm font-medium px-2 py-1 rounded-full bg-gray-200/60 dark:bg-gray-600/40 text-gray-700 dark:text-gray-200 shadow-sm">
-              Human Factors Advocate
-            </span>
-            <span className="inline-block text-xs md:text-sm font-medium px-2 py-1 rounded-full bg-gray-200/60 dark:bg-gray-600/40 text-gray-700 dark:text-gray-200 shadow-sm">
-              End-to-End Designer
-            </span>
-            <span className="inline-block text-xs md:text-sm font-medium px-2 py-1 rounded-full bg-gray-200/60 dark:bg-gray-600/40 text-gray-700 dark:text-gray-200 shadow-sm">
-              Product Strategist
-            </span>
-          </div>
-        </TransitionEffect>
+      <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 text-sm text-muted-foreground">
+        <span className="font-serif">Scroll</span>
+        <ArrowDown className="inline-block ml-2 w-4 h-4 animate-bounce" />
+      </div>
 
-        <div className="flex flex-col items-center text-center w-full">
-          <TransitionEffect direction="up" delay={0.2}>
-            <h1 className="shiftnudge-heading mb-6 md:mb-8 lg:mb-10 text-balance max-w-4xl mx-auto font-normal">
-              <div className="mb-4">Designing usable, accessible, and scalable software isn't easy.</div>
-              <span className={cn("font-bold hero-animated-gradient")}>
-                Let me do it for you.
-              </span>
-            </h1>
-          </TransitionEffect>
+      {/* Main content */}
+      <div className="max-w-7xl">
+        <div className="reveal mb-6">
+          <span className="text-sm md:text-base text-muted-foreground tracking-widest uppercase">
+            Product Designer
+          </span>
+        </div>
 
-          <TransitionEffect direction="up" delay={0.4}>
-            <div className="flex flex-col sm:flex-row w-full items-center justify-center gap-3 md:gap-4 mb-6 px-4 sm:px-0">
-              <a href="#contact" className={cn("group inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-600/80 dark:to-blue-800/80 px-5 py-2 md:px-6 md:py-3 rounded-full hover:bg-blue-700 dark:hover:opacity-90 transition-all duration-300 w-full sm:w-auto min-w-[140px] h-12 md:h-14 whitespace-nowrap z-10", "border border-gray-300 shadow-xl hover:shadow-blue-500/20 dark:border-transparent dark:shadow-none text-sm md:text-base")}>
-                <span className="font-medium text-slate-50">Connect With Me</span>
-              </a>
+        <h1 className="reveal reveal-delay-1 heading-xl mb-8">
+          <span className="block">I design</span>
+          <span className="block">
+            <span className="font-serif">products</span> that
+          </span>
+          <span className="block">
+            people{' '}
+            <span className="text-accent">actually</span>
+          </span>
+          <span className="block">want to use.</span>
+        </h1>
 
-              <a href="#projects" className={cn("group inline-flex items-center justify-center space-x-2 bg-gray-200/80 dark:bg-gray-800/20 backdrop-blur-xl text-gray-700 dark:text-gray-200 px-5 py-2 md:px-6 md:py-3 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700/30 transition-all duration-300 w-full sm:w-auto min-w-[140px] h-12 md:h-14 whitespace-nowrap z-10", "border border-gray-300 dark:border-white/10 shadow-xl hover:shadow-gray-500/10 hover:scale-[1.02] text-sm md:text-base")}>
-                <span className="font-medium">View My Work</span>
-              </a>
-            </div>
-          </TransitionEffect>
+        <div className="reveal reveal-delay-2 flex flex-col sm:flex-row gap-4 sm:gap-8 mt-12">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-md leading-relaxed">
+            Human factors advocate crafting usable, accessible, and scalable software for defense & enterprise.
+          </p>
+        </div>
+
+        <div className="reveal reveal-delay-3 flex flex-wrap gap-4 mt-12">
+          <a
+            href="#work"
+            className="group inline-flex items-center gap-3 px-6 py-4 bg-foreground text-background rounded-full text-sm font-medium transition-all hover:gap-5"
+          >
+            View selected work
+            <ArrowDown className="w-4 h-4 -rotate-90 transition-transform group-hover:translate-x-1" />
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-3 px-6 py-4 border border-foreground/20 rounded-full text-sm font-medium transition-all hover:border-foreground/40 hover:bg-foreground/5"
+          >
+            Get in touch
+          </a>
         </div>
       </div>
-    </section>;
+
+      {/* Floating accent shape */}
+      <div className="absolute -right-20 top-1/3 w-40 h-40 md:w-64 md:h-64 rounded-full bg-accent/10 blur-3xl pointer-events-none" />
+      <div className="absolute -left-20 bottom-1/4 w-32 h-32 md:w-48 md:h-48 rounded-full bg-accent/5 blur-2xl pointer-events-none" />
+    </section>
+  );
 };
+
 export default Hero;

@@ -1,99 +1,79 @@
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
-import { Card, CardContent } from '@/components/ui/card';
 
 const DefTechResultsSection: React.FC = () => {
-  return <CaseStudySection title="Results & Impact">
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
-        <Card className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent"></div>
-          <CardContent className="p-6 relative z-10 bg-transparent">
-            <h3 className="text-xl font-medium mb-3">Efficiency</h3>
-            <p className="text-4xl font-bold mb-2 text-blue-500">62%</p>
-            <p className="text-muted-foreground">Reduction in resource allocation time</p>
-          </CardContent>
-        </Card>
-        <Card className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent"></div>
-          <CardContent className="p-6 relative z-10 bg-transparent">
-            <h3 className="text-xl font-medium mb-3">Adoption</h3>
-            <p className="text-4xl font-bold mb-2 text-purple-500">96%</p>
-            <p className="text-muted-foreground">User adoption rate among logistics teams</p>
-          </CardContent>
-        </Card>
-        <Card className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent"></div>
-          <CardContent className="p-6 relative z-10 bg-transparent">
-            <h3 className="text-xl font-medium mb-3">Cost Savings</h3>
-            <p className="text-4xl font-bold mb-2 text-green-500">42%</p>
-            <p className="text-muted-foreground">Reduction in logistics operational costs</p>
-          </CardContent>
-        </Card>
-      </div>
-      
-      <Card className="mb-10 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent"></div>
-        <CardContent className="p-8 relative z-10">
-          <h3 className="text-2xl font-medium mb-6 text-center">Business Impact</h3>
+  return (
+    <CaseStudySection title="Results">
+      <div className="space-y-10">
+        <p className="text-lg text-muted-foreground">
+          We launched Forward Edge at Travis AFB first, then rolled out to two more bases over the following 6 months. The numbers below are from post-launch surveys and usage analytics collected 90 days after each deployment.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="bg-card p-6 rounded-lg border border-border">
+            <p className="text-4xl font-bold mb-2">2.5 hrs → 45 min</p>
+            <p className="text-muted-foreground">Daily status assessment time</p>
+            <p className="text-sm text-muted-foreground mt-2">Users who previously spent the first 2+ hours of their day building a picture of operations could now get it in under an hour.</p>
+          </div>
+          <div className="bg-card p-6 rounded-lg border border-border">
+            <p className="text-4xl font-bold mb-2">96%</p>
+            <p className="text-muted-foreground">Active user rate after 90 days</p>
+            <p className="text-sm text-muted-foreground mt-2">Nearly every logistics officer at the pilot bases was using the tool daily. The remaining 4% were personnel who rotated out.</p>
+          </div>
+          <div className="bg-card p-6 rounded-lg border border-border">
+            <p className="text-4xl font-bold mb-2">7 days</p>
+            <p className="text-muted-foreground">Average early warning time</p>
+            <p className="text-sm text-muted-foreground mt-2">The predictive features gave commanders a week of lead time on potential shortages, up from zero (they found out when things broke).</p>
+          </div>
+        </div>
+
+        <div className="bg-muted/30 p-8 rounded-lg">
+          <h3 className="text-xl font-medium mb-6">What users actually said</h3>
           <div className="space-y-6">
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              The redesigned Forward Edge platform transformed how defense logistics teams manage supply chain operations, leading to measurable improvements in efficiency, resource allocation, and cost management.
-            </p>
-            
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              The intuitive visualization tools and streamlined workflows have become a significant competitive advantage, with multiple defense contractors citing the platform as essential to their logistics optimization efforts.
-            </p>
-            
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              The platform has helped bridge communication gaps between logistics teams and leadership, enabling more strategic resource planning and investment decisions.
-            </p>
-          </div>
-        </CardContent>
-      </Card>
-      
-      <div className="p-1 bg-gradient-to-r from-blue-200 via-purple-400 to-blue-600 rounded-lg">
-        <Card className="rounded-md">
-          <CardContent className="p-8">
-            <blockquote className="text-xl md:text-2xl italic font-light bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">
-              "Forward Edge has completely transformed our supply chain management. What used to take days of manual tracking now happens in real-time, and the insights have helped us optimize our entire logistics operation."
-            </blockquote>
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-muted rounded-full"></div>
-              <div>
-                <p className="font-medium">USAF Colonel</p>
-                <p className="text-muted-foreground text-sm">Director of Operations, LRS</p>
-              </div>
+            <div className="border-l-2 border-blue-500 pl-4">
+              <p className="text-muted-foreground italic mb-2">"I used to come in at 0500 to get caught up before the morning briefing. Now I walk in at 0700 and I already know more than I did before."</p>
+              <p className="text-sm text-muted-foreground">Lt Col, Logistics Readiness Squadron</p>
             </div>
-          </CardContent>
-        </Card>
+
+            <div className="border-l-2 border-blue-500 pl-4">
+              <p className="text-muted-foreground italic mb-2">"Last week the system flagged a parts shortage 9 days before it would have hit. That's 9 days I got to fix it instead of explaining to the wing commander why jets can't fly."</p>
+              <p className="text-sm text-muted-foreground">Chief Master Sergeant, Maintenance Group</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-medium mb-6">What I'd do differently</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h4 className="font-medium mb-3">Start with mobile</h4>
+              <p className="text-muted-foreground text-sm">
+                I designed desktop-first and adapted for mobile later. In hindsight, I should have started with the tablet experience since that's where most of the floor work happened. The retrofit was painful.
+              </p>
+            </div>
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h4 className="font-medium mb-3">Push harder on data quality</h4>
+              <p className="text-muted-foreground text-sm">
+                The tool is only as good as the data feeding it. Some units had garbage data and the tool surfaced that clearly. I should have advocated earlier for a data quality initiative alongside the design work.
+              </p>
+            </div>
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h4 className="font-medium mb-3">Document tribal knowledge</h4>
+              <p className="text-muted-foreground text-sm">
+                There were workarounds and informal processes that never got captured. When the colonel who invented them rotated out, some of that knowledge was lost. I wish I'd spent more time documenting the "unofficial" workflows.
+              </p>
+            </div>
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h4 className="font-medium mb-3">Build in training from day one</h4>
+              <p className="text-muted-foreground text-sm">
+                Adoption was high, but onboarding new users was still a challenge. I should have designed interactive tutorials into the product instead of relying on separate training materials.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <Card className="mt-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent"></div>
-        <CardContent className="p-8 relative z-10">
-          <h3 className="text-2xl font-medium mb-6 text-center">Lessons Learned</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div>
-              <h4 className="font-medium text-lg mb-3">Simplify Complexity</h4>
-              <p className="text-muted-foreground">
-                Finding the right balance between detailed logistics data and user-friendly interface was crucial for adoption.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-medium text-lg mb-3">Real-time Insights</h4>
-              <p className="text-muted-foreground">
-                Providing real-time, actionable insights became a key differentiator for logistics management.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-medium text-lg mb-3">Cross-functional Collaboration</h4>
-              <p className="text-muted-foreground">
-                Close collaboration between UX designers, logistics experts, and data analysts was essential to creating an effective platform.
-              </p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-    </CaseStudySection>;
+    </CaseStudySection>
+  );
 };
+
 export default DefTechResultsSection;

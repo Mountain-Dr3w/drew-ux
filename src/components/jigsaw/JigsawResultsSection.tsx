@@ -1,71 +1,86 @@
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
-import { TrendingUp, ThumbsUp, Clock } from 'lucide-react';
+
 const JigsawResultsSection: React.FC = () => {
-  return <CaseStudySection title="Results & Impact">
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
-        <div className="bg-card p-6 rounded-lg border border-border relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent"></div>
-          <div className="relative z-10 bg-transparent">
-            <div className="flex items-center gap-2 mb-3">
-              
-              <h3 className="text-xl font-medium">Planning Speed</h3>
-            </div>
-            <p className="text-4xl font-bold mb-2 text-blue-500">85%</p>
-            <p className="text-muted-foreground">Faster mission planning process</p>
+  return (
+    <CaseStudySection title="Results">
+      <div className="space-y-10">
+        <p className="text-lg text-muted-foreground">
+          The redesign rolled out to the 609th AOC first, then expanded to two other Air Operations Centers over the next 6 months. Numbers below are from 90 days post-deployment.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="bg-card p-6 rounded-lg border border-border">
+            <p className="text-4xl font-bold mb-2">8+ hrs → 1.5 hrs</p>
+            <p className="text-muted-foreground">Daily planning time</p>
+            <p className="text-sm text-muted-foreground mt-2">Planners who used to spend all morning on schedules now finish before their first coffee gets cold.</p>
+          </div>
+          <div className="bg-card p-6 rounded-lg border border-border">
+            <p className="text-4xl font-bold mb-2">4 weeks → 3 days</p>
+            <p className="text-muted-foreground">New planner onboarding</p>
+            <p className="text-sm text-muted-foreground mt-2">The intuitive interface meant new planners could work independently much faster. Huge productivity gain over time.</p>
+          </div>
+          <div className="bg-card p-6 rounded-lg border border-border">
+            <p className="text-4xl font-bold mb-2">0</p>
+            <p className="text-muted-foreground">Conflicts missed in 90 days</p>
+            <p className="text-sm text-muted-foreground mt-2">Every scheduling conflict was caught before execution. No more angry phone calls from ops.</p>
           </div>
         </div>
-        <div className="bg-card p-6 rounded-lg border border-border relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent"></div>
-          <div className="relative z-10 bg-transparent">
-            <div className="flex items-center gap-2 mb-3">
-              
-              <h3 className="text-xl font-medium">Resource Utilization</h3>
+
+        <div className="bg-muted/30 p-8 rounded-lg">
+          <h3 className="text-xl font-medium mb-6">What planners actually said</h3>
+          <div className="space-y-6">
+            <div className="border-l-2 border-blue-500 pl-4">
+              <p className="text-muted-foreground italic mb-2">"I used to come in at 0400 to get the daily plan done before the morning brief. Now I come in at 0600 like a normal person."</p>
+              <p className="text-sm text-muted-foreground">Major, Lead Tanker Planner</p>
             </div>
-            <p className="text-4xl font-bold mb-2 text-cyan-500">23%</p>
-            <p className="text-muted-foreground">Improved tanker utilization rate</p>
+
+            <div className="border-l-2 border-blue-500 pl-4">
+              <p className="text-muted-foreground italic mb-2">"New guy showed up last week. By day three he was building plans on his own. Used to take a month before we'd trust someone to work unsupervised."</p>
+              <p className="text-sm text-muted-foreground">Captain, Planning Flight Commander</p>
+            </div>
           </div>
         </div>
-        <div className="bg-card p-6 rounded-lg border border-border relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent"></div>
-          <div className="relative z-10 bg-transparent">
-            <div className="flex items-center gap-2 mb-3">
-              
-              <h3 className="text-xl font-medium">Training</h3>
+
+        <div>
+          <h3 className="text-xl font-medium mb-6">What I'd do differently</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h4 className="font-medium mb-3">More cross-AOC research earlier</h4>
+              <p className="text-muted-foreground text-sm">
+                I focused heavily on the 609th. When we rolled out to other AOCs, we found they had slightly different workflows. Some adjustments could have been avoided with broader initial research.
+              </p>
             </div>
-            <p className="text-4xl font-bold mb-2 text-purple-500">78%</p>
-            <p className="text-muted-foreground">Reduction in planner training time</p>
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h4 className="font-medium mb-3">Better mobile fallback</h4>
+              <p className="text-muted-foreground text-sm">
+                Planners sometimes needed to make changes from their phones. The responsive design worked, but wasn't great. Should have invested more in the mobile experience.
+              </p>
+            </div>
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h4 className="font-medium mb-3">Built-in documentation</h4>
+              <p className="text-muted-foreground text-sm">
+                We relied on separate training materials. Should have built contextual help directly into the product. Would have made onboarding even faster.
+              </p>
+            </div>
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h4 className="font-medium mb-3">Performance monitoring earlier</h4>
+              <p className="text-muted-foreground text-sm">
+                We didn't add analytics until after launch. Wish we'd had usage data from day one to identify bottlenecks faster.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div className="bg-muted/30 p-8 rounded-lg border border-border mb-10">
-        <h3 className="text-2xl font-medium mb-6 text-left">Operational Impact</h3>
-        <div className="space-y-6">
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            The redesigned Jigsaw planning interface has transformed how the Air Force manages aerial refueling operations. Planners who previously spent 8+ hours creating daily schedules can now complete the same work in approximately 1-2 hours, with greater accuracy and fewer conflicts.
+
+        <div className="bg-card p-8 rounded-lg border border-border">
+          <h3 className="text-xl font-medium mb-4">The bigger picture</h3>
+          <p className="text-muted-foreground">
+            Jigsaw became a case study for Kessel Run on how to approach design for complex domains. The approach of extended embedded research followed by rapid iteration became a template for other teams. That felt like an impact beyond just this one product.
           </p>
-          
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            By making tanker resource allocation more efficient, Jigsaw has enabled Air Mobility Command to support more missions with the same number of aircraft. The intuitive gantt visualization has also improved coordination between planners and operators, reducing miscommunications and ensuring smoother execution of complex refueling operations.
-          </p>
         </div>
       </div>
-      
-      <div className="p-1 bg-gradient-to-r from-blue-200 via-cyan-400 to-blue-600 rounded-lg">
-        <div className="bg-card p-8 rounded-md">
-          <blockquote className="text-xl md:text-2xl italic font-light bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">
-            "Before the new Jigsaw planning interface, we were spending up to 10 hours daily just building tanker plans. Now we can create better schedules in a fraction of the time, allowing us to respond to changing mission requirements much more effectively."
-          </blockquote>
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-muted rounded-full"></div>
-            <div>
-              <p className="font-medium">Air Force Major</p>
-              <p className="text-muted-foreground text-sm">Lead Tanker Planner, 609th Air Operations Center</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </CaseStudySection>;
+    </CaseStudySection>
+  );
 };
+
 export default JigsawResultsSection;

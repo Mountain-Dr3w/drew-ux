@@ -1,54 +1,70 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
-import { AlertTriangle } from 'lucide-react';
 
 const JigsawChallengesSection: React.FC = () => {
   return (
-    <CaseStudySection title="Challenges">
-      <div className="mb-8 bg-card p-6 rounded-lg border border-border">
-        <h3 className="text-xl font-medium mb-4 flex items-center gap-2">
-          <AlertTriangle size={20} className="text-amber-500" />
-          <span>Planning Interface Pain Points</span>
-        </h3>
-        <ul className="space-y-6 text-muted-foreground">
-          <li className="flex gap-4">
-            <div className="flex-shrink-0 bg-amber-100 dark:bg-amber-950/50 text-amber-700 dark:text-amber-400 w-8 h-8 rounded-full flex items-center justify-center font-medium">
-              1
+    <CaseStudySection title="The Problem">
+      <div className="space-y-8">
+        <p className="text-lg text-muted-foreground">
+          First day at the 609th, I watched a Major spend 45 minutes trying to reschedule one tanker. The interface had the data he needed, but finding it was like searching for a needle in a haystack made of other needles.
+        </p>
+
+        <div className="bg-card p-6 rounded-lg border border-border">
+          <h3 className="text-xl font-medium mb-6">What planners told me</h3>
+          <div className="space-y-6">
+            <div className="border-l-2 border-amber-500 pl-4">
+              <p className="text-muted-foreground italic mb-2">"The system has all the information. I just can't see it when I need it. So I end up keeping a whiteboard next to my desk with the stuff I actually use."</p>
+              <p className="text-sm text-muted-foreground">Major, Lead Tanker Planner</p>
             </div>
-            <div>
-              <h4 className="font-medium text-foreground mb-1">Complex Timeline Visualization</h4>
-              <p className="text-muted-foreground">Tanker planners struggled to visualize hundreds of sorties, refueling operations, and aircraft maintenance windows simultaneously. The existing gantt interface was cluttered, making it difficult to spot conflicts and optimization opportunities.</p>
+
+            <div className="border-l-2 border-amber-500 pl-4">
+              <p className="text-muted-foreground italic mb-2">"When there's a conflict, the system doesn't tell me. I find out when someone calls me angry that their tanker isn't there."</p>
+              <p className="text-sm text-muted-foreground">Captain, Scheduler</p>
             </div>
-          </li>
-          <li className="flex gap-4">
-            <div className="flex-shrink-0 bg-amber-100 dark:bg-amber-950/50 text-amber-700 dark:text-amber-400 w-8 h-8 rounded-full flex items-center justify-center font-medium">
-              2
+
+            <div className="border-l-2 border-amber-500 pl-4">
+              <p className="text-muted-foreground italic mb-2">"New planners take weeks to get up to speed. The interface is so complicated that we pair them with experienced folks for the first month."</p>
+              <p className="text-sm text-muted-foreground">Squadron Commander</p>
             </div>
-            <div>
-              <h4 className="font-medium text-foreground mb-1">Dependency Management</h4>
-              <p className="text-muted-foreground">Aerial refueling operations involve complex dependencies between receiver aircraft, tankers, airspace, and crew availability. The original system lacked intuitive visual indicators for these relationships, forcing planners to maintain mental models of these connections.</p>
-            </div>
-          </li>
-          <li className="flex gap-4">
-            <div className="flex-shrink-0 bg-amber-100 dark:bg-amber-950/50 text-amber-700 dark:text-amber-400 w-8 h-8 rounded-full flex items-center justify-center font-medium">
-              3
-            </div>
-            <div>
-              <h4 className="font-medium text-foreground mb-1">Resource Conflicts</h4>
-              <p className="text-muted-foreground">When planning aerial refueling missions, identifying and resolving resource conflicts (like double-booked tankers or airspace) was a manual process prone to errors. The system didn't automatically highlight these conflicts, requiring time-consuming review processes.</p>
-            </div>
-          </li>
-          <li className="flex gap-4">
-            <div className="flex-shrink-0 bg-amber-100 dark:bg-amber-950/50 text-amber-700 dark:text-amber-400 w-8 h-8 rounded-full flex items-center justify-center font-medium">
-              4
-            </div>
-            <div>
-              <h4 className="font-medium text-foreground mb-1">Learning Curve</h4>
-              <p className="text-muted-foreground">The previous Jigsaw planning interface had a steep learning curve requiring weeks of training. This created operational challenges during personnel rotations and limited the ability to quickly onboard new planners during surge operations.</p>
-            </div>
-          </li>
-        </ul>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-muted/30 p-6 rounded-lg">
+            <h4 className="font-medium mb-3">The Gantt was overwhelming</h4>
+            <p className="text-muted-foreground text-sm">
+              Hundreds of sorties displayed at once. Color-coded, but the colors meant nothing to new users. Impossible to find what you were looking for without knowing exactly where to look.
+            </p>
+          </div>
+
+          <div className="bg-muted/30 p-6 rounded-lg">
+            <h4 className="font-medium mb-3">Conflicts were invisible</h4>
+            <p className="text-muted-foreground text-sm">
+              The system knew when resources were double-booked, but it didn't surface that information. Planners discovered conflicts by accident or when operations called to complain.
+            </p>
+          </div>
+
+          <div className="bg-muted/30 p-6 rounded-lg">
+            <h4 className="font-medium mb-3">Dependencies were mental math</h4>
+            <p className="text-muted-foreground text-sm">
+              If you moved one tanker, it affected six other things. The system didn't show those connections. Planners had to keep it all in their heads.
+            </p>
+          </div>
+
+          <div className="bg-muted/30 p-6 rounded-lg">
+            <h4 className="font-medium mb-3">Training took forever</h4>
+            <p className="text-muted-foreground text-sm">
+              The Air Force rotates personnel every 2-3 years. If it takes a month to train each new planner, that's a huge productivity loss across the force.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-black text-white dark:bg-white dark:text-black p-8 rounded-lg">
+          <p className="text-lg font-medium mb-2">The core question</p>
+          <p className="text-xl md:text-2xl font-light leading-relaxed">
+            How do you visualize complex interdependencies in a way that makes conflicts obvious and decisions easy?
+          </p>
+        </div>
       </div>
     </CaseStudySection>
   );

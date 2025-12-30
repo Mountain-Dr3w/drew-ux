@@ -1,80 +1,90 @@
 import React from 'react';
 import CaseStudySection from './CaseStudySection';
-import { Palette, LayoutGrid, BarChart2 } from 'lucide-react';
+
 const SolutionsSection: React.FC = () => {
-  return <CaseStudySection title="Solutions">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-        <div className="bg-card rounded-lg border border-border overflow-hidden">
-          <div className="p-6 border-b border-border">
-            <div className="bg-blue-100 dark:bg-blue-900/30 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-              <Palette className="text-blue-600 dark:text-blue-400" size={24} />
+  return (
+    <CaseStudySection title="The Solution">
+      <div className="space-y-10">
+        <p className="text-lg text-muted-foreground">
+          I rebuilt the core workflows from scratch, focusing on the three tasks users did most often: scheduling pickups, checking driver status, and pulling compliance reports.
+        </p>
+
+        <div>
+          <h3 className="text-xl font-medium mb-6">What I redesigned</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <div className="text-green-500 font-mono text-sm mb-2">Core Flow 1</div>
+              <h4 className="text-xl font-medium mb-3">Quick Scheduling</h4>
+              <p className="text-muted-foreground text-sm mb-4">
+                Scheduling a pickup went from 15 clicks to 3. Calendar view for date, dropdown for client, done. Repeat pickups could be set up once and forgotten.
+              </p>
+              <div className="text-xs text-muted-foreground">
+                Before: 15+ clicks, 5 minutes<br />
+                After: 3 clicks, 30 seconds
+              </div>
             </div>
-            <h3 className="text-xl font-medium mb-2">Design System Creation</h3>
-            <p className="text-muted-foreground">
-              I developed a comprehensive design system including component libraries, typography guidelines, and color systems.
-            </p>
+
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <div className="text-green-500 font-mono text-sm mb-2">Core Flow 2</div>
+              <h4 className="text-xl font-medium mb-3">Live Driver View</h4>
+              <p className="text-muted-foreground text-sm mb-4">
+                A map showing all drivers in real time with their current pickup. Click a driver to see their route. No more calling drivers to ask where they are.
+              </p>
+              <div className="text-xs text-muted-foreground">
+                Before: Phone calls to each driver<br />
+                After: One glance at the map
+              </div>
+            </div>
+
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <div className="text-green-500 font-mono text-sm mb-2">Core Flow 3</div>
+              <h4 className="text-xl font-medium mb-3">One-Click Reports</h4>
+              <p className="text-muted-foreground text-sm mb-4">
+                Compliance officers needed chain-of-custody reports for audits. I built pre-configured report templates they could run with one click.
+              </p>
+              <div className="text-xs text-muted-foreground">
+                Before: Call support, wait for CSV<br />
+                After: Click button, download PDF
+              </div>
+            </div>
           </div>
-          
         </div>
-        
-        <div className="bg-card rounded-lg border border-border overflow-hidden">
-          <div className="p-6 border-b border-border py-[24px]">
-            <div className="bg-purple-100 dark:bg-purple-900/30 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-              <LayoutGrid className="text-purple-600 dark:text-purple-400" size={24} />
+
+        <div>
+          <h3 className="text-xl font-medium mb-4">Design decisions that worked</h3>
+          <div className="space-y-6">
+            <div className="border-l-2 border-green-500 pl-6">
+              <h4 className="font-medium mb-2">Role-based dashboards</h4>
+              <p className="text-muted-foreground text-sm">
+                Instead of one interface for everyone, I created three: Dispatcher, Driver, and Compliance. Each showed only what that role needed. Less cognitive load, faster task completion.
+              </p>
             </div>
-            <h3 className="text-xl font-medium mb-2">Information Architecture</h3>
-            <p className="text-muted-foreground">
-              I restructured the platform's navigation and content hierarchy based on user needs and common tasks.
-            </p>
-          </div>
-          
-        </div>
-        
-        <div className="bg-card rounded-lg border border-border overflow-hidden">
-          <div className="p-6 border-b border-border">
-            <div className="bg-green-100 dark:bg-green-900/30 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-              <BarChart2 className="text-green-600 dark:text-green-400" size={24} />
+
+            <div className="border-l-2 border-green-500 pl-6">
+              <h4 className="font-medium mb-2">Offline-first mobile app</h4>
+              <p className="text-muted-foreground text-sm">
+                Drivers often work in areas with bad signal. I redesigned the driver app to work offline, syncing when connection returned. This alone fixed half the support tickets.
+              </p>
             </div>
-            <h3 className="text-xl font-medium mb-2">Data Visualization</h3>
-            <p className="text-muted-foreground">
-              I redesigned dashboards and reports to communicate insights more effectively and highlight key metrics.
-            </p>
+
+            <div className="border-l-2 border-green-500 pl-6">
+              <h4 className="font-medium mb-2">Photo-based data capture</h4>
+              <p className="text-muted-foreground text-sm">
+                Drivers take photos at pickup and drop-off. The app auto-logs timestamp, GPS, and container ID. No typing required. This made chain-of-custody data actually reliable.
+              </p>
+            </div>
+
+            <div className="border-l-2 border-green-500 pl-6">
+              <h4 className="font-medium mb-2">Simple component library</h4>
+              <p className="text-muted-foreground text-sm">
+                I built a component library in Figma with clear specs for the dev team. Made handoff painless and ensured the final product matched the designs.
+              </p>
+            </div>
           </div>
-          
         </div>
       </div>
-      
-      <div className="bg-card p-8 rounded-lg border border-border mb-8">
-        <h3 className="text-xl font-medium mb-4">Design Process</h3>
-        
-        <div className="relative">
-          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border"></div>
-          
-          <div className="relative pl-12 pb-10">
-            <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-blue-500 border-4 border-background"></div>
-            <h4 className="font-medium text-lg mb-2">Discovery & Research</h4>
-            <p className="text-muted-foreground mb-2">I began with extensive user research to understand pain points and opportunities.</p>
-          </div>
-          
-          <div className="relative pl-12 pb-10">
-            <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-purple-500 border-4 border-background"></div>
-            <h4 className="font-medium text-lg mb-2">Design & Prototyping</h4>
-            <p className="text-muted-foreground mb-2">I created wireframes, developed the design system, and built interactive prototypes.</p>
-          </div>
-          
-          <div className="relative pl-12 pb-10">
-            <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-amber-500 border-4 border-background"></div>
-            <h4 className="font-medium text-lg mb-2">Testing & Iteration</h4>
-            <p className="text-muted-foreground mb-2">I conducted usability testing with actual users and refined my designs based on feedback.</p>
-          </div>
-          
-          <div className="relative pl-12">
-            <div className="absolute left-2 top-0 w-6 h-6 rounded-full bg-green-500 border-4 border-background"></div>
-            <h4 className="font-medium text-lg mb-2">Implementation & Handoff</h4>
-            <p className="text-muted-foreground">I collaborated with developers to implement the design system and ensure design fidelity.</p>
-          </div>
-        </div>
-      </div>
-    </CaseStudySection>;
+    </CaseStudySection>
+  );
 };
+
 export default SolutionsSection;

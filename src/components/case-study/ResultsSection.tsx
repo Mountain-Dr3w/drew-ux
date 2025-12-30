@@ -1,114 +1,86 @@
 import React from 'react';
 import CaseStudySection from './CaseStudySection';
-import { TrendingUp, ThumbsUp, Clock, RecycleIcon, Truck, CircleCheck } from 'lucide-react';
-import { Separator } from '@/components/ui/separator';
+
 const ResultsSection: React.FC = () => {
-  return <CaseStudySection title="Results & Impact">
-      
-      <div className="bg-card rounded-lg border border-border overflow-hidden mb-10">
-        <div className="p-6 border-b border-border">
-          <h3 className="text-2xl font-medium mb-2">Sustainability Impact</h3>
+  return (
+    <CaseStudySection title="Results">
+      <div className="space-y-10">
+        <p className="text-lg text-muted-foreground">
+          The redesign rolled out over 3 months. We started with existing customers who were struggling, then onboarded new ones with the updated product. Numbers below are from 6 months post-launch.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="bg-card p-6 rounded-lg border border-border">
+            <p className="text-4xl font-bold mb-2">52%</p>
+            <p className="text-muted-foreground">Increase in daily active users</p>
+            <p className="text-sm text-muted-foreground mt-2">People who had stopped using the product came back. The dispatcher who'd gone back to paper logs started using the app again.</p>
+          </div>
+          <div className="bg-card p-6 rounded-lg border border-border">
+            <p className="text-4xl font-bold mb-2">78%</p>
+            <p className="text-muted-foreground">Drop in support tickets</p>
+            <p className="text-sm text-muted-foreground mt-2">The "how do I..." questions mostly disappeared. Users could figure things out themselves.</p>
+          </div>
+          <div className="bg-card p-6 rounded-lg border border-border">
+            <p className="text-4xl font-bold mb-2">124%</p>
+            <p className="text-muted-foreground">YoY client growth</p>
+            <p className="text-sm text-muted-foreground mt-2">More than doubled customer base. Sales team said the product demo was finally something they were proud to show.</p>
+          </div>
+        </div>
+
+        <div className="bg-muted/30 p-8 rounded-lg">
+          <h3 className="text-xl font-medium mb-6">What the team said</h3>
+          <div className="space-y-6">
+            <div className="border-l-2 border-green-500 pl-4">
+              <p className="text-muted-foreground italic mb-2">"Drew didn't just make things look better. He changed how we think about building product. We actually talk to users now."</p>
+              <p className="text-sm text-muted-foreground">CTO, Veriflux</p>
+            </div>
+
+            <div className="border-l-2 border-green-500 pl-4">
+              <p className="text-muted-foreground italic mb-2">"I was skeptical when we brought on a designer. I thought it was a waste of money. I was wrong. The component library alone saved us months of dev time."</p>
+              <p className="text-sm text-muted-foreground">Lead Engineer, Veriflux</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-medium mb-6">What I'd do differently</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h4 className="font-medium mb-3">More driver research early on</h4>
+              <p className="text-muted-foreground text-sm">
+                I talked mostly to dispatchers and managers. Should have spent more time with the drivers themselves. Learned some things late that would have been useful earlier.
+              </p>
+            </div>
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h4 className="font-medium mb-3">Design for localization</h4>
+              <p className="text-muted-foreground text-sm">
+                Many drivers spoke Spanish as their first language. I didn't account for translation in my designs. Had to retrofit later, which was messy.
+              </p>
+            </div>
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h4 className="font-medium mb-3">Better metrics dashboard</h4>
+              <p className="text-muted-foreground text-sm">
+                I focused on operational tools but under-invested in analytics. Clients wanted to see their environmental impact over time. That became a fast-follow feature.
+              </p>
+            </div>
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h4 className="font-medium mb-3">Push for dedicated QA</h4>
+              <p className="text-muted-foreground text-sm">
+                Small team meant designs shipped with bugs. I should have advocated harder for testing resources. Some issues could have been caught before users saw them.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-card p-8 rounded-lg border border-border">
+          <h3 className="text-xl font-medium mb-4">The outcome</h3>
           <p className="text-muted-foreground">
-            The redesigned platform has directly contributed to measurable environmental benefits.
+            Veriflux closed their Series A about 4 months after the redesign launched. The founder told me the improved product experience was a big factor in closing the round. That felt like the right measure of impact.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-border">
-          <div className="p-6">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                <RecycleIcon className="h-5 w-5 text-green-600 dark:text-green-400" />
-              </div>
-              <div className="text-3xl font-bold text-green-500">1.2M</div>
-            </div>
-            <p className="text-sm text-muted-foreground">Pounds of waste diverted from landfills</p>
-          </div>
-          
-          <div className="p-6">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                <Truck className="h-5 w-5 text-green-600 dark:text-green-400" />
-              </div>
-              <div className="text-3xl font-bold text-green-500">342K</div>
-            </div>
-            <p className="text-sm text-muted-foreground">Miles saved through route optimization</p>
-          </div>
-          
-          <div className="p-6">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                <CircleCheck className="h-5 w-5 text-green-600 dark:text-green-400" />
-              </div>
-              <div className="text-3xl font-bold text-green-500">98.7%</div>
-            </div>
-            <p className="text-sm text-muted-foreground">Collection accuracy rate</p>
-          </div>
-          
-          <div className="p-6">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                <TrendingUp className="h-5 w-5 text-green-600 dark:text-green-400" />
-              </div>
-              <div className="text-3xl font-bold text-green-500">24%</div>
-            </div>
-            <p className="text-sm text-muted-foreground">Increase in recycling rates</p>
-          </div>
-        </div>
       </div>
-      
-      <div className="bg-muted/30 p-8 rounded-lg border border-border mb-10">
-        <h3 className="text-2xl font-medium mb-6 text-left">Business Outcomes</h3>
-        <div className="space-y-6">
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            The redesigned platform transformed how Veriflux's clients interact with waste management data, resulting in significant improvements in user engagement and satisfaction. The new design system also enabled the Veriflux team to develop new features more efficiently while maintaining consistency.
-          </p>
-          
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            Most importantly, the improved user experience led to higher adoption rates among client organizations, ultimately helping more businesses effectively track and reduce their food waste - furthering Veriflux's mission of environmental sustainability and creating a measurable impact across the food service industry.
-          </p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="bg-card p-4 rounded-lg border border-border">
-              <div className="text-3xl font-bold text-green-500 mb-2">87%</div>
-              <p className="text-sm text-muted-foreground">Of users reported the new platform directly helped them recycle food waste</p>
-            </div>
-            <div className="bg-card p-4 rounded-lg border border-border">
-              <div className="text-3xl font-bold text-green-500 mb-2">52%</div>
-              <p className="text-sm text-muted-foreground">Increase in regular platform usage among existing clients</p>
-            </div>
-            <div className="bg-card p-4 rounded-lg border border-border">
-              <div className="text-3xl font-bold text-green-500 mb-2">124%</div>
-              <p className="text-sm text-muted-foreground">Growth in new client acquisition year-over-year</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div className="p-1 bg-gradient-to-r from-green-200 via-green-400 to-green-600 rounded-lg">
-        <div className="bg-card p-8 rounded-md">
-          <blockquote className="text-xl md:text-2xl italic font-light bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">"Drew didn't just redesign our UI—he fundamentally transformed how we approach our product. His collaborative, user-centric approach turned Veriflux from a niche solution into a game-changing platform, driving a remarkable 52% increase in user adoption and setting a new standard for environmental impact tracking."</blockquote>
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-muted rounded-full"></div>
-            <div>
-              <p className="font-medium">Lead Engineer</p>
-              <p className="text-muted-foreground text-sm">Veriflux</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <Separator className="my-16" />
-      
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-        <div className="max-w-md">
-          <h3 className="text-2xl font-medium mb-4">Ready to see more?</h3>
-          <p className="text-muted-foreground mb-6">Explore another case study to see how I approach different design challenges across industries.</p>
-        </div>
-        
-        <div className="flex-shrink-0">
-          <img src="/lovable-uploads/Asset%203.svg" alt="Veriflux logo" className="h-16 w-auto opacity-50" />
-        </div>
-      </div>
-    </CaseStudySection>;
+    </CaseStudySection>
+  );
 };
+
 export default ResultsSection;

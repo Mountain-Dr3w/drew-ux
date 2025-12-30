@@ -1,163 +1,89 @@
-
 import React from 'react';
 import CaseStudySection from '@/components/case-study/CaseStudySection';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Check } from 'lucide-react';
 
 const DebriefSolutionSection: React.FC = () => {
   return (
-    <CaseStudySection title="Solution">
+    <CaseStudySection title="The Solution">
       <div className="space-y-10">
         <p className="text-lg text-muted-foreground">
-          Our solution was to create the Debrief platform — a comprehensive post-flight analysis system built specifically for aviation professionals. The platform addresses the core challenges through several key features:
+          I redesigned Debrief from the ground up around one core principle: capture information in the moment it happens, in the format pilots naturally think about it.
         </p>
 
-        <Tabs defaultValue="interface" className="w-full">
-          <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="interface">Streamlined Interface</TabsTrigger>
-            <TabsTrigger value="standardization">Data Standardization</TabsTrigger>
-            <TabsTrigger value="analytics">Analytics & Insights</TabsTrigger>
-          </TabsList>
-          <TabsContent value="interface" className="mt-6">
+        <div>
+          <h3 className="text-xl font-medium mb-6">The new flow</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-card p-6 rounded-lg border border-border">
-              <h3 className="text-xl font-medium mb-4">Pilot-Centric User Experience</h3>
-              <p className="text-muted-foreground mb-6">
-                We designed the interface around the natural workflow of pilots, minimizing cognitive load during the critical post-flight period while ensuring comprehensive data capture.
+              <div className="text-blue-500 font-mono text-sm mb-2">Step 1</div>
+              <h4 className="text-xl font-medium mb-3">Quick Capture</h4>
+              <p className="text-muted-foreground text-sm mb-4">
+                Right after landing, pilots open the iPad app and answer 5 questions. Takes about 4 minutes. Flight number, mission type, anything unusual? Yes or no buttons, minimal typing.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-medium text-lg mb-3">Key Features</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Interactive flight timeline with visual anomaly markers</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Quick-select templates for common events and discrepancies</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Contextual guidance for regulatory compliance</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-medium text-lg mb-3">Benefits</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Reduced debriefing time by 62%</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">91% lower error rate in documentation</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Increased satisfaction scores among pilots</span>
-                    </li>
-                  </ul>
-                </div>
+              <div className="text-xs text-muted-foreground">
+                This is the only required step.
               </div>
             </div>
-          </TabsContent>
-          
-          <TabsContent value="standardization" className="mt-6">
-            <div className="bg-card p-6 rounded-lg border border-border">
-              <h3 className="text-xl font-medium mb-4">Structured Data Collection</h3>
-              <p className="text-muted-foreground mb-6">
-                We implemented a standardized taxonomy for flight events, anomalies, and observations that ensures consistency while maintaining flexibility for unique situations.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-medium text-lg mb-3">Key Features</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Industry-standard event classification system</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Intelligent form fields with contextual suggestions</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Cross-reference with historical flight data</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-medium text-lg mb-3">Benefits</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">85% improvement in data consistency</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Enabled cross-fleet pattern identification</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Reduced training time for new pilots</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="analytics" className="mt-6">
-            <div className="bg-card p-6 rounded-lg border border-border">
-              <h3 className="text-xl font-medium mb-4">Actionable Intelligence</h3>
-              <p className="text-muted-foreground mb-6">
-                We developed powerful analytics tools that transform individual flight reports into strategic insights, helping airlines improve safety protocols and operational efficiency.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-medium text-lg mb-3">Key Features</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Pattern detection across routes, aircraft, and crews</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Customizable dashboards for different stakeholders</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Predictive safety alerts based on trend analysis</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-medium text-lg mb-3">Benefits</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">43% increase in identified safety improvements</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">More targeted training programs based on data</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">Reduced operational costs through optimization</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </TabsContent>
-        </Tabs>
 
-        <div className="bg-muted/30 p-6 rounded-lg border border-border">
-          <h3 className="text-xl font-medium mb-4">Strategic Impact</h3>
-          <p className="text-muted-foreground">
-            By reimagining the post-flight debriefing process as a strategic data collection opportunity rather than an administrative burden, Debrief has transformed how airlines approach safety management and operational excellence. The platform bridges the gap between individual flight experiences and organizational learning, creating a continuous improvement cycle that benefits all stakeholders.
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <div className="text-amber-500 font-mono text-sm mb-2">Step 2 (if needed)</div>
+              <h4 className="text-xl font-medium mb-3">Detail Flow</h4>
+              <p className="text-muted-foreground text-sm mb-4">
+                If something unusual happened, they get a targeted follow-up. For a near-miss, it asks about traffic type, altitude, evasive action. For a maintenance issue, it asks about symptoms and writeup details.
+              </p>
+              <div className="text-xs text-muted-foreground">
+                Only shown when relevant.
+              </div>
+            </div>
+
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <div className="text-green-500 font-mono text-sm mb-2">For Safety Officers</div>
+              <h4 className="text-xl font-medium mb-3">Trend Dashboard</h4>
+              <p className="text-muted-foreground text-sm mb-4">
+                Safety officers get a web dashboard that aggregates debrief data across the squadron. They can see patterns, flag recurring issues, and push findings back to pilots through the app.
+              </p>
+              <div className="text-xs text-muted-foreground">
+                Closes the feedback loop.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-medium mb-4">Design decisions that made the difference</h3>
+          <div className="space-y-6">
+            <div className="border-l-2 border-blue-500 pl-6">
+              <h4 className="font-medium mb-2">Big touch targets for gloved hands</h4>
+              <p className="text-muted-foreground text-sm">
+                Pilots often debrief while still wearing flight gloves. I made all buttons 48px minimum and spaced them out. Early testing with a prototype proved this was necessary after watching a pilot struggle with standard iOS buttons.
+              </p>
+            </div>
+
+            <div className="border-l-2 border-blue-500 pl-6">
+              <h4 className="font-medium mb-2">Voice input for notes</h4>
+              <p className="text-muted-foreground text-sm">
+                Typing on a tablet is slow. I added a voice-to-text option for the free-form notes field. Pilots could just talk through what happened while walking back to the squadron. This single feature got the most positive feedback in testing.
+              </p>
+            </div>
+
+            <div className="border-l-2 border-blue-500 pl-6">
+              <h4 className="font-medium mb-2">Flight data pre-fill</h4>
+              <p className="text-muted-foreground text-sm">
+                The app pulled flight data from the scheduling system automatically. Pilots didn't have to enter their tail number, takeoff time, or mission type. It was already there. This cut about 2 minutes off every debrief.
+              </p>
+            </div>
+
+            <div className="border-l-2 border-blue-500 pl-6">
+              <h4 className="font-medium mb-2">Weekly safety digest</h4>
+              <p className="text-muted-foreground text-sm">
+                I designed a weekly email digest that went to all squadron pilots summarizing what the safety officer learned from that week's debriefs. Pilots finally saw that their input led to actual changes. This was the key to sustained adoption.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-muted/30 p-6 rounded-lg">
+          <h4 className="font-medium mb-4">Note on screenshots</h4>
+          <p className="text-muted-foreground text-sm">
+            The actual interface contains mission-specific information I can't share publicly. I can walk through the design in detail during an interview and show additional work samples under NDA.
           </p>
         </div>
       </div>

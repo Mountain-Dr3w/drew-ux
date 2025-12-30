@@ -1,155 +1,176 @@
-
-import React from 'react';
-import TransitionEffect from './TransitionEffect';
-import { Check, Star } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { useIsMobile } from "@/hooks/use-mobile";
+import React, { useEffect, useRef } from 'react';
 
 const About: React.FC = () => {
-  const isMobile = useIsMobile();
-  
-  const qualities = [
-    {
-      title: "End-to-End Product Design",
-      description: "I take ideas all the way from exploratory research to polished, high-fidelity designs—creating experiences that are not just beautiful, but intuitive, functional, and built to scale."
-    },
-    {
-      title: "Product Strategy",
-      description: "I connect user needs with business goals to shape products that are both valuable and viable. By blending research, data, and design thinking, I help define clear roadmaps, prioritize features, and create experiences that drive real impact."
-    },
-    {
-      title: "Technical Collaboration",
-      description: "With deep knowledge of component architecture and design systems, I partner closely with engineering to create solutions that balance innovation with implementation realities and constraints."
-    },
-    {
-      title: "User-Centered Approach",
-      description: "I dig deep to understand what users truly need by listening, researching, and testing. Every design decision I make is guided by real insights and a genuine focus on creating better experiences."
-    }
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const reveals = containerRef.current?.querySelectorAll('.reveal');
+    reveals?.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const skills = [
+    'Product Strategy',
+    'User Research',
+    'Interaction Design',
+    'Design Systems',
+    'Prototyping',
+    'Usability Testing',
   ];
 
-  const personalQualities = [
+  const experiences = [
     {
-      title: "Family Guy",
-      description: "As a young dad, I spend most of my time with my wife and infant daughter. This is where I recharge, and where I draw my passion and energy."
+      role: 'Senior Product Designer',
+      company: 'Defense Tech',
+      period: 'Current',
     },
     {
-      title: "Hoops Nerd",
-      description: "Ever since I watched Bugs Bunny and MJ face off against the Monstars in Space Jam, I've loved basketball. Whether I'm pouring over the latest advanced metrics, catching a Celtics game after work, or coaching youth leagues, you'll always find me somewhere near the game."
+      role: 'Product Designer',
+      company: 'Enterprise SaaS',
+      period: '2021-2023',
     },
     {
-      title: "Musician",
-      description: "Piano, drums, guitar, or saxophone - chances are, if you visit my house you'll hear me riffing away on one of these at some point. I started playing when I was a kid, and still use Music as a creative outlet today."
+      role: 'UX Designer',
+      company: 'Agency',
+      period: '2019-2021',
     },
-    {
-      title: "Passionate Designer",
-      description: "My love for design doesn't end after 5:00 - I live for the craft. You can regularly catch me getting up to speed on industry trends, working on side projects, and improving my craft in whatever way I can."
-    }
   ];
 
   return (
-    <section id="about" className="min-h-screen py-24 md:py-32 relative flex items-center">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 -left-10 -right-10 h-32 rounded-[50%] bg-gradient-to-r from-black/2 via-black/1 to-muted blur-3xl -z-10 transform translate-y-[-45%] dark:from-white/2 dark:via-white/1 dark:to-muted" />
-        
-        <div className="absolute top-20 right-[5%] w-24 h-24 border-2 border-dashed border-gray-300/40 dark:border-gray-700/40 rounded-md rotate-12 opacity-60"></div>
-        <div className="absolute bottom-[30%] right-[15%] w-32 h-8 bg-gray-100/20 dark:bg-gray-800/20 rounded-sm transform -rotate-6"></div>
-        <div className="absolute top-[25%] left-[20%] w-12 h-12 border-2 border-gray-300/30 dark:border-gray-700/30 transform rotate-45"></div>
+    <section
+      id="about"
+      ref={containerRef}
+      className="section-padding px-6 md:px-12 lg:px-24 relative"
+    >
+      {/* Section Label */}
+      <div className="reveal mb-16 md:mb-24">
+        <span className="text-sm text-muted-foreground tracking-widest uppercase">
+          About
+        </span>
       </div>
-      
-      <div className="max-w-7xl mx-auto px-4 md:px-8 w-full relative">
-        <TransitionEffect delay={0.1}>
-          <div className="text-center mb-12">
-            <span className="inline-block px-3 py-1 text-sm font-medium bg-black/10 text-black rounded-full mb-3 dark:bg-white/10 dark:text-white">
-              Who I Am
-            </span>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 text-black dark:text-white">
-              Your key to driving user and business outcomes
-            </h2>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+        {/* Left Column - Bio */}
+        <div>
+          <h2 className="reveal heading-lg mb-8">
+            I believe great design is{' '}
+            <span className="font-serif">invisible</span>—it just{' '}
+            <span className="text-accent">works</span>.
+          </h2>
+
+          <div className="reveal reveal-delay-1 space-y-6 text-muted-foreground text-lg leading-relaxed">
+            <p>
+              With over 5 years in product design, I specialize in transforming
+              complex problems into intuitive solutions. My work spans defense
+              technology, enterprise SaaS, and consumer products.
+            </p>
+            <p>
+              I'm passionate about human factors and accessibility—designing
+              software that works for everyone, not just the ideal user. Every
+              interaction should feel effortless.
+            </p>
+            <p>
+              When I'm not designing, you'll find me with my family, on the
+              basketball court, or playing piano. These passions fuel my
+              creativity and remind me why human-centered design matters.
+            </p>
           </div>
-        </TransitionEffect>
-        
-        <TransitionEffect delay={0.2}>
-          <div className="max-w-5xl mx-auto mb-12">
-            <Tabs defaultValue="at-work" className="w-full">
-              <div className="flex justify-center mb-8">
-                <TabsList className="bg-gray-100/70 dark:bg-gray-800/50">
-                  <TabsTrigger value="at-work" className="text-sm px-6">At Work</TabsTrigger>
-                  <TabsTrigger value="outside-work" className="text-sm px-6">Outside of Work</TabsTrigger>
-                </TabsList>
+
+          {/* Testimonial */}
+          <div className="reveal reveal-delay-2 mt-12 p-8 border border-border rounded-2xl bg-card">
+            <blockquote className="text-lg mb-4 leading-relaxed">
+              "Drew's ability to understand users and deliver valuable outcomes
+              has been instrumental. We wouldn't have operational adoption without him."
+            </blockquote>
+            <cite className="text-sm text-muted-foreground not-italic">
+              — Portfolio Product Lead
+            </cite>
+          </div>
+        </div>
+
+        {/* Right Column - Skills & Experience */}
+        <div className="space-y-16">
+          {/* Skills */}
+          <div>
+            <h3 className="reveal text-sm text-muted-foreground tracking-widest uppercase mb-6">
+              Expertise
+            </h3>
+            <div className="reveal reveal-delay-1 flex flex-wrap gap-3">
+              {skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-4 py-2 text-sm border border-border rounded-full hover:border-foreground/30 hover:bg-foreground/5 transition-all"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Experience */}
+          <div>
+            <h3 className="reveal text-sm text-muted-foreground tracking-widest uppercase mb-6">
+              Experience
+            </h3>
+            <div className="reveal reveal-delay-2 space-y-6">
+              {experiences.map((exp, index) => (
+                <div
+                  key={index}
+                  className="flex justify-between items-start pb-6 border-b border-border last:border-0"
+                >
+                  <div>
+                    <p className="font-medium">{exp.role}</p>
+                    <p className="text-muted-foreground">{exp.company}</p>
+                  </div>
+                  <span className="text-sm text-muted-foreground">
+                    {exp.period}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Fun Facts */}
+          <div>
+            <h3 className="reveal text-sm text-muted-foreground tracking-widest uppercase mb-6">
+              Outside Work
+            </h3>
+            <div className="reveal reveal-delay-3 grid grid-cols-2 gap-4">
+              <div className="p-4 border border-border rounded-xl">
+                <span className="text-2xl mb-2 block">👨‍👩‍👧</span>
+                <p className="text-sm font-medium">Family First</p>
+                <p className="text-xs text-muted-foreground">Young dad life</p>
               </div>
-              
-              <TabsContent value="at-work" className="mt-0 space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {qualities.map((quality, index) => (
-                    <div key={index} className="bg-white/50 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200/80 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-all duration-300">
-                      <h3 className="text-lg font-medium mb-3 text-black dark:text-white">
-                        {quality.title}
-                      </h3>
-                      <p className="text-gray-700 dark:text-gray-300 text-pretty">
-                        {quality.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </TabsContent>
-              
-              <TabsContent value="outside-work" className="mt-0">
-                <div className="flex flex-col md:flex-row gap-8">
-                  {!isMobile && (
-                    <div className="md:w-2/5">
-                      <div className="rounded-xl border border-gray-200/80 dark:border-white/10 shadow-md overflow-hidden h-full">
-                        <img 
-                          src="/lovable-uploads/f073a10d-33bb-42dc-88f5-205f14398adf.png" 
-                          alt="Drew conversing with colleagues" 
-                          className="object-cover w-full h-full"
-                        />
-                      </div>
-                    </div>
-                  )}
-                  
-                  <div className={isMobile ? "w-full" : "md:w-3/5"}>
-                    <div className="grid grid-cols-1 gap-6">
-                      {personalQualities.map((quality, index) => (
-                        <div key={index} className="bg-white/50 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200/80 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-all duration-300">
-                          <h3 className="text-lg font-medium mb-3 text-black dark:text-white">
-                            {quality.title}
-                          </h3>
-                          <p className="text-gray-700 dark:text-gray-300 text-pretty">
-                            {quality.description}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </TabsContent>
-            </Tabs>
-          </div>
-        </TransitionEffect>
-        
-        <TransitionEffect delay={0.4}>
-          <div className="mt-16 relative max-w-2xl mx-auto p-1">
-            <div className="rounded-2xl overflow-hidden bg-gradient-to-tr from-purple-600 to-blue-500 shadow-sm p-8">
-              <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={20} className="text-white fill-white" />
-                    ))}
-                  </div>
-                </div>
-                <blockquote className="text-lg font-medium italic mb-4 text-balance text-white">
-                  "Drew's ability to build relationships with [our users], and to understand and act on their feedback to deliver valuable outcomes has been instrumental for us. I truly believe we would not have operational adoption without him."
-                </blockquote>
-                <cite className="text-sm text-white/80 not-italic">— Portfolio Product Lead</cite>
+              <div className="p-4 border border-border rounded-xl">
+                <span className="text-2xl mb-2 block">🏀</span>
+                <p className="text-sm font-medium">Hoops Nerd</p>
+                <p className="text-xs text-muted-foreground">Celtics fan</p>
+              </div>
+              <div className="p-4 border border-border rounded-xl">
+                <span className="text-2xl mb-2 block">🎹</span>
+                <p className="text-sm font-medium">Musician</p>
+                <p className="text-xs text-muted-foreground">Piano & drums</p>
+              </div>
+              <div className="p-4 border border-border rounded-xl">
+                <span className="text-2xl mb-2 block">📚</span>
+                <p className="text-sm font-medium">Always Learning</p>
+                <p className="text-xs text-muted-foreground">Design craft</p>
               </div>
             </div>
-            
-            <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-black/10 -z-10 dark:bg-white/5" />
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-black/10 -z-10 dark:bg-white/5" />
           </div>
-        </TransitionEffect>
+        </div>
       </div>
     </section>
   );
