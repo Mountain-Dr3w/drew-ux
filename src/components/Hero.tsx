@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowDown } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -27,21 +27,14 @@ const Hero: React.FC = () => {
       ref={containerRef}
       className="min-h-screen flex flex-col justify-center relative px-6 md:px-12 lg:px-24 pt-20"
     >
-      {/* Decorative elements */}
-      <div className="absolute top-24 right-8 md:top-28 md:right-12 text-sm text-muted-foreground tracking-wide">
-        <span className="font-serif">Based in</span> Nashville, TN
-      </div>
-
-      <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 text-sm text-muted-foreground">
-        <span className="font-serif">Scroll</span>
-        <ArrowDown className="inline-block ml-2 w-4 h-4 animate-bounce" />
-      </div>
-
       {/* Main content */}
       <div className="max-w-7xl">
-        <div className="reveal mb-6">
+        <div className="reveal mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <span className="text-sm md:text-base text-muted-foreground tracking-widest uppercase">
-            Product Designer
+            Product / Service Designer
+          </span>
+          <span className="text-sm text-muted-foreground tracking-wide">
+            <span className="font-serif">Based in</span> Nashville, TN
           </span>
         </div>
 
@@ -68,8 +61,8 @@ const Hero: React.FC = () => {
             href="#work"
             className="group inline-flex items-center gap-3 px-6 py-4 bg-foreground text-background rounded-full text-sm font-medium transition-all hover:gap-5"
           >
-            View selected work
-            <ArrowDown className="w-4 h-4 -rotate-90 transition-transform group-hover:translate-x-1" />
+            View my work
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </a>
           <a
             href="#contact"

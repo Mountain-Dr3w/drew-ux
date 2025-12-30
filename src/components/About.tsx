@@ -30,24 +30,6 @@ const About: React.FC = () => {
     'Usability Testing',
   ];
 
-  const experiences = [
-    {
-      role: 'Senior Product Designer',
-      company: 'Defense Tech',
-      period: 'Current',
-    },
-    {
-      role: 'Product Designer',
-      company: 'Enterprise SaaS',
-      period: '2021-2023',
-    },
-    {
-      role: 'UX Designer',
-      company: 'Agency',
-      period: '2019-2021',
-    },
-  ];
-
   return (
     <section
       id="about"
@@ -66,18 +48,18 @@ const About: React.FC = () => {
         <div>
           <h2 className="reveal heading-lg mb-8">
             I believe great design is{' '}
-            <span className="font-serif">invisible</span>—it just{' '}
+            <span className="font-serif">invisible.</span> It just{' '}
             <span className="text-accent">works</span>.
           </h2>
 
           <div className="reveal reveal-delay-1 space-y-6 text-muted-foreground text-lg leading-relaxed">
             <p>
-              With over 5 years in product design, I specialize in transforming
+              With over 8 years in product design, I specialize in transforming
               complex problems into intuitive solutions. My work spans defense
               technology, enterprise SaaS, and consumer products.
             </p>
             <p>
-              I'm passionate about human factors and accessibility—designing
+              I'm passionate about human factors and accessibility; designing
               software that works for everyone, not just the ideal user. Every
               interaction should feel effortless.
             </p>
@@ -95,7 +77,7 @@ const About: React.FC = () => {
               has been instrumental. We wouldn't have operational adoption without him."
             </blockquote>
             <cite className="text-sm text-muted-foreground not-italic">
-              — Portfolio Product Lead
+              Portfolio Product Lead
             </cite>
           </div>
         </div>
