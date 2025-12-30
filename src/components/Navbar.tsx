@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-4 group">
-            <img src="/lovable-uploads/Asset 3.svg" alt="Drew McFarland" className="h-8 w-auto transition-transform group-hover:scale-110" />
+            <img src="/lovable-uploads/logo.svg" alt="Drew McFarland" className="h-8 w-auto transition-transform group-hover:scale-110" />
             <span className="hidden md:block text-sm font-medium">
               Drew McFarland
             </span>
