@@ -22,12 +22,19 @@ const About: React.FC = () => {
   }, []);
 
   const skills = [
-    'Product Strategy',
+    'Service Blueprinting',
+    'Journey Mapping',
     'User Research',
-    'Interaction Design',
-    'Design Systems',
-    'Prototyping',
-    'Usability Testing',
+    'Stakeholder Alignment',
+    'Accessibility (Section 508)',
+    'Prototyping & Testing',
+  ];
+
+  const experiences = [
+    { role: 'Senior Service Designer', company: 'Rise8, Inc.', period: '2025-Present' },
+    { role: 'Design Operations Lead', company: 'USAF Kessel Run', period: '2022-2025' },
+    { role: 'Product Designer', company: 'USAF Kessel Run', period: '2017-2022' },
+    { role: 'Service Design Consultant', company: 'DrewUX', period: '2016-Present' },
   ];
 
   return (

@@ -92,6 +92,41 @@ npm run dev
 ```
 Opens at http://localhost:8080
 
+### 5. Session 2 Updates (December 30, 2024)
+
+**New FORGE Case Study:**
+- Created complete case study for Space Force DevSecOps platform
+- Added 6 section components in `src/components/forge/`
+- Copied images from `forge-case-study/` folder to `public/lovable-uploads/`
+- Route: `/case-study/forge`
+
+**Homepage Changes:**
+- Changed location from Boston, MA to Nashville, TN
+- Changed hero text from "products" to "experiences"
+- Changed subheader to "Product / Service Designer"
+- Aligned "Based in Nashville, TN" with subheader row
+- Increased hero top padding for breathing room
+- Replaced project cards with FORGE featured card
+- Removed scroll indicator
+
+**Portfolio Page Updates:**
+- Grouped projects into "Service Design" and "Product Design" sections
+- Service Design first (FORGE)
+- Product Design second (Jigsaw, Debrief, Veriflux)
+- Hidden Forward Edge case study
+- Updated descriptions to lead with metrics
+
+**Custom Cursor:**
+- Added `<CustomCursor />` to all 4 case study pages
+
+**About Section:**
+- Updated experience from resume: Rise8 (2025), Kessel Run Design Ops (2022-2025), Kessel Run Product Designer (2017-2022), DrewUX Consultant (2016-Present)
+- Updated skills: Service Blueprinting, Journey Mapping, User Research, Stakeholder Alignment, Accessibility, Prototyping
+
+**Cleanup:**
+- Removed em dashes from About.tsx and Contact.tsx
+- Fixed missing `experiences` array that was causing blank page
+
 ## Next Steps to Consider
 1. Add actual project images/screenshots where possible
 2. Review the specific numbers in case studies for accuracy

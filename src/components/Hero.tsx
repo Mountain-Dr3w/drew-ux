@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
   return (
     <section
       ref={containerRef}
-      className="min-h-screen flex flex-col justify-center relative px-6 md:px-12 lg:px-24 pt-20"
+      className="min-h-screen flex flex-col justify-center relative px-6 md:px-12 lg:px-24 pt-32"
     >
       {/* Main content */}
       <div className="max-w-7xl">
