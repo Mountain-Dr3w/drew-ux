@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
           {/* Image */}
           <div className="relative aspect-[4/3] lg:aspect-auto overflow-hidden">
             <img
-              src="/lovable-uploads/portal-onboarding.png"
+              src="/lovable-uploads/portal-services.png"
               alt="FORGE Platform"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -77,7 +77,7 @@ const Projects: React.FC = () => {
 
               {/* Description */}
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Transformed developer onboarding from months to days through service blueprinting and friction logging. Created a self-service portal that reduced support burden and made blockers visible.
+                Transformed developer onboarding from months to days by using service blueprinting and friction logging to visualize, communicate, and prioritize tenant pain points. Reduced internal support burden and made blockers visible.
               </p>
             </div>
 
