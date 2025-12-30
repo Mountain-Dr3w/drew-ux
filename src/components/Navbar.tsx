@@ -34,6 +34,7 @@ const Navbar: React.FC = () => {
       hour: '2-digit',
       minute: '2-digit',
       hour12: false,
+      timeZoneName: 'short',
     });
   };
 
@@ -71,7 +72,7 @@ const Navbar: React.FC = () => {
             ))}
             <div className="w-px h-4 bg-border" />
             <span className="text-sm text-muted-foreground font-mono">
-              {formatTime(time)} EST
+              {formatTime(time)}
             </span>
             <ThemeToggle />
           </nav>
@@ -125,7 +126,7 @@ const Navbar: React.FC = () => {
             style={{ transitionDelay: '400ms' }}
           >
             <span>drew@drewux.design</span>
-            <span className="font-mono">{formatTime(time)} EST</span>
+            <span className="font-mono">{formatTime(time)}</span>
           </div>
         </div>
       </div>
