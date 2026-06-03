@@ -1,7 +1,0 @@
-# In-container Caddy: serve the SPA on :8080 with client-side routing fallback.
-:8080 {
-	root * /srv
-	encode gzip
-	try_files {path} /index.html
-	file_server
-}
