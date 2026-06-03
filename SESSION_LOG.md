@@ -133,3 +133,20 @@ Opens at http://localhost:8080
 3. Consider adding a "process" or "approach" page
 4. Mobile testing and refinement
 5. SEO meta tags and social sharing images
+
+### 6. Session 3 — FORGE impact + problem framing (June 3, 2026)
+
+**Goal:** Make the FORGE case study match the house standard the other four already hit — concrete user outcomes and before→after numbers — and sharpen the core problem statement.
+
+**Plan:**
+1. **Synthesis (`ForgeSynthesisSection.tsx`)** — name the unifying problem above Visibility/Discoverability/Ownership: *there was no centralized way to onboard your app and then manage it.* Those three become facets of that one gap.
+2. **Impact (`ForgeResultsSection.tsx`)** — rewrite from capability statements ("Reduced Ambiguity") to explicit *user outcomes enabled* ("a tenant can self-serve onboarding status without pinging a human"), each paired with a real before→after number. Mirrors the before-state stats in Background (6–7% self-service, months vs. 1-week target). Portal is shipped & in use → present tense / real-adoption claims are fair.
+3. Verify with `npm run build` (and visual check at /case-study/forge).
+
+**Done (verified via `npm run build`):**
+- **Synthesis** — added the core-problem statement ("no single place to onboard your app and then manage it") as a callout above the three facets (Visibility / Discoverability / Ownership).
+- **Impact** — replaced the four qualitative cards with: a headline mission outcome (new capability reaches users in **under 30 days, on avg**), a 4-up before→after number band, and four user-outcome cards ("Know exactly where you stand", etc.).
+
+**Real metrics used (provided by Drew):** self-service onboarding 6-7% → **90%**; time to first deploy months → **4.5 days** (beat 1-week target); onboarding support tickets **~80%** reduction; **8** apps onboarded; headline: capability reaches users in **<30 days avg**. Portal is shipped & in use → present-tense claims retained.
+
+**Optional follow-ups not done:** surface the 90% / <30-day headline in the hero or Background for scanability; add a real tenant/platform-lead quote (other four case studies have one, FORGE still doesn't).

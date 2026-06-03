@@ -6,11 +6,20 @@ const ForgeSynthesisSection: React.FC = () => {
     <CaseStudySection title="Synthesis: Defining the Core Problem">
       <div className="space-y-8">
         <p className="text-lg text-muted-foreground">
-          The friction log and service blueprint told a clear story. The platform's primary failure point wasn't any single tool or team. It was the onboarding experience itself. Tenants didn't understand what the platform offered, what was required of them, or how to navigate from start to finish.
+          The friction log and service blueprint told a clear story. The platform's primary failure point wasn't any single tool or team. It was that FORGE had no centralized way for a tenant to onboard their application and then manage it. Everything a team needed was real and available, but it lived in scattered tools, undocumented handoffs, and the heads of individual experts. There was no front door to get in, and no home base to operate from once you were.
         </p>
 
+        <div className="bg-accent/5 border-l-2 border-accent p-6 rounded-r-lg">
+          <p className="text-foreground font-medium">
+            The core problem: there was no single place to onboard your app and then manage it.
+          </p>
+          <p className="text-muted-foreground mt-2">
+            Onboarding wasn't a step that ended at go-live. Tenants needed a persistent home to track status, reach their tools, and know who owned what, from first intake through day-to-day operations. That place didn't exist, so every team rebuilt it ad hoc out of Slack threads and tribal knowledge.
+          </p>
+        </div>
+
         <p className="text-muted-foreground">
-          Three interconnected problems emerged:
+          That single gap surfaced as three interconnected problems:
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
