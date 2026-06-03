@@ -15,7 +15,7 @@ const JigsawIntroSection: React.FC = () => {
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-start gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2"></div>
-                <span>Led research with tanker planners at the 609th AOC</span>
+                <span>Led research with tanker planners at the 609th and 613th AOC</span>
               </li>
               <li className="flex items-start gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2"></div>
