@@ -1,0 +1,2 @@
+# Trivy vulnerability suppressions for the drew-ux image.
+# One CVE ID per line. Empty = no suppressions.

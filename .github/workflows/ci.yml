@@ -1,0 +1,39 @@
+name: CI / Deploy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  # Build the image, run the SecRel pipeline (Gitleaks, Semgrep, Trivy, Syft),
+  # and push to GHCR. Needs only GITHUB_TOKEN, so this runs on every push.
+  secrel:
+    uses: Mountain-Dr3w/infra/.github/workflows/secrel.yml@main
+    with:
+      dockerfile: Dockerfile
+      image-name: drew-ux
+    secrets: inherit
+
+  # Deploy to the VPS. Dormant until the repo is provisioned:
+  #   1. set repo secrets VPS_HOST / VPS_USER / DEPLOY_SSH_KEY
+  #   2. one-time (root) on the VPS: pull infra + reload Caddy for drewux.<DOMAIN>
+  #   3. set repo variable DEPLOY_ENABLED=true
+  # Skipped (not failed) while DEPLOY_ENABLED is unset, so the pipeline stays green.
+  deploy:
+    needs: secrel
+    if: ${{ vars.DEPLOY_ENABLED == 'true' }}
+    uses: Mountain-Dr3w/infra/.github/workflows/deploy-compose.yml@main
+    with:
+      service-name: drew-ux-app
+      image-name: drew-ux
+      image-tag: ${{ needs.secrel.outputs.image-tag }}
+      compose-file: drew-ux/docker-compose.yml
+    secrets:
+      VPS_HOST: ${{ secrets.VPS_HOST }}
+      VPS_USER: ${{ secrets.VPS_USER }}
+      DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+      GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}

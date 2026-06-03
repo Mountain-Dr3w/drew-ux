@@ -150,3 +150,16 @@ Opens at http://localhost:8080
 **Real metrics used (provided by Drew):** self-service onboarding 6-7% → **90%**; time to first deploy months → **4.5 days** (beat 1-week target); onboarding support tickets **~80%** reduction; **8** apps onboarded; headline: capability reaches users in **<30 days avg**. Portal is shipped & in use → present-tense claims retained.
 
 **Optional follow-ups not done:** surface the 90% / <30-day headline in the hero or Background for scanability; add a real tenant/platform-lead quote (other four case studies have one, FORGE still doesn't).
+
+### 7. Session 4 — deploy via Velveteen/infra CI pipeline (June 3, 2026)
+
+**Goal:** Deploy drew-ux to `drewux.velveteen.sh` through the same headless infra CI path velveteen/oscc use (GitHub Actions → SecRel scan → GHCR → VPS via Caddy), instead of Lovable.
+
+**Findings (empirical):** Lovable git-sync broke because the GitHub account was renamed `DrewUXDesign → Mountain-Dr3w`. VPS is `5.78.201.14`. SSH from this machine is denied (`publickey`), drew-ux has no deploy secrets, and adding a new Caddy subdomain needs root — so a *first* deploy can't be 100% headless on my end; the SecRel pipeline can.
+
+**Plan / artifacts:**
+- **drew-ux:** `Dockerfile` (multi-stage: node build → `caddy:2-alpine` serving `dist/` with SPA fallback), `Caddyfile.docker`, `.dockerignore`, `.trivyignore`, `.github/workflows/ci.yml` (calls `infra/secrel.yml`; deploy job gated behind `vars.DEPLOY_ENABLED` so the pipeline is green until provisioned).
+- **infra:** `compose/drew-ux/docker-compose.yml` (static site, 127.0.0.1:8082→8080, 128m), Caddy route `drewux.{$DOMAIN} → localhost:8082`, runbook entry.
+- **Verify:** build+run image locally; push both repos; watch SecRel run to green; confirm image in GHCR.
+
+**Handoff (needs Drew — credential/root):** set drew-ux secrets `VPS_HOST=5.78.201.14`, `VPS_USER=deploy`, `DEPLOY_SSH_KEY=<key>`; one-time on VPS as root: `cd /opt/infra && git pull && cp compose/caddy/Caddyfile /etc/caddy/Caddyfile && caddy validate --config /etc/caddy/Caddyfile && systemctl reload caddy`; then set repo var `DEPLOY_ENABLED=true` and re-run. DNS for drewux.velveteen.sh is covered by the existing `*.velveteen.sh` wildcard.
